@@ -1,127 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head><meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="标题使用 #表示一级标题 ##表示二级标题，以此类推,注意：#号后空格。 123# 一级标题## 二级标题### 三级标题 段落1 段落间隔上下两行空出一行 123第一行第二行 使用&lt;br&gt;表示回车 ，可多级使用 2 字体1234567891011_斜体文本___粗体文本__ ___粗斜体文本___&#x3D;&#x3D;高亮字体 &#x3D;&#x3D;h&lt;sub&gt;2&amp;l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Makedown语法">
+<meta property="og:url" content="http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/index.html">
+<meta property="og:site_name" content="Even">
+<meta property="og:description" content="标题使用 #表示一级标题 ##表示二级标题，以此类推,注意：#号后空格。 123# 一级标题## 二级标题### 三级标题 段落1 段落间隔上下两行空出一行 123第一行第二行 使用&lt;br&gt;表示回车 ，可多级使用 2 字体1234567891011_斜体文本___粗体文本__ ___粗斜体文本___&#x3D;&#x3D;高亮字体 &#x3D;&#x3D;h&lt;sub&gt;2&amp;l">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2019/03/A042DF30-C232-46F3-8436-7D6C35351BBD.jpg">
+<meta property="og:image" content="http://qzonestyle.gtimg.cn/qzone/qzactStatics/imgs/20171122191630_ff8fef.jpg">
+<meta property="article:published_time" content="2021-02-09T02:54:56.000Z">
+<meta property="article:modified_time" content="2021-02-11T07:10:11.853Z">
+<meta property="article:author" content="Smashdog">
+<meta property="article:tag" content="markdowm">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.runoob.com/wp-content/uploads/2019/03/A042DF30-C232-46F3-8436-7D6C35351BBD.jpg">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Makedown语法</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
 
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Even" type="application/atom+xml">
+</head>
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/study/">Study</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/tag/">Tags</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2021/02/11/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2021/02/08/hello-world/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/&text=Makedown语法"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/&title=Makedown语法"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/&is_video=false&description=Makedown语法"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Makedown语法&body=Check out this article: http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/&title=Makedown语法"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/&title=Makedown语法"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/&title=Makedown语法"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/&title=Makedown语法"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/&name=Makedown语法&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/&t=Makedown语法"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
 
-<meta name="description" content="Makedown语法"/><meta name="keywords" content="markdowm, Even" /><link rel="alternate" href="/default" title="Even" ><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.0" />
-<link rel="canonical" href="http://mk310.github/2021/02/09/Makedown语法/"/>
-
-<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
-<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.11.0" />
-
-<script id="baidu_push">
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-<script>
-  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":"","latex":false};
-</script>
-
-    <title>Makedown语法 - Even</title>
-  <meta name="generator" content="Hexo 5.3.0"></head>
-
-  <body><div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/." class="logo">Even</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list"><a href="/">
-        <li class="mobile-menu-item">Home
-          </li>
-      </a><a href="/study/">
-        <li class="mobile-menu-item">Study
-          </li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags
-          </li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories
-          </li>
-      </a></ul>
-</nav>
-<div class="container" id="mobile-panel">
-      <header id="header" class="header"><div class="logo-wrapper">
-  <a href="/." class="logo">Even</a>
-</div>
-
-<nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item">
-          <a class="menu-item-link" href="/">
-            Home
-            </a>
-        </li>
-      <li class="menu-item">
-          <a class="menu-item-link" href="/study/">
-            Study
-            </a>
-        </li>
-      <li class="menu-item">
-          <a class="menu-item-link" href="/tags/">
-            Tags
-            </a>
-        </li>
-      <li class="menu-item">
-          <a class="menu-item-link" href="/categories/">
-            Categories
-            </a>
-        </li>
-      </ul></nav>
-
-
-
-
-
-
-</header>
-
-      <main id="main" class="main">
-        <div class="content-wrapper">
-          <div id="content" class="content"><article class="post">
-    <header class="post-header">
-      <h1 class="post-title">Makedown语法
-        </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2021-02-09
-        </span><span class="post-category">
-            <a href="/categories/makdown/">makdown</a>
-            </span>
-        </div>
-    </header>
-
-    <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%87%E9%A2%98"><span class="toc-text">标题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD"><span class="toc-text">段落</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%AE%B5%E8%90%BD%E9%97%B4%E9%9A%94"><span class="toc-text">1 段落间隔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AD%97%E4%BD%93"><span class="toc-text">2 字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%BE%93%E5%85%A5%E7%A9%BA%E6%A0%BC"><span class="toc-text">3 输入空格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%88%86%E5%89%B2%E7%BA%BF"><span class="toc-text">4 分割线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E4%B8%8B%E5%88%92%E7%BA%BF"><span class="toc-text">5 下划线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E8%84%9A%E6%B3%A8"><span class="toc-text">6 脚注</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-text">列表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-text">1 有序列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%97%A0%E9%9C%80%E5%88%97%E8%A1%A8"><span class="toc-text">2 无需列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8"><span class="toc-text">3 任务列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%B5%8C%E5%A5%97%E5%88%97%E8%A1%A8"><span class="toc-text">4 嵌套列表</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8C%BA%E5%9D%97"><span class="toc-text">区块</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%8C%BA%E5%9D%97%E5%BC%95%E7%94%A8"><span class="toc-text">1 区块引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%8C%BA%E5%9D%97%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%97%E8%A1%A8"><span class="toc-text">2 区块中使用列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%88%97%E8%A1%A8%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%8C%BA%E5%9D%97"><span class="toc-text">3 列表中使用区块</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text">代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%A1%8C%E5%86%85%E4%BB%A3%E7%A0%81"><span class="toc-text">1 行内代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9D%97"><span class="toc-text">2 代码区块</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5"><span class="toc-text">链接</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9F%BA%E6%9C%AC%E9%93%BE%E6%8E%A5"><span class="toc-text">1 基本链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%BC%95%E7%94%A8%E9%93%BE%E6%8E%A5"><span class="toc-text">2 引用链接&#x2F;&#x2F;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%9B%B4%E6%8E%A5%E9%93%BE%E6%8E%A5"><span class="toc-text">3 直接链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%BC%95%E7%94%A8%E5%88%B0%E6%A0%87%E9%A2%98-hexo%E6%9A%82%E4%B8%8D%E5%8F%AF%E7%94%A8"><span class="toc-text">4 引用到标题&#x2F;&#x2F;hexo暂不可用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-text">图片</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC"><span class="toc-text">表格</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9B%E9%98%B6"><span class="toc-text">进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89%E7%AC%A6"><span class="toc-text">转义符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%98%E6%9C%89-%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F-%E7%94%98%E7%89%B9%E5%9B%BE"><span class="toc-text">还有 数学公式 甘特图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li></ol>
     </div>
-  </div><div class="post-content"><h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p>使用 <code>#</code>表示一级标题 <code>##</code>表示二级标题，以此类推,注意：<code>#</code>号后空格。</p>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%87%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">标题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD"><span class="toc-number">2.</span> <span class="toc-text">段落</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%AE%B5%E8%90%BD%E9%97%B4%E9%9A%94"><span class="toc-number">2.1.</span> <span class="toc-text">1 段落间隔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AD%97%E4%BD%93"><span class="toc-number">2.2.</span> <span class="toc-text">2 字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%BE%93%E5%85%A5%E7%A9%BA%E6%A0%BC"><span class="toc-number">2.3.</span> <span class="toc-text">3 输入空格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%88%86%E5%89%B2%E7%BA%BF"><span class="toc-number">2.4.</span> <span class="toc-text">4 分割线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E4%B8%8B%E5%88%92%E7%BA%BF"><span class="toc-number">2.5.</span> <span class="toc-text">5 下划线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E8%84%9A%E6%B3%A8"><span class="toc-number">2.6.</span> <span class="toc-text">6 脚注</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-number">3.</span> <span class="toc-text">列表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-number">3.1.</span> <span class="toc-text">1 有序列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%97%A0%E9%9C%80%E5%88%97%E8%A1%A8"><span class="toc-number">3.2.</span> <span class="toc-text">2 无需列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8"><span class="toc-number">3.3.</span> <span class="toc-text">3 任务列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%B5%8C%E5%A5%97%E5%88%97%E8%A1%A8"><span class="toc-number">3.4.</span> <span class="toc-text">4 嵌套列表</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8C%BA%E5%9D%97"><span class="toc-number">4.</span> <span class="toc-text">区块</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%8C%BA%E5%9D%97%E5%BC%95%E7%94%A8"><span class="toc-number">4.1.</span> <span class="toc-text">1 区块引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%8C%BA%E5%9D%97%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%97%E8%A1%A8"><span class="toc-number">4.2.</span> <span class="toc-text">2 区块中使用列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%88%97%E8%A1%A8%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%8C%BA%E5%9D%97"><span class="toc-number">4.3.</span> <span class="toc-text">3 列表中使用区块</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number">5.</span> <span class="toc-text">代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%A1%8C%E5%86%85%E4%BB%A3%E7%A0%81"><span class="toc-number">5.1.</span> <span class="toc-text">1 行内代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9D%97"><span class="toc-number">5.2.</span> <span class="toc-text">2 代码区块</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5"><span class="toc-number">6.</span> <span class="toc-text">链接</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9F%BA%E6%9C%AC%E9%93%BE%E6%8E%A5"><span class="toc-number">6.1.</span> <span class="toc-text">1 基本链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%BC%95%E7%94%A8%E9%93%BE%E6%8E%A5"><span class="toc-number">6.2.</span> <span class="toc-text">2 引用链接&#x2F;&#x2F;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%9B%B4%E6%8E%A5%E9%93%BE%E6%8E%A5"><span class="toc-number">6.3.</span> <span class="toc-text">3 直接链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%BC%95%E7%94%A8%E5%88%B0%E6%A0%87%E9%A2%98-hexo%E6%9A%82%E4%B8%8D%E5%8F%AF%E7%94%A8"><span class="toc-number">6.4.</span> <span class="toc-text">4 引用到标题&#x2F;&#x2F;hexo暂不可用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-number">7.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC"><span class="toc-number">8.</span> <span class="toc-text">表格</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9B%E9%98%B6"><span class="toc-number">9.</span> <span class="toc-text">进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89%E7%AC%A6"><span class="toc-number">9.1.</span> <span class="toc-text">转义符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%98%E6%9C%89-%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F-%E7%94%98%E7%89%B9%E5%9B%BE"><span class="toc-number">9.2.</span> <span class="toc-text">还有 数学公式 甘特图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">10.</span> <span class="toc-text">参考</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Makedown语法
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Smashdog</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2021-02-09T02:54:56.000Z" itemprop="datePublished">2021-02-09</time>
+        
+        (Updated: <time datetime="2021-02-11T07:10:11.853Z" itemprop="dateModified">2021-02-11</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Makdown/">Makdown</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/markdowm/" rel="tag">markdowm</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p>使用 <code>#</code>表示一级标题 <code>##</code>表示二级标题，以此类推,注意：<code>#</code>号后空格。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br></pre></td></tr></table></figure>
 <h1 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h1><h2 id="1-段落间隔"><a href="#1-段落间隔" class="headerlink" title="1 段落间隔"></a>1 段落间隔</h2><p>上下两行空出一行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">第一行</span><br><span class="line"></span><br><span class="line">第二行</span><br></pre></td></tr></table></figure>
@@ -246,67 +290,146 @@
 <p>菜鸟教程markdown <a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-tutorial.html">https://www.runoob.com/markdown/md-tutorial.html</a><br><a target="_blank" rel="noopener" href="https://mk310.github.io/">1</a>:<a target="_blank" rel="noopener" href="https://baidu.com/">https://baidu.com/</a></p>
 </blockquote>
 
-      </div>
-      <div class="post-copyright">
-    <p class="copyright-item">
-      <span>Author: </span>
-      <a href="http://mk310.github">Smashdog</a>
-    </p>
-    <p class="copyright-item">
-      <span>Link: </span>
-      <a href="http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/">http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/</a>
-    </p>
-    <p class="copyright-item">
-      <span>License: </span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-    </p>
   </div>
-      <footer class="post-footer">
-        <div class="post-tags">
-            <a href="/tags/markdowm/">markdowm</a>
-            </div>
+</article>
+
+
+
         
-        <nav class="post-nav"><a class="prev" href="/2021/02/11/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">hexo博客搭建</span>
-        <span class="prev-text nav-mobile">Prev</span>
-      </a>
-    <a class="next" href="/2021/02/08/hello-world/">
-        <span class="next-text nav-default">Hello World</span>
-        <span class="prev-text nav-mobile">Next</span>
-        <i class="iconfont icon-right"></i>
-      </a>
-    </nav></footer>
-    </article></div><div class="comments" id="comments"></div></div>
-      </main>
+          <div id="footer-post-container">
+  <div id="footer-post">
 
-      <footer id="footer" class="footer"><div class="social-links"><a target="_blank" rel="noopener" href="https://github.com/mk310" class="iconfont icon-github" title="github"></a>
-        <a target="_blank" rel="noopener" href="https://www.zhihu.com/" class="iconfont icon-zhihu" title="zhihu"></a>
-        <a href="/https/www.bilibili.com" class="iconfont icon-instagram" title="instagram"></a>
-        <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
-    </div><div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/ahonn/hexo-theme-even">Even</a>
-  </span>
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/study/">Study</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/tag/">Tags</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </div>
 
-  <span class="copyright-year">&copy;2021<span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">Smashdog</span>
-  </span>
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%87%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">标题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD"><span class="toc-number">2.</span> <span class="toc-text">段落</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%AE%B5%E8%90%BD%E9%97%B4%E9%9A%94"><span class="toc-number">2.1.</span> <span class="toc-text">1 段落间隔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AD%97%E4%BD%93"><span class="toc-number">2.2.</span> <span class="toc-text">2 字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%BE%93%E5%85%A5%E7%A9%BA%E6%A0%BC"><span class="toc-number">2.3.</span> <span class="toc-text">3 输入空格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%88%86%E5%89%B2%E7%BA%BF"><span class="toc-number">2.4.</span> <span class="toc-text">4 分割线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E4%B8%8B%E5%88%92%E7%BA%BF"><span class="toc-number">2.5.</span> <span class="toc-text">5 下划线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E8%84%9A%E6%B3%A8"><span class="toc-number">2.6.</span> <span class="toc-text">6 脚注</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-number">3.</span> <span class="toc-text">列表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-number">3.1.</span> <span class="toc-text">1 有序列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%97%A0%E9%9C%80%E5%88%97%E8%A1%A8"><span class="toc-number">3.2.</span> <span class="toc-text">2 无需列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8"><span class="toc-number">3.3.</span> <span class="toc-text">3 任务列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%B5%8C%E5%A5%97%E5%88%97%E8%A1%A8"><span class="toc-number">3.4.</span> <span class="toc-text">4 嵌套列表</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8C%BA%E5%9D%97"><span class="toc-number">4.</span> <span class="toc-text">区块</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%8C%BA%E5%9D%97%E5%BC%95%E7%94%A8"><span class="toc-number">4.1.</span> <span class="toc-text">1 区块引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%8C%BA%E5%9D%97%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%97%E8%A1%A8"><span class="toc-number">4.2.</span> <span class="toc-text">2 区块中使用列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%88%97%E8%A1%A8%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%8C%BA%E5%9D%97"><span class="toc-number">4.3.</span> <span class="toc-text">3 列表中使用区块</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number">5.</span> <span class="toc-text">代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%A1%8C%E5%86%85%E4%BB%A3%E7%A0%81"><span class="toc-number">5.1.</span> <span class="toc-text">1 行内代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9D%97"><span class="toc-number">5.2.</span> <span class="toc-text">2 代码区块</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5"><span class="toc-number">6.</span> <span class="toc-text">链接</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9F%BA%E6%9C%AC%E9%93%BE%E6%8E%A5"><span class="toc-number">6.1.</span> <span class="toc-text">1 基本链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%BC%95%E7%94%A8%E9%93%BE%E6%8E%A5"><span class="toc-number">6.2.</span> <span class="toc-text">2 引用链接&#x2F;&#x2F;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%9B%B4%E6%8E%A5%E9%93%BE%E6%8E%A5"><span class="toc-number">6.3.</span> <span class="toc-text">3 直接链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%BC%95%E7%94%A8%E5%88%B0%E6%A0%87%E9%A2%98-hexo%E6%9A%82%E4%B8%8D%E5%8F%AF%E7%94%A8"><span class="toc-number">6.4.</span> <span class="toc-text">4 引用到标题&#x2F;&#x2F;hexo暂不可用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-number">7.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC"><span class="toc-number">8.</span> <span class="toc-text">表格</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9B%E9%98%B6"><span class="toc-number">9.</span> <span class="toc-text">进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89%E7%AC%A6"><span class="toc-number">9.1.</span> <span class="toc-text">转义符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%98%E6%9C%89-%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F-%E7%94%98%E7%89%B9%E5%9B%BE"><span class="toc-number">9.2.</span> <span class="toc-text">还有 数学公式 甘特图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">10.</span> <span class="toc-text">参考</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/&text=Makedown语法"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/&title=Makedown语法"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/&is_video=false&description=Makedown语法"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Makedown语法&body=Check out this article: http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/&title=Makedown语法"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/&title=Makedown语法"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/&title=Makedown语法"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/&title=Makedown语法"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/&name=Makedown语法&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/&t=Makedown语法"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
 </div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2021
+    Smashdog
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/study/">Study</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/tag/">Tags</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </nav>
+  </div>
 </footer>
 
-      <div class="back-to-top" id="back-to-top">
-        <i class="iconfont icon-up"></i>
-      </div>
-    </div><script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/src/even.js?v=2.11.0"></script>
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
 </body>
 </html>
