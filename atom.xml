@@ -3,11 +3,11 @@
   <title>Even</title>
   
   
-  <link href="http://mk310.github/atom.xml" rel="self"/>
+  <link href="https://smashdog1.gitee.io/smashdog/atom.xml" rel="self"/>
   
-  <link href="http://mk310.github/"/>
+  <link href="https://smashdog1.gitee.io/smashdog/"/>
   <updated>2021-02-11T14:35:02.851Z</updated>
-  <id>http://mk310.github/</id>
+  <id>https://smashdog1.gitee.io/smashdog/</id>
   
   <author>
     <name>Smashdog</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>hexo使用问题</title>
-    <link href="http://mk310.github/2021/02/11/hexo%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/"/>
-    <id>http://mk310.github/2021/02/11/hexo%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/</id>
+    <link href="https://smashdog1.gitee.io/smashdog/2021/02/11/hexo%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/"/>
+    <id>https://smashdog1.gitee.io/smashdog/2021/02/11/hexo%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/</id>
     <published>2021-02-11T13:00:28.000Z</published>
     <updated>2021-02-11T14:35:02.851Z</updated>
     
@@ -34,23 +34,23 @@
     
     
     
-    <category term="Hexo" scheme="http://mk310.github/categories/Hexo/"/>
+    <category term="Hexo" scheme="https://smashdog1.gitee.io/smashdog/categories/Hexo/"/>
     
     
-    <category term="hexo使用本地图片" scheme="http://mk310.github/tags/hexo%E4%BD%BF%E7%94%A8%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/"/>
+    <category term="hexo使用本地图片" scheme="https://smashdog1.gitee.io/smashdog/tags/hexo%E4%BD%BF%E7%94%A8%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/"/>
     
-    <category term="hexo嵌入视频" scheme="http://mk310.github/tags/hexo%E5%B5%8C%E5%85%A5%E8%A7%86%E9%A2%91/"/>
+    <category term="hexo嵌入视频" scheme="https://smashdog1.gitee.io/smashdog/tags/hexo%E5%B5%8C%E5%85%A5%E8%A7%86%E9%A2%91/"/>
     
   </entry>
   
   <entry>
     <title>hackintosh</title>
-    <link href="http://mk310.github/2021/02/11/hackintosh/"/>
-    <id>http://mk310.github/2021/02/11/hackintosh/</id>
+    <link href="https://smashdog1.gitee.io/smashdog/2021/02/11/hackintosh/"/>
+    <id>https://smashdog1.gitee.io/smashdog/2021/02/11/hackintosh/</id>
     <published>2021-02-11T09:39:34.000Z</published>
     <updated>2021-02-11T13:19:58.457Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h1 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h1><h1 id="使用技巧"><a href="#使用技巧" class="headerlink" title="使用技巧"></a>使用技巧</h1><h1 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h1><ol><li>App Store不能正常登陆和下载安装软件</li></ol><p><img src="/2021/02/11/hackintosh/AppStoreErr.png" alt="app store err"></p><p>解决方法：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">defaults delete com.apple.appstore.commerce Storefront</span><br><span class="line">defaults write com.apple.appstore.commerce Storefront -string &quot;$(defaults read com.apple.appstore.commerce Storefront | sed s&#x2F;,8&#x2F;,13&#x2F;)&quot;</span><br></pre></td></tr></table></figure><p>在终端中输入上述代码后冷关机后重启。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h1 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h1><h1 id="使用技巧"><a href="#使用技巧" class="headerlink" title="使用技巧"></a>使用技巧</h1><h1 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h1><ol><li>App Store不能正常登陆和下载安装软件</li></ol><p><img src="/smashdog/smashdog/2021/02/11/hackintosh/AppStoreErr.png" alt="app store err"></p><p>解决方法：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">defaults delete com.apple.appstore.commerce Storefront</span><br><span class="line">defaults write com.apple.appstore.commerce Storefront -string &quot;$(defaults read com.apple.appstore.commerce Storefront | sed s&#x2F;,8&#x2F;,13&#x2F;)&quot;</span><br></pre></td></tr></table></figure><p>在终端中输入上述代码后冷关机后重启。</p>]]></content>
     
     
       
@@ -60,17 +60,17 @@
     
     
     
-    <category term="Hackintosh" scheme="http://mk310.github/categories/Hackintosh/"/>
+    <category term="Hackintosh" scheme="https://smashdog1.gitee.io/smashdog/categories/Hackintosh/"/>
     
     
-    <category term="App Store问题" scheme="http://mk310.github/tags/App-Store%E9%97%AE%E9%A2%98/"/>
+    <category term="App Store问题" scheme="https://smashdog1.gitee.io/smashdog/tags/App-Store%E9%97%AE%E9%A2%98/"/>
     
   </entry>
   
   <entry>
     <title>hexo博客搭建</title>
-    <link href="http://mk310.github/2021/02/11/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    <id>http://mk310.github/2021/02/11/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</id>
+    <link href="https://smashdog1.gitee.io/smashdog/2021/02/11/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <id>https://smashdog1.gitee.io/smashdog/2021/02/11/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</id>
     <published>2021-02-11T01:17:06.000Z</published>
     <updated>2021-02-11T14:13:59.650Z</updated>
     
@@ -85,17 +85,17 @@
     
     
     
-    <category term="Hexo" scheme="http://mk310.github/categories/Hexo/"/>
+    <category term="Hexo" scheme="https://smashdog1.gitee.io/smashdog/categories/Hexo/"/>
     
     
-    <category term="hexo 搭建博客" scheme="http://mk310.github/tags/hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <category term="hexo 搭建博客" scheme="https://smashdog1.gitee.io/smashdog/tags/hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title>Makedown语法</title>
-    <link href="http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/"/>
-    <id>http://mk310.github/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/</id>
+    <link href="https://smashdog1.gitee.io/smashdog/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/"/>
+    <id>https://smashdog1.gitee.io/smashdog/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/</id>
     <published>2021-02-09T02:54:56.000Z</published>
     <updated>2021-02-11T07:17:00.554Z</updated>
     
@@ -109,17 +109,17 @@
     
     
     
-    <category term="Makdown" scheme="http://mk310.github/categories/Makdown/"/>
+    <category term="Makdown" scheme="https://smashdog1.gitee.io/smashdog/categories/Makdown/"/>
     
     
-    <category term="markdowm" scheme="http://mk310.github/tags/markdowm/"/>
+    <category term="markdowm" scheme="https://smashdog1.gitee.io/smashdog/tags/markdowm/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://mk310.github/2021/02/08/hello-world/"/>
-    <id>http://mk310.github/2021/02/08/hello-world/</id>
+    <link href="https://smashdog1.gitee.io/smashdog/2021/02/08/hello-world/"/>
+    <id>https://smashdog1.gitee.io/smashdog/2021/02/08/hello-world/</id>
     <published>2021-02-08T07:52:50.879Z</published>
     <updated>2021-02-08T07:52:50.879Z</updated>
     
