@@ -54,8 +54,7 @@
     <!-- rss -->
     
     
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Even" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 <body class="max-width mx-auto px3 ltr">
     
@@ -173,7 +172,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">第一行</span><br><span class="line"></span><br><span class="line">第二行</span><br></pre></td></tr></table></figure>
 <p>使用<code>&lt;br&gt;</code>表示回车 ，可多级使用</p>
 <h2 id="2-字体"><a href="#2-字体" class="headerlink" title="2 字体"></a>2 字体</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">_斜体文本_</span><br><span class="line"></span><br><span class="line">__粗体文本__ </span><br><span class="line"></span><br><span class="line">___粗斜体文本___</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;高亮字体 &#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">h&lt;sub&gt;2&lt;&#x2F;sub&gt;o  &#x2F;&#x2F;上标</span><br><span class="line">x&lt;sup&gt;2&lt;sup&gt;  &#x2F;&#x2F;下标</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>显示：<br><em>斜体文本</em> , <strong>粗体文本</strong> , <strong><em>粗斜体文本</em></strong> ,==高亮字体==  ，h<sub>2</sub>o ,x<sup>2<sup> </p>
+<p>显示：<br><em>斜体文本</em> , <strong>粗体文本</strong> , <strong><em>粗斜体文本</em></strong> ,==高亮字体==  ，h<sub>2</sub>o ,x<sup>2<sup> </sup></sup></p>
 <h2 id="3-输入空格"><a href="#3-输入空格" class="headerlink" title="3 输入空格"></a>3 输入空格</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">插入一个空格 </span><br><span class="line">　　　　&amp;nbsp;</span><br><span class="line"></span><br><span class="line">插入两个空格 (en space)</span><br><span class="line">　　　　&amp;ensp;     </span><br><span class="line"></span><br><span class="line">插入四个空格 (em space)</span><br><span class="line">　　　　&amp;emsp; </span><br></pre></td></tr></table></figure>
 <h2 id="4-分割线"><a href="#4-分割线" class="headerlink" title="4 分割线"></a>4 分割线</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">---------------</span><br></pre></td></tr></table></figure>
 <p>显示</p>
@@ -206,8 +205,8 @@
 <hr>
 <h2 id="3-任务列表"><a href="#3-任务列表" class="headerlink" title="3 任务列表"></a>3 任务列表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 注意[]中间空格，空格间填 x 默认任务完成</span><br><span class="line">- [ ] 任务1</span><br><span class="line">- [ ] 任务2</span><br></pre></td></tr></table></figure>
 <ul>
-<li><input disabled="" type="checkbox"> 任务1</li>
-<li><input disabled="" type="checkbox"> 任务2</li>
+<li><input disabled type="checkbox"> 任务1</li>
+<li><input disabled type="checkbox"> 任务2</li>
 </ul>
 <hr>
 <h2 id="4-嵌套列表"><a href="#4-嵌套列表" class="headerlink" title="4 嵌套列表"></a>4 嵌套列表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. 第一项</span><br><span class="line">  - 第一子项</span><br></pre></td></tr></table></figure>
@@ -263,7 +262,7 @@
 <p>Hexo 内置标签系统-图片标签（显示图片标题）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% img [class names] &#x2F;path&#x2F;to&#x2F;image [width] [height] &#39;&quot;alt text&quot; &quot;title text&quot;&#39; %&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;例子</span><br><span class="line">&#123;% img http:&#x2F;&#x2F;qzonestyle.gtimg.cn&#x2F;qzone&#x2F;qzactStatics&#x2F;imgs&#x2F;20171122191630_ff8fef.jpg &quot;picture 404!&quot; &quot;This is a pic for test&quot;  %&#125;</span><br></pre></td></tr></table></figure>
 <p>显示：</p>
-<img src="http://qzonestyle.gtimg.cn/qzone/qzactStatics/imgs/20171122191630_ff8fef.jpg" class="" title="picture 404! This is a pic for test">
+<img src="http://qzonestyle.gtimg.cn/qzone/qzactStatics/imgs/20171122191630_ff8fef.jpg" class title="picture 404! This is a pic for test">
 
 <h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| 左对齐站位 | 右对齐站位 | 居中对齐 站位|</span><br><span class="line">|:----|----:|:----:|</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br></pre></td></tr></table></figure>
 <table>
