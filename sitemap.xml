@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://mk310.github/2021/02/11/hackintosh/</loc>
+    
+    <lastmod>2021-02-11</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://mk310.github/archives/index.html</loc>
     
     <lastmod>2021-02-11</lastmod>
@@ -67,6 +74,13 @@
   </url>
   
   <url>
+    <loc>http://mk310.github/tags/hackintosh/</loc>
+    <lastmod>2021-02-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://mk310.github/tags/hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2021-02-11</lastmod>
     <changefreq>daily</changefreq>
@@ -77,6 +91,13 @@
   
   <url>
     <loc>http://mk310.github/categories/Makdown/</loc>
+    <lastmod>2021-02-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://mk310.github/categories/Hackintosh/</loc>
     <lastmod>2021-02-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
