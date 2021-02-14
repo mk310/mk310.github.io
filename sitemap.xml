@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mk310.github.io/2021/02/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/</loc>
+    
+    <lastmod>2021-02-14</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://mk310.github.io/2021/02/11/hexo%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/</loc>
     
-    <lastmod>2021-02-11</lastmod>
+    <lastmod>2021-02-14</lastmod>
     
   </url>
   
@@ -37,13 +44,6 @@
   </url>
   
   <url>
-    <loc>https://mk310.github.io/study/index.html</loc>
-    
-    <lastmod>2021-02-11</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://mk310.github.io/categories/index.html</loc>
     
     <lastmod>2021-02-11</lastmod>
@@ -67,7 +67,7 @@
 
   <url>
     <loc>https://mk310.github.io/</loc>
-    <lastmod>2021-02-11</lastmod>
+    <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -75,35 +75,42 @@
   
   <url>
     <loc>https://mk310.github.io/tags/markdowm/</loc>
-    <lastmod>2021-02-11</lastmod>
+    <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mk310.github.io/tags/App-Store%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2021-02-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mk310.github.io/tags/hexo%E4%BD%BF%E7%94%A8%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/</loc>
-    <lastmod>2021-02-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mk310.github.io/tags/hexo%E5%B5%8C%E5%85%A5%E8%A7%86%E9%A2%91/</loc>
-    <lastmod>2021-02-11</lastmod>
+    <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mk310.github.io/tags/hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2021-02-11</lastmod>
+    <lastmod>2021-02-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mk310.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</loc>
+    <lastmod>2021-02-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mk310.github.io/tags/hexo%E4%BD%BF%E7%94%A8%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/</loc>
+    <lastmod>2021-02-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mk310.github.io/tags/hexo%E5%B5%8C%E5%85%A5%E8%A7%86%E9%A2%91/</loc>
+    <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -112,21 +119,28 @@
   
   <url>
     <loc>https://mk310.github.io/categories/Makdown/</loc>
-    <lastmod>2021-02-11</lastmod>
+    <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mk310.github.io/categories/Hackintosh/</loc>
-    <lastmod>2021-02-11</lastmod>
+    <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mk310.github.io/categories/Hexo/</loc>
-    <lastmod>2021-02-11</lastmod>
+    <lastmod>2021-02-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mk310.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2021-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
