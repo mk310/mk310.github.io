@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="数据结构的基本组成： 数据结构术语基本 数据：是能输入计算机并且能被计算机处理的各种符号集合：   能被计算机是被储存加工 信息载体 对客观事物孵化好表示   数据元素计算机通常作为一个整体进行处理和考虑，是数据的基本单位。也称 记录，节点树形图），定点（图）。  例子：|姓名|班级|学号||:—-|:—-|:—-||张三|A1|11111| 其中张三的姓名，班级，学号三个数据是一个数据元素。">
+    <meta name="description" content="数据结构的基本组成 基本名词解释 数据：是能输入计算机并且能被计算机处理的各种符号集合：   能被计算机是被储存加工 信息载体 对客观事物孵化好表示   数据元素计算机通常作为一个整体进行处理和考虑，是数据的基本单位。也称 记录，节点树形图），定点（图）。  例子：|姓名|班级|学号||:—-|:—-|:—-||张三|A1|11111| 其中张三的姓名，班级，学号三个数据是一个数据元素。  数据项">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构1">
 <meta property="og:url" content="https://mk310.github.io/2021/02/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/index.html">
 <meta property="og:site_name" content="Even">
-<meta property="og:description" content="数据结构的基本组成： 数据结构术语基本 数据：是能输入计算机并且能被计算机处理的各种符号集合：   能被计算机是被储存加工 信息载体 对客观事物孵化好表示   数据元素计算机通常作为一个整体进行处理和考虑，是数据的基本单位。也称 记录，节点树形图），定点（图）。  例子：|姓名|班级|学号||:—-|:—-|:—-||张三|A1|11111| 其中张三的姓名，班级，学号三个数据是一个数据元素。">
+<meta property="og:description" content="数据结构的基本组成 基本名词解释 数据：是能输入计算机并且能被计算机处理的各种符号集合：   能被计算机是被储存加工 信息载体 对客观事物孵化好表示   数据元素计算机通常作为一个整体进行处理和考虑，是数据的基本单位。也称 记录，节点树形图），定点（图）。  例子：|姓名|班级|学号||:—-|:—-|:—-||张三|A1|11111| 其中张三的姓名，班级，学号三个数据是一个数据元素。  数据项">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://mk310.github.io/2021/02/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/DataStruct.png">
 <meta property="article:published_time" content="2021-02-14T10:17:33.000Z">
-<meta property="article:modified_time" content="2021-02-14T11:38:07.751Z">
+<meta property="article:modified_time" content="2021-02-14T11:43:56.843Z">
 <meta property="article:author" content="Smashdog">
 <meta property="article:tag" content="数据结构基本概念">
 <meta name="twitter:card" content="summary">
@@ -111,7 +111,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">数据结构的基本组成：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%9C%AF%E8%AF%AD"><span class="toc-number"></span> <span class="toc-text">数据结构术语</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text">基本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">数据结构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number"></span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84%E7%A7%8D%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">逻辑结构种类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">存储结构</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90"><span class="toc-number">1.</span> <span class="toc-text">数据结构的基本组成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A"><span class="toc-number">2.</span> <span class="toc-text">基本名词解释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9A%E4%B9%89"><span class="toc-number">3.</span> <span class="toc-text">数据结构定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84%E7%A7%8D%E7%B1%BB"><span class="toc-number">4.</span> <span class="toc-text">逻辑结构种类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84%E7%A7%8D%E7%B1%BB"><span class="toc-number">5.</span> <span class="toc-text">存储结构种类</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -137,7 +137,7 @@
       
         <time datetime="2021-02-14T10:17:33.000Z" itemprop="datePublished">2021-02-14</time>
         
-        (Updated: <time datetime="2021-02-14T11:38:07.751Z" itemprop="dateModified">2021-02-14</time>)
+        (Updated: <time datetime="2021-02-14T11:43:56.843Z" itemprop="dateModified">2021-02-14</time>)
         
       
     </div>
@@ -162,8 +162,8 @@
   
 
   <div class="content" itemprop="articleBody">
-    <h2 id="数据结构的基本组成："><a href="#数据结构的基本组成：" class="headerlink" title="数据结构的基本组成："></a>数据结构的基本组成：</h2><p><img src="/2021/02/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/DataStruct.png" alt="数据结构图"></p>
-<h1 id="数据结构术语"><a href="#数据结构术语" class="headerlink" title="数据结构术语"></a>数据结构术语</h1><h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><ol>
+    <h2 id="数据结构的基本组成"><a href="#数据结构的基本组成" class="headerlink" title="数据结构的基本组成"></a>数据结构的基本组成</h2><p><img src="/2021/02/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/DataStruct.png" alt="数据结构图"></p>
+<h2 id="基本名词解释"><a href="#基本名词解释" class="headerlink" title="基本名词解释"></a>基本名词解释</h2><ol>
 <li>数据：<br>是能输入计算机并且能被计算机处理的各种符号集合：</li>
 </ol>
 <ul>
@@ -182,7 +182,7 @@
 <li><p>数据对象<br>数据相同的数据元素组成的集合 是数据的一个子集。<br> 例子：丄例中的整个表表示的是很多个学生的个人信息的集合，他就是一个数据项。</p>
 </li>
 </ol>
-<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><ol>
+<h2 id="数据结构定义"><a href="#数据结构定义" class="headerlink" title="数据结构定义"></a>数据结构定义</h2><ol>
 <li>数据结构不是孤立的 元素之间存在某种<code>结构</code>。</li>
 <li>数据结构的内容：<ul>
 <li>逻辑结构</li>
@@ -191,14 +191,14 @@
 </ul>
 </li>
 </ol>
-<h1 id><a href="#" class="headerlink" title></a></h1><h2 id="逻辑结构种类"><a href="#逻辑结构种类" class="headerlink" title="逻辑结构种类"></a>逻辑结构种类</h2><ol>
+<h2 id="逻辑结构种类"><a href="#逻辑结构种类" class="headerlink" title="逻辑结构种类"></a>逻辑结构种类</h2><ol>
 <li><p>线性结构</p>
 <p>有且仅有哟个开始和终端：线性表，栈，队列，串</p>
 </li>
 <li><p>非线性结构<br>一个节点能有多个直接前驱，后继：树形图，图</p>
 </li>
 </ol>
-<h2 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h2><ol>
+<h2 id="存储结构种类"><a href="#存储结构种类" class="headerlink" title="存储结构种类"></a>存储结构种类</h2><ol>
 <li><p>顺序存储结构<br>用一组连续存储单元依次存储数据元素，数据元素之间的逻辑关系由存储位置标示：C语言的数组</p>
 </li>
 <li><p>链式存储结构<br>用一组任意存储单元存储数据元素，数据之间的关系用指针标示：C语言的链表。</p>
@@ -235,7 +235,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">数据结构的基本组成：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%9C%AF%E8%AF%AD"><span class="toc-number"></span> <span class="toc-text">数据结构术语</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text">基本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">数据结构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number"></span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84%E7%A7%8D%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">逻辑结构种类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">存储结构</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90"><span class="toc-number">1.</span> <span class="toc-text">数据结构的基本组成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A"><span class="toc-number">2.</span> <span class="toc-text">基本名词解释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9A%E4%B9%89"><span class="toc-number">3.</span> <span class="toc-text">数据结构定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84%E7%A7%8D%E7%B1%BB"><span class="toc-number">4.</span> <span class="toc-text">逻辑结构种类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84%E7%A7%8D%E7%B1%BB"><span class="toc-number">5.</span> <span class="toc-text">存储结构种类</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
