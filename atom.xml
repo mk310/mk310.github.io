@@ -3,11 +3,11 @@
   <title>SmashDog</title>
   
   
-  <link href="https://mk310.github.io/atom.xml" rel="self"/>
+  <link href="https://smashdog1.gitee.io/smashdog/atom.xml" rel="self"/>
   
-  <link href="https://mk310.github.io/"/>
+  <link href="https://smashdog1.gitee.io/smashdog/"/>
   <updated>2021-03-11T14:55:19.891Z</updated>
-  <id>https://mk310.github.io/</id>
+  <id>https://smashdog1.gitee.io/smashdog/</id>
   
   <author>
     <name>SmashDog</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>考研英语准备</title>
-    <link href="https://mk310.github.io/2021/03/07/%E8%80%83%E7%A0%94%E8%8B%B1%E8%AF%AD%E5%87%86%E5%A4%87/"/>
-    <id>https://mk310.github.io/2021/03/07/%E8%80%83%E7%A0%94%E8%8B%B1%E8%AF%AD%E5%87%86%E5%A4%87/</id>
+    <link href="https://smashdog1.gitee.io/smashdog/2021/03/07/%E8%80%83%E7%A0%94%E8%8B%B1%E8%AF%AD%E5%87%86%E5%A4%87/"/>
+    <id>https://smashdog1.gitee.io/smashdog/2021/03/07/%E8%80%83%E7%A0%94%E8%8B%B1%E8%AF%AD%E5%87%86%E5%A4%87/</id>
     <published>2021-03-06T22:42:11.000Z</published>
     <updated>2021-03-11T14:55:19.891Z</updated>
     
@@ -35,42 +35,42 @@
     
     
     
-    <category term="考研" scheme="https://mk310.github.io/categories/%E8%80%83%E7%A0%94/"/>
+    <category term="考研" scheme="https://smashdog1.gitee.io/smashdog/categories/%E8%80%83%E7%A0%94/"/>
     
     
-    <category term="考研英语" scheme="https://mk310.github.io/tags/%E8%80%83%E7%A0%94%E8%8B%B1%E8%AF%AD/"/>
+    <category term="考研英语" scheme="https://smashdog1.gitee.io/smashdog/tags/%E8%80%83%E7%A0%94%E8%8B%B1%E8%AF%AD/"/>
     
   </entry>
   
   <entry>
     <title>数据结构1</title>
-    <link href="https://mk310.github.io/2021/02/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/"/>
-    <id>https://mk310.github.io/2021/02/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/</id>
+    <link href="https://smashdog1.gitee.io/smashdog/2021/02/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/"/>
+    <id>https://smashdog1.gitee.io/smashdog/2021/02/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/</id>
     <published>2021-02-14T10:17:33.000Z</published>
     <updated>2021-03-07T03:03:50.486Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="数据结构的基本组成"><a class="header-anchor" href="#数据结构的基本组成">¶</a>数据结构的基本组成</h2><p><img src="/2021/02/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/DataStruct.png" alt="数据结构图"></p><h2 id="基本名词解释"><a class="header-anchor" href="#基本名词解释">¶</a>基本名词解释</h2><ol><li>数据：<br>是能输入计算机并且能被计算机处理的各种符号集合：</li></ol><ul><li>能被计算机是被储存加工</li><li>信息载体</li><li>对客观事物孵化好表示</li></ul><ol start="2"><li>数据元素<br>计算机通常作为一个整体进行处理和考虑，是数据的基本单位。也称 记录，节点树形图），定点（图）。</li></ol><p>例子：</p><table><thead><tr><th style="text-align:left">姓名</th><th style="text-align:left">班级</th><th style="text-align:left">学号</th></tr></thead><tbody><tr><td style="text-align:left">张三</td><td style="text-align:left">A1</td><td style="text-align:left">11111</td></tr></tbody></table><p>其中张三的姓名，班级，学号三个数据是一个数据元素。</p><ol start="3"><li><p>数据项<br>构成数据元素的不可分割的最小元素。<br>上面例子中 姓名为一个数据项，</p></li><li><p>数据对象<br>数据相同的数据元素组成的集合 是数据的一个子集。<br>例子：丄例中的整个表表示的是很多个学生的个人信息的集合，他就是一个数据项。</p></li></ol><h2 id="数据结构定义"><a class="header-anchor" href="#数据结构定义">¶</a>数据结构定义</h2><ol><li>数据结构不是孤立的 元素之间存在某种<code>结构</code>。</li><li>数据结构的内容：<ul><li>逻辑结构</li><li>物理结构（存储结构）</li><li>运算实现</li></ul></li></ol><h2 id="逻辑结构种类"><a class="header-anchor" href="#逻辑结构种类">¶</a>逻辑结构种类</h2><ol><li>线性结构</li></ol><p>有且仅有哟个开始和终端：线性表，栈，队列，串</p><ol start="2"><li>非线性结构<br>一个节点能有多个直接前驱，后继：树形图，图</li></ol><h2 id="存储结构种类"><a class="header-anchor" href="#存储结构种类">¶</a>存储结构种类</h2><ol><li><p>顺序存储结构<br>用一组连续存储单元依次存储数据元素，数据元素之间的逻辑关系由存储位置标示：C语言的数组</p></li><li><p>链式存储结构<br>用一组任意存储单元存储数据元素，数据之间的关系用指针标示：C语言的链表。</p></li><li><p>索引结构</p></li><li><p>散列结构</p></li></ol><h2 id="数据类型和抽象数据类型"><a class="header-anchor" href="#数据类型和抽象数据类型">¶</a>数据类型和抽象数据类型</h2><h3 id="数据类型"><a class="header-anchor" href="#数据类型">¶</a>数据类型</h3><ol><li>定义：是一组性质相同的值的集合以及定义在这个集合上的一组操作的合称。</li><li>分类：<ul><li>基本数据类型： 数组 字符串</li><li>抽象数据类型：图 树</li></ul></li><li>数据类型的作用<ul><li>约束常量/变量的取值范围</li><li>约束常量/变量的操作</li></ul></li></ol><h3 id="抽象数据类型"><a class="header-anchor" href="#抽象数据类型">¶</a>抽象数据类型</h3><ol><li>定义：指一个数学模型及在此模型上的一组操作<ul><li>由用户定义，从问题抽象出的数学模型（逻辑结构）</li><li>定义在此数学模型上的抽象运算</li></ul><blockquote><p>概括他们共同的面本质属性关系，舍弃个别的，非本质方面的关系属性。</p></blockquote></li></ol><hr><p>例子：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">圆：到某个点距离相等的点的集合（舍弃其颜色，大小等次要属性）</span><br><span class="line"></span><br><span class="line">运算： 构造，求圆的面积</span><br></pre></td></tr></table></figure><ol start="2"><li>抽象数据类型的定义形式</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ADT 抽象数据类型名&#123;</span><br><span class="line">    d（数据对象）:&lt;&gt;</span><br><span class="line">    S（数据对象的关系集）:&lt;&gt;</span><br><span class="line">    p（数据对象的基本操作）:&lt;&gt;</span><br><span class="line">&#125;ADT 抽象数据名</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">p：</span><br><span class="line">1. 基本参数名（参数表）</span><br><span class="line">赋值参数，提供输入值</span><br><span class="line">2. 初始条件</span><br><span class="line">执行前应满足的条件不满足操作输出错误信息，满足输出结果</span><br><span class="line">3. 结果</span><br><span class="line">数据结构及其返回值</span><br></pre></td></tr></table></figure><p>例子：定义圆</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ADT circle&#123;</span><br><span class="line">    数据对象：D&#x3D;&#123;x,y,r|xyr均为实数&#125;</span><br><span class="line">    关系： R&#x3D;&#123;&lt;x,y,r&gt;|r为半径，&lt;x,y&gt;为圆心坐标&#125;</span><br><span class="line">    操作：</span><br><span class="line">    c (&amp;C,r,x,y)</span><br><span class="line">        操作结果：构造一个圆</span><br><span class="line">    area (C)</span><br><span class="line">        初始条件：圆已经存在</span><br><span class="line">        操作结果：计算圆的面积</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>21.2.19 17:00</p></blockquote><h2 id="算法和算法分析"><a class="header-anchor" href="#算法和算法分析">¶</a>算法和算法分析</h2><h3 id="算法"><a class="header-anchor" href="#算法">¶</a>算法</h3><ol><li><p>算法描述</p><ul><li>自然语言</li><li>流程图</li><li>伪代码</li><li>程序代码</li></ul></li><li><p>算法和程序</p><ul><li>算法是解决问题的过程和方法</li><li>程序是某种程序设计语言对算法的具体实现</li></ul></li><li><p>算法特性</p><ul><li>有穷性：执行有穷步数后结束，每一步都在有穷步数内结束</li><li>确定性：每一条指令都必须有明确的含义，无异意。</li><li>可行性</li><li>输入：零个或多个</li><li>输出</li></ul></li><li><p>算法的设计要求</p><ul><li>正确性</li><li>可读性</li><li>健壮性：对不同的输入都要有相应的反应，比如合法的输入就要有相应的输出，不合法的输入要有相应的提示信息输出，提示此输入不合法！（考虑全面）</li><li>高效性</li></ul></li></ol><h3 id="算法效率"><a class="header-anchor" href="#算法效率">¶</a>算法效率</h3><ol><li>衡量</li></ol><ul><li>时空效率：算法耗费的时间</li><li>空间效率：算法执行时所占有的空间</li></ul><ol start="2"><li>算法时间效率度量</li></ol><ul><li><p>事后统计：实现算法，测算时间空间耗费，缺点是 结果片面，单一统计，结果不能准确概括。</p></li><li><p>事前分析：估算算法运行时间</p></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">算法运行时间 &#x3D; 一个简单操作所需时间*操作次数</span><br><span class="line">&#x3D;Σ每条语句执行次数（语句频度）*该语句执行时间</span><br></pre></td></tr></table></figure><p>由于语句执行时间由机器本身决定，与算法无关，所以转化为讨论语句频度之和。<br>例子：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>,i&lt;n,i++ ) <span class="comment">//N+1 最后一次判断</span></span><br><span class="line">    <span class="keyword">for</span>(k=<span class="number">1</span>,k&lt;=n,k++)<span class="comment">//(N+1)*N</span></span><br><span class="line">    s = s+<span class="number">1</span> <span class="comment">//N^2</span></span><br></pre></td></tr></table></figure><p>$ Tn=2*n^2+2n+1 $<br>为了方便比较不同算法的时间效率，仅比较数量级</p><p>例子：Tn=10n^2 Tn <sub>2</sub>=n ，Tn时间效率低。</p><ol><li>渐近空间复杂度</li></ol><p>$S(n)=O(f(n))$<br>算法要占据的空间</p><ul><li><p>算法本身要占据的空间，输入/输出，指令，常数，变量。</p></li><li><p>算法运行时使用的辅助空间</p></li></ul><p>例子：将一位数组a中的n个数逆序放在原数组中，</p><ul><li>算法1：</li></ul><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>,i&lt;n/<span class="number">2</span>,i++)</span><br><span class="line">    t = a[i],a[i] = a[n-i<span class="number">-1</span>],a[n-i<span class="number">-1</span>] = t;</span><br><span class="line">    <span class="comment">//只用到了 t</span></span><br></pre></td></tr></table></figure><ul><li>算法2：</li></ul><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i = <span class="number">2</span>,i &lt; n, i++)</span><br><span class="line">b[i = a[n-i<span class="number">-1</span>]]</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>,i&lt;n,i++ )</span><br><span class="line">    a[i]=b[i]</span><br><span class="line">    <span class="comment">// 用到了b[i]数组</span></span><br></pre></td></tr></table></figure><p>上述两种算法中 方法2 用到的空间比方法1多 所以方法1 的渐近空间复杂度小。</p><blockquote><p>21.2.21 21:55</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h2 id="数据结构的基本组成"><a class="header-anchor" href="#数据结构的基本组成">¶</a>数据结构的基本组成</h2><p><img src="/smashdog/smashdog/2021/02/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841/DataStruct.png" alt="数据结构图"></p><h2 id="基本名词解释"><a class="header-anchor" href="#基本名词解释">¶</a>基本名词解释</h2><ol><li>数据：<br>是能输入计算机并且能被计算机处理的各种符号集合：</li></ol><ul><li>能被计算机是被储存加工</li><li>信息载体</li><li>对客观事物孵化好表示</li></ul><ol start="2"><li>数据元素<br>计算机通常作为一个整体进行处理和考虑，是数据的基本单位。也称 记录，节点树形图），定点（图）。</li></ol><p>例子：</p><table><thead><tr><th style="text-align:left">姓名</th><th style="text-align:left">班级</th><th style="text-align:left">学号</th></tr></thead><tbody><tr><td style="text-align:left">张三</td><td style="text-align:left">A1</td><td style="text-align:left">11111</td></tr></tbody></table><p>其中张三的姓名，班级，学号三个数据是一个数据元素。</p><ol start="3"><li><p>数据项<br>构成数据元素的不可分割的最小元素。<br>上面例子中 姓名为一个数据项，</p></li><li><p>数据对象<br>数据相同的数据元素组成的集合 是数据的一个子集。<br>例子：丄例中的整个表表示的是很多个学生的个人信息的集合，他就是一个数据项。</p></li></ol><h2 id="数据结构定义"><a class="header-anchor" href="#数据结构定义">¶</a>数据结构定义</h2><ol><li>数据结构不是孤立的 元素之间存在某种<code>结构</code>。</li><li>数据结构的内容：<ul><li>逻辑结构</li><li>物理结构（存储结构）</li><li>运算实现</li></ul></li></ol><h2 id="逻辑结构种类"><a class="header-anchor" href="#逻辑结构种类">¶</a>逻辑结构种类</h2><ol><li>线性结构</li></ol><p>有且仅有哟个开始和终端：线性表，栈，队列，串</p><ol start="2"><li>非线性结构<br>一个节点能有多个直接前驱，后继：树形图，图</li></ol><h2 id="存储结构种类"><a class="header-anchor" href="#存储结构种类">¶</a>存储结构种类</h2><ol><li><p>顺序存储结构<br>用一组连续存储单元依次存储数据元素，数据元素之间的逻辑关系由存储位置标示：C语言的数组</p></li><li><p>链式存储结构<br>用一组任意存储单元存储数据元素，数据之间的关系用指针标示：C语言的链表。</p></li><li><p>索引结构</p></li><li><p>散列结构</p></li></ol><h2 id="数据类型和抽象数据类型"><a class="header-anchor" href="#数据类型和抽象数据类型">¶</a>数据类型和抽象数据类型</h2><h3 id="数据类型"><a class="header-anchor" href="#数据类型">¶</a>数据类型</h3><ol><li>定义：是一组性质相同的值的集合以及定义在这个集合上的一组操作的合称。</li><li>分类：<ul><li>基本数据类型： 数组 字符串</li><li>抽象数据类型：图 树</li></ul></li><li>数据类型的作用<ul><li>约束常量/变量的取值范围</li><li>约束常量/变量的操作</li></ul></li></ol><h3 id="抽象数据类型"><a class="header-anchor" href="#抽象数据类型">¶</a>抽象数据类型</h3><ol><li>定义：指一个数学模型及在此模型上的一组操作<ul><li>由用户定义，从问题抽象出的数学模型（逻辑结构）</li><li>定义在此数学模型上的抽象运算</li></ul><blockquote><p>概括他们共同的面本质属性关系，舍弃个别的，非本质方面的关系属性。</p></blockquote></li></ol><hr><p>例子：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">圆：到某个点距离相等的点的集合（舍弃其颜色，大小等次要属性）</span><br><span class="line"></span><br><span class="line">运算： 构造，求圆的面积</span><br></pre></td></tr></table></figure><ol start="2"><li>抽象数据类型的定义形式</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ADT 抽象数据类型名&#123;</span><br><span class="line">    d（数据对象）:&lt;&gt;</span><br><span class="line">    S（数据对象的关系集）:&lt;&gt;</span><br><span class="line">    p（数据对象的基本操作）:&lt;&gt;</span><br><span class="line">&#125;ADT 抽象数据名</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">p：</span><br><span class="line">1. 基本参数名（参数表）</span><br><span class="line">赋值参数，提供输入值</span><br><span class="line">2. 初始条件</span><br><span class="line">执行前应满足的条件不满足操作输出错误信息，满足输出结果</span><br><span class="line">3. 结果</span><br><span class="line">数据结构及其返回值</span><br></pre></td></tr></table></figure><p>例子：定义圆</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ADT circle&#123;</span><br><span class="line">    数据对象：D&#x3D;&#123;x,y,r|xyr均为实数&#125;</span><br><span class="line">    关系： R&#x3D;&#123;&lt;x,y,r&gt;|r为半径，&lt;x,y&gt;为圆心坐标&#125;</span><br><span class="line">    操作：</span><br><span class="line">    c (&amp;C,r,x,y)</span><br><span class="line">        操作结果：构造一个圆</span><br><span class="line">    area (C)</span><br><span class="line">        初始条件：圆已经存在</span><br><span class="line">        操作结果：计算圆的面积</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>21.2.19 17:00</p></blockquote><h2 id="算法和算法分析"><a class="header-anchor" href="#算法和算法分析">¶</a>算法和算法分析</h2><h3 id="算法"><a class="header-anchor" href="#算法">¶</a>算法</h3><ol><li><p>算法描述</p><ul><li>自然语言</li><li>流程图</li><li>伪代码</li><li>程序代码</li></ul></li><li><p>算法和程序</p><ul><li>算法是解决问题的过程和方法</li><li>程序是某种程序设计语言对算法的具体实现</li></ul></li><li><p>算法特性</p><ul><li>有穷性：执行有穷步数后结束，每一步都在有穷步数内结束</li><li>确定性：每一条指令都必须有明确的含义，无异意。</li><li>可行性</li><li>输入：零个或多个</li><li>输出</li></ul></li><li><p>算法的设计要求</p><ul><li>正确性</li><li>可读性</li><li>健壮性：对不同的输入都要有相应的反应，比如合法的输入就要有相应的输出，不合法的输入要有相应的提示信息输出，提示此输入不合法！（考虑全面）</li><li>高效性</li></ul></li></ol><h3 id="算法效率"><a class="header-anchor" href="#算法效率">¶</a>算法效率</h3><ol><li>衡量</li></ol><ul><li>时空效率：算法耗费的时间</li><li>空间效率：算法执行时所占有的空间</li></ul><ol start="2"><li>算法时间效率度量</li></ol><ul><li><p>事后统计：实现算法，测算时间空间耗费，缺点是 结果片面，单一统计，结果不能准确概括。</p></li><li><p>事前分析：估算算法运行时间</p></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">算法运行时间 &#x3D; 一个简单操作所需时间*操作次数</span><br><span class="line">&#x3D;Σ每条语句执行次数（语句频度）*该语句执行时间</span><br></pre></td></tr></table></figure><p>由于语句执行时间由机器本身决定，与算法无关，所以转化为讨论语句频度之和。<br>例子：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>,i&lt;n,i++ ) <span class="comment">//N+1 最后一次判断</span></span><br><span class="line">    <span class="keyword">for</span>(k=<span class="number">1</span>,k&lt;=n,k++)<span class="comment">//(N+1)*N</span></span><br><span class="line">    s = s+<span class="number">1</span> <span class="comment">//N^2</span></span><br></pre></td></tr></table></figure><p>$ Tn=2*n^2+2n+1 $<br>为了方便比较不同算法的时间效率，仅比较数量级</p><p>例子：Tn=10n^2 Tn <sub>2</sub>=n ，Tn时间效率低。</p><ol><li>渐近空间复杂度</li></ol><p>$S(n)=O(f(n))$<br>算法要占据的空间</p><ul><li><p>算法本身要占据的空间，输入/输出，指令，常数，变量。</p></li><li><p>算法运行时使用的辅助空间</p></li></ul><p>例子：将一位数组a中的n个数逆序放在原数组中，</p><ul><li>算法1：</li></ul><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>,i&lt;n/<span class="number">2</span>,i++)</span><br><span class="line">    t = a[i],a[i] = a[n-i<span class="number">-1</span>],a[n-i<span class="number">-1</span>] = t;</span><br><span class="line">    <span class="comment">//只用到了 t</span></span><br></pre></td></tr></table></figure><ul><li>算法2：</li></ul><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i = <span class="number">2</span>,i &lt; n, i++)</span><br><span class="line">b[i = a[n-i<span class="number">-1</span>]]</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>,i&lt;n,i++ )</span><br><span class="line">    a[i]=b[i]</span><br><span class="line">    <span class="comment">// 用到了b[i]数组</span></span><br></pre></td></tr></table></figure><p>上述两种算法中 方法2 用到的空间比方法1多 所以方法1 的渐近空间复杂度小。</p><blockquote><p>21.2.21 21:55</p></blockquote>]]></content>
     
     
       
       
     <summary type="html">&lt;h2 id=&quot;数据结构的基本组成&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#数据结构的基本组成&quot;&gt;¶&lt;/a&gt;数据结构的基本组成&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/2021/02/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E</summary>
+&lt;p&gt;&lt;img src=&quot;/smashdog/smashdog/2021/02/14/%E6%95%B0%E6%8D</summary>
       
     
     
     
-    <category term="数据结构" scheme="https://mk310.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="数据结构" scheme="https://smashdog1.gitee.io/smashdog/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     
-    <category term="数据结构基本概念" scheme="https://mk310.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
+    <category term="数据结构基本概念" scheme="https://smashdog1.gitee.io/smashdog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
     
   </entry>
   
   <entry>
     <title>hexo使用问题</title>
-    <link href="https://mk310.github.io/2021/02/11/hexo%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/"/>
-    <id>https://mk310.github.io/2021/02/11/hexo%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/</id>
+    <link href="https://smashdog1.gitee.io/smashdog/2021/02/11/hexo%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/"/>
+    <id>https://smashdog1.gitee.io/smashdog/2021/02/11/hexo%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/</id>
     <published>2021-02-11T13:00:28.000Z</published>
     <updated>2021-02-21T14:17:36.982Z</updated>
     
@@ -86,23 +86,23 @@
     
     
     
-    <category term="Hexo" scheme="https://mk310.github.io/categories/Hexo/"/>
+    <category term="Hexo" scheme="https://smashdog1.gitee.io/smashdog/categories/Hexo/"/>
     
     
-    <category term="hexo使用本地图片" scheme="https://mk310.github.io/tags/hexo%E4%BD%BF%E7%94%A8%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/"/>
+    <category term="hexo使用本地图片" scheme="https://smashdog1.gitee.io/smashdog/tags/hexo%E4%BD%BF%E7%94%A8%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/"/>
     
-    <category term="hexo嵌入视频" scheme="https://mk310.github.io/tags/hexo%E5%B5%8C%E5%85%A5%E8%A7%86%E9%A2%91/"/>
+    <category term="hexo嵌入视频" scheme="https://smashdog1.gitee.io/smashdog/tags/hexo%E5%B5%8C%E5%85%A5%E8%A7%86%E9%A2%91/"/>
     
   </entry>
   
   <entry>
     <title>hackintosh</title>
-    <link href="https://mk310.github.io/2021/02/11/hackintosh/"/>
-    <id>https://mk310.github.io/2021/02/11/hackintosh/</id>
+    <link href="https://smashdog1.gitee.io/smashdog/2021/02/11/hackintosh/"/>
+    <id>https://smashdog1.gitee.io/smashdog/2021/02/11/hackintosh/</id>
     <published>2021-02-11T09:39:34.000Z</published>
     <updated>2021-02-11T13:19:58.457Z</updated>
     
-    <content type="html"><![CDATA[<h1>安装</h1><h1>配置</h1><h1>软件</h1><h1>使用技巧</h1><h1>问题解决</h1><ol><li>App Store不能正常登陆和下载安装软件</li></ol><p><img src="/2021/02/11/hackintosh/AppStoreErr.png" alt="app store err"></p><p>解决方法：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">defaults delete com.apple.appstore.commerce Storefront</span><br><span class="line">defaults write com.apple.appstore.commerce Storefront -string &quot;$(defaults read com.apple.appstore.commerce Storefront | sed s&#x2F;,8&#x2F;,13&#x2F;)&quot;</span><br></pre></td></tr></table></figure><p>在终端中输入上述代码后冷关机后重启。</p>]]></content>
+    <content type="html"><![CDATA[<h1>安装</h1><h1>配置</h1><h1>软件</h1><h1>使用技巧</h1><h1>问题解决</h1><ol><li>App Store不能正常登陆和下载安装软件</li></ol><p><img src="/smashdog/smashdog/2021/02/11/hackintosh/AppStoreErr.png" alt="app store err"></p><p>解决方法：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">defaults delete com.apple.appstore.commerce Storefront</span><br><span class="line">defaults write com.apple.appstore.commerce Storefront -string &quot;$(defaults read com.apple.appstore.commerce Storefront | sed s&#x2F;,8&#x2F;,13&#x2F;)&quot;</span><br></pre></td></tr></table></figure><p>在终端中输入上述代码后冷关机后重启。</p>]]></content>
     
     
       
@@ -115,22 +115,22 @@
 &lt;ol&gt;
 &lt;li&gt;App Store不能正常登陆和下载安装软件&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;/2021/02/11/hackinto</summary>
+&lt;p&gt;&lt;img src=&quot;/smashdog/smashdog/2</summary>
       
     
     
     
-    <category term="Hackintosh" scheme="https://mk310.github.io/categories/Hackintosh/"/>
+    <category term="Hackintosh" scheme="https://smashdog1.gitee.io/smashdog/categories/Hackintosh/"/>
     
     
-    <category term="App Store问题" scheme="https://mk310.github.io/tags/App-Store%E9%97%AE%E9%A2%98/"/>
+    <category term="App Store问题" scheme="https://smashdog1.gitee.io/smashdog/tags/App-Store%E9%97%AE%E9%A2%98/"/>
     
   </entry>
   
   <entry>
     <title>hexo博客搭建</title>
-    <link href="https://mk310.github.io/2021/02/11/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    <id>https://mk310.github.io/2021/02/11/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</id>
+    <link href="https://smashdog1.gitee.io/smashdog/2021/02/11/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <id>https://smashdog1.gitee.io/smashdog/2021/02/11/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</id>
     <published>2021-02-11T01:17:06.000Z</published>
     <updated>2021-02-11T15:41:07.752Z</updated>
     
@@ -145,17 +145,17 @@
     
     
     
-    <category term="Hexo" scheme="https://mk310.github.io/categories/Hexo/"/>
+    <category term="Hexo" scheme="https://smashdog1.gitee.io/smashdog/categories/Hexo/"/>
     
     
-    <category term="hexo 搭建博客" scheme="https://mk310.github.io/tags/hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <category term="hexo 搭建博客" scheme="https://smashdog1.gitee.io/smashdog/tags/hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title>Makedown语法</title>
-    <link href="https://mk310.github.io/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/"/>
-    <id>https://mk310.github.io/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/</id>
+    <link href="https://smashdog1.gitee.io/smashdog/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/"/>
+    <id>https://smashdog1.gitee.io/smashdog/2021/02/09/Makedown%E8%AF%AD%E6%B3%95/</id>
     <published>2021-02-09T02:54:56.000Z</published>
     <updated>2021-02-11T07:17:00.554Z</updated>
     
@@ -171,17 +171,17 @@
     
     
     
-    <category term="Makdown" scheme="https://mk310.github.io/categories/Makdown/"/>
+    <category term="Makdown" scheme="https://smashdog1.gitee.io/smashdog/categories/Makdown/"/>
     
     
-    <category term="markdowm" scheme="https://mk310.github.io/tags/markdowm/"/>
+    <category term="markdowm" scheme="https://smashdog1.gitee.io/smashdog/tags/markdowm/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://mk310.github.io/2021/02/08/hello-world/"/>
-    <id>https://mk310.github.io/2021/02/08/hello-world/</id>
+    <link href="https://smashdog1.gitee.io/smashdog/2021/02/08/hello-world/"/>
+    <id>https://smashdog1.gitee.io/smashdog/2021/02/08/hello-world/</id>
     <published>2021-02-08T07:52:50.879Z</published>
     <updated>2021-02-08T07:52:50.879Z</updated>
     
