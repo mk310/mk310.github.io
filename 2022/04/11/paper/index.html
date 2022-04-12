@@ -1,169 +1,248 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang="zh-CN">
 <head>
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
     <meta name="description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="论文">
 <meta property="og:url" content="http://example.com/2022/04/11/paper/index.html">
-<meta property="og:site_name" content="myBlog">
+<meta property="og:site_name" content="mk310 的博客">
 <meta property="og:description" content="Here&#39;s something encrypted, password is required to continue reading.">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-11T10:23:49.000Z">
-<meta property="article:modified_time" content="2022-04-11T13:31:27.149Z">
+<meta property="article:modified_time" content="2022-04-12T07:30:27.082Z">
 <meta property="article:author" content="mk310">
 <meta property="article:tag" content="毕业论文方法">
 <meta name="twitter:card" content="summary">
-    
-    
-      
-        
-          <link rel="shortcut icon" href="/images/favicon.ico">
-        
-      
-      
-        
-          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-        
-      
-      
-        
-          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-        
-      
-    
-    <!-- title -->
-    <title>论文</title>
-    <!-- styles -->
-    
-<link rel="stylesheet" href="/css/style.css">
 
-    <!-- persian styles -->
-    
-    <!-- rss -->
-    
-    
-	<!-- mathjax -->
-	
-		<script type="text/x-mathjax-config">
-		  MathJax.Hub.Config({
-			tex2jax: {
-			  skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-			  inlineMath: [['$','$']]
-			}
-		  });
-		</script>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
-	
-<meta name="generator" content="Hexo 5.4.2"></head>
 
-<body class="max-width mx-auto px3 ltr">
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-        <!--
-       --><li><a href="/">Home</a></li><!--
-     --><!--
-       --><li><a href="/about/">About</a></li><!--
-     --><!--
-       --><li><a href="/archives/">Writing</a></li><!--
-     --><!--
-       --><li><a target="_blank" rel="noopener" href="https://gitee.com/SmashDog1/SmashDog1">Projects</a></li><!--
-     -->
-      </ul>
-    </span>
-    <br/>
-    <span id="actions">
-      <ul>
-        
-        
-        <li><a class="icon" aria-label="Next post" href="/2022/04/11/hexo-configuration-and-push/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
-        
-        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" aria-label="Share post" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none;">Previous post</span>
-      <span id="i-next" class="info" style="display:none;">Next post</span>
-      <span id="i-top" class="info" style="display:none;">Back to top</span>
-      <span id="i-share" class="info" style="display:none;">Share post</span>
-    </span>
-    <br/>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2022/04/11/paper/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2022/04/11/paper/&text=论文"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2022/04/11/paper/&title=论文"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2022/04/11/paper/&is_video=false&description=论文"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=论文&body=Check out this article: http://example.com/2022/04/11/paper/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2022/04/11/paper/&title=论文"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2022/04/11/paper/&title=论文"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2022/04/11/paper/&title=论文"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2022/04/11/paper/&title=论文"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2022/04/11/paper/&name=论文&description=Here&#39;s something encrypted, password is required to continue reading."><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2022/04/11/paper/&t=论文"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
-</ul>
-
-    </div>
-    <div id="toc">
-      
-    </div>
-  </span>
-</div>
-
-    
-    <div class="content index py4">
-        
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    
-    <h1 class="posttitle" itemprop="name headline">
-        论文
-    </h1>
+<link rel="canonical" href="http://example.com/2022/04/11/paper/">
 
 
 
-    <div class="meta">
-      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">mk310</span>
-      </span>
-      
-    <div class="postdate">
-      
-        <time datetime="2022-04-11T10:23:49.000Z" itemprop="datePublished">2022-04-11</time>
-        
-      
-    </div>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/04/11/paper/","path":"2022/04/11/paper/","title":"论文"}</script>
 
-
-      
-    <div class="article-category">
-        <i class="fas fa-archive"></i>
-        <a class="category-link" href="/categories/%E8%AE%BA%E6%96%87/">论文</a>
-    </div>
-
-
-      
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link-link" href="/tags/%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87%E6%96%B9%E6%B3%95/" rel="tag">毕业论文方法</a>
-    </div>
-
-
-    </div>
-  </header>
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>论文 | mk310 的博客</title>
   
 
-  <div class="content" itemprop="articleBody">
-    <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">mk310 的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">5</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">5</span></a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="mk310"
+      src="/images/myavatar.png">
+  <p class="site-author-name" itemprop="name">mk310</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/11/paper/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/myavatar.png">
+      <meta itemprop="name" content="mk310">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mk310 的博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="论文 | mk310 的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          论文
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-11 18:23:49" itemprop="dateCreated datePublished" datetime="2022-04-11T18:23:49+08:00">2022-04-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-12 15:30:27" itemprop="dateModified" datetime="2022-04-12T15:30:27+08:00">2022-04-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%BA%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">论文</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
   <script id="hbeData" type="hbeData" data-hmacdigest="af73789951f45762fbe04464765b9f1eceaf7b1391ed18565aec8b3d3310d671">1d621d107eecb08cb114bf54a2314bea52433928ce111f3ec8ffcb70bb2f9be47fdef2763ac45f5bc2514efb252d0aff548535e85735c0eed15303d5c8d2bf669c9bbb00671c6b5a1a456dca69d6e3be20fe292d8a406227f8c5abfde714a1a83ff3f29bf235389cf52d46e842c6bdd5cdbbd62aecaa4224ecbd4d88a2a6b48941c5fd72d1a58f167ab8a98aa8ac64cb881c98f10ca2fa6b3fda9ff20cabbd955468a2a6009f05bfacaa57061145137df7856711ad456503e560e9476b9cd0c50d7a8e23aed1e7289ed19937912f6d34cb85b876be94753d80833911c376634be7dea25b79d82c41bf48292d698025d94404525c075cd7d550bbdcde6a0504dc4f6a9e6729ac61340ef299d703e6da8cf3880197b6b12b4e4ad4de612b25d6ae80a6f5a71203ef56532e34d379a245e1b19cc491e94d2d0f0b20411c3cf034275e03cce31ee82dc4cd96d9a5104e8a06e914a5b8e76404669490e8d2a6b316f89de54039e6c93268ff849dae2f92845dda24be555cdd4e8164dc68669e101892140df4c6c1c621b41a304398091757728f7c3a35f2ebc1aa7f4011efbfef830d6e466cea660e5c4f0acb68fc39b3d41c495f5e3c1eb027dbf1e9231f04aee81a1fab52b28a846f17af928863724c6daa0665f710b7cc19e35d1aa8cb3df928628d5b1fcad9f2187df458773341192ccad1d9a6c9188e4e1ea2d1245db6ba334e5621c8bfa21668248dc36fc0f6f79472b88de8a4be33b528be3499a434c04394ce702921a2fb8abb1c4b9d8edae32a88af2c70de210c1ef159e2c9f4e3b609a1da313f6b35f3434974ebc8962f637304edaf5ce939df284227b3a75f0b3cda66335cea7072d2edb4d5dd75352a4cc28d66c300b86151025e7c5a6cfc6bdf034f2fe47fd8e5615ef0ab7953def92660b01178155d187b8de53a9e220aaca1014c07949d85bb52c7b07833d42db856bd73ff5b3bed3b42356b139dc3872fd0f9f3f699795560086bc1065cce6268132981e76cfaf625398081bdf9de1aa4585865eb65de0cc10b14950980a81c172ef1fe5cad8a209cc41d828fec4adb5df09327b38bd910a358e52fbd44281105f63a943392997e61d21279553f2694c95e396d8620c275b929c624273223af9710500fdfa06bd325f4df6ee4d10f97545b1710f201b86e45bbeec3b26719ac4e5728c874260b39e4836588f59a97dcbe602b52b92c8326c04e3727a196bd3abe056c4b29b66ccb4085598c39d518667460a86ca6e1c98070a1817d845f27aa77364a5d1d61b5a23257ca65a1e7e659f484113f359abdb4cc03b600bd7d6b46844749efe60830f38fb4eea6fb226982bb25a0b621c39b5f147d207644ee1d2800168f97cbd7899daaaa9d0d5d38b9b1f166c0fe8f0e6eeb93ab9c6d67ce45d1306585036543f8ed7191a87c433f1fc880fe51a01d7c80e8abe2b8c59171f6a42c28cf6cbadb5b6ec5a5dd58d435fabf1beaf9b2348b27dddd40e267fcd780f0e7ed1e05ee842d5944d4d7ad60f10ab1764f96b43c871d9eb1468d373886a277b76496874f3591aec79d3598494de7f35ea5aa0fb26b9631bc1e56aa843c24f89bdb4133561408e5812332ce02740305e90980039236d7fbf0bf275d9a631b7c72bdd24613dc80b29cf1d2d5434f3c0abc6e79c470434398f78e4d1ae4203b494060f12f55a777f3de06d41a2bdddbeaa4754962f2786de9c7a41c0c8c859ff020e9d7581e531eb7e5ff2ab5f9c2703187e09a8fd2ffb78b21e05ca552199555249c5f3fa3f2645cf1370aadcd9cec76990774434053fbfe5b0241c843c72376ac2415edcc92d1b80a6766ce7b63b10421ff63826591f62f2eeb1374d47c97df413cbed7eb5aca349a08c2bdb5d0d6d24c1a793c547bb6e9ab24a98476c2a24991fee01a69cadfd0633a63f67640f6cf55fd1c1ba10f4601508b1bd20001d3ecf6bc4ec9061ea3d16d096db31ddd0374cd7913140367c0e5117cf3f79b4f1098e2e022957d21f6850050c901d90c31d994fa3f73d2ae03636919d206e59473f0cac2e281168781cb5f71c48f7947dc5b5674788d98935bb36744b6683266cd2e27e5774104b994fa5bb59c40736a09ce164d457848e7b66d765f36ce8fb1680ac1dadb3e9f82239de903c49fad7fc8c4d1f8b8fbbf6f6a31b62af21e4ed831fcdc8c1342751a805c85ad4b9429ba0d34c3080e1ec17b5095172ad2bb0623d1dd001fd962b5ba6f2de75d367085d25c391e9feca6f461b34561ee0dea929c58ef03b7b09df89a04cf5da5196f8538c86369b5029937cdd32ac7f08b1f67fd4ce6dda0a9b45cf6ecc543380dac000fea317894e4157895a3dee00b1d2f26f6ebf1ab7eb3df26b79255802e8e1e6532b7765a857cdb92720178dce726d3f9b014e14c6733ff8387b7a86fa7cd6e8d29cc2bd828efa8eab2eb02728e8f539f77f9121d92af92601e1a495b749077a3fea4c9bd1b47cea5350ff70cd73b34703ecf4c9f64675a21073434a16de6fa30d906c62a1ff26191a4bd14b752a4785f3b65b3cb3b007d4257bcf7a8f274f73d26c8f766162329820e30d99f59c39317b6e9e2fe4f8bba4bfe7ebf550ec2f9363001250e2d1bbebc3e97ad609d60c2293b519e75b8c8efcdf1d190778733d04884148da5880fcd50160f4ca47be8f8af7acc5c906f339e85a26d939666574ab7b62389fa4eecc5801c4816c09d4f1272b97adf30faf813cf96207824e1410511bec12529b4ab2375ab542497bb2182f9f38367aa7b1ca7190603eddb8344a8fc7db3a5db6d8655615a4b3982b557565f953ba54810dc9c723b225c0801beb281c84a9dc8f309403d43e503f44bada17a919d18ecbde29bc0f089ffbf1d3b2e8b0864bf7144d588ec22b417c738dfb225f09b660699d48211c88e89d94aa613045c57ba7aed5698705e5cfc4aa68872afbc2a5e863c0343004ec74cf4a30b46759fc8c0655443d6ba56c36eda6d7edcd96211087acdea1a1bdf6759969d2afb964076132d9bd64e85dcce2d6b20a301f7a034df6fc17d6c3186029e06ae5d2af0cd33414002bd261ba6fed77f943ac8cd7b1b58fbd4ec983d5146e2d777f76cbbfbdbb20550290f127fc0b1894de20a2968dc56826b38bd8b490798d4af7197ff101797b3502902783c0b2a3600aba824987c1d94c6d5b5e04f52e40220fae1491ee04d1a8bba84da2d600e85dacaa2d3139112cbd6da45d04fbe68cfe6817e7104725edfe9d062f0dc461b65019d8cad8bae032fb18d39eeca9603b4553eb2116a04b51192a463988092126232da444f2a961613e5299670168c96d91c5cd1310d49752a070150a3ed863820d3cfff208cb1cbfec0bcb7e9ee47b81658105ec5c343b946e16bdc1679aa022f75e621639a16a209cbd9275488790138ffb5adfd26cb11d1b8970698a6a87ecf562ba9955ec3ef10a7f10863136a0cc5ff61fa664a027e6bab3e418d3175e064a3029f568d3abf376ef338620f5ee5f14cd5adb860d3e266f40004de38d64bede73620bef6f30f2fb43c933eb5529e3c08a16e745141f8e67c8e08bfeb05d883411778965d2127e3f5abea0a705756f1595b3dd148df2ab00551e15a1070f8d3d170652a4ac09b4bbfaaaa7e06f81775a22f6774ab30091479695c7fba4b5a4ab6f7cff964ec65467222ab2b3d132fec696a3f73139d3481d37676e30062ab0eef34ca11274302a4b4c1ec6f963f7885fe2bf33b73d0500fa4fe6debdd9a41bb9372fa489236c5586f2d754aeb6fdf901d294294fcb1d564b9b7c8a75791507ad1dab0d68250f9427aa3466c3549b26635769846bb327e9dbe7ae4954277a69d97c371881be0524f492de5f2dad55c9bee8c8b9ebe617ebc595b5610d4c6332ba06d79386274fae84c20da5668a0bac660a4b2fe18d2cb594af557f9cd69de8fdd71d252035eb81e42ec80be40671d1a370ad4b0bd4ebbf8408395d3b89b350bfdf5d52c13dcd55144c643d85de529a3162366b396a0ecbd25f3b9170ec855b009ef8f548a995da275ad75abd36fe48d60d5bfb960cd6ff0a6dee687b07d5907c65416baebf8ebc1c7d85799f7b95007fbe886791a2d4b5821b66a46936d2cd6cb1dced4afc8100cd95ed8f58b4842b6da19c172eac630de56332a27f39dbe30ee3e048ddcd3c70a0843921dc81a3ecb7fbe73080e20417320a17ccbea184094a06a7f5cd868d2f41e8118ae5d1edd0816f25e55f5af17d1b34ce2288393613ccb4fa1d1ecde1cf627edfa5969ed1e380748f8b331c29420e8a72c6226f6a3f5374ef09a408eef35f84219ff8c2f67b1aea99b3f39ffc1c4297131f9821142a24809ca9df7e4d48b1ae4d689abd4b31b6107c048e78f4652af4c2216c52c3e3119a80ead788184d172e692d28c7756c2ad9d0b72a55f969f0f29bddeca2503b172bd91ad65a981441fc18a23225cccc661285f08e5054eee10fe96362bd9a6c2d89bbe5eddea87a82ef9a96ee293e3879877c437a36caf5d2094497fa5b193d14c6e2d1d97781e8a5bb90bc4a763e7265908558f1804d800ee324d29494a258be3b29f71c442e557f282e5b282bd318dd025f67e3bb63fbf76f47a9d464e1cac3f3c9f28b401de8aff44ade2730ba98d5fda04d7ffb9b56368d77bae50d2cf74a6a7ccfac4736018c5f4ca005286eeacfc8d292077f383a320db9e8cbb8fbfcce81f4b54ad5c1825f18b84d55b06b4c5eb4c71d753317850e3a0c0dc1af191ef034dc76f6cac9bc1ab9e7a01ac2f7e33c0841208c632e5b00b651d3c28d6b74f3b29399f85bc768475112c6dcd4855b5755b221cbb2fb703d0af322eea709012b78454e9219a449aef4d5e8d7b52de29e6d8e108472da251ec285f228419d0c2519d43beff1b61df512b46aa70e9b45a9382395ee3e9a1ef8fffb64f333c309a2a9c99823daa15f964ed7b91bac1eca07cd83ced1011b79fe52013d967154cdf4ccbd5c80cd04169f2629402af01bc96abe962b00c8fabac4ea508a9c9d6a38d3a5c7bbb4493dea264de57ffa3cee6b15a120b3573eb0001232b0214789026a616ba1d1f766dfc8bbdd79f9755271ee1fcfec72cf77838381bb89c5945e69ffa6ed48f16a1e9f86a49c6e6765856b684c6939a5cba05f5f8fdffdfb9b8c47fe1ccde3c7c9cf54d78f40976620dc949f8e5073fe741f533e4b0988d1a677263c4fd4709f75793ac38426ecd90f8e2a821cf8a809ed9cae125e3b389fe0609c413a838626c1431b4a291a3f1021af3faf11ee85be6672a8b67b59d73bb2b6b0d688912c5fa4867bd949002eea5db7dd05ea57f61c59148ba486cc79b919fafce8ba5d74f2f7640c0a8742f6a1d95ab0e22a04c8ec8efc18539a3dbd07952a86fc61705f92e2fec4d090fff3cb4ef621a22a08ff1725b3cb765b73914c5df1b753705f1aa80649ebfd0390597e0f86e51a37d730f06ca5f6c815539fa89f0da4d94c3da99e9535f44d5fdbf611466bea9a7d9c850c8436726649c3e9115d9dcb763fff5a7bd03d857124a86fbd1eff1bb6123454148f76a6b5fe961de3d7f9231f5a07008572423ce0c79d9b8f6149fbb2e11d4a0d7773e39b20e2941d403839871686a45aedb963e04d6fab7fe0835ef9a325f72dcbc1f473baa5563179853caa936d2fcf734ff1cfd1e0a78d121c523687e4c519ad164748ec037bd6a30ca4df6f97a5645cc7a2f470b8781e75bb1edaad792f5e2b865206844bbefe528d6c6a153aec31324f21cd31fa4c8661df1fad948170e1aa4738c14dcf7a0f4aa467c4e1d2c50ac8b3de8ba4c4fc8fbe1d11c42650171812c0a77a576caa39f842b5eb991304b3254f8b631e40e4b7e825d7455a3b1efd5280a515c8b44769f84ca0177d2aba5a3e6fb203e17b9e4c8c994ef0f13fdb5bc5af6908dcc3c2e0cb38f0a5ca55d83931f27fbb1f89a642be56d03d52b9431a6175a1ad2bce2d8cb351df98fb9b43a0f9d6a3f112cfeeabad4449f22e8c445946b30f42ff1257980dc430f047b6e5e79a5b69d5d3daf538866602862eeca5dd58bba4f672f3ad0c7de064c4fabd7d6974beba3f79715349ff758dd4c0da870ab9636905ee458ad23728d28fd1e84363b522adbf7464da25678ccb4caa721a2545439132cd9d910a40c331095bc37ecfcb8f0f9ae135a45c8813b43145df18cde0f97bd6f0ff9c9b744f347f2ada7c573486e8788fc94851f8ee33c0c382d2ccc518ed9209827feadb372ba23e04ff8fb4cfc8dc5ae15638e367975a7084b77b98a30e4ac3126c12b4c967cebd07a8b9626edf3d83047bcb629fcf18e59699eb45e8b7db1c30115454625ee90afeb93db0b53fef98fbc3e25ef3a8b42a99228df9b40c2a682f1aba5438f00d424c85d9c994d5edcf5d84856fbc8a6caccd66f8b62ae6ae81432bb7a97e987980ec1a626eea72b61545cbfa6d6b4242ce04df7dd03f6da434f95be64b56eed51f42050a5513935d9755c6b15ed347b54baaebbaf332906a60904896da748b537aad0170b5f417614b617953464d08cb98a0aa655f22db6fa9fd0b977efb49b1fbac189208e6a58145be1592441e790cee1c5803613371c997aa7034cb1a4293fd418738383f95893fc256f2e29a036be1ae7d0c8c24020a1dddeb0f6b6028491f8eead74163c18b76d3a42d0fd7ce6660ad5b172a370ea7a6638a10af5fde6af5b06f8bc6085fac47e6d91c19e2b781d3f6151280d5e2f8d7952dd6075d3e3b3d3c245d20fd783b56ef1b66a05f9f17808555a7c83c0d510ea5d3651d4b3610bf3ba53d6de4a5b4e146a8dfc67b4e697e9eab601dcd85ca8ed86621bbe32580a565d234abdf97e9d7d16d15802d8296b95caf5113f7b25fc0896791e9f2180818b0d35d073f0b854cd988fc27daa6347baed3207657de7e1a19c5899ba783ce15cf4b73cb7da2b604f7cdd90459774cf7d2766c87d2e19dbd047b4f3b6dceb6da31b0d6fdd130765bd1fc2c34dcc0a2add37c6d9a9e28189de8c5b1a7882c568c0f0eb404d079c7b7ae7aa30222e7286e1ac0bce2d7e9ff80fb57967305eac5a52d937c4f4406a03277224ebf3adab217b68ec8169c2a33a9a30a5e2e02355d31240872cc06eb6ee0655c759314326ed5426547acc13b4efd2a9021aa4d6b0c73cfd64d8feb6132502a77cfc852c8dec8779bda8962ba6c82e18cc90d14ddaf089615bf166d5d5a2c551133f1ad8d79fc3139881f01a9f3fb0f0e75d41fa7cb812f8d5c23ec94d9b1b6d57bfd134224f5e02fcbb80a4938cb9d39f0989250afa5cbad1a71d25b2e20069defad4b5e2a61b7f1d047a5981960c56db8add79c42577790f387cff2bea32d1b6ad3e1291d63ec5ee11007d5184cec15b3a1f1fd99ed2ec2461bca937823ebc5e1ad7b0e26a34a7ae3bebaf1af73519aa09b7c5fa6e746b6057b84c179f4399ef757d393f157e0638751b43a25084899bf8e7eb127f0359f87077b1b6231aaa622ea833af0f6906308d71ddcad46cc0017fdda9443cd173fe0ff22444857f8cf45cfe2b7f27c4b8b97dd32dfbec79926fc3e377f6cff47ec2154a9db5fd63a2a16315d04b5445f437091028ed3a1701271560cff106fd8cfc650fc033bfe39df2191df030a3922f1dc87823bc3752a3b657c1af535bd93ee64e63df7a3a34a28a83c92bf1a5812adc1a3dffb546ec6a65631bb20a1938dacc6acb91ae661ad0883b508e12982b04c1004b2a3bff77c4c996c19d2a9844f06a4118688acb86655212e4fe724bfadc0f56b627525a8d1cec78f3f30232bb9531b7a0f235342a8e1153b8ab7d8bd68a3d72d908e32f04b0a7919edacbda35cfea5562997688a9c11ddeb729ca925a7453cdea8d58d597deb7bf1b60d1b2374f926ac41c4a79a5e632</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
@@ -175,142 +254,95 @@
   </div>
 </div>
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
-  </div>
-</article>
-
-
-
-        
-          <div id="footer-post-container">
-  <div id="footer-post">
-
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="/archives/">Writing</a></li>
-         
-          <li><a target="_blank" rel="noopener" href="https://gitee.com/SmashDog1/SmashDog1">Projects</a></li>
-        
-      </ul>
     </div>
 
-    <div id="toc-footer" style="display: none">
-      
-    </div>
+    
+    
+    
 
-    <div id="share-footer" style="display: none">
-      <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2022/04/11/paper/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2022/04/11/paper/&text=论文"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2022/04/11/paper/&title=论文"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2022/04/11/paper/&is_video=false&description=论文"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=论文&body=Check out this article: http://example.com/2022/04/11/paper/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2022/04/11/paper/&title=论文"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2022/04/11/paper/&title=论文"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2022/04/11/paper/&title=论文"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2022/04/11/paper/&title=论文"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2022/04/11/paper/&name=论文&description=Here&#39;s something encrypted, password is required to continue reading."><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2022/04/11/paper/&t=论文"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>mk310
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2022/04/11/paper/" title="论文">http://example.com/2022/04/11/paper/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
 </ul>
-
-    </div>
-
-    <div id="actions-footer">
-        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
-        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
-        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
-        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
-    </div>
-
-  </div>
 </div>
 
+          <div class="post-tags">
+              <a href="/tags/%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87%E6%96%B9%E6%B3%95/" rel="tag"># 毕业论文方法</a>
+          </div>
+
         
-        <footer id="footer">
-  <div class="footer-left">
-    Copyright &copy;
-    
-    
-    2018-2022
-    mk310
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/04/11/hexo-configuration-and-push/" rel="prev" title="hexo 创建配置和上传">
+                  <i class="fa fa-chevron-left"></i> hexo 创建配置和上传
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/04/12/machingLearning/" rel="next" title="machingLearning">
+                  machingLearning <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mk310</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-        <!--
-       --><li><a href="/">Home</a></li><!--
-     --><!--
-       --><li><a href="/about/">About</a></li><!--
-     --><!--
-       --><li><a href="/archives/">Writing</a></li><!--
-     --><!--
-       --><li><a target="_blank" rel="noopener" href="https://gitee.com/SmashDog1/SmashDog1">Projects</a></li><!--
-     -->
-      </ul>
-    </nav>
-  </div>
-</footer>
 
     </div>
-    <!-- styles -->
-
-
-
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
-
-
-    <!-- jquery -->
- 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
-
-
-
-
-<!-- clipboard -->
+  </footer>
 
   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  <script size="300" alpha="0.7" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
   
-  <script type="text/javascript">
-  $(function() {
-    // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
-    btn += '<i class="far fa-clone"></i>';
-    btn += '</span>'; 
-    // mount it!
-    $(".highlight table").before(btn);
-    var clip = new ClipboardJS('.btn-copy', {
-      text: function(trigger) {
-        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
-      }
-    });
-    clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "Copied!");
-      e.clearSelection();
-    })
-  })
-  </script>
 
 
-<script src="/js/main.js"></script>
 
-<!-- search -->
 
-<!-- Google Analytics -->
+  <script src="/js/third-party/pace.js"></script>
 
-<!-- Baidu Analytics -->
+  
 
-<!-- Cloudflare Analytics -->
 
-<!-- Umami Analytics -->
 
-<!-- Disqus Comments -->
 
-<!-- utterances Comments -->
 
 </body>
 </html>
