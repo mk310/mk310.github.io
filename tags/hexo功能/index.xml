@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>hexo功能 - 标签 - HUGO BOLG</title>
+        <link>http://example.org/tags/hexo%E5%8A%9F%E8%83%BD/</link>
+        <description>hexo功能 - 标签 - HUGO BOLG</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 11 Apr 2022 12:48:14 &#43;0000</lastBuildDate><atom:link href="http://example.org/tags/hexo%E5%8A%9F%E8%83%BD/" rel="self" type="application/rss+xml" /><item>
+    <title>配置</title>
+    <link>http://example.org/hexo-configuration/</link>
+    <pubDate>Mon, 11 Apr 2022 12:48:14 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/hexo-configuration/</guid>
+    <description><![CDATA[{% markmap 300px %} hexo markdown语法 功能 插入图片 思维导图 文章加密 {%endmarkmap%} markdow 语法 reference: Markdown 教程 | 菜鸟教程 (runoob.com) 功能 typora配合hexo 上传图片 参考 https://blog.csdn.net/ayuayue/article/details/109198493 安装插件： 1]]></description>
+</item></channel>
+</rss>
