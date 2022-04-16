@@ -2,12 +2,16 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://mk310.github.io/categories/artificial-intelligence/</loc><lastmod>2022-04-12T14:10:54&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://mk310.github.io/categories/</loc><lastmod>2022-04-12T14:10:54&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://mk310.github.io/</loc><lastmod>2022-04-12T14:10:54&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://mk310.github.io/tags/machinglearning/</loc><lastmod>2022-04-12T14:10:54&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://mk310.github.io/machinglearning/</loc><lastmod>2022-04-12T14:10:54&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://mk310.github.io/posts/</loc><lastmod>2022-04-12T14:10:54&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://mk310.github.io/tags/</loc><lastmod>2022-04-12T14:10:54&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://mk310.github.io/tags/%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87%E6%96%B9%E6%B3%95/</loc><lastmod>2022-04-11T18:23:49&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://mk310.github.io/paper/</loc><lastmod>2022-04-11T18:23:49&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url></urlset>
+            <loc>http://example.org/machinglearing/</loc><lastmod>2022-04-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/categories/</loc><lastmod>2022-04-16T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/tags/git/</loc><lastmod>2022-04-16T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/software_git/</loc><lastmod>2022-04-16T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/</loc><lastmod>2022-04-16T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/posts/</loc><lastmod>2022-04-16T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/tags/</loc><lastmod>2022-04-16T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/categories/%E8%BD%AF%E4%BB%B6/</loc><lastmod>2022-04-16T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/tags/machinglearing/</loc><lastmod>2022-04-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc><lastmod>2022-04-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/tags/%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87%E6%96%B9%E6%B3%95/</loc><lastmod>2022-04-11T18:23:49&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/categories/%E8%AE%BA%E6%96%87/</loc><lastmod>2022-04-11T18:23:49&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.org/paper/</loc><lastmod>2022-04-11T18:23:49&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url></urlset>

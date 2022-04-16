@@ -75,3 +75,9 @@
 ### 研究方法
 
 本文将借助现有的python爬虫研究爬取电影评分网站数据，利用flask和html，css，js搭建网站，利用echarts可视化展现爬取的数据，将python爬虫和数据可视化联系在一起。
+
+
+
+
+
+![img](paper/wps1.jpg)
