@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/software_git\/"
-        },"genre": "posts","keywords": "git","wordcount":  637 ,
+        },"genre": "posts","keywords": "git","wordcount":  706 ,
         "url": "http:\/\/example.org\/software_git\/","datePublished": "2022-04-16T09:12:26+08:00","dateModified": "2022-04-16T09:12:26+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -104,7 +104,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">git</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>mk310</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%BD%AF%E4%BB%B6/"><i class="far fa-folder fa-fw"></i>软件</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-16">2022-04-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 637 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-16">2022-04-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 706 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -118,6 +118,7 @@
     <li><a href="#三种状态">三种状态</a></li>
     <li><a href="#创建版本库并提交文件例子">创建版本库并提交文件例子</a></li>
     <li><a href="#版本回溯">版本回溯</a></li>
+    <li><a href="#git远端仓库切换到gitee">git远端仓库切换到gitee</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
@@ -279,7 +280,37 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>如果将b.txt 文件误提交到暂存区，使用<code>git reset HEAD</code> 撤回提交的文件</p>
-</div><div class="post-footer" id="post-footer">
+<h2 id="git远端仓库切换到gitee">git远端仓库切换到gitee</h2>
+<p>删除本地远端仓库</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git remote rm origin
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>添加gitee远端仓库</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git remote add 仓库名
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>设置用户名，用户邮箱</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global user.name <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">git config --global user.email <span class="s2">&#34; &#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

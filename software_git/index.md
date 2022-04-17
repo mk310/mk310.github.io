@@ -144,3 +144,33 @@ index 75b9dc5..af32cb2 100644
 ```
 
 如果将b.txt 文件误提交到暂存区，使用`git reset HEAD` 撤回提交的文件
+
+
+
+
+
+
+
+
+
+## git远端仓库切换到gitee
+
+删除本地远端仓库
+
+```bash
+git remote rm origin
+```
+
+添加gitee远端仓库
+
+```bash
+git remote add 仓库名
+```
+
+设置用户名，用户邮箱
+
+```bash
+git config --global user.name ""
+git config --global user.email " "
+```
+
