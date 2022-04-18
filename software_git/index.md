@@ -1,6 +1,6 @@
 # git
 
-> preference: https://zhuanlan.zhihu.com/p/94008510
+> preference: https://zhuanlan.zhihu.com/p/94008510 [哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1XP4y147v1?from=search&seid=3299839228711840777&spm_id_from=333.337.0.0)
 
 ## 版本控制
 
@@ -119,9 +119,9 @@ graph LR;
     git log
     Author: mk310 <1594401797@qq.com>
     Date:   Sat Apr 16 18:26:05 2022 +0800
-
+    
         git 测试提交了a.txt
-
+    
     ```
 
 ## 版本回溯
@@ -146,6 +146,86 @@ index 75b9dc5..af32cb2 100644
 如果将b.txt 文件误提交到暂存区，使用`git reset HEAD` 撤回提交的文件
 
 
+
+### 返回上一次的提交
+
+
+
+```bash
+git reset --hard HEAD^
+```
+
+```bash
+Author: mk310 <1594401797@qq.com>
+Date:   Mon Apr 18 15:35:05 2022 +0800
+
+    添加全部
+
+commit 4d13d943de4aa3bb183c01b9432cb693e3275fee
+Author: mk310 <1594401797@qq.com>
+Date:   Sat Apr 16 18:35:25 2022 +0800
+
+    提交了a.txt的修改
+
+commit b27872183beaa169349415830fe7261b9ba5f6d5
+Author: mk310 <1594401797@qq.com>
+Date:   Sat Apr 16 18:26:05 2022 +0800
+
+    git 测试提交了a.txt
+
+```
+
+使用命令后
+
+```bash
+Author: mk310 <1594401797@qq.com>
+Date:   Sat Apr 16 18:35:25 2022 +0800
+
+    提交了a.txt的修改
+
+commit b27872183beaa169349415830fe7261b9ba5f6d5
+Author: mk310 <1594401797@qq.com>
+Date:   Sat Apr 16 18:26:05 2022 +0800
+
+    git 测试提交了a.txt
+
+```
+
+### 特定版本的回退
+
+`git reset --hard HEAD^` 这个`^`最多三个，表示退回三个版本
+
+更多的回退则使用
+
+```bash
+git reset --hard HEAD~34
+```
+
+回到特定的版本
+
+```bash
+git reset --hard <版本标识符>
+```
+
+
+
+## 文件删除
+
+在git中只关注文件的修改，文件的删除也是修改
+
+如果在工作区误删除文件(前提是文件在删除前已经提交到本地仓库)
+
+```bash
+git checkout -- <filename>
+```
+
+删除文件/目录
+
+```bash
+git rm <filename>
+```
+
+> `git ls-files`查看本地库的文件
 
 
 
