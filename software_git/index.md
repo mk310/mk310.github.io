@@ -1,6 +1,8 @@
 # git
 
 > preference: https://zhuanlan.zhihu.com/p/94008510 [哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1XP4y147v1?from=search&seid=3299839228711840777&spm_id_from=333.337.0.0)
+>
+> `git log -5 --pretty=oneline` 显示5行简单查看日志
 
 ## 版本控制
 
@@ -229,19 +231,109 @@ git rm <filename>
 
 
 
+## 远程仓库
+
+**https** 是简单的方式
+
+**ssh** 加密的方式，而且更加的高效
+
+```bash
+#新建工作目录并进入
+git init 
+#若已经有本地仓库直接进行下列操作
+git remote add <要上传的仓库地址>
+git add .
+git commit -m ""
+git push -u origin master
+```
 
 
 
+## git分支操作
 
-## git远端仓库切换到gitee
+### 本地分支
 
-删除本地远端仓库
+常见分支操作命令
+
+| 命令                                   | 描述                                                         | 注意                                                         |
+| -------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| git checkout branch                    | 切换到指定的分支                                             | 切换分支的时候，工作区的文件会随分支变化                     |
+| git checkout -b new_branch             | 新建分支并切换到新建分支                                     |                                                              |
+| git branch -d branch                   | 删除指定的分支                                               |                                                              |
+| git branch                             | 查看所有的分支，并且标记当前所在的分支`*`                    |                                                              |
+| git merge branch                       | 合并分支                                                     | 合并分支时要切换到**master**,操作后将分支的修改覆盖到master中；只能在master中合并分支 |
+| git branch -m \|-M oldbranch newbranch | 重命名分支，若newbranch已经存在，则使用-M强制重命名，否则使用-m重命名 |                                                              |
+
+### 分支push pull操作
+
+| 命令                                             | 描述                               |
+| ------------------------------------------------ | ---------------------------------- |
+| git branch -a                                    | 查看本地与远程分支                 |
+| git push origin branch_name                      | 推送本地分支到远程                 |
+| git push origin :remote_branch                   | 删除远程分支（本地分支还在保存）   |
+| git checkout -b local_brach origin/remote_branch | 提取远程指定的分支并在本地创建分支 |
+
+> `git fetch`查看远程仓库的最新状态
+
+### 分支操作冲突和解决办法
+
+#### 本地分支冲突
+
+master 和分支同时进行不同的操作
+
+未进行操作前master 和 leaf01
+
+```bash
+52e331fcc94db2b49c5efa47e101ab584ffd3fb3 b
+fc5e024e572348dec05c7f4f57cd4e67eea30d30 (origin/master, origin/leaf02) 删除readme
+ccb26cdce7fc848baa33b857c874cb873472373a 提交readme
+```
+
+进行操作  
+
+master
+
+```bash
+2b0e87f699833770cac0f49543be8436310fbc15 (HEAD -> master) master 添加 master.txt
+fc5e024e572348dec05c7f4f57cd4e67eea30d30 (origin/master, origin/leaf02) 删除readme
+52e331fcc94db2b49c5efa47e101ab584ffd3fb3 b
+ccb26cdce7fc848baa33b857c874cb873472373a 提交readme
+```
+
+leaf01
+
+```bash
+57998bcf8cfa6a81b424c505b8d2686dff7f585e (HEAD -> leaf01) leaf01 添加 leaf01.txt
+fc5e024e572348dec05c7f4f57cd4e67eea30d30 (origin/master, origin/leaf02) 删除readme
+52e331fcc94db2b49c5efa47e101ab584ffd3fb3 b
+ccb26cdce7fc848baa33b857c874cb873472373a 提交readme
+```
+
+切换到master，使用`git merge leaf01`填写commit解释
+
+```bash
+$ git log --graph --pretty=oneline
+*   1d9c9a7319ef31eaff0b92d10afea718105a84a8 (HEAD -> master, origin/master) ---
+|\
+| * 57998bcf8cfa6a81b424c505b8d2686dff7f585e (leaf01) leaf01 添加 leaf01.txt
+* | 2b0e87f699833770cac0f49543be8436310fbc15 master 添加 master.txt
+|/
+* fc5e024e572348dec05c7f4f57cd4e67eea30d30 (origin/leaf02) 删除readme
+* 52e331fcc94db2b49c5efa47e101ab584ffd3fb3 b
+* ccb26cdce7fc848baa33b857c874cb873472373a 提交readme
+```
+
+# git 使用
+
+## git远程仓库切换到gitee
+
+删除本地远程仓库
 
 ```bash
 git remote rm origin
 ```
 
-添加gitee远端仓库
+添加gitee远程仓库
 
 ```bash
 git remote add 仓库名
@@ -253,4 +345,20 @@ git remote add 仓库名
 git config --global user.name ""
 git config --global user.email " "
 ```
+
+
+
+## git删除远程仓库的所有文件
+
+> prefence:[git删除所有文件夹（清空远程仓库）](https://blog.csdn.net/qq_43498002/article/details/120357263)
+
+首先确定与远程仓库连接，然后命令：
+
+```bash
+git rm * -f -r #删除所有的文件
+git add . #提交修改到暂存区
+git commit -m"" #提交修改到本地仓库
+git push
+```
+
 

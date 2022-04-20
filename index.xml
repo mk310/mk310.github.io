@@ -1,30 +1,30 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>HUGO BOLG</title>
-        <link>http://example.org/</link>
+        <link>https://mk310.github.io/</link>
         <description>这是我的全新 Hugo 网站</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 16 Apr 2022 09:12:26 &#43;0800</lastBuildDate>
-            <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+            <atom:link href="https://mk310.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>机器学习</title>
-    <link>http://example.org/machinglearing/</link>
+    <link>https://mk310.github.io/machinglearing/</link>
     <pubDate>Thu, 14 Apr 2022 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>http://example.org/machinglearing/</guid>
+    <guid>https://mk310.github.io/machinglearing/</guid>
     <description><![CDATA[1-绪论 三个关系 artificial intelligence maching learning 人工智能的一个实现途径 deepinglearing 深度学习的神经网络 方法发展而来 分支 计算机视觉 自然语言处理 语音识别 困难：鸡尾酒会效应：不能处理]]></description>
 </item><item>
     <title>git</title>
-    <link>http://example.org/software_git/</link>
+    <link>https://mk310.github.io/software_git/</link>
     <pubDate>Sat, 16 Apr 2022 09:12:26 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://example.org/software_git/</guid>
-    <description><![CDATA[preference: https://zhuanlan.zhihu.com/p/94008510 哔哩哔哩_bilibili 版本控制 git是分布式的版本控制系统 图： 所有clone远程库的本地库都拥有完整的version——databs]]></description>
+    <guid>https://mk310.github.io/software_git/</guid>
+    <description><![CDATA[preference: https://zhuanlan.zhihu.com/p/94008510 哔哩哔哩_bilibili git log -5 --pretty=oneline 显示5行简单查看日志 版本控制 git是分布式的版本控制系统 图： 所有clone远程库的本地库都拥有完整的v]]></description>
 </item><item>
     <title>论文</title>
-    <link>http://example.org/paper/</link>
+    <link>https://mk310.github.io/paper/</link>
     <pubDate>Mon, 11 Apr 2022 18:23:49 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>http://example.org/paper/</guid>
+    <guid>https://mk310.github.io/paper/</guid>
     <description><![CDATA[摘要 绪论 reference: 毕业论文怎么写——论文摘要论文绪论模板_哔哩哔哩_bilibili 研究背景 社会大环境 通过中国互联网信息中心报告http://www]]></description>
 </item></channel>
 </rss>
