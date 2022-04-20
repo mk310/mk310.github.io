@@ -4,6 +4,8 @@
 >
 > `git log -5 --pretty=oneline` 显示5行简单查看日志
 
+# git 基本知识
+
 ## 版本控制
 
 git是分布式的版本控制系统
@@ -11,7 +13,7 @@ git是分布式的版本控制系统
 图：
 
 {{< mermaid >}}
-flowchart LR
+flowchart TD
 subgraph computer1
     subgraph data1[version_database]
         v1[version1]-->v2[version2]
@@ -322,6 +324,87 @@ $ git log --graph --pretty=oneline
 * 52e331fcc94db2b49c5efa47e101ab584ffd3fb3 b
 * ccb26cdce7fc848baa33b857c874cb873472373a 提交readme
 ```
+
+#### 多人协同操作冲突
+
+当pc1 和 pc2 链接相同的远程仓库，pc1 先对a.txt操作，推送到远程仓库。
+
+```bash
+$ git commit -m"pc1 edit"
+[master e034be8] pc1 edit
+ 1 file changed, 1 insertion(+)
+```
+
+pc2 同样是对a.txt操作
+
+```bash
+$ git commit -m"pc2 edit"
+[master 8aebf78] pc2 edit
+ 1 file changed, 1 insertion(+)
+```
+
+操作后推送到远程仓库时发生冲突
+
+```bash
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://gitee.com/SmashDog1/imgHS.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+原因：另一个用户推送到远程仓库的内容和当前用户推送的内容相冲突。
+
+**解决**：
+
+先从远程pull一下 
+
+```bash
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 217 bytes | 54.00 KiB/s, done.
+From https://gitee.com/SmashDog1/imgHS
+   5fcb742..e034be8  master     -> origin/master
+Auto-merging a.txt
+CONFLICT (content): Merge conflict in a.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+发现，远程拉取的库与本地有冲突`CONFLICT (content): Merge conflict in a.txt
+Automatic merge failed; fix conflicts and then commit the result.`
+
+我们在pc2 工作区中修改a.txt 文件 使用`cat a.txt`查看文件修改状态
+
+```bash
+$ cat a.txt
+<<<<<<< HEAD
+pc2 edit
+=======
+pc1 edit
+>>>>>>> e034be8dd540064be30bdd10d3249ab5b2af8a04
+```
+
+只保留**pc2 edit** 即只保留pc2 操作结果，然后重新提交上传问题解决。
+
+## 标签管理
+
+标签操作基本命令
+
+| 命令                                | 描述                             |
+| ----------------------------------- | -------------------------------- |
+| git tag tag_name                    | 新建标签，默认为HEAD             |
+| git tag -a tag_name -m"xxx"         | 指定标签添加描述内容             |
+| git tag                             | 查看所有的标签                   |
+| git tag -d tag_name                 | 删除本地标签                     |
+| git  push origin tag_name           | 推动本地标签到远程               |
+| git push origin --tags              | 推送全部为推送过的本地标签到远程 |
+| git push origin :refs/tags/tag_name | 删除一个远程标签                 |
+
+tag 是标记版本的，如果标签推送到远程仓库时没有描述信息，默认为最近一次推送到远端的描述
 
 # git 使用
 

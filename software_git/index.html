@@ -6,7 +6,7 @@
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>git - HUGO BOLG</title><meta name="Description" content="这是我的全新 Hugo 网站"><meta property="og:title" content="git" />
-<meta property="og:description" content="preference: https://zhuanlan.zhihu.com/p/94008510 哔哩哔哩_bilibili git log -5 --pretty=oneline 显示5行简单查看日志 版本控制 git是分布式的版本控制系统 图： 所有clone远程库的本地库都拥有完整的v" />
+<meta property="og:description" content="preference: https://zhuanlan.zhihu.com/p/94008510 哔哩哔哩_bilibili git log -5 --pretty=oneline 显示5行简单查看日志 git 基本知识 版本控制 git是分布式的版本控制系统 图： 所有clone远程库的本地库都拥" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mk310.github.io/software_git/" /><meta property="og:image" content="https://mk310.github.io/software_git/featured-image.jpg"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-04-16T09:12:26+08:00" />
@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://mk310.github.io/software_git/featured-image.jpg"/>
 <meta name="twitter:title" content="git"/>
-<meta name="twitter:description" content="preference: https://zhuanlan.zhihu.com/p/94008510 哔哩哔哩_bilibili git log -5 --pretty=oneline 显示5行简单查看日志 版本控制 git是分布式的版本控制系统 图： 所有clone远程库的本地库都拥有完整的v"/>
+<meta name="twitter:description" content="preference: https://zhuanlan.zhihu.com/p/94008510 哔哩哔哩_bilibili git log -5 --pretty=oneline 显示5行简单查看日志 git 基本知识 版本控制 git是分布式的版本控制系统 图： 所有clone远程库的本地库都拥"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="icon.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://mk310.github.io/software_git/" /><link rel="prev" href="https://mk310.github.io/paper/" /><link rel="next" href="https://mk310.github.io/machinglearing/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
@@ -31,7 +31,7 @@
                             "url": "https:\/\/mk310.github.io\/software_git\/featured-image.jpg",
                             "width":  1000 ,
                             "height":  420 
-                        }],"genre": "posts","keywords": "git","wordcount":  1779 ,
+                        }],"genre": "posts","keywords": "git","wordcount":  2361 ,
         "url": "https:\/\/mk310.github.io\/software_git\/","datePublished": "2022-04-16T09:12:26+08:00","dateModified": "2022-04-16T09:12:26+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -108,8 +108,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">git</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>mk310</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%BD%AF%E4%BB%B6/"><i class="far fa-folder fa-fw"></i>软件</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-16">2022-04-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1779 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-16">2022-04-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2361 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -143,10 +143,12 @@
         <li><a href="#分支操作冲突和解决办法">分支操作冲突和解决办法</a>
           <ul>
             <li><a href="#本地分支冲突">本地分支冲突</a></li>
+            <li><a href="#多人协同操作冲突">多人协同操作冲突</a></li>
           </ul>
         </li>
       </ul>
     </li>
+    <li><a href="#标签管理">标签管理</a></li>
   </ul>
 
   <ul>
@@ -158,6 +160,7 @@
 <p>preference: <a href="https://zhuanlan.zhihu.com/p/94008510" target="_blank" rel="noopener noreffer">https://zhuanlan.zhihu.com/p/94008510</a> <a href="https://www.bilibili.com/video/BV1XP4y147v1?from=search&amp;seid=3299839228711840777&amp;spm_id_from=333.337.0.0" target="_blank" rel="noopener noreffer">哔哩哔哩_bilibili</a></p>
 <p><code>git log -5 --pretty=oneline</code> 显示5行简单查看日志</p>
 </blockquote>
+<h1 id="git-基本知识">git 基本知识</h1>
 <h2 id="版本控制">版本控制</h2>
 <p>git是分布式的版本控制系统</p>
 <p>图：</p>
@@ -600,7 +603,146 @@
 </span></span><span class="line"><span class="cl">* ccb26cdce7fc848baa33b857c874cb873472373a 提交readme
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="git-使用">git 使用</h1>
+</div><h4 id="多人协同操作冲突">多人协同操作冲突</h4>
+<p>当pc1 和 pc2 链接相同的远程仓库，pc1 先对a.txt操作，推送到远程仓库。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ git commit -m<span class="s2">&#34;pc1 edit&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>master e034be8<span class="o">]</span> pc1 edit
+</span></span><span class="line"><span class="cl"> <span class="m">1</span> file changed, <span class="m">1</span> insertion<span class="o">(</span>+<span class="o">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>pc2 同样是对a.txt操作</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ git commit -m<span class="s2">&#34;pc2 edit&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>master 8aebf78<span class="o">]</span> pc2 edit
+</span></span><span class="line"><span class="cl"> <span class="m">1</span> file changed, <span class="m">1</span> insertion<span class="o">(</span>+<span class="o">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>操作后推送到远程仓库时发生冲突</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> ! <span class="o">[</span>rejected<span class="o">]</span>        master -&gt; master <span class="o">(</span>fetch first<span class="o">)</span>
+</span></span><span class="line"><span class="cl">error: failed to push some refs to <span class="s1">&#39;https://gitee.com/SmashDog1/imgHS.git&#39;</span>
+</span></span><span class="line"><span class="cl">hint: Updates were rejected because the remote contains work that you <span class="k">do</span>
+</span></span><span class="line"><span class="cl">hint: not have locally. This is usually caused by another repository pushing
+</span></span><span class="line"><span class="cl">hint: to the same ref. You may want to first integrate the remote changes
+</span></span><span class="line"><span class="cl">hint: <span class="o">(</span>e.g., <span class="s1">&#39;git pull ...&#39;</span><span class="o">)</span> before pushing again.
+</span></span><span class="line"><span class="cl">hint: See the <span class="s1">&#39;Note about fast-forwards&#39;</span> in <span class="s1">&#39;git push --help&#39;</span> <span class="k">for</span> details.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>原因：另一个用户推送到远程仓库的内容和当前用户推送的内容相冲突。</p>
+<p><strong>解决</strong>：</p>
+<p>先从远程pull一下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ git pull
+</span></span><span class="line"><span class="cl">remote: Enumerating objects: 5, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">remote: Counting objects: 100% <span class="o">(</span>5/5<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">remote: Total <span class="m">3</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>, pack-reused <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Unpacking objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="m">217</span> bytes <span class="p">|</span> 54.00 KiB/s, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">From https://gitee.com/SmashDog1/imgHS
+</span></span><span class="line"><span class="cl">   5fcb742..e034be8  master     -&gt; origin/master
+</span></span><span class="line"><span class="cl">Auto-merging a.txt
+</span></span><span class="line"><span class="cl">CONFLICT <span class="o">(</span>content<span class="o">)</span>: Merge conflict in a.txt
+</span></span><span class="line"><span class="cl">Automatic merge failed<span class="p">;</span> fix conflicts and <span class="k">then</span> commit the result.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>发现，远程拉取的库与本地有冲突<code>CONFLICT (content): Merge conflict in a.txt Automatic merge failed; fix conflicts and then commit the result.</code></p>
+<p>我们在pc2 工作区中修改a.txt 文件 使用<code>cat a.txt</code>查看文件修改状态</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ cat a.txt
+</span></span><span class="line"><span class="cl"><span class="o">&lt;&lt;&lt;&lt;&lt;&lt;</span>&lt; HEAD
+</span></span><span class="line"><span class="cl">pc2 <span class="nv">edit</span>
+</span></span><span class="line"><span class="cl"><span class="o">=======</span>
+</span></span><span class="line"><span class="cl">pc1 edit
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt;&gt;&gt;&gt;&gt; e034be8dd540064be30bdd10d3249ab5b2af8a04
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>只保留<strong>pc2 edit</strong> 即只保留pc2 操作结果，然后重新提交上传问题解决。</p>
+<h2 id="标签管理">标签管理</h2>
+<p>标签操作基本命令</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git tag tag_name</td>
+<td>新建标签，默认为HEAD</td>
+</tr>
+<tr>
+<td>git tag -a tag_name -m&quot;xxx&quot;</td>
+<td>指定标签添加描述内容</td>
+</tr>
+<tr>
+<td>git tag</td>
+<td>查看所有的标签</td>
+</tr>
+<tr>
+<td>git tag -d tag_name</td>
+<td>删除本地标签</td>
+</tr>
+<tr>
+<td>git  push origin tag_name</td>
+<td>推动本地标签到远程</td>
+</tr>
+<tr>
+<td>git push origin &ndash;tags</td>
+<td>推送全部为推送过的本地标签到远程</td>
+</tr>
+<tr>
+<td>git push origin :refs/tags/tag_name</td>
+<td>删除一个远程标签</td>
+</tr>
+</tbody>
+</table>
+<p>tag 是标记版本的，如果标签推送到远程仓库时没有描述信息，默认为最近一次推送到远端的描述</p>
+<h1 id="git-使用">git 使用</h1>
 <h2 id="git远程仓库切换到gitee">git远程仓库切换到gitee</h2>
 <p>删除本地远程仓库</p>
 <div class="highlight"><div class="chroma">
@@ -690,5 +832,5 @@
             </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="fas fa-comment fa-fw"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/mermaid/mermaid.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/mermaid/mermaid.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"data":{"id-1":"flowchart LR\nsubgraph computer1\n    subgraph data1[version_database]\n        v1[version1]--\u003ev2[version2]\n        v2--\u003e v3[version3]\n    end\nend\nsubgraph computer2\n    subgraph data2[version_database]\n        v21[version1]--\u003ev22[version2]\n        v22--\u003e v23[version3]\n    end\nend\nsubgraph computer3\n    subgraph data3[version_database]\n        v31[version1]--\u003ev32[version2]\n        v32--\u003e v33[version3]\n    end\nend\ncomputer1 --- computer2 --- computer3","id-2":"sequenceDiagram\n    participant w as working diectroy(工作区)\n    participant s as staging area（暂存区）\n    participant g as git diectory（本地仓库）\n    g-\u003e\u003ew: check the project\n    w-\u003e\u003es: stage files(git add)\n    s-\u003e\u003eg: commit(git commit)","id-3":"graph LR;\n    A[远程仓库] --\u003e|fetch/clone| B[本地仓库]\n    B --\u003e |push|A\n    B --\u003e |checkout| D[工作区]\n    D --\u003e |add| C[缓存区]\n    C --\u003e |commit| B\n    A --\u003e|pull| D","id-4":"HUGO","id-5":"HUGO"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"","algoliaIndex":"","algoliaSearchKey":"","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-4":["id-4"],"id-5":["id-5"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/mermaid/mermaid.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/mermaid/mermaid.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"data":{"id-1":"flowchart TD\nsubgraph computer1\n    subgraph data1[version_database]\n        v1[version1]--\u003ev2[version2]\n        v2--\u003e v3[version3]\n    end\nend\nsubgraph computer2\n    subgraph data2[version_database]\n        v21[version1]--\u003ev22[version2]\n        v22--\u003e v23[version3]\n    end\nend\nsubgraph computer3\n    subgraph data3[version_database]\n        v31[version1]--\u003ev32[version2]\n        v32--\u003e v33[version3]\n    end\nend\ncomputer1 --- computer2 --- computer3","id-2":"sequenceDiagram\n    participant w as working diectroy(工作区)\n    participant s as staging area（暂存区）\n    participant g as git diectory（本地仓库）\n    g-\u003e\u003ew: check the project\n    w-\u003e\u003es: stage files(git add)\n    s-\u003e\u003eg: commit(git commit)","id-3":"graph LR;\n    A[远程仓库] --\u003e|fetch/clone| B[本地仓库]\n    B --\u003e |push|A\n    B --\u003e |checkout| D[工作区]\n    D --\u003e |add| C[缓存区]\n    C --\u003e |commit| B\n    A --\u003e|pull| D","id-4":"HUGO","id-5":"HUGO"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"","algoliaIndex":"","algoliaSearchKey":"","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-4":["id-4"],"id-5":["id-5"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
