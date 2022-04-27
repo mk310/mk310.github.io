@@ -406,6 +406,14 @@ pc1 edit
 
 tag 是标记版本的，如果标签推送到远程仓库时没有描述信息，默认为最近一次推送到远端的描述
 
+
+
+# 图解git
+
+> refrence:[GIT命令图解_FOUR-D的博客-CSDN博客_git命令图解](https://blog.csdn.net/GoGleTech/article/details/108493622)
+
+![image-20220427113944109](index/image-20220427113944109.png)
+
 # git 使用
 
 ## git远程仓库切换到gitee

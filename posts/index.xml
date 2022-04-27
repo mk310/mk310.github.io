@@ -17,12 +17,5 @@
     <author>作者</author>
     <guid>https://mk310.github.io/software_git/</guid>
     <description><![CDATA[preference: https://zhuanlan.zhihu.com/p/94008510 哔哩哔哩_bilibili git log -5 --pretty=oneline 显示5行简单查看日志 git 基本知识 版本控制 git是分布式的版本控制系统 图： 所有clone远程库的本地库都拥]]></description>
-</item><item>
-    <title>论文</title>
-    <link>https://mk310.github.io/paper/</link>
-    <pubDate>Mon, 11 Apr 2022 18:23:49 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://mk310.github.io/paper/</guid>
-    <description><![CDATA[摘要 绪论 reference: 毕业论文怎么写——论文摘要论文绪论模板_哔哩哔哩_bilibili]]></description>
 </item></channel>
 </rss>
