@@ -3,7 +3,14 @@
         <title>所有文章 - HUGO BOLG</title>
         <link>https://mk310.github.io/posts/</link>
         <description>所有文章 | HUGO BOLG</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 16 Apr 2022 09:12:26 &#43;0800</lastBuildDate><atom:link href="https://mk310.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 27 Apr 2022 09:12:26 &#43;0800</lastBuildDate><atom:link href="https://mk310.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>hugo</title>
+    <link>https://mk310.github.io/hugo/</link>
+    <pubDate>Wed, 27 Apr 2022 09:12:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://mk310.github.io/hugo/</guid>
+    <description><![CDATA[<p>探索 Hugo - <strong>LoveIt</strong> 主题的全部内容和背后的核心概念.</p>]]></description>
+</item><item>
     <title>机器学习</title>
     <link>https://mk310.github.io/machinelearning/</link>
     <pubDate>Thu, 14 Apr 2022 09:12:26 &#43;0800</pubDate>
@@ -17,12 +24,5 @@
     <author>作者</author>
     <guid>https://mk310.github.io/software_git/</guid>
     <description><![CDATA[preference: https://zhuanlan.zhihu.com/p/94008510 哔哩哔哩_bilibili git log -5 --pretty=oneline 显示5行简单查看日志 git 基本知识 版本控制 git是分布式的版本控制系统 图： 所有clone远程库的本地库都拥]]></description>
-</item><item>
-    <title></title>
-    <link>https://mk310.github.io/hugo/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://mk310.github.io/hugo/</guid>
-    <description><![CDATA[hugo #下载并安装hugo Releases · gohugoio/hugo (github.com) 下载amd64 git 删除仓库文件 如何删除GitHub仓库里的文件夹（配图详解）_行稳方能走远的博客-CSDN博客_]]></description>
 </item></channel>
 </rss>
