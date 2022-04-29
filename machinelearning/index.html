@@ -31,7 +31,7 @@
                             "url": "https:\/\/mk310.github.io\/machinelearning\/featured-image.jpg",
                             "width":  1080 ,
                             "height":  607 
-                        }],"genre": "posts","keywords": "machinelearning","wordcount":  1446 ,
+                        }],"genre": "posts","keywords": "machinelearning","wordcount":  2796 ,
         "url": "https:\/\/mk310.github.io\/machinelearning\/","datePublished": "2022-04-14T09:12:26+08:00","dateModified": "2022-04-14T09:12:26+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -108,8 +108,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">机器学习</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>mk310</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"><i class="far fa-folder fa-fw"></i>人工智能</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-14">2022-04-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1446 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-14">2022-04-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2796 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -157,6 +157,18 @@
           <ul>
             <li><a href="#欠拟合">欠拟合</a></li>
             <li><a href="#过拟合">过拟合</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#实战">实战</a>
+      <ul>
+        <li><a href="#1-环境安装和基础配置">1 环境安装和基础配置</a></li>
+        <li><a href="#2-jupyter-notebook使用">2 jupyter notebook使用</a></li>
+        <li><a href="#3-matplotlib-使用">3 matplotlib 使用</a>
+          <ul>
+            <li><a href="#3-1-实现简单的绘图">3-1 实现简单的绘图</a></li>
+            <li><a href="#3-2-matplotlib三层显示">3-2 matplotlib三层显示</a></li>
           </ul>
         </li>
       </ul>
@@ -329,7 +341,7 @@
 <p>均方根误差（Root Mean Squared Error,RMSE）</p>
 <ul>
 <li>
-<p>RMSE是一个衡量回归模型误差率的常用公式，仅能比较误差是相同是相同单位的模型。</p>
+<p>RMSE是一个衡量回归模型误差率的常用公式，仅能比较误差是相同单位的模型。</p>
 <p>$$RESM =  \sqrt \frac{\sum_{i = 1} ^{n}{\left( {p_{i}-a_{i}} \right) ^2}}{n}$$</p>
 </li>
 </ul>
@@ -382,6 +394,161 @@
 <p>因为机器学习到的数据特征太少，导致区分标准太粗糙。</p>
 <h4 id="过拟合">过拟合</h4>
 <p>模型表现过于优越，导致验证数据集即测试数据集中表现不佳。eg：识别天鹅时，因为黑天鹅不是白色的判断不是天鹅。</p>
+<h2 id="实战">实战</h2>
+<h3 id="1-环境安装和基础配置">1 环境安装和基础配置</h3>
+<p>python创建虚拟环境（windows环境下）</p>
+<blockquote>
+<p><a href="https://www.jb51.net/article/214307.htm" target="_blank" rel="noopener noreffer">https://www.jb51.net/article/214307.htm</a></p>
+</blockquote>
+<p>这里所指的环境包括：</p>
+<ul>
+<li>python解释器，选用哪个解释器执行代码</li>
+<li>python库的位置，去哪里引用所需的模块</li>
+<li>可执行文件的位置，例如pip文件在哪里</li>
+</ul>
+<p>由于每个项目的情况都可能不一样，比如这个项目用的是vtk 7.1，另一个项目用的是vtk 9.0。如果不进行环境隔离而是全局安装，就会导致包的冲突从而出现问题，这个时候让每个项目都拥有一套独立的Python环境，这样就不会产生冲突了。Python虚拟环境正是为了解决这个问题而存在的，简而言之，虚拟环境就是系统 Python 环境的一个副本。</p>
+<p>安装virtualenv</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip install virtualenv
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>创建一个独立的python运行环境</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">virtualenv  ai 
+</span></span><span class="line"><span class="cl">//no--site--packages 表示不复制已经安装到系统python环境中的所有第三方包，得到一个纯净的环境，20版本以上默认
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>激活运行环境</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ai<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+</span></span><span class="line"><span class="cl">//退出当前的环境
+</span></span><span class="line"><span class="cl">deactivate
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>激活环境后命令提示符的前面会显示虚拟环境名</p>
+<p>安装特定版本的库文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">//matplotlib安装
+</span></span><span class="line"><span class="cl">pip install matplotlib
+</span></span><span class="line"><span class="cl">// numpy 安装(实际上面的安装已经安装)
+</span></span><span class="line"><span class="cl">// 安装pandas
+</span></span><span class="line"><span class="cl">// 安装 tables
+</span></span><span class="line"><span class="cl">// 安装jupyter
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-jupyter-notebook使用">2 jupyter notebook使用</h3>
+<p>juputer开源软件，ipython的加强版</p>
+<blockquote>
+<p><a href="https://www.bilibili.com/read/cv3704251" target="_blank" rel="noopener noreffer">tensorflow教程一：安装和jupyter notebook的使用 - 哔哩哔哩 (bilibili.com)</a></p>
+</blockquote>
+<h3 id="3-matplotlib-使用">3 matplotlib 使用</h3>
+<p>绘图库</p>
+<h4 id="3-1-实现简单的绘图">3-1 实现简单的绘图</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># 1.创建画布 </span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span> <span class="c1"># 2.绘制图像 </span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> 
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># 3.显示图像 </span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="index/image-20220429202607813.png"
+        data-srcset="/machinelearning/index/image-20220429202607813.png, index/image-20220429202607813.png 1.5x, /machinelearning/index/image-20220429202607813.png 2x"
+        data-sizes="auto"
+        alt="/machinelearning/index/image-20220429202607813.png"
+        title="image-20220429202607813" /></p>
+<h4 id="3-2-matplotlib三层显示">3-2 matplotlib三层显示</h4>
+<ul>
+<li>容器层</li>
+</ul>
+<p>​		容器层主要由Canvas、Figure、Axes组成。</p>
+<ul>
+<li>
+<p>Canvas是位于最底层的系统层，在绘图的过程中充当画板的⻆⾊，即放置画布(Figure)的⼯具。</p>
+</li>
+<li>
+<p>Figure是Canvas上⽅的第⼀层，也是需要⽤户来操作的应⽤层的第⼀层，在绘图的过程中充	当画布的⻆⾊。</p>
+</li>
+<li>
+<p>Axes是应⽤层的第⼆层，在绘图的过程中相当于画布上的绘图区的⻆⾊。</p>
+<ul>
+<li>Figure:指整个图形(可以通过plt.figure()设置画布的⼤⼩和分辨率等)</li>
+<li>Axes(<strong>坐标系</strong>):数据的绘图区域</li>
+<li>Axis(<strong>坐标轴</strong>)：坐标系中的⼀条轴，包含⼤⼩限制、刻度和刻度标签</li>
+<li>⼀个figure(图像)可以包含多个axes(坐标系/绘图区)，但是⼀个axes只能属于⼀个figure。</li>
+<li>一个axes(坐标系/绘图区)可以包含多个axis(坐标轴)，包含两个即为2d坐标系，3个即为3d坐标系</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="index/image-20220429203215320.png"
+        data-srcset="/machinelearning/index/image-20220429203215320.png, index/image-20220429203215320.png 1.5x, /machinelearning/index/image-20220429203215320.png 2x"
+        data-sizes="auto"
+        alt="/machinelearning/index/image-20220429203215320.png"
+        title="image-20220429203215320" /></p>
+</li>
+<li>
+<p>辅助显示层</p>
+</li>
+</ul>
+<p>​	辅助显示层为Axes(绘图区)内的除了根据数据绘制出的图像以外的内容，主要包括Axes外观(facecolor)、边框线 (spines)、坐标轴(axis)、坐标轴名称(axis label)、坐标轴刻度(tick)、坐标轴刻度标签(tick abel)、⽹格线(grid)、图例 (legend)、标题(title)等内容。该层的设置可使图像显示更加直观更加容易被⽤户理解，但⼜不会对图像产⽣实质的影响。</p>
+<ul>
+<li>图像层</li>
+</ul>
+<p>​	图像层指Axes内通过plot、scatter、bar、histogram、pie等函数根据数据绘制出的图像。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="index/image-20220429203349253.png"
+        data-srcset="/machinelearning/index/image-20220429203349253.png, index/image-20220429203349253.png 1.5x, /machinelearning/index/image-20220429203349253.png 2x"
+        data-sizes="auto"
+        alt="/machinelearning/index/image-20220429203349253.png"
+        title="image-20220429203349253" /></p>
+<ul>
+<li>总结
+<ul>
+<li>Canvas（画板）位于最底层，⽤户⼀般接触不到</li>
+<li>Figure（画布）建⽴在Canvas之上</li>
+<li>Axes（绘图区）建⽴在Figure之上</li>
+<li>坐标轴（axis）、图例（egend）等辅助显示层以及图像层都是建⽴在Axes之上</li>
+</ul>
+</li>
+</ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

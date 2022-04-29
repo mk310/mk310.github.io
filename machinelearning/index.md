@@ -252,7 +252,7 @@ b --> |action| a
 
 - 均方根误差（Root Mean Squared Error,RMSE）
 
-  - RMSE是一个衡量回归模型误差率的常用公式，仅能比较误差是相同是相同单位的模型。
+  - RMSE是一个衡量回归模型误差率的常用公式，仅能比较误差是相同单位的模型。
 
     $$RESM =  \sqrt \frac{\sum_{i = 1} ^{n}{\left( {p_{i}-a_{i}} \right) ^2}}{n}$$
 
@@ -298,4 +298,111 @@ b --> |action| a
 #### 过拟合
 
 模型表现过于优越，导致验证数据集即测试数据集中表现不佳。eg：识别天鹅时，因为黑天鹅不是白色的判断不是天鹅。
+
+## 实战
+
+### 1 环境安装和基础配置
+
+python创建虚拟环境（windows环境下）
+> https://www.jb51.net/article/214307.htm
+
+这里所指的环境包括：
+- python解释器，选用哪个解释器执行代码
+- python库的位置，去哪里引用所需的模块
+- 可执行文件的位置，例如pip文件在哪里
+
+由于每个项目的情况都可能不一样，比如这个项目用的是vtk 7.1，另一个项目用的是vtk 9.0。如果不进行环境隔离而是全局安装，就会导致包的冲突从而出现问题，这个时候让每个项目都拥有一套独立的Python环境，这样就不会产生冲突了。Python虚拟环境正是为了解决这个问题而存在的，简而言之，虚拟环境就是系统 Python 环境的一个副本。
+
+安装virtualenv
+```bash
+pip install virtualenv
+```
+
+创建一个独立的python运行环境 
+
+```bash
+virtualenv  ai 
+//no--site--packages 表示不复制已经安装到系统python环境中的所有第三方包，得到一个纯净的环境，20版本以上默认
+```
+
+激活运行环境
+
+```bash
+ai\Scripts\activate
+//退出当前的环境
+deactivate
+```
+
+激活环境后命令提示符的前面会显示虚拟环境名
+
+安装特定版本的库文件
+
+```
+//matplotlib安装
+pip install matplotlib
+// numpy 安装(实际上面的安装已经安装)
+// 安装pandas
+// 安装 tables
+// 安装jupyter
+```
+
+### 2 jupyter notebook使用
+
+juputer开源软件，ipython的加强版
+
+> [tensorflow教程一：安装和jupyter notebook的使用 - 哔哩哔哩 (bilibili.com)](https://www.bilibili.com/read/cv3704251)
+
+### 3 matplotlib 使用
+
+绘图库
+
+#### 3-1 实现简单的绘图
+
+```python
+import matplotlib.pyplot as plt # 1.创建画布 
+plt.figure(figsize=(20,8), dpi=100) # 2.绘制图像 
+x = [1,2,3] y = [4,5,6] 
+plt.plot(x, y) # 3.显示图像 
+plt.show()
+```
+
+![image-20220429202607813](index/image-20220429202607813.png)
+
+#### 3-2 matplotlib三层显示
+
+- 容器层
+
+​		容器层主要由Canvas、Figure、Axes组成。
+
+- Canvas是位于最底层的系统层，在绘图的过程中充当画板的⻆⾊，即放置画布(Figure)的⼯具。
+
+- Figure是Canvas上⽅的第⼀层，也是需要⽤户来操作的应⽤层的第⼀层，在绘图的过程中充	当画布的⻆⾊。 
+
+- Axes是应⽤层的第⼆层，在绘图的过程中相当于画布上的绘图区的⻆⾊。
+
+
+  - Figure:指整个图形(可以通过plt.figure()设置画布的⼤⼩和分辨率等)
+  - Axes(**坐标系**):数据的绘图区域
+  - Axis(**坐标轴**)：坐标系中的⼀条轴，包含⼤⼩限制、刻度和刻度标签 
+  - ⼀个figure(图像)可以包含多个axes(坐标系/绘图区)，但是⼀个axes只能属于⼀个figure。 
+  - 一个axes(坐标系/绘图区)可以包含多个axis(坐标轴)，包含两个即为2d坐标系，3个即为3d坐标系 
+
+  ![image-20220429203215320](index/image-20220429203215320.png)
+
+- 辅助显示层
+
+​	辅助显示层为Axes(绘图区)内的除了根据数据绘制出的图像以外的内容，主要包括Axes外观(facecolor)、边框线 (spines)、坐标轴(axis)、坐标轴名称(axis label)、坐标轴刻度(tick)、坐标轴刻度标签(tick abel)、⽹格线(grid)、图例 (legend)、标题(title)等内容。该层的设置可使图像显示更加直观更加容易被⽤户理解，但⼜不会对图像产⽣实质的影响。 
+
+- 图像层
+
+​	图像层指Axes内通过plot、scatter、bar、histogram、pie等函数根据数据绘制出的图像。
+
+![image-20220429203349253](index/image-20220429203349253.png)
+
+- 总结
+  - Canvas（画板）位于最底层，⽤户⼀般接触不到 
+  - Figure（画布）建⽴在Canvas之上 
+  - Axes（绘图区）建⽴在Figure之上 
+  - 坐标轴（axis）、图例（egend）等辅助显示层以及图像层都是建⽴在Axes之上 
+
 
