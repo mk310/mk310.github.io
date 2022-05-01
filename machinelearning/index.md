@@ -405,4 +405,112 @@ plt.show()
   - Axes（绘图区）建⽴在Figure之上 
   - 坐标轴（axis）、图例（egend）等辅助显示层以及图像层都是建⽴在Axes之上 
 
+#### 3-3 matplotlib 图例
+
+基本图例：显示温度变化情况
+
+```python
+import matplotlib.pyplot as plt
+import random
+
+# 生成数据
+x = range(60)
+y_beijing = [random.uniform(10,15) for i in x]
+y_shanghai = [random.uniform(15,25) for i in x]
+
+# 1创建画布
+plt.figure(figsize  = (20,8),dpi = 100)
+
+# 2 图形绘制
+plt.plot(x,y_beijing,label= 'beijing')
+plt.plot(x,y_shanghai,label = 'shanghai')
+
+plt.yticks(y_ticks[::5])
+plt.xticks(x[::5], x_ticks_label[::5])
+
+# 2.1 添加刻度
+y_ticks = range(40)
+x_ticks_label = ["11h{}m".format(i) for i in x]
+
+# 2.2添加网格
+plt.grid(True,linestyle = '--',alpha = 0.5)
+
+# 2.3添加描述
+plt.xlabel('time')
+plt.ylabel('temperature')
+plt.title('temperature and time')
+
+# 2.4 显示图例
+plt.legend()
+
+# 3 图像显示
+plt.show()
+```
+
+![image-20220501200712801](index/image-20220501200712801.png)
+
+特殊图例：多坐标系显示温度变化
+
+```python 
+import matplotlib.pyplot as plt
+import random
+
+# 生成数据
+x = range(60)
+y_beijing = [random.uniform(10,15) for i in x]
+y_shanghai = [random.uniform(15,25) for i in x]
+
+# 1创建画布
+# plt.figure(figsize  = (20,8),dpi = 100)
+fig, axes = plt.subplots(nrows =1,ncols = 2,figsize = (20,8),dpi = 100)
+
+# 2 图形绘制
+axes[0].plot(x,y_beijing,label= 'beijing')
+axes[1].plot(x,y_shanghai,label = 'shanghai',color = 'g',linestyle = '-.')
+
+
+
+# 2.1 添加刻度
+y_ticks = range(40)
+x_ticks_label = ["11h{}m".format(i) for i in x]
+
+axes[0].set_xticks(x[::5])
+axes[0].set_yticks(y_ticks[::5])
+axes[0].set_xticklabels(x_ticks_label[::5])
+
+axes[1].set_xticks(x[::5])
+axes[1].set_yticks(y_ticks[::5])
+axes[1].set_xticklabels(x_ticks_label[::5])
+# 2.2添加网格
+axes[0].grid(True,linestyle = '--',alpha = 0.5)
+axes[1].grid(True,linestyle = '--',alpha = 0.5)
+
+# 2.3添加描述
+axes[0].set_xlabel('time')
+axes[0].set_ylabel('temperature')
+axes[0].set_title('temperature and time')
+
+axes[1].set_xlabel('time')
+axes[1].set_ylabel('temperature')
+axes[1].set_title('temperature and time')
+# 2.4 显示图例
+axes[0].legend()
+axes[1].legend()
+# 3 图像显示
+plt.show()
+```
+
+![image-20220501203322801](index/image-20220501203322801.png)
+
+#### 3-4 折线图的应用场景
+
+- 表示数据趋势
+
+  - 呈现公司产品(不同区域)每天活跃⽤户数 
+
+  - 呈现app每天下载数量 
+
+  - 呈现产品新功能上线后,⽤户点击次数随时间的变化 
+
+- 拓展：**画各种数学函数图像** 
 

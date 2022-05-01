@@ -29,7 +29,7 @@
     <pubDate>Sat, 30 Apr 2022 14:28:56 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://mk310.github.io/linearalgebra/</guid>
-    <description><![CDATA[行列式 基本概念 逆序 逆序数 行列式：代数式或者值 余子式和代数余子式 特殊的高洁行列式 对角，上下三角行列式 范德蒙行列式： 分块行列式 拉普拉斯]]></description>
+    <description><![CDATA[行列式 1-基本概念 逆序 逆序数 行列式：代数式或者值 余子式和代数余子式 2-特殊的高阶行列式 对角，上下三角行列式 范德蒙行列式： 分块行列式 拉普拉斯 3]]></description>
 </item><item>
     <title>git</title>
     <link>https://mk310.github.io/software_git/</link>
