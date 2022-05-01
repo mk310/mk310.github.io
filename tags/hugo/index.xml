@@ -9,6 +9,12 @@
     <pubDate>Wed, 27 Apr 2022 09:12:26 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://mk310.github.io/hugo/</guid>
-    <description><![CDATA[<p>探索 Hugo - <strong>LoveIt</strong> 主题的全部内容和背后的核心概念.</p>]]></description>
+    <description><![CDATA[<p>探索 Hugo - <strong>LoveIt</strong> 主题的全部内容和背后的核心概念.</p>
+<h2 id="hugo使用">hugo使用</h2>
+<h3 id="1-添加行列式">1 添加行列式</h3>
+<blockquote>
+<p><a href="https://zhuanlan.zhihu.com/p/261750408?utm_source=wechat_session" target="_blank" rel="noopener noreffer">Typora数学公式汇总（Markdown） - 知乎 (zhihu.com)</a></p>
+<p><a href="https://katex.org/docs/supported.html" target="_blank" rel="noopener noreffer">Supported Functions · KaTeX</a></p>
+</blockquote>]]></description>
 </item></channel>
 </rss>

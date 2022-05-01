@@ -3,7 +3,7 @@
         <title>HUGO BOLG</title>
         <link>https://mk310.github.io/</link>
         <description>这是我的全新 Hugo 网站</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 27 Apr 2022 09:12:26 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 30 Apr 2022 14:28:56 &#43;0800</lastBuildDate>
             <atom:link href="https://mk310.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>hugo</title>
@@ -11,7 +11,13 @@
     <pubDate>Wed, 27 Apr 2022 09:12:26 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://mk310.github.io/hugo/</guid>
-    <description><![CDATA[<p>探索 Hugo - <strong>LoveIt</strong> 主题的全部内容和背后的核心概念.</p>]]></description>
+    <description><![CDATA[<p>探索 Hugo - <strong>LoveIt</strong> 主题的全部内容和背后的核心概念.</p>
+<h2 id="hugo使用">hugo使用</h2>
+<h3 id="1-添加行列式">1 添加行列式</h3>
+<blockquote>
+<p><a href="https://zhuanlan.zhihu.com/p/261750408?utm_source=wechat_session" target="_blank" rel="noopener noreffer">Typora数学公式汇总（Markdown） - 知乎 (zhihu.com)</a></p>
+<p><a href="https://katex.org/docs/supported.html" target="_blank" rel="noopener noreffer">Supported Functions · KaTeX</a></p>
+</blockquote>]]></description>
 </item><item>
     <title>机器学习</title>
     <link>https://mk310.github.io/machinelearning/</link>
@@ -19,6 +25,13 @@
     <author>作者</author>
     <guid>https://mk310.github.io/machinelearning/</guid>
     <description><![CDATA[1-绪论 三个关系 artificial intelligence machine learning 人工智能的一个实现途径 deepinglearing 深度学习的神经网络 方法发展而来 分支 计算机视觉 自然语言处理 语音识别 困难：鸡尾酒会效应：不能处理]]></description>
+</item><item>
+    <title>LinearAlgebra</title>
+    <link>https://mk310.github.io/linearalgebra/</link>
+    <pubDate>Sat, 30 Apr 2022 14:28:56 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://mk310.github.io/linearalgebra/</guid>
+    <description><![CDATA[行列式 基本概念 逆序 逆序数 行列式：代数式或者值 余子式和代数余子式 特殊的高洁行列式 对角，上下三角行列式 范德蒙行列式： 分块行列式 拉普拉斯]]></description>
 </item><item>
     <title>git</title>
     <link>https://mk310.github.io/software_git/</link>

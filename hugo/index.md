@@ -1,8 +1,19 @@
 # hugo
 
 
-
 探索 Hugo - **LoveIt** 主题的全部内容和背后的核心概念.
+
+## hugo使用
+
+### 1 添加行列式
+
+>[Typora数学公式汇总（Markdown） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/261750408?utm_source=wechat_session)
+>
+>[Supported Functions · KaTeX](https://katex.org/docs/supported.html)
+
+
+
+
 
 <!--more-->
 
@@ -163,4 +174,5 @@ hugo
 ```
 
 会生成一个 `public` 目录, 其中包含你网站的所有静态内容和资源. 现在可以将其部署在任何 Web 服务器上.
+
 
