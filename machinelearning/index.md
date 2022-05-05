@@ -514,3 +514,69 @@ plt.show()
 
 - 拓展：**画各种数学函数图像** 
 
+#### 3-5 常见图形的绘制
+
+散点图
+
+绘制代码
+
+```bash
+import matplotlib.pyplot as plt
+import random
+
+# 绘制散点图
+
+#0 数据准备
+z = range(60)
+x = [random.uniform(10,15) for i in z]
+y = [random.uniform(15,25) for i in z]
+# 1创建画布
+plt.figure(figsize=(20,8),dpi = 100)
+
+# 2 绘制图像
+
+plt.scatter(x,y)
+
+# 3 图像显示
+plt.show()
+```
+
+图像效果
+
+![image-20220505214500173](index/image-20220505214500173.png)
+
+柱状图
+
+配置代码
+
+```bash
+import matplotlib.pyplot as plt
+import random
+
+# 绘制散点图
+
+#0 数据准备
+movie_name = {'hear','the thing','king of han','school war','date time'}
+y = [123.232,122.444,130.444,148.790,111.111]
+x = range(len(movie_name))
+# 1创建画布
+plt.figure(figsize=(20,8),dpi = 100)
+
+# 2 绘制图像
+
+plt.bar(x, y, width=0.5,color = ['b','r','y','c','g'])
+
+# 2.1 显示x轴刻度显示
+plt.xticks(x,movie_name)
+# 2.2 网格显示
+plt.grid(linestyle = '-.',alpha = 0.5)
+plt.title('bar table')
+
+# 3 图像显示
+plt.show()
+```
+
+显示效果
+
+![image-20220505215743495](index/image-20220505215743495.png)
+

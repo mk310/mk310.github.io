@@ -31,7 +31,7 @@
                             "url": "https:\/\/mk310.github.io\/machinelearning\/featured-image.jpg",
                             "width":  1080 ,
                             "height":  607 
-                        }],"genre": "posts","keywords": "machinelearning","wordcount":  3237 ,
+                        }],"genre": "posts","keywords": "machinelearning","wordcount":  3448 ,
         "url": "https:\/\/mk310.github.io\/machinelearning\/","datePublished": "2022-04-14T09:12:26+08:00","dateModified": "2022-04-14T09:12:26+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -108,7 +108,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">机器学习</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>mk310</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"><i class="far fa-folder fa-fw"></i>人工智能</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-14">2022-04-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3237 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-14">2022-04-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3448 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 7 分钟&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -171,6 +171,7 @@
             <li><a href="#3-2-matplotlib三层显示">3-2 matplotlib三层显示</a></li>
             <li><a href="#3-3-matplotlib-图例">3-3 matplotlib 图例</a></li>
             <li><a href="#3-4-折线图的应用场景">3-4 折线图的应用场景</a></li>
+            <li><a href="#3-5-常见图形的绘制">3-5 常见图形的绘制</a></li>
           </ul>
         </li>
       </ul>
@@ -764,6 +765,125 @@
 <p>拓展：<strong>画各种数学函数图像</strong></p>
 </li>
 </ul>
+<h4 id="3-5-常见图形的绘制">3-5 常见图形的绘制</h4>
+<p>散点图</p>
+<p>绘制代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">import matplotlib.pyplot as plt
+</span></span><span class="line"><span class="cl">import random
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 绘制散点图</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#0 数据准备</span>
+</span></span><span class="line"><span class="cl"><span class="nv">z</span> <span class="o">=</span> range<span class="o">(</span>60<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">x</span> <span class="o">=</span> <span class="o">[</span>random.uniform<span class="o">(</span>10,15<span class="o">)</span> <span class="k">for</span> i in z<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">y</span> <span class="o">=</span> <span class="o">[</span>random.uniform<span class="o">(</span>15,25<span class="o">)</span> <span class="k">for</span> i in z<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 1创建画布</span>
+</span></span><span class="line"><span class="cl">plt.figure<span class="o">(</span><span class="nv">figsize</span><span class="o">=(</span>20,8<span class="o">)</span>,dpi <span class="o">=</span> 100<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2 绘制图像</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">plt.scatter<span class="o">(</span>x,y<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 3 图像显示</span>
+</span></span><span class="line"><span class="cl">plt.show<span class="o">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>图像效果</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="index/image-20220505214500173.png"
+        data-srcset="/machinelearning/index/image-20220505214500173.png, index/image-20220505214500173.png 1.5x, /machinelearning/index/image-20220505214500173.png 2x"
+        data-sizes="auto"
+        alt="/machinelearning/index/image-20220505214500173.png"
+        title="image-20220505214500173" /></p>
+<p>柱状图</p>
+<p>配置代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">import matplotlib.pyplot as plt
+</span></span><span class="line"><span class="cl">import random
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 绘制散点图</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#0 数据准备</span>
+</span></span><span class="line"><span class="cl"><span class="nv">movie_name</span> <span class="o">=</span> <span class="o">{</span><span class="s1">&#39;hear&#39;</span>,<span class="s1">&#39;the thing&#39;</span>,<span class="s1">&#39;king of han&#39;</span>,<span class="s1">&#39;school war&#39;</span>,<span class="s1">&#39;date time&#39;</span><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="nv">y</span> <span class="o">=</span> <span class="o">[</span>123.232,122.444,130.444,148.790,111.111<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">x</span> <span class="o">=</span> range<span class="o">(</span>len<span class="o">(</span>movie_name<span class="o">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 1创建画布</span>
+</span></span><span class="line"><span class="cl">plt.figure<span class="o">(</span><span class="nv">figsize</span><span class="o">=(</span>20,8<span class="o">)</span>,dpi <span class="o">=</span> 100<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2 绘制图像</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">plt.bar<span class="o">(</span>x, y, <span class="nv">width</span><span class="o">=</span>0.5,color <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;b&#39;</span>,<span class="s1">&#39;r&#39;</span>,<span class="s1">&#39;y&#39;</span>,<span class="s1">&#39;c&#39;</span>,<span class="s1">&#39;g&#39;</span><span class="o">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2.1 显示x轴刻度显示</span>
+</span></span><span class="line"><span class="cl">plt.xticks<span class="o">(</span>x,movie_name<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 2.2 网格显示</span>
+</span></span><span class="line"><span class="cl">plt.grid<span class="o">(</span><span class="nv">linestyle</span> <span class="o">=</span> <span class="s1">&#39;-.&#39;</span>,alpha <span class="o">=</span> 0.5<span class="o">)</span>
+</span></span><span class="line"><span class="cl">plt.title<span class="o">(</span><span class="s1">&#39;bar table&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 3 图像显示</span>
+</span></span><span class="line"><span class="cl">plt.show<span class="o">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>显示效果</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="index/image-20220505215743495.png"
+        data-srcset="/machinelearning/index/image-20220505215743495.png, index/image-20220505215743495.png 1.5x, /machinelearning/index/image-20220505215743495.png 2x"
+        data-sizes="auto"
+        alt="/machinelearning/index/image-20220505215743495.png"
+        title="image-20220505215743495" /></p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
