@@ -31,7 +31,7 @@
                             "url": "https:\/\/mk310.github.io\/machinelearning\/featured-image.jpg",
                             "width":  1080 ,
                             "height":  607 
-                        }],"genre": "posts","keywords": "machinelearning","wordcount":  3448 ,
+                        }],"genre": "posts","keywords": "machinelearning","wordcount":  4706 ,
         "url": "https:\/\/mk310.github.io\/machinelearning\/","datePublished": "2022-04-14T09:12:26+08:00","dateModified": "2022-04-14T09:12:26+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -108,8 +108,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">机器学习</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>mk310</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"><i class="far fa-folder fa-fw"></i>人工智能</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-14">2022-04-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3448 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 7 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-14">2022-04-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 4706 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 10 分钟&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -172,6 +172,23 @@
             <li><a href="#3-3-matplotlib-图例">3-3 matplotlib 图例</a></li>
             <li><a href="#3-4-折线图的应用场景">3-4 折线图的应用场景</a></li>
             <li><a href="#3-5-常见图形的绘制">3-5 常见图形的绘制</a></li>
+          </ul>
+        </li>
+        <li><a href="#4-numpy">4 numpy</a>
+          <ul>
+            <li><a href="#4-1-ndarray">4-1 ndarray</a>
+              <ul>
+                <li><a href="#4-1-1-内存块风格一体式存储">4-1-1 内存块风格(一体式存储)</a></li>
+                <li><a href="#4-1-2-ndarray支持并行化运算-向量运算">4-1-2 ndarray支持并行化运算 （向量运算）</a></li>
+                <li><a href="#4-1-3-效率远高于纯python代码">4-1-3 效率远高于纯python代码</a></li>
+              </ul>
+            </li>
+            <li><a href="#4-2-ndarray具体介绍">4-2 ndarray具体介绍</a>
+              <ul>
+                <li><a href="#4-2-1-ndarray的属性">4-2-1 ndarray的属性</a></li>
+                <li><a href="#4-2-2-ndarray类型">4-2-2 ndarray类型</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
@@ -884,7 +901,177 @@
         data-sizes="auto"
         alt="/machinelearning/index/image-20220505215743495.png"
         title="image-20220505215743495" /></p>
-</div><div class="post-footer" id="post-footer">
+<h3 id="4-numpy">4 numpy</h3>
+<p>NumPy（Numerical Python）是Python的一种开源的数值计算扩展。这种工具可用来存储和处理大型矩阵，比Python自身的嵌套列表（nested list structure)结构要高效的多（该结构也可以用来表示矩阵（matrix）），支持大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。</p>
+<p>NumPy提供一个N维的<strong>数组类型ndarray</strong>，它描述里<strong>相同类型</strong>的items的集合。</p>
+<table>
+<thead>
+<tr>
+<th>政治</th>
+<th>语文</th>
+<th>数学</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>70</td>
+<td>44</td>
+<td>70</td>
+</tr>
+<tr>
+<td>72</td>
+<td>45</td>
+<td>77</td>
+</tr>
+</tbody>
+</table>
+<p>ndarray和普通的数组的效率对比</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">random</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span> 
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000000</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">%</span><span class="n">time</span> <span class="n">sum2</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">%</span><span class="n">time</span> <span class="n">sum1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#显示</span>
+</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">total</span><span class="p">:</span> <span class="mf">31.2</span> <span class="n">ms</span>
+</span></span><span class="line"><span class="cl"><span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mf">38.8</span> <span class="n">ms</span>
+</span></span><span class="line"><span class="cl"><span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">total</span><span class="p">:</span> <span class="mf">15.6</span> <span class="n">ms</span>
+</span></span><span class="line"><span class="cl"><span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mf">11.2</span> <span class="n">ms</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>明显ndarray的效率更加的高。</p>
+<h4 id="4-1-ndarray">4-1 ndarray</h4>
+<h5 id="4-1-1-内存块风格一体式存储">4-1-1 内存块风格(一体式存储)</h5>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="index/image-20220509162308300.png"
+        data-srcset="/machinelearning/index/image-20220509162308300.png, index/image-20220509162308300.png 1.5x, /machinelearning/index/image-20220509162308300.png 2x"
+        data-sizes="auto"
+        alt="/machinelearning/index/image-20220509162308300.png"
+        title="image-20220509162308300" /></p>
+<p>从图中我们可以看出ndarray在存储数据的时候，数据与数据的地址都是连续的，这样就给使得批量操作数组元素时速度更快。</p>
+<p>这是因为ndarray中的所有元素的类型都是相同的，⽽Python列表中的元素类型是任意的，所以ndarray在存储元素时内 存可以连续，⽽python原⽣list就只能通过寻址⽅式找到下⼀个元素，这虽然也导致了在通⽤性能⽅⾯Numpy的ndarray不及Python原⽣list，但在科学计算中，Numpy的ndarray就可以省掉很多循环语句，代码使⽤⽅⾯⽐Python原⽣list简单 的多。</p>
+<h5 id="4-1-2-ndarray支持并行化运算-向量运算">4-1-2 ndarray支持并行化运算 （向量运算）</h5>
+<p>数组与数组之间进行运算</p>
+<h5 id="4-1-3-效率远高于纯python代码">4-1-3 效率远高于纯python代码</h5>
+<p>Numpy底层使⽤C语⾔编写，内部解除了GIL（全局解释器锁），其对数组的操作速度不受Python解释器的限制，所以，其效率远⾼于纯Python代码。</p>
+<blockquote>
+<p>Python中的多线程是<strong>假的多线程</strong>。</p>
+<p>这是由于存在<strong>GIL（全局解释锁）</strong>！</p>
+<p>Python中，每个线程的执行方式：</p>
+<p>1.获取GIL</p>
+<p>2.执行代码直到sleep或python解释器将其挂起。</p>
+<p>3.释放GIL</p>
+<p><strong>因此，我们可以把GIL看作是“许可证”，一个线程若想要执行，必须先拿到GIL。并且在一个python进程中，GIL只有一个。拿不到“许可证”的线程，就不能执行。</strong></p>
+<p>这就导致了在Python进程中，<strong>即使有多个线程，同一时间也是仅有一个线程在执行。</strong></p>
+<p>所以，Python中的多线程是假的多线程。</p>
+</blockquote>
+<h4 id="4-2-ndarray具体介绍">4-2 ndarray具体介绍</h4>
+<p>N维数组ndarray</p>
+<h5 id="4-2-1-ndarray的属性">4-2-1 ndarray的属性</h5>
+<table>
+<thead>
+<tr>
+<th>属性名字</th>
+<th>属性解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ndarray.shape</td>
+<td>数组维度的元组</td>
+</tr>
+<tr>
+<td>ndarray.ndim</td>
+<td>数组维数</td>
+</tr>
+<tr>
+<td>ndarray.size</td>
+<td>数组中的元素数量</td>
+</tr>
+<tr>
+<td>ndarray.itemsize</td>
+<td>一个数组元素的长度（字节）</td>
+</tr>
+<tr>
+<td>ndarray.dtype</td>
+<td>数组元素的类型</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;数组的维度：</span><span class="si">%s</span><span class="se">\n</span><span class="s1">数组的维数：</span><span class="si">%s</span><span class="s1"> </span><span class="se">\n</span><span class="s1">数组中的元素数量:</span><span class="si">%s</span><span class="se">\n</span><span class="s1">一个数组元素的长度：</span><span class="si">%s</span><span class="se">\n</span><span class="s1">数组元素的类型：</span><span class="si">%s</span><span class="s1">&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">score</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span><span class="n">score</span><span class="o">.</span><span class="n">ndim</span><span class="p">,</span><span class="n">score</span><span class="o">.</span><span class="n">size</span><span class="p">,</span><span class="n">score</span><span class="o">.</span><span class="n">itemsize</span><span class="p">,</span><span class="n">score</span><span class="o">.</span><span class="n">dtype</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">显示</span><span class="err">：</span>
+</span></span><span class="line"><span class="cl"><span class="n">数组的维度</span><span class="err">：</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">数组的维数</span><span class="err">：</span><span class="mi">2</span> 
+</span></span><span class="line"><span class="cl"><span class="n">数组中的元素数量</span><span class="p">:</span><span class="mi">9</span>
+</span></span><span class="line"><span class="cl"><span class="n">一个数组元素的长度</span><span class="err">：</span><span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="n">数组元素的类型</span><span class="err">：</span><span class="n">int32</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="4-2-2-ndarray类型">4-2-2 ndarray类型</h5>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="index/image-20220509220918542.png"
+        data-srcset="/machinelearning/index/image-20220509220918542.png, index/image-20220509220918542.png 1.5x, /machinelearning/index/image-20220509220918542.png 2x"
+        data-sizes="auto"
+        alt="/machinelearning/index/image-20220509220918542.png"
+        title="image-20220509220918542" /></p>
+<p>创建数组的时候指定类型</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

@@ -580,3 +580,114 @@ plt.show()
 
 ![image-20220505215743495](index/image-20220505215743495.png)
 
+### 4 numpy
+
+NumPy（Numerical Python）是Python的一种开源的数值计算扩展。这种工具可用来存储和处理大型矩阵，比Python自身的嵌套列表（nested list structure)结构要高效的多（该结构也可以用来表示矩阵（matrix）），支持大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。
+
+NumPy提供一个N维的**数组类型ndarray**，它描述里**相同类型**的items的集合。
+
+| 政治 | 语文 | 数学 |
+| ---- | ---- | ---- |
+| 70   | 44   | 70   |
+| 72   | 45   | 77   |
+
+ndarray和普通的数组的效率对比
+
+```python
+import random
+import time 
+import numpy as np
+a = []
+for i in range(10000000):
+    a.append(random.random())
+
+%time sum2 = sum(a)
+
+b = np.array(a)
+%time sum1 = np.sum(b)
+
+
+
+#显示
+CPU times: total: 31.2 ms
+Wall time: 38.8 ms
+CPU times: total: 15.6 ms
+Wall time: 11.2 ms
+```
+
+明显ndarray的效率更加的高。
+
+#### 4-1 ndarray
+
+##### 4-1-1 内存块风格(一体式存储)
+
+![image-20220509162308300](index/image-20220509162308300.png)
+
+从图中我们可以看出ndarray在存储数据的时候，数据与数据的地址都是连续的，这样就给使得批量操作数组元素时速度更快。 
+
+这是因为ndarray中的所有元素的类型都是相同的，⽽Python列表中的元素类型是任意的，所以ndarray在存储元素时内 存可以连续，⽽python原⽣list就只能通过寻址⽅式找到下⼀个元素，这虽然也导致了在通⽤性能⽅⾯Numpy的ndarray不及Python原⽣list，但在科学计算中，Numpy的ndarray就可以省掉很多循环语句，代码使⽤⽅⾯⽐Python原⽣list简单 的多。
+
+##### 4-1-2 ndarray支持并行化运算 （向量运算）
+
+数组与数组之间进行运算
+
+##### 4-1-3 效率远高于纯python代码
+
+Numpy底层使⽤C语⾔编写，内部解除了GIL（全局解释器锁），其对数组的操作速度不受Python解释器的限制，所以，其效率远⾼于纯Python代码。
+
+> Python中的多线程是**假的多线程**。
+>
+> 这是由于存在**GIL（全局解释锁）**！
+>
+> Python中，每个线程的执行方式：
+>
+> 1.获取GIL
+>
+> 2.执行代码直到sleep或python解释器将其挂起。
+>
+> 3.释放GIL
+>
+> **因此，我们可以把GIL看作是“许可证”，一个线程若想要执行，必须先拿到GIL。并且在一个python进程中，GIL只有一个。拿不到“许可证”的线程，就不能执行。**
+>
+> 这就导致了在Python进程中，**即使有多个线程，同一时间也是仅有一个线程在执行。**
+>
+> 所以，Python中的多线程是假的多线程。
+
+#### 4-2 ndarray具体介绍
+
+N维数组ndarray
+
+##### 4-2-1 ndarray的属性
+
+| 属性名字         | 属性解释                   |
+| ---------------- | -------------------------- |
+| ndarray.shape    | 数组维度的元组             |
+| ndarray.ndim     | 数组维数                   |
+| ndarray.size     | 数组中的元素数量           |
+| ndarray.itemsize | 一个数组元素的长度（字节） |
+| ndarray.dtype    | 数组元素的类型             |
+
+```python
+print('数组的维度：%s\n数组的维数：%s \n数组中的元素数量:%s\n一个数组元素的长度：%s\n数组元素的类型：%s'%(score.shape,score.ndim,score.size,score.itemsize,score.dtype))
+
+显示：
+数组的维度：(3, 3)
+数组的维数：2 
+数组中的元素数量:9
+一个数组元素的长度：4
+数组元素的类型：int32
+```
+
+
+
+##### 4-2-2 ndarray类型
+
+![image-20220509220918542](index/image-20220509220918542.png)
+
+创建数组的时候指定类型
+
+```python
+a = np.array([[1, 2, 3],[4, 5, 6]], dtype=np.float32)
+```
+
+
