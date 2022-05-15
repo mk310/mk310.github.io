@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/mk310.github.io\/linearalgebra\/"
-        },"genre": "posts","wordcount":  918 ,
+        },"genre": "posts","wordcount":  1284 ,
         "url": "https:\/\/mk310.github.io\/linearalgebra\/","datePublished": "2022-04-30T14:28:56+08:00","dateModified": "2022-04-30T14:28:56+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -104,8 +104,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">LinearAlgebra</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>mk310</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-30">2022-04-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 918 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-30">2022-04-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1284 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -148,13 +148,19 @@
         <li><a href="#3-矩阵的逆矩阵">3 矩阵的逆矩阵</a>
           <ul>
             <li><a href="#3-1-逆矩阵的定义">3-1 逆矩阵的定义</a></li>
-            <li><a href="#3-2-矩阵可逆的充分必要条件-star">3-2 矩阵可逆的充分必要条件 $\star$</a></li>
+            <li><a href="#3-2-矩阵可逆的充分必要条件---">3-2 矩阵可逆的充分必要条件   ⭐</a></li>
             <li><a href="#3-3-逆矩阵的求法">3-3 逆矩阵的求法</a>
               <ul>
                 <li><a href="#1-伴随矩阵求法">1 伴随矩阵求法</a></li>
-                <li><a href="#2-初等变换法">2 初等变换法</a></li>
+                <li><a href="#2-初等变换法">2 初等变换法</a>
+                  <ul>
+                    <li><a href="#初等行变换对应的还有初等列变换">初等行变换（对应的还有初等列变换）</a></li>
+                    <li><a href="#初等变换求逆矩阵">初等变换求逆矩阵</a></li>
+                  </ul>
+                </li>
               </ul>
             </li>
+            <li><a href="#3-4-逆矩阵的性质">3-4 逆矩阵的性质</a></li>
           </ul>
         </li>
         <li><a href="#4-矩阵的秩">4 矩阵的秩</a></li>
@@ -290,14 +296,74 @@
 <p>如何求逆矩阵</p>
 </li>
 </ul>
-<h4 id="3-2-矩阵可逆的充分必要条件-star">3-2 矩阵可逆的充分必要条件 $\star$</h4>
+<h4 id="3-2-矩阵可逆的充分必要条件---">3-2 矩阵可逆的充分必要条件   ⭐</h4>
 <p>定理：设A是n阶矩阵，则A可逆的充分必要条件时$|A|\ne 0$</p>
 <h4 id="3-3-逆矩阵的求法">3-3 逆矩阵的求法</h4>
 <h5 id="1-伴随矩阵求法">1 伴随矩阵求法</h5>
 <p>若矩阵A可逆，则$A^{-1} =\frac { 1}{|A|}A^*$</p>
 <h5 id="2-初等变换法">2 初等变换法</h5>
+<blockquote>
 <p>方程组中的一方程对应矩阵$\overline A$(增广矩阵)中的一行。</p>
 <p>若$|A| \ne 0$,则求解方程的过程即将系数矩阵A化为单位矩阵E的过程。</p>
+</blockquote>
+<h6 id="初等行变换对应的还有初等列变换">初等行变换（对应的还有初等列变换）</h6>
+<ol>
+<li>对调两个矩阵的两行</li>
+</ol>
+<p>​	$E_{i,j}$	(矩阵的i,j两行交换位置)</p>
+<ol start="2">
+<li>矩阵的某行乘以非零常数$k$</li>
+</ol>
+<p>​	$E_{i}(c)$	(将矩阵的第i行乘以c得到的矩阵)</p>
+<ol start="3">
+<li>矩阵某行的倍数加到另一行</li>
+</ol>
+<p>​	$E_{i,j}(k)$	(将矩阵的第i行的k倍加到第j行)</p>
+<ol start="4">
+<li>初等矩阵的性质
+<ul>
+<li>$|E_{i,j}| = -1$ 	$|E_{i}(c)| = c $	$|E_{i,j}(k)| = 1 $  三个初等矩阵都可逆</li>
+<li>$(E_{i,j})^{-1} = E_{i,j}$</li>
+<li>$[E_{i}(c)]^{-1} = E_{i}(\frac{1}{c}) $</li>
+<li>$[E_{i,j}(k)]^{-1} = E_{i,j}(-k) $</li>
+</ul>
+</li>
+</ol>
+<p>​	<strong>问：$A$ 是否可以经过有限次初等行变换/列变换/变换转换为单位矩阵$E$</strong></p>
+<h6 id="初等变换求逆矩阵">初等变换求逆矩阵</h6>
+<ul>
+<li>定理1：A是n阶可逆矩阵，$(A\vdots E) \stackrel{行}\rightarrow (E\vdots A^{-1})$</li>
+<li>定理2：A是n阶可逆矩阵，B为n行s列矩阵，$(A\vdots B) \stackrel{行}\rightarrow (E\vdots A^{-1} B)$</li>
+<li>定理3：</li>
+<li>定理4：</li>
+</ul>
+<h4 id="3-4-逆矩阵的性质">3-4 逆矩阵的性质</h4>
+<ol>
+<li>
+<p>$(A^{-1})^{-1} = A$</p>
+</li>
+<li>
+<p>$(kA)^{-1} = \frac{1}{k}A^{-1}$</p>
+</li>
+<li>
+<p>$(AB)^{-1} = B^{-1}A^{-1}$</p>
+</li>
+<li>
+<p>$(A^T)^{-1} = (A^{-1})^T$</p>
+</li>
+<li>
+<p>$(A^n)^{-1} = (A^{-1})^n$</p>
+</li>
+<li>
+<p>$$
+\begin{pmatrix} A &amp; O \\ O &amp; B \end{pmatrix}^{-1} = \begin{pmatrix} A^{-1} &amp; O \\ O &amp; B^{-1} \end{pmatrix}
+$$</p>
+<p>$$
+\begin{pmatrix} O &amp; A \\ B &amp; A \end{pmatrix}^{-1} = \begin{pmatrix} O &amp; A^{-1} \\ B^{-1} &amp;O  \end{pmatrix}
+$$</p>
+</li>
+<li></li>
+</ol>
 <h3 id="4-矩阵的秩">4 矩阵的秩</h3>
 <h3 id="5-矩阵等价">5 矩阵等价</h3>
 </div><div class="post-footer" id="post-footer">
