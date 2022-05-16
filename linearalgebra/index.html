@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/mk310.github.io\/linearalgebra\/"
-        },"genre": "posts","wordcount":  1284 ,
+        },"genre": "posts","wordcount":  1672 ,
         "url": "https:\/\/mk310.github.io\/linearalgebra\/","datePublished": "2022-04-30T14:28:56+08:00","dateModified": "2022-04-30T14:28:56+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -104,8 +104,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">LinearAlgebra</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>mk310</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-30">2022-04-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1284 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-30">2022-04-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1672 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -163,8 +163,19 @@
             <li><a href="#3-4-逆矩阵的性质">3-4 逆矩阵的性质</a></li>
           </ul>
         </li>
-        <li><a href="#4-矩阵的秩">4 矩阵的秩</a></li>
-        <li><a href="#5-矩阵等价">5 矩阵等价</a></li>
+        <li><a href="#4-矩阵的秩">4 矩阵的秩</a>
+          <ul>
+            <li><a href="#4-1-矩阵秩的u概念">4-1 矩阵秩的u概念</a></li>
+            <li><a href="#4-2-矩阵秩的求法">4-2 矩阵秩的求法</a></li>
+            <li><a href="#4-3-矩阵秩的性质">4-3 矩阵秩的性质</a></li>
+          </ul>
+        </li>
+        <li><a href="#5-矩阵等价">5 矩阵等价</a>
+          <ul>
+            <li><a href="#5-1-矩阵等价的定义">5-1 矩阵等价的定义</a></li>
+            <li><a href="#5-2-矩阵等价的判别方法">5-2 矩阵等价的判别方法</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -362,10 +373,34 @@ $$</p>
 \begin{pmatrix} O &amp; A \\ B &amp; A \end{pmatrix}^{-1} = \begin{pmatrix} O &amp; A^{-1} \\ B^{-1} &amp;O  \end{pmatrix}
 $$</p>
 </li>
-<li></li>
 </ol>
 <h3 id="4-矩阵的秩">4 矩阵的秩</h3>
+<h4 id="4-1-矩阵秩的u概念">4-1 矩阵秩的u概念</h4>
+<h4 id="4-2-矩阵秩的求法">4-2 矩阵秩的求法</h4>
+<p>在方程组中，矩阵的秩的本质是方程组中约束条件的个数，二方程组的约束条件的个数即经过方程组单中同解（初等变换）变形阶梯化后留下的方程组的个数，因此对矩阵进行初等行变换阶梯化后非零行数即为矩阵的秩：
+$$
+A  = \begin{pmatrix} 1 &amp; 1&amp;-1&amp;3 \\ 1&amp;2&amp;1&amp; 1 \\ 2&amp;3&amp;0&amp;4 \end{pmatrix} \rightarrow
+\begin{pmatrix} 1 &amp; 1&amp;-1&amp;3 \\ 0&amp;1&amp;2&amp;-2 \\ 0&amp;1&amp;2&amp;-2 \end{pmatrix}  \rightarrow
+\begin{pmatrix} 1 &amp; 1&amp;-1&amp;3 \\ 0&amp;1&amp;2&amp;-2 \\ 0&amp;0&amp;0&amp;0 \end{pmatrix}
+$$
+即$r(A) = 2$</p>
+<h4 id="4-3-矩阵秩的性质">4-3 矩阵秩的性质</h4>
+<ol>
+<li>$r(A) = r(A^T) = r(A^TA) = r(AA^T)$</li>
+<li>$r(A \pm B) \leq r(A)+r(B)$  ( 题中出现$A \pm B$ 或者 $r(A)+r(B)$时）</li>
+<li>$r(AB) \leq min{r(A),r(B) }$</li>
+<li>$AB = 0,则r(A)+r(B) \leq n$</li>
+<li>A 是$m \times n$矩阵，P，Q分别为m,n阶可逆矩阵，  $r(A) = r(PA) = r(AQ) = r(PAQ)$</li>
+<li></li>
+</ol>
 <h3 id="5-矩阵等价">5 矩阵等价</h3>
+<h4 id="5-1-矩阵等价的定义">5-1 矩阵等价的定义</h4>
+<p>设<strong>A</strong>和<strong>B</strong>为同型的矩阵，<strong>A</strong>经过有限次的初等变换变为<strong>B</strong>，则称A，B是同型矩阵。</p>
+<h4 id="5-2-矩阵等价的判别方法">5-2 矩阵等价的判别方法</h4>
+<ul>
+<li><strong>定理一</strong>：设<strong>A</strong>和<strong>B</strong>为同型的矩阵，<strong>A</strong>，<strong>B</strong>等价的充分必要条件是$r(A) = r(B)$</li>
+<li><strong>定理二</strong>:  设<strong>A</strong>和<strong>B</strong>为同型的矩阵，<strong>A</strong>，<strong>B</strong>等价的充分必要条件是,存在可逆矩阵$P,Q$,使得$PAQ = B$</li>
+</ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
