@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/mk310.github.io\/linearalgebra\/"
-        },"genre": "posts","wordcount":  1672 ,
+        },"genre": "posts","wordcount":  1822 ,
         "url": "https:\/\/mk310.github.io\/linearalgebra\/","datePublished": "2022-04-30T14:28:56+08:00","dateModified": "2022-04-30T14:28:56+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -104,7 +104,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">LinearAlgebra</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>mk310</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-30">2022-04-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1672 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-30">2022-04-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1822 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -386,12 +386,41 @@ $$
 即$r(A) = 2$</p>
 <h4 id="4-3-矩阵秩的性质">4-3 矩阵秩的性质</h4>
 <ol>
-<li>$r(A) = r(A^T) = r(A^TA) = r(AA^T)$</li>
-<li>$r(A \pm B) \leq r(A)+r(B)$  ( 题中出现$A \pm B$ 或者 $r(A)+r(B)$时）</li>
-<li>$r(AB) \leq min{r(A),r(B) }$</li>
-<li>$AB = 0,则r(A)+r(B) \leq n$</li>
-<li>A 是$m \times n$矩阵，P，Q分别为m,n阶可逆矩阵，  $r(A) = r(PA) = r(AQ) = r(PAQ)$</li>
-<li></li>
+<li>
+<p>$r(A) = r(A^T) = r(A^TA) = r(AA^T)$</p>
+</li>
+<li>
+<p>$r(A \pm B) \leq r(A)+r(B)$  ( 题中出现$A \pm B$ 或者 $r(A)+r(B)$时）</p>
+</li>
+<li>
+<p>$r(AB) \leq min \{ r(A),r(B) \}$</p>
+</li>
+<li>
+<p>$AB = 0,则r(A)+r(B) \leq n$</p>
+</li>
+<li>
+<p>A 是$m \times n$矩阵，P，Q分别为m,n阶可逆矩阵，  $r(A) = r(PA) = r(AQ) = r(PAQ)$</p>
+</li>
+<li>
+<p>设A是n阶矩阵，则
+$$
+r(A^*) = \begin{cases} n,r(A) = n, \\ 1,r(A) = n-1,(n \geq 2) \\ 0,r(A)&lt;n-1 \end{cases}
+$$</p>
+</li>
+<li>
+<p>(1)$若A，B分别为m \times s ,n \times s$矩阵，则</p>
+</li>
+</ol>
+<p>$$
+max { r(A),r(B) } \leq r{\begin{pmatrix} A \\B \end{pmatrix}} \leq r(A) +r(B)
+$$</p>
+<p>$若A，B分别为m \times n,m \times s$矩阵，则
+$$
+max { r(A),r(B)} \leq r(A \vdots B) \leq r(A) +r(B)
+$$
+(2) $r{ \begin{pmatrix} A&amp;O \\ O&amp;B \end{pmatrix}} = r(A) +r(B)$</p>
+<ol start="8">
+<li>设A为n阶非零矩阵，则r(A) = 1的充分必要条件是，存在非零向量 $\alpha ,\beta,使得A= \alpha \beta^T$</li>
 </ol>
 <h3 id="5-矩阵等价">5 矩阵等价</h3>
 <h4 id="5-1-矩阵等价的定义">5-1 矩阵等价的定义</h4>

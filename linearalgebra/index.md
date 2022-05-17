@@ -205,11 +205,33 @@ $$
 #### 4-3 矩阵秩的性质
 
 1. $r(A) = r(A^T) = r(A^TA) = r(AA^T)$
+
 2. $r(A \pm B) \leq r(A)+r(B)$  ( 题中出现$A \pm B$ 或者 $r(A)+r(B)$时）
-3.    $r(AB) \leq min\{r(A),r(B) \}$
+
+3. $r(AB) \leq min \\{ r(A),r(B) \\}$
+
 4. $AB = 0,则r(A)+r(B) \leq n$
+
 5. A 是$m \times n$矩阵，P，Q分别为m,n阶可逆矩阵，  $r(A) = r(PA) = r(AQ) = r(PAQ)$
-6. 
+
+6. 设A是n阶矩阵，则
+   $$
+   r(A^*) = \begin{cases} n,r(A) = n, \\\\ 1,r(A) = n-1,(n \geq 2) \\\\ 0,r(A)<n-1 \end{cases}
+   $$
+
+7. (1)$若A，B分别为m \times s ,n \times s$矩阵，则
+
+$$
+max \{ r(A),r(B) \} \leq r{\begin{pmatrix} A \\\\B \end{pmatrix}} \leq r(A) +r(B)
+$$
+
+$若A，B分别为m \times n,m \times s$矩阵，则
+$$
+max \{ r(A),r(B)\} \leq r(A \vdots B) \leq r(A) +r(B)
+$$
+(2) $r{ \begin{pmatrix} A&O \\\\ O&B \end{pmatrix}} = r(A) +r(B)$
+
+8. 设A为n阶非零矩阵，则r(A) = 1的充分必要条件是，存在非零向量 $\alpha ,\beta,使得A= \alpha \beta^T$
 
 ### 5 矩阵等价
 
