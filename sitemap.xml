@@ -2,15 +2,15 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://mk310.github.io/hugo/</loc><lastmod>2022-04-27T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://mk310.github.io/hugo/</loc><lastmod>2022-04-27T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>https://mk310.github.io/machinelearning/</loc><lastmod>2022-04-14T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
             <loc>https://mk310.github.io/</loc><lastmod>2022-04-30T14:28:56&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>https://mk310.github.io/linearalgebra/</loc><lastmod>2022-04-30T14:28:56&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>https://mk310.github.io/posts/</loc><lastmod>2022-04-30T14:28:56&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://mk310.github.io/categories/</loc><lastmod>2022-04-27T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://mk310.github.io/tags/hugo/</loc><lastmod>2022-04-27T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://mk310.github.io/categories/hugo/</loc><lastmod>2022-04-27T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://mk310.github.io/tags/</loc><lastmod>2022-04-27T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://mk310.github.io/categories/</loc><lastmod>2022-04-27T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://mk310.github.io/tags/hugo/</loc><lastmod>2022-04-27T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://mk310.github.io/categories/hugo/</loc><lastmod>2022-04-27T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://mk310.github.io/tags/</loc><lastmod>2022-04-27T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>https://mk310.github.io/tags/git/</loc><lastmod>2022-04-16T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
             <loc>https://mk310.github.io/software_git/</loc><lastmod>2022-04-16T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
             <loc>https://mk310.github.io/categories/%E8%BD%AF%E4%BB%B6/</loc><lastmod>2022-04-16T09:12:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
