@@ -6,20 +6,24 @@
 ### 1-基本概念
 
 - 逆序
-- 逆序数
-- 行列式：代数式或者值
+- 逆序数：$ \tau(421635) = 3+1+0+2+0+0 = 6$
+
+- 行列式:行列式本身是代数式或者值
 - 余子式和代数余子式
 
-### 2-特殊的高阶行列式
-
-- 对角，上下三角行列式
+### 2-特殊的高阶行列式对角，上下三角行列式
 
 - 范德蒙行列式：
 
 ![image-20220430171422249](index/image-20220430171422249.png)
 
 - 分块行列式
+  - $\begin{vmatrix} A&C \\\\ 0&B \end{vmatrix} = \begin{vmatrix} A&0 \\\\ D&B \end{vmatrix} = |A| \cdot |B|$
+  - 设AB分别为m，阶矩阵：$\begin{vmatrix} A&0 \\\\ 0&B \end{vmatrix} = (-1)^{mn}|A|\cdot|B|$
+
 - 拉普拉斯
+
+$A_{nn}B_{nn},|AB| = |A|\cdot|B|$ 
 
 ### 3-行列式的计算
 
@@ -82,17 +86,76 @@ $$a_{i1}A_{j1}+a_{i2}A_{j2}+ \cdots +a_{in}A_{jn}(i \neq j )$$
 
 ##### 矩阵加减：必须是同型，对应各项相加减
 
-##### 矩阵乘法（内标相同才可以运算，外标决定结果型）
+##### :cry:矩阵乘法（内标相同才可以运算，外标决定结果型）
 
 矩阵和数**k**相乘：每项都乘**k**
 
 矩阵和矩阵乘法：
 
-$$A_{mn} \times B_{ns}  = R_{ms} $$
+ $$A_{mn} \times B_{ns}  = R_{ms} $$ 
+
+
+
+{{< admonition tip "矩阵相乘的本质" false >}}
+
+![image-20220521173329084](index/image-20220521173329084.png)
+
+$$
+\begin{gathered}
+\overrightarrow {OA}  = a_{x} \overrightarrow{i} +a_{y} \overrightarrow{j} \\\\ \overrightarrow {OB}  = b_{x} \overrightarrow{i} +b_{y} \overrightarrow{j}  \end{gathered} \qquad\Rightarrow\qquad \begin{gathered}
+\overrightarrow {OX^{'}}  = 5(a_{x} \overrightarrow{i} +a_{y} \overrightarrow{j})+3( b_{x} \overrightarrow{i} +b_{y} \overrightarrow{j} ) \end{gathered}
+$$
+
+$$
+\begin{gathered}
+\overrightarrow {OA} = \begin{bmatrix}a_x \\\\ a_y \end{bmatrix}  \\\\
+\overrightarrow{OB} = \begin{bmatrix}b_x \\\\ b_y \end{bmatrix} 
+\end{gathered} 
+\qquad\Rightarrow\qquad 
+\begin{gathered}
+\overrightarrow {OX^{'}}  = 5\begin{bmatrix}a_x \\\\ 
+a_y \end{bmatrix}+3\begin{bmatrix}b_x \\\\ b_y \end{bmatrix}
+=(5,3)\begin{bmatrix} a_x&b_x \\\\ a_y&b_y \end{bmatrix}
+\end{gathered}
+$$
+
+$$
+\quad \quad 
+\begin{matrix}
+{\overrightarrow a_{1}}\over{\uparrow}&{\overrightarrow a_{2}}\over{\uparrow}&\cdots&{\overrightarrow a_{n}}\over{\uparrow} 
+\end{matrix}
+\quad \quad
+\begin{matrix}
+\quad
+\end{matrix}\\\
+\quad \quad A = 
+\begin{bmatrix}
+ {a_{11}}&a_{12}&\cdots&a_{1n} \\\\
+a_{21}&a_{22}&\cdots&a_{2n} \\\\
+\vdots&\vdots&&\vdots		\\\\
+a_{m1}&a_{m2}&\cdots&a_{mn} 
+\end{bmatrix},
+x = 
+\begin{bmatrix}
+x_{1} \\\\
+x_{2} \\\\
+\vdots		\\\\
+x_{1}
+\end{bmatrix},
+$$
+
+矩阵相乘的**本质**：
+
+标准坐标系中的点经过矩阵A的变换后，变为以矩阵**A的列向量为基**的坐标系中的点x。Ax就是变换后坐标系中点x的坐标。
+
+
+{{< /admonition >}}
+
+
 
 理解:每行分别和每一列相乘
 
-{{< bilibili BV1BZ4y1r7fJ>}}
+{{< bilibili BV1hf4y1R7HQ>}}
 
 notes：
 
@@ -127,15 +190,22 @@ notes：
 
 定理：设A是n阶矩阵，则A可逆的充分必要条件时$|A|\ne 0$ 
 
+**证明**:smile:(会证明)
+
+- 充分性：$BA = E 得 |BA| = |B||A| = E \ne 0$ 所以$|A| \ne 0$ 
+- 必要性：$A^{-1} =\frac { 1}{|A|}A^*$  只要$|A| \ne 0，A^*存在$
+
 #### 3-3 逆矩阵的求法
 
-##### 1 伴随矩阵求法
+##### 1 伴随矩阵求法（阶数不超过三阶）
 
 若矩阵A可逆，则$A^{-1} =\frac { 1}{|A|}A^*$
 
 ##### 2 初等变换法
 
 > 方程组中的一方程对应矩阵$\overline A$(增广矩阵)中的一行。
+>
+> *（单纯解解方程不能列变换）*
 >
 > 若$|A| \ne 0$,则求解方程的过程即将系数矩阵A化为单位矩阵E的过程。 
 
@@ -190,7 +260,7 @@ notes：
 
 ### 4 矩阵的秩
 
-#### 4-1 矩阵秩的u概念
+#### 4-1 矩阵秩的概念
 
 #### 4-2 矩阵秩的求法
 
@@ -243,6 +313,12 @@ $$
 
 - **定理一**：设**A**和**B**为同型的矩阵，**A**，**B**等价的充分必要条件是$r(A) = r(B)$
 - **定理二**:  设**A**和**B**为同型的矩阵，**A**，**B**等价的充分必要条件是,存在可逆矩阵$P,Q$,使得$PAQ = B$
+
+
+
+
+
+
 
 
 
