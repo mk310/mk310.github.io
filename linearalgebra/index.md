@@ -55,6 +55,12 @@ $$a_{i1}A_{j1}+a_{i2}A_{j2}+ \cdots +a_{in}A_{jn}(i \neq j )$$
 
 ## 矩阵
 
+{{< admonition question "相关题型" false >}}
+
+矩阵的幂矩阵求法
+
+{{< /admonition >}}
+
 ### 1- 基本概念
 
 #### 1-2 同型矩阵和矩阵相等：行列数m，n相等同型，所有元素相等才相等。
@@ -264,7 +270,7 @@ notes：
 
 #### 4-2 矩阵秩的求法
 
-在方程组中，矩阵的秩的本质是方程组中约束条件的个数，二方程组的约束条件的个数即经过方程组单中同解（初等变换）变形阶梯化后留下的方程组的个数，因此对矩阵进行初等行变换阶梯化后非零行数即为矩阵的秩：
+在方程组中，矩阵的秩的本质是方程组中约束条件的个数，二方程组的约束条件的个数即经过方程组单中同解（初等变换）变形***阶梯化***后留下的方程组的个数，因此对矩阵进行初等行变换阶梯化后非零行数即为矩阵的秩：
 $$
 A  = \begin{pmatrix} 1 & 1&-1&3 \\\\ 1&2&1& 1 \\\\ 2&3&0&4 \end{pmatrix} \rightarrow 
 \begin{pmatrix} 1 & 1&-1&3 \\\\ 0&1&2&-2 \\\\ 0&1&2&-2 \end{pmatrix}  \rightarrow
@@ -274,40 +280,44 @@ $$
 
 #### 4-3 矩阵秩的性质
 
-1. $r(A) = r(A^T) = r(A^TA) = r(AA^T)$
+1. $r(A) = r(A^T) = r(A^TA) = r(AA^T)$ 【:point_right:出现$ A^TA , AA^T$时使用】[^1]
 
-2. $r(A \pm B) \leq r(A)+r(B)$  ( 题中出现$A \pm B$ 或者 $r(A)+r(B)$时）
+2. $r(A \pm B) \leq r(A)+r(B)$  【:point_right: 题中出现$A \pm B$ 或者 $r(A)+r(B)$时】
 
-3. $r(AB) \leq min \\{ r(A),r(B) \\}$
+3. $A,B分别为m \times n ，n \times s 矩阵，r(AB) \leq min [ r(A),r(B) ]$,矩阵相乘秩不会增长【:point_right:看到AB时候使用】
 
-4. $AB = 0,则r(A)+r(B) \leq n$
+4. :star:$A,B分别为m \times n ，n \times s 矩阵,AB = 0,则r(A)+r(B) \leq n$【:point_right:看到$AB = 0$】
 
 5. A 是$m \times n$矩阵，P，Q分别为m,n阶可逆矩阵，  $r(A) = r(PA) = r(AQ) = r(PAQ)$
 
-6. 设A是n阶矩阵，则
+6. :star:设A是n阶矩阵，则
    $$
    r(A^*) = \begin{cases} n,r(A) = n, \\\\ 1,r(A) = n-1,(n \geq 2) \\\\ 0,r(A)<n-1 \end{cases}
    $$
-
+   
 7. (1)$若A，B分别为m \times s ,n \times s$矩阵，则
 
 $$
-max \{ r(A),r(B) \} \leq r{\begin{pmatrix} A \\\\B \end{pmatrix}} \leq r(A) +r(B)
+max [ r(A),r(B) ] \leq r{\begin{pmatrix} A \\\\B \end{pmatrix}} \leq r(A) +r(B)
 $$
 
 $若A，B分别为m \times n,m \times s$矩阵，则
 $$
-max \{ r(A),r(B)\} \leq r(A \vdots B) \leq r(A) +r(B)
+max [r(A),r(B)] \leq r(A \vdots B) \leq r(A) +r(B)
 $$
 (2) $r{ \begin{pmatrix} A&O \\\\ O&B \end{pmatrix}} = r(A) +r(B)$
 
+
+
 8. 设A为n阶非零矩阵，则r(A) = 1的充分必要条件是，存在非零向量 $\alpha ,\beta,使得A= \alpha \beta^T$
+
+   
 
 ### 5 矩阵等价
 
 #### 5-1 矩阵等价的定义
 
-设**A**和**B**为同型的矩阵，**A**经过有限次的初等变换变为**B**，则称A，B是同型矩阵。
+设**A**和**B**为同型的矩阵，**A**经过有限次的初等变换变为**B**，则称A，B等价。
 
 #### 5-2 矩阵等价的判别方法
 
@@ -316,9 +326,70 @@ $$
 
 
 
+## 向量
+
+### 1 向量的概念和运算
+
+#### 1-1 基本概念
+
+- 向量：既有大小又有方向的量
+
+- 向量的模：$\alpha = \begin{bmatrix}a_1 \\\\ a_2 \\\\ \vdots \\\\a_n\end{bmatrix},向量的模 ：\sqrt{{a_1}^2+{a_2}^2+\cdots+{a_2}^2}$
+
+- 向量的单位化：单位向量 ：${\alpha}^0 = \frac{1}{|\alpha|}\alpha$
+
+- 向量的三则运算
+
+- 向量的内积：
+  $$
+  \alpha = 
+  \begin{bmatrix}
+  a_1 \\\\ a_2 \\\\ \vdots \\\\a_n
+  \end{bmatrix}
+  ,
+  \beta =
+  \begin{bmatrix}
+  b_1 \\\\ b_2 \\\\ \vdots \\\\b_n
+  \end{bmatrix}
+  ,
+  内积(\alpha,\beta) = a_1b_1+a_2b_2+\cdots+a_nb_n
+  $$
+  
+
+#### 1-2 向量运算的性质
+
+- 三则运算支持交换律，结合律
+- 向量内积性质：
+  - $（\alpha,k_1\beta_1+k_2\beta_2+\cdots+k_n\beta_n） = k_1(\alpha_1,\beta_1)+k_2(\alpha_2,\beta_2)+\cdots+k_n(\alpha_n,\beta_n)$
+  - $(\alpha,\beta) =0 \Leftrightarrow a_1b_1+a_2b_2+\cdots+a_nb_n = 0 称 \alpha ,\beta正交，记作\alpha \perp \beta  $
+
+### 2 向量组的相关性与线性表示
+
+#### 2-1 向量的相关性和线性表示理论的背景
+
+向量的相关性与线性表示理论本质上是以向量为工具对方程组理论进行描述：每一个向量表示系数矩阵的一列。
+
+#### 2-2 向量组相关性与线性表示的基本概念
+
+##### 2-2-1 相关性
+
+对齐次线性方程组
 
 
+$$
+x_1\alpha_1+x_2\alpha_2 +\cdots +x_n\alpha_n \\\\
+$$
 
+
+#### 2-3 向量组相关性与线性表示的性质
+
+### 3 向量组等价，向量组的极大线性无关组与向量组的秩
+
+#### 3-1 基本概念
+
+#### 3-2 向量组秩的性质
+
+[^1]:[(如何证明矩阵A乘以A的转置的秩＝A的秩？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/498418851/answer/2220779021)
 
 
 
