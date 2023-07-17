@@ -79,12 +79,12 @@
       <link href="/2023/02/26/git/"/>
       <url>/2023/02/26/git/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p><em>Git</em>是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理</p><span id="more"></span><h2 id="Git概述"><a href="#Git概述" class="headerlink" title="Git概述"></a>Git概述</h2><p>Git 诞生于一个极富纷争大举创新的年代。Linux 内核开源项目有着为数众多的参与者。 绝大多数的 Linux 内核维护工作都花在了提交补丁和保存归档的繁琐事务上（1991－2002年间）。 到 2002 年，整个项目组开始启用一个专有的分布式版本控制系统 BitKeeper 来管理和维护代码。<br>到了 2005 年，开发 BitKeeper 的商业公司同 Linux 内核开源社区的合作关系结束，他们收回了 Linux 内核社区免费使用 BitKeeper 的权力。 这就迫使 Linux 开源社区（特别是 Linux 的缔造者 Linus Torvalds）基于使用 BitKeeper 时的经验教训，开发出自己的版本系统。</p><p>Linus对新的系统制定了若干目标：</p><ul><li>速度</li><li>简单的设计</li><li>对分线性开发模式的强力支持（允许成千上万并行开发的分支）</li><li>完全分布式</li><li>有能力高效管理类似LInux内核一样超大规模项目（速度和数据量）</li></ul>]]></content>
       
       
       <categories>
           
-          <category> tech </category>
+          <category> tec </category>
           
       </categories>
       
@@ -289,11 +289,36 @@
     
     
     <entry>
+      <title>数学</title>
+      <link href="/2023/01/17/%E6%95%B0%E5%AD%A6/"/>
+      <url>/2023/01/17/%E6%95%B0%E5%AD%A6/</url>
+      
+        <content type="html"><![CDATA[<h2 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h2><h3 id="极限的定义和使用"><a href="#极限的定义和使用" class="headerlink" title="极限的定义和使用"></a>极限的定义和使用</h3><p>定义</p><p><img src="/../images/%E6%95%B0%E5%AD%A6/image-20230717134509855.png" alt="极限定义"></p><p>使用（在函数存在条件下）</p><ul><li>是常数</li><li>唯一性：左极限等于右边极限</li><li>局部有界性：<img src="/../images/%E6%95%B0%E5%AD%A6/image-20230717134918794.png" alt="局部有界"></li><li>局部保号：<img src="/../images/%E6%95%B0%E5%AD%A6/image-20230717135008717.png" alt="局部保号"></li><li>等式脱帽法：<img src="/../images/%E6%95%B0%E5%AD%A6/image-20230717135122321.png" alt="脱帽法"></li></ul><p><img src="/../images/%E6%95%B0%E5%AD%A6/image-20230717135222126.png" alt="image-20230717135222126"></p><h2 id="函数极限的计算"><a href="#函数极限的计算" class="headerlink" title="函数极限的计算"></a>函数极限的计算</h2><h3 id="化简先行"><a href="#化简先行" class="headerlink" title="化简先行"></a>化简先行</h3><ul><li>常用等价无穷小：<img src="/../images/%E6%95%B0%E5%AD%A6/image-20230717135440982.png" alt="常用等价无穷小"></li><li>等价无穷小替换:<img src="/../images/%E6%95%B0%E5%AD%A6/image-20230717135552605.png" alt="image-20230717135552605"></li><li>恒等变形<ul><li>提公因式</li><li>换元</li><li>通分</li><li><img src="/../images/%E6%95%B0%E5%AD%A6/image-20230717135751896.png" alt="image-20230717135751896"></li><li>使用公式</li><li>中值定理：<img src="/../images/%E6%95%B0%E5%AD%A6/image-20230717135858870.png" alt="中值定理"></li></ul></li><li>及时提出极限存在且不为0的因式</li></ul><h3 id="七种未定式"><a href="#七种未定式" class="headerlink" title="七种未定式"></a>七种未定式</h3><p><img src="/../images/%E6%95%B0%E5%AD%A6/image-20230717140737950.png" alt="未定式"></p><h3 id="洛必达"><a href="#洛必达" class="headerlink" title="洛必达"></a>洛必达</h3><p><img src="/../images/%E6%95%B0%E5%AD%A6/image-20230717140838860.png" alt="洛必达"></p><h3 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h3><h6 id=""><a href="#" class="headerlink" title=""></a><img src="/../images/%E6%95%B0%E5%AD%A6/image-20230717140928075.png" alt="泰勒公式"></h6><p>展开原则：？</p><h3 id="无穷小比阶"><a href="#无穷小比阶" class="headerlink" title="无穷小比阶"></a>无穷小比阶</h3><h2 id="函数存在性证明"><a href="#函数存在性证明" class="headerlink" title="函数存在性证明"></a>函数存在性证明</h2><ul><li>具体形：无法使用洛必达就用夹逼准则</li><li>抽象性：单调有界</li></ul><h2 id="连续间断"><a href="#连续间断" class="headerlink" title="连续间断"></a>连续间断</h2><p><img src="/../images/%E6%95%B0%E5%AD%A6/image-20230717141314676.png" alt="image-20230717141314676"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>poem</title>
       <link href="/2023/01/16/poem/"/>
       <url>/2023/01/16/poem/</url>
       
-        <content type="html"><![CDATA[<center>临江仙·夜饮东坡醒复醉<center>宋-苏轼</center><center>夜饮东坡醒复醉，归来仿佛三更。家童鼻息已雷鸣。敲门都不应，倚杖听江声。</center><center>长恨此身非我有，何时忘却营营。夜阑风静縠纹平。小舟从此逝，江海寄余生。</center><span id="more"></span><h2 id="唐"><a href="#唐" class="headerlink" title="唐"></a>唐</h2><h3 id="崔道融"><a href="#崔道融" class="headerlink" title="崔道融"></a>崔道融</h3><center>《梅花》</center><center>数萼初含雪，孤标画本难。</center><center>香中别有韵，清极不知寒。</center><center>横笛和愁听，斜枝依病看。</center><center>朔风如解意，容易莫摧残。</center><h2 id="明"><a href="#明" class="headerlink" title="明"></a>明</h2><h3 id="施耐庵"><a href="#施耐庵" class="headerlink" title="施耐庵"></a>施耐庵</h3><center>《鲁智深坐化诗》</center><center>平生不修善果，只爱杀人放火。</center><center>忽地顿开金枷，这里扯断玉锁。</center><center>咦！钱塘江上潮信来，今日方知我是我。 </center><hr><center>《西江月》 宋江反诗</center><center>自幼曾攻经史，长成亦有权谋。恰如猛虎卧荒丘，潜伏爪牙忍受。</center><center>不幸刺文双颊，那堪配在江州。他年若得报冤仇，血染浔阳江口!</center><center>心在山东身在吴，飘蓬江海谩嗟吁。他时若遂凌云志，敢笑黄巢不丈夫! </center><h2 id="清"><a href="#清" class="headerlink" title="清"></a>清</h2><h3 id="曹雪芹"><a href="#曹雪芹" class="headerlink" title="曹雪芹"></a>曹雪芹</h3><center>《自题一绝》</center><center>满纸荒唐言，一把辛酸泪！</center><center>都云作者痴，谁解其中味？</center><hr><h3 id="石达开"><a href="#石达开" class="headerlink" title="石达开"></a>石达开</h3><center>《入川题壁》</center><center>大盗亦有道，诗书所不屑。黄金若粪土，肝胆硬如铁。</center><center>策马渡悬崖，弯弓射胡月。人头作酒杯，饮尽仇雠血。</center>]]></content>
+        <content type="html"><![CDATA[<center>临江仙·夜饮东坡醒复醉<center>宋-苏轼</center><center>夜饮东坡醒复醉，归来仿佛三更。家童鼻息已雷鸣。敲门都不应，倚杖听江声。</center><center>长恨此身非我有，何时忘却营营。夜阑风静縠纹平。小舟从此逝，江海寄余生。</center><span id="more"></span><h2 id="唐"><a href="#唐" class="headerlink" title="唐"></a>唐</h2><h3 id="崔道融"><a href="#崔道融" class="headerlink" title="崔道融"></a>崔道融</h3><center>《梅花》</center><center>数萼初含雪，孤标画本难。</center><center>香中别有韵，清极不知寒。</center><center>横笛和愁听，斜枝依病看。</center><center>朔风如解意，容易莫摧残。</center><h2 id="明"><a href="#明" class="headerlink" title="明"></a>明</h2><h3 id="施耐庵"><a href="#施耐庵" class="headerlink" title="施耐庵"></a>施耐庵</h3><center>《鲁智深坐化诗》</center><center>平生不修善果，只爱杀人放火。</center><center>忽地顿开金枷，这里扯断玉锁。</center><center>咦！钱塘江上潮信来，今日方知我是我。 </center><hr><center>《西江月》 宋江反诗</center><center>自幼曾攻经史，长成亦有权谋。恰如猛虎卧荒丘，潜伏爪牙忍受。</center><center>不幸刺文双颊，那堪配在江州。他年若得报冤仇，血染浔阳江口!</center><center>心在山东身在吴，飘蓬江海谩嗟吁。他时若遂凌云志，敢笑黄巢不丈夫! </center><h2 id="清"><a href="#清" class="headerlink" title="清"></a>清</h2><h3 id="曹雪芹"><a href="#曹雪芹" class="headerlink" title="曹雪芹"></a>曹雪芹</h3><center>《自题一绝》</center><center>满纸荒唐言，一把辛酸泪！</center><center>都云作者痴，谁解其中味？</center><hr><h3 id="石达开"><a href="#石达开" class="headerlink" title="石达开"></a>石达开</h3><center>《入川题壁》</center><center>大盗亦有道，诗书所不屑。黄金若粪土，肝胆硬如铁。</center><center>策马渡悬崖，弯弓射胡月。人头作酒杯，饮尽仇雠血。</center><hr><h3 id="钱彩"><a href="#钱彩" class="headerlink" title="钱彩"></a>钱彩</h3><center>《说岳全传》>《风云》</center><center>金麟岂是池中物，一遇风云便化龙。</center><center>九霄龙吟惊天变，风云际会浅水游。</center>]]></content>
       
       
       <categories>
@@ -411,9 +436,9 @@
       
         <tags>
             
-            <tag> css实战 </tag>
-            
             <tag> css </tag>
+            
+            <tag> css实战 </tag>
             
         </tags>
       
@@ -438,9 +463,9 @@
       
         <tags>
             
-            <tag> css </tag>
-            
             <tag> css基础 </tag>
+            
+            <tag> css </tag>
             
         </tags>
       
