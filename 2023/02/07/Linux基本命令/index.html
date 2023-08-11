@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Linux基本命令 - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Hexo"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hexo"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="linux命令是对Linux系统进行管理的命令。对于Linux系统来说，无论是中央处理器、内存、磁盘驱动器、键盘、鼠标，还是用户等都是文件，Linux系统管理的命令是它正常运行的核心，与之前的DOS命令类似。linux命令在系统中有两种类型：内置Shell命令和Linux命令。"><meta property="og:type" content="blog"><meta property="og:title" content="Linux基本命令"><meta property="og:url" content="http://example.com/2023/02/07/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="linux命令是对Linux系统进行管理的命令。对于Linux系统来说，无论是中央处理器、内存、磁盘驱动器、键盘、鼠标，还是用户等都是文件，Linux系统管理的命令是它正常运行的核心，与之前的DOS命令类似。linux命令在系统中有两种类型：内置Shell命令和Linux命令。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://img1.baidu.com/it/u=2661267181,3993059189&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=800&amp;h=449"><meta property="article:published_time" content="2023-02-07T12:17:32.000Z"><meta property="article:modified_time" content="2023-06-14T05:53:45.144Z"><meta property="article:author" content="mk310"><meta property="article:tag" content="Linux"><meta property="article:tag" content="操作系统"><meta property="article:tag" content="命令"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://img1.baidu.com/it/u=2661267181,3993059189&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=800&amp;h=449"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/02/07/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/"},"headline":"Linux基本命令","image":[],"datePublished":"2023-02-07T12:17:32.000Z","dateModified":"2023-06-14T05:53:45.144Z","author":{"@type":"Person","name":"mk310"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":"linux命令是对Linux系统进行管理的命令。对于Linux系统来说，无论是中央处理器、内存、磁盘驱动器、键盘、鼠标，还是用户等都是文件，Linux系统管理的命令是它正常运行的核心，与之前的DOS命令类似。linux命令在系统中有两种类型：内置Shell命令和Linux命令。"}</script><link rel="canonical" href="http://example.com/2023/02/07/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/github.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://img1.baidu.com/it/u=2661267181,3993059189&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=800&amp;h=449" alt="Linux基本命令"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-02-07T12:17:32.000Z" title="2023/2/7 20:17:32">2023-02-07</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/tech/">tech</a></span><span class="level-item">30 分钟读完 (大约4503个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Linux基本命令</h1><div class="content"><p>linux命令是对Linux系统进行管理的命令。对于<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Linux%E7%B3%BB%E7%BB%9F/1732935?fromModule=lemma_inlink">Linux系统</a>来说，无论是<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/284033?fromModule=lemma_inlink">中央处理器</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%86%85%E5%AD%98/103614?fromModule=lemma_inlink">内存</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%A3%81%E7%9B%98%E9%A9%B1%E5%8A%A8%E5%99%A8/5900722?fromModule=lemma_inlink">磁盘驱动器</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%94%AE%E7%9B%98/208749?fromModule=lemma_inlink">键盘</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%BC%A0%E6%A0%87/122323?fromModule=lemma_inlink">鼠标</a>，还是用户等都是文件，Linux系统管理的命令是它正常运行的核心，与之前的DOS命令类似。linux命令在系统中有两种类型：内置Shell命令和Linux命令。</p>
+<span id="more"></span>
+
+<p>操作系统</p>
+<p> 主要作用是管理好硬件设备，并为用户和应用程序提供一个简单的接口，便于使用，作为中间人，连接软件和硬件</p>
+<h2 id="Linux文件和目录"><a href="#Linux文件和目录" class="headerlink" title="Linux文件和目录"></a>Linux文件和目录</h2><p><img src="/../images/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/image-20230307211929449.png" alt="linux目录"></p>
+<ul>
+<li><p>&#x2F;bin[重点] (&#x2F;usr&#x2F;bin、&#x2F;usr&#x2F;local&#x2F;bin）</p>
+<pre><code>是Binarv的缩写，这个目录存放着最经常使用的命令。
+</code></pre>
+</li>
+<li><p>&#x2F;sbin (&#x2F;usr&#x2F;sbin、&#x2F;usr&#x2F;local&#x2F;sbin)</p>
+<pre><code>s就是Super User的意思，这里存放的是系统管理员使用的系统管理程序。
+</code></pre>
+</li>
+<li><p>&#x2F;home[重点]</p>
+<pre><code>存放普通用户的主目录，在Linux中每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的。
+</code></pre>
+</li>
+<li><p>&#x2F;root[重点]</p>
+<pre><code>该目录为系统管理员，也称作超级权限者的用户主目录。
+</code></pre>
+</li>
+<li><p>&#x2F;boot[重点]</p>
+<pre><code>存放的是启动Linux时使用的一些核心文件，包括一些连接文件以及镜像文件。
+</code></pre>
+</li>
+<li><p>&#x2F;proc</p>
+<pre><code>这个目录是一个虚拟的目录，它是系统内存的映射，访问这个目录来获取系统信息。
+</code></pre>
+</li>
+<li><p>&#x2F;srv </p>
+<pre><code>service缩写，该目录存放一些服务启动之后需要提取的数据。
+</code></pre>
+</li>
+<li><p>&#x2F;sys</p>
+<pre><code>这是linux2.6内核的一个很大的变化。该目录下安装了26内核中新出现的一个文件系线。
+</code></pre>
+</li>
+<li><p>&#x2F;tmp</p>
+<pre><code>这个目录是用来存放一些临时文件的。
+</code></pre>
+</li>
+<li><p>&#x2F;dev</p>
+<pre><code>类似于windows的设备管理器，把所有的硬件用文件的形式存储。
+</code></pre>
+</li>
+<li><p>&#x2F;media[重点]</p>
+<pre><code>linux系统会自动识别一些设备，例如U盘、光驱等等，当识别后，linux会把识别的设备挂载到这个目录下。
+</code></pre>
+</li>
+<li><p>&#x2F;mnt[重点]</p>
+<pre><code>系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以将外部的存储挂
+</code></pre>
+<p>载在&#x2F;mnt&#x2F;上，然后进入该目录就可以查看里的内容了。d:&#x2F;myshare</p>
+</li>
+<li><p>&#x2F;opt</p>
+<pre><code>这是给主机额外安装软件所摆放的目录。如安装ORACLE数据库就可放到该目录下。
+</code></pre>
+<p>默认为空。</p>
+</li>
+<li><p>&#x2F;usr&#x2F;local[重点]</p>
+<pre><code>这是另一个给主机额外安装软件所安装的目录。一般是通过编译源码方式安装的程序。
+</code></pre>
+</li>
+<li><p>&#x2F;var[重点]</p>
+<pre><code>这个目录中存放着在不断扩充着的东西，习惯将经常被修改的目录放在这个目录下。
+</code></pre>
+<p>包括各种日志文件。</p>
+</li>
+<li><p>&#x2F;selinux[security-enhanced linux]360</p>
+<pre><code>SELinux是一种安全子系统，它能控制程序只能访问特定文件。
+</code></pre>
+</li>
+</ul>
+<hr>
+<h2 id="文件和文件夹操作"><a href="#文件和文件夹操作" class="headerlink" title="文件和文件夹操作"></a>文件和文件夹操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#终端命令格式</span></span><br><span class="line"><span class="built_in">command</span> [-options] [parameter]</span><br></pre></td></tr></table></figure>
+
+<h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h3><p>(change diectory) 切换到文件夹</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> cd /home 绝对路径，以根目录开头</span><br><span class="line"><span class="bullet">-</span> cd admin  相对路径，不以根目录开头，以文件名开头</span><br><span class="line"><span class="bullet">-</span> cd .. 返回上一级目录</span><br><span class="line"><span class="bullet">-</span> cd ~ 回到自己家的的目录，/home/damiin</span><br><span class="line"><span class="bullet">-</span> cd - 返回上一步进入的文件夹</span><br></pre></td></tr></table></figure>
+
+<p><code>pwd(print work diectory) </code>查看当前所在文件夹</p>
+<h3 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h3><p>(list) 查看目录内容</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> ls  -l 显示详细列表</span><br><span class="line"><span class="bullet">-</span> ls -lh把文件大小以人性化的方式显示（如比特转换为kb）</span><br><span class="line"><span class="bullet">-</span> ls  -a 显示所有的文件，包含隐藏文件，隐藏文件是以“.”开头的文件</span><br><span class="line">touch .123.txt 创建隐藏文件</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> ls -lah </span><br><span class="line"><span class="bullet">-</span> ls  /home la 查看home中隐藏的文件列表</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/image-20230307220440453.png" alt="文件权限"></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">drwxrwxr-x  d代表文件夹   -代表文件</span><br><span class="line"></span><br><span class="line">rwx（文件拥有者的权限）  rwx（文件拥有的组的权限 ）  r-x（其他用户的权限）  </span><br></pre></td></tr></table></figure>
+
+<p>通配符</p>
+<table>
+<thead>
+<tr>
+<th>通配符</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>*</td>
+<td>代表人任意个字符</td>
+</tr>
+<tr>
+<td>？</td>
+<td>代表任意一个字符，至少是一个</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>掉膘可以匹配字符组中的任意一个</td>
+</tr>
+<tr>
+<td>[abc]</td>
+<td>匹配abc中的任意一个</td>
+</tr>
+<tr>
+<td>[a-f]</td>
+<td>匹配a到f范围内的任意一个字符</td>
+</tr>
+</tbody></table>
+<p>配合通配符使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- <span class="built_in">ls</span> *txt 查看当前文件夹下以txt结尾的所有文件</span><br><span class="line">- <span class="built_in">ls</span> 1* 查看以1开头的文件</span><br></pre></td></tr></table></figure>
+
+<h3 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h3><blockquote>
+<p>如果有要创建的文件夹重名，不要内需创建</p>
+</blockquote>
+<p>(make diectory) 创建文件夹（相对路径，当前目录下创建文件夹）</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> mkdir /home/admin/(绝对路径）</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> mkdir	/home/admin  如果上级目录不存在，加上-p自动创建父目录、</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> mkdir	a b 在当前目录创建多个文件夹</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> mkdir a/&#123;c,d&#125;在指定目录下创建多个文件夹</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> mkdir  .abc 以.开头  创建隐藏目录</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> mkdir -p a1/b1/c1/d1 递归创建多个目录</span><br></pre></td></tr></table></figure>
+
+<h3 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h3><p> 如果文件不存在，创建空文件。如果文件存在，修改文件的末次修改日期</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> touch  abc.txt  在当前目录下创建  如果指定了目录，必须保证上级目录存在</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> touch .abc  创建隐藏文件</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> gedit  abc.txt使用记事本打开文本</span><br></pre></td></tr></table></figure>
+
+<h3 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h3><p> 删除文件</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> rm a.txt 删除文件</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> rm -r abv  删除目录</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> rm -f 强制删除，忽略不存在的文件，没有提示</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> rm * 删除当前目录下的所有内容 ，不能删除隐藏文件  . 和   .. 删除不掉</span><br></pre></td></tr></table></figure>
+
+<h3 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h3><p>复制</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp a.txt b.txt</span><br><span class="line">cp ~/Document/readme.txt .   #将家目录下的readme文件复制到当前目录中</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">mer</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-a</td>
+<td align="left">该选项通常在复制目录时候使用，它保留链接，文件属性，并递归分复制目录，总之保留文件原有的属性</td>
+</tr>
+<tr>
+<td align="center">-f</td>
+<td align="left">覆盖已经存在的目标文件而且不提示</td>
+</tr>
+<tr>
+<td align="center">-i</td>
+<td align="left">交互式复制，在覆盖目标文件之前将给出提示要求用户确认</td>
+</tr>
+<tr>
+<td align="center">-r</td>
+<td align="left">若给出的源文件是目录文件，则cp将递归复制该目录下的所有目录和文件，目标文件必须为一个目录名</td>
+</tr>
+<tr>
+<td align="center">-v</td>
+<td align="left">显示拷贝进度</td>
+</tr>
+</tbody></table>
+<h3 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h3><p>移动</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> mv 1.txt 2.txt  重命名</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> mv  1.txt  目录/2.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="查阅命令帮助信息"><a href="#查阅命令帮助信息" class="headerlink" title="查阅命令帮助信息"></a>查阅命令帮助信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> --<span class="built_in">help</span></span><br><span class="line"><span class="comment">#例如</span></span><br><span class="line"><span class="built_in">rm</span> --<span class="built_in">help</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#或者使用man</span></span><br><span class="line">man <span class="built_in">rm</span></span><br></pre></td></tr></table></figure>
+
+<p>使用<code>man</code>时候操作键</p>
+<table>
+<thead>
+<tr>
+<th>操作建</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>空格</td>
+<td>显示手册下一页</td>
+</tr>
+<tr>
+<td>Enter</td>
+<td>一次滚动手册的一页</td>
+</tr>
+<tr>
+<td>b</td>
+<td>回滚一页</td>
+</tr>
+<tr>
+<td>r</td>
+<td>前滚一页</td>
+</tr>
+<tr>
+<td>q</td>
+<td>退出</td>
+</tr>
+<tr>
+<td>&#x2F;word</td>
+<td>搜索word字符串</td>
+</tr>
+</tbody></table>
+<h2 id="其它命令行"><a href="#其它命令行" class="headerlink" title="其它命令行"></a>其它命令行</h2><h3 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h3><p>echo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> hello linux <span class="comment">#输出命令hello linux</span></span><br></pre></td></tr></table></figure>
+
+<p>重定向 <code>&gt;</code>和<code>&gt;&gt;</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">命令/文件 将命令返回的数据写入文件中，若命令没有返回则文件为空</span><br><span class="line">    <span class="built_in">echo</span> hello linux &gt; 1.txt <span class="comment">#将hello linux写入文件 </span></span><br><span class="line">    <span class="built_in">ls</span> -lh &gt; 1.txt <span class="comment">#将ls查看内容输出到文件中</span></span><br><span class="line">    把命令返回的结果输出到文件中，会覆盖之前的数据，默认情况命令返回的结果是显示在屏幕中</span><br><span class="line">    <span class="built_in">ls</span> &gt;&gt; 1.txt 把命令返回的结果输出到文件中，追加的方式</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h3><p>linux允许<strong>一个命令的输出</strong>通过管道作为另外<strong>一个命令的输入</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -al/ 显示根目录下的文件</span><br><span class="line">ls -al/ | more 使用more命令分屏显示前面命令返回的结果</span><br><span class="line">ls -al/ | grep D 搜寻根目录文件中含有D的文件 </span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="find查找文件"><a href="#find查找文件" class="headerlink" title="find查找文件"></a>find查找文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find /home -name 1.txt 在/home 目录中查找文件名为1.txt的文件</span><br><span class="line">find /home -name &#x27;*txt&#x27; 在/home 目录中查找以txt结尾的文件</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="ln-链接"><a href="#ln-链接" class="headerlink" title="ln 链接"></a>ln 链接</h3><hr>
+<h4 id="软链接"><a href="#软链接" class="headerlink" title="软链接"></a>软链接</h4><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>ln -s 被链接的源文件 软链接名</td>
+<td>软链接只记住文件名，指向文件名的文件，不会管文件内容，类似快捷方式</td>
+</tr>
+</tbody></table>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">使用软连接时候要使用绝对路径，方便移动文件后链接能够正常使用</span><br><span class="line">sudo ln -s /home/mk310/softlink.txt /home/softlink2</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="硬链接"><a href="#硬链接" class="headerlink" title="硬链接"></a>硬链接</h4><blockquote>
+<p>和软连接相比少了个 <code>-s</code>选项</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">硬链接本身占空间，相当于把源文件复制一份，与源文件同步变化，不能给目录创建硬链接</span><br><span class="line"></span><br><span class="line">使用ll查看时，有一个数字在，代表有几个文件能同步发生变化</span><br><span class="line"></span><br><span class="line">ln 1.txt  1.hard_link</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/image-20230613135020056.png" alt="软连接和硬链接原理"></p>
+<hr>
+<h3 id="Ubuntu的软件安装apt"><a href="#Ubuntu的软件安装apt" class="headerlink" title="Ubuntu的软件安装apt"></a>Ubuntu的软件安装apt</h3><ul>
+<li>apt是<code>Advanced Packing Tool</code>，是Linux下的安装包管理工具</li>
+<li>可以在终端中安装卸载更新</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">安装软件</span></span><br><span class="line">sudo apt install software</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">卸载软件</span></span><br><span class="line">sudo apt remove software</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">更新已经安装的包</span></span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="文件内容命令"><a href="#文件内容命令" class="headerlink" title="文件内容命令"></a>文件内容命令</h2></br>
+
+<h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3><p>concatenate（连接合并）查看文件内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#显示全部内容</span></span><br><span class="line"><span class="built_in">cat</span> 1.txt把文件的内容全部显示到屏幕中</span><br><span class="line"><span class="built_in">cat</span> 1.txt 2. txt</span><br><span class="line"><span class="built_in">cat</span> 1.txt 2.txt &gt; 3.txt把多个文件的内容合并到新的文件中</span><br><span class="line"><span class="built_in">cat</span> -b 1.txt <span class="comment">#显示文件内容的行数</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">more 1.txt <span class="comment">#可以分屏显示 适合内容多的 查看操作和man相同</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="grep文本搜索"><a href="#grep文本搜索" class="headerlink" title="grep文本搜索"></a>grep文本搜索</h3><p>LInux系统中grep命令是一个强大的文本搜索工具，grep允许对文本文件进行模式查找，如果找到匹配模式，grep打印包含模式的所有行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep [-选项] &#x27;搜索内容串&#x27; 文件名 </span><br></pre></td></tr></table></figure>
+
+<p>在grep命令中输入字符串参数时候，最好引号扩起来</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep &#x27;a&#x27; 1.txt</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-v</td>
+<td>显示不包含匹配文本的所有行（相当于求反）</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>显示匹配行及行号</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>忽略大小写</td>
+</tr>
+</tbody></table>
+<p>grep搜索内容串可以是正则表达式</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>^a</td>
+<td>行首，搜寻以a开头的行：<code>grep -n &#39;^a&#39; 1.txt</code></td>
+</tr>
+<tr>
+<td>end$</td>
+<td>行尾，搜寻以end结束的行：<code>grep -n &#39;end$&#39; 1.txt</code></td>
+</tr>
+<tr>
+<td>[Ss]igna[Ll]</td>
+<td>行首行尾忽略大小写</td>
+</tr>
+<tr>
+<td>.</td>
+<td>(点)匹配一个非换行符的字符; 匹配e和e之间有任意一个字符，可以匹配 eee，eae.eve，但是不匹配 ee，eaae; grep -n e.e’ 1.txt</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="远程管理命令"><a href="#远程管理命令" class="headerlink" title="远程管理命令"></a>远程管理命令</h2><h3 id="关机重启"><a href="#关机重启" class="headerlink" title="关机重启"></a>关机重启</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>reboot</td>
+<td>重新启动操作系统（不需要权限）</td>
+</tr>
+<tr>
+<td>shutdown -r now</td>
+<td>重新启动操作系统，shutdown会给别的用户提示</td>
+</tr>
+<tr>
+<td>shutdown -h now</td>
+<td>立刻关机，其中now相当于时间为0的状态</td>
+</tr>
+<tr>
+<td>shutdown -h 20:25</td>
+<td>系统在今天的20:25关机</td>
+</tr>
+<tr>
+<td>shutdown -h +10</td>
+<td>系统在输入命令后十分钟自动关机</td>
+</tr>
+<tr>
+<td>shutdown -c</td>
+<td>取消关机</td>
+</tr>
+</tbody></table>
+<h3 id="网卡信息命令"><a href="#网卡信息命令" class="headerlink" title="网卡信息命令"></a>网卡信息命令</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>释义</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ifconfig</td>
+<td>configure a network interface</td>
+<td>查看和配置网卡配置信息</td>
+</tr>
+<tr>
+<td>ping ip</td>
+<td>ping</td>
+<td>检测到目标ip地址的连接是否正常</td>
+</tr>
+</tbody></table>
+<p>查看网卡对应的ip地址</p>
+<p><code>ifconfig | grep inet</code></p>
+<p>检测本地网卡是否正常</p>
+<p><code>ping 127.0.0.1</code></p>
+<h3 id="SSh-secure-shell"><a href="#SSh-secure-shell" class="headerlink" title="SSh(secure shell)"></a>SSh(secure shell)</h3><p>常见服务端口号列表：</p>
+<table>
+<thead>
+<tr>
+<th>服务</th>
+<th>端口号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SSH服务器</td>
+<td>22</td>
+</tr>
+<tr>
+<td>web服务器</td>
+<td>80</td>
+</tr>
+<tr>
+<td>HTTPS</td>
+<td>443</td>
+</tr>
+<tr>
+<td>FTP</td>
+<td>21</td>
+</tr>
+</tbody></table>
+<p>SSH简单使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh [-p port] user@remote</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>uer</strong>是在远程服务器上的用户名 ，不指定默认就是当前用户</li>
+<li><strong>remote</strong>是远程机器的地址，可以是ip&#x2F;域名，或者是别名</li>
+<li><strong>port</strong>是SSH Server监听的端口，如果不指定，默认22</li>
+<li>使用<code>exit</code>退出当前用户的登录</li>
+</ul>
+<p>ssh免密码登录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen <span class="comment">#在.ssh文件夹下生成id_rsa 和 id_rsa.pub 文件</span></span><br><span class="line"></span><br><span class="line">ssh-copy-id mk310@172.168.0.109 <span class="comment">#将授权文件送到远程服务器</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#之后不用输入密码就可以登录</span></span><br></pre></td></tr></table></figure>
+
+<p>配置别名</p>
+<p>在<code>.ssh/config</code>中追加一下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host nickname</span><br><span class="line">	HostName 192.168.0.101</span><br><span class="line">	User mk310</span><br><span class="line">	port 22</span><br></pre></td></tr></table></figure>
+
+<p>之后可以使用<code>ssh nickname</code>可以直接登录远程服务器</p>
+<h3 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h3><p>secure copy 远程拷贝命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将远程加目录下Desktop/1.py复制到本地目录下</span></span><br><span class="line">scp -P port user@remote:Desktop/1.py 1.py</span><br><span class="line"></span><br><span class="line"><span class="comment">#把本地当前目录下的1.py文件复制到远程家目录下的Desktop/1.py</span></span><br><span class="line">scp -P port 1.py user@remote:Desktop/1.py</span><br><span class="line"></span><br><span class="line"><span class="comment">#加上-r可以传送文件夹</span></span><br><span class="line"><span class="comment">#把当前目录下的demo文件夹复制到远程家目录下的Desktop</span></span><br><span class="line">scp -r demo user@remote:Desktop</span><br><span class="line"></span><br><span class="line"><span class="comment">#把远程家目录下的Desktop 复制到当前目录下的demo文件夹中</span></span><br><span class="line">scp -r user@remote:Desktop demo</span><br></pre></td></tr></table></figure>
+
+<h2 id="用户权限命令"><a href="#用户权限命令" class="headerlink" title="用户权限命令"></a>用户权限命令</h2><p><img src="/../images/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/image-20230606174516850.png" alt="文件权限"></p>
+<h3 id="who查看登陆用户信息"><a href="#who查看登陆用户信息" class="headerlink" title="who查看登陆用户信息"></a>who查看登陆用户信息</h3><p><img src="/../images/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/image-20230313034234783.png" alt="用户登录信息"></p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-q –count</td>
+<td>只显示用户的登录账号和登录用户的数量</td>
+</tr>
+<tr>
+<td>-u –heading</td>
+<td>只列标题</td>
+</tr>
+</tbody></table>
+<h3 id="chown"><a href="#chown" class="headerlink" title="chown"></a>chown</h3><p>修改文件&#x2F;文件夹所有者</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown zhangsan python/ #将python文件所有者换为张三</span><br></pre></td></tr></table></figure>
+
+<h3 id="chgrp"><a href="#chgrp" class="headerlink" title="chgrp"></a>chgrp</h3><p> 修改文件&#x2F;文件夹所在组</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chgrp -R zhangsan python/ #将python文件所在组换为张三，-R对文件夹递归操作</span><br></pre></td></tr></table></figure>
+
+<h3 id="chmod修改文件权限"><a href="#chmod修改文件权限" class="headerlink" title="chmod修改文件权限"></a>chmod修改文件权限</h3></br>
+
+<p>chmod修改文件权限有两种格式：字母法和数字法</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字母法：chmod u/g/o/a +/-/= rwx 文件</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>u</td>
+<td>user表示该文件的所有者</td>
+</tr>
+<tr>
+<td>g</td>
+<td>group表示与该文件所有者一组的，即用户组</td>
+</tr>
+<tr>
+<td>o</td>
+<td>other表示其他意外的人</td>
+</tr>
+<tr>
+<td>a</td>
+<td>all表示这三者皆是</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>+</td>
+<td>增加权限</td>
+</tr>
+<tr>
+<td>-</td>
+<td>减少权限</td>
+</tr>
+<tr>
+<td>&#x3D;</td>
+<td>设定权限</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>r</td>
+<td>read 表示可以读取，没有r权限非可读</td>
+</tr>
+<tr>
+<td>w</td>
+<td>write可写入权限</td>
+</tr>
+<tr>
+<td>x</td>
+<td>excute可执行权限</td>
+</tr>
+</tbody></table>
+<hr>
+<p>数字法</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>r</td>
+<td>代号4</td>
+</tr>
+<tr>
+<td>w</td>
+<td>代号2</td>
+</tr>
+<tr>
+<td>x</td>
+<td>代号1</td>
+</tr>
+<tr>
+<td>-</td>
+<td>代号0，不具备任何权限</td>
+</tr>
+</tbody></table>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">执行 chmod u = rwx,g = rx,o-f filename 相当于 chmod u = 7,g = 5,o = 4 filename</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="用户管理命令"><a href="#用户管理命令" class="headerlink" title="用户管理命令"></a>用户管理命令</h2><h3 id="创建-x2F-设置密码-x2F-删除用户"><a href="#创建-x2F-设置密码-x2F-删除用户" class="headerlink" title="创建&#x2F;设置密码&#x2F;删除用户"></a>创建&#x2F;设置密码&#x2F;删除用户</h3><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>作用</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>useradd -m -g 组新建用户名</td>
+<td>添加新用户</td>
+<td>-m 自动建立用户家目录 -g指定用户所在的组，否则会建立一个和用户名同名的组</td>
+</tr>
+<tr>
+<td>02</td>
+<td>passwd 用户名</td>
+<td>设置用户密码</td>
+<td>普通用户可以直接用passwd修改</td>
+</tr>
+<tr>
+<td>03</td>
+<td>userdel -r 用户名</td>
+<td>删除用户</td>
+<td>-r 选项会自动删除家目录</td>
+</tr>
+<tr>
+<td>04</td>
+<td>cat &#x2F;etc&#x2F;passwd |grep 用户名</td>
+<td>确认用户信息</td>
+<td>新建用户信息保存在passwd文件</td>
+</tr>
+</tbody></table>
+<h3 id="查看用户信息"><a href="#查看用户信息" class="headerlink" title="查看用户信息"></a>查看用户信息</h3><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>id username</td>
+<td>查看用户UID和GID信息</td>
+</tr>
+<tr>
+<td>2</td>
+<td>who</td>
+<td>查看当前所有登录的用户列表</td>
+</tr>
+<tr>
+<td>3</td>
+<td>whoami</td>
+<td>查看当前登录用户的账户名</td>
+</tr>
+</tbody></table>
+<p><code>/etc/passwd</code>存放的是用户信息：</p>
+<ol>
+<li>用户名</li>
+<li>密码（x表示加密）</li>
+<li>UID</li>
+<li>GID（组标识）</li>
+<li>用户全名和本地账号</li>
+<li>家目录</li>
+<li>用户登录使用的Shell</li>
+</ol>
+<p><img src="/../images/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/image-20230608223626292.png" alt="image-20230608223626292"></p>
+<h3 id="which"><a href="#which" class="headerlink" title="which"></a>which</h3><p>查询命令在系统中的保存位置</p>
+<p><img src="/../images/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/image-20230611173109443.png" alt="查找passed命令位置"></p>
+<blockquote>
+<p><code>/etc/passwd</code>是用于保存用户信息的文件</p>
+<p><code>/usr/bin/passwd</code>是用于修改用户密码的程序</p>
+</blockquote>
+<p><strong>bin</strong>和<strong>sbin</strong></p>
+<ul>
+<li>在linux中大多数可执行文件保存在<code>/bin</code> <code>/sbin</code> <code>/usr/bin</code> <code>/usr/sbin</code></li>
+<li><code>/bin</code>（binary）是二进制执行文件目录，用于具体应用</li>
+<li><code>/sbin</code>（system binary）是系统管理员专用的二进制代码存放目录，主要用于系统管理</li>
+<li><code>/usr/bin</code> （user commands for applications）后期安装的一些软件</li>
+<li><code>/usr/sbin</code>（super user commands for applications）超级用户的一些管理程序</li>
+</ul>
+<h3 id="su切换用户"><a href="#su切换用户" class="headerlink" title="su切换用户"></a>su切换用户</h3><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>作用</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>su -username</td>
+<td>切换用户，并且切换目录</td>
+<td>- 可以切换到用户家目录，否则保持位置不变</td>
+</tr>
+<tr>
+<td>2</td>
+<td>exit</td>
+<td>退出当前登录账户</td>
+<td></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="系统信息命令"><a href="#系统信息命令" class="headerlink" title="系统信息命令"></a>系统信息命令</h2><h3 id="时间date和cal"><a href="#时间date和cal" class="headerlink" title="时间date和cal"></a>时间date和cal</h3><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>date</td>
+<td>查看系统当前时间</td>
+</tr>
+<tr>
+<td>2</td>
+<td>cal</td>
+<td>calendar 查看日历，-y选项可以查看一年的日历</td>
+</tr>
+</tbody></table>
+<h3 id="磁盘信息"><a href="#磁盘信息" class="headerlink" title="磁盘信息"></a>磁盘信息</h3><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>df -h</td>
+<td>disk free 显示磁盘剩余空间</td>
+</tr>
+<tr>
+<td>2</td>
+<td>du -h 【目录名】</td>
+<td>disk usage显示目录下的文件大小</td>
+</tr>
+</tbody></table>
+<h3 id="进程信息"><a href="#进程信息" class="headerlink" title="进程信息"></a>进程信息</h3><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>ps aux</td>
+<td>process status 查看进程详细状况</td>
+</tr>
+<tr>
+<td>2</td>
+<td>top</td>
+<td>动态显示运行中的进程并且进行排序</td>
+</tr>
+<tr>
+<td>3</td>
+<td>kill [-9] 进程代号</td>
+<td>种植指定代号的进程 -9表示强行终止</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><code>ps</code>默认只会显示当前用户通过终端启动的应用程序</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>选型</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>a</td>
+<td>显示终端上所有的进程，包括其他用户的进程</td>
+</tr>
+<tr>
+<td>u</td>
+<td>显示进程的详细状态</td>
+</tr>
+<tr>
+<td>x</td>
+<td>显示没有控制终端的进程</td>
+</tr>
+</tbody></table>
+<h2 id="压缩命令"><a href="#压缩命令" class="headerlink" title="压缩命令"></a>压缩命令</h2></br>
+
+<h4 id="tar打包命令（没有压缩）"><a href="#tar打包命令（没有压缩）" class="headerlink" title="tar打包命令（没有压缩）"></a>tar打包命令（没有压缩）</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">打包</span><br><span class="line">tar cvf a.txt *.txt</span><br><span class="line"></span><br><span class="line">解包</span><br><span class="line">tar xvf a.tar -C atar</span><br><span class="line"></span><br><span class="line">列出出档案内的名称</span><br><span class="line">tar tf tarName.tar </span><br></pre></td></tr></table></figure>
+
+<p>tar很特殊，其参数前面可以使用<code>-</code>也可以不使用</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-c</td>
+<td>生成档案文档，创建打包文件</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>列出归档解档的详细过程，显示进度</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>指定档案文件名称</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>列出档案中包含的文件</td>
+</tr>
+<tr>
+<td>-x</td>
+<td>解开档案文件</td>
+</tr>
+</tbody></table>
+<hr>
+<h4 id="gzip文件压缩"><a href="#gzip文件压缩" class="headerlink" title="gzip文件压缩"></a>gzip文件压缩</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">压缩打包后的文件</span><br><span class="line">gzip -r tarName.tar</span><br><span class="line"></span><br><span class="line">解压缩</span><br><span class="line">gzip -d tarName.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>tar命令和gzip命令结合</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">一步打包压缩</span><br><span class="line">tar czf name.tar.gz *txt</span><br><span class="line">一步解压缩到指定文件夹</span><br><span class="line">tar xzf name name.tar.gz -C dciName</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="bzip2文件压缩"><a href="#bzip2文件压缩" class="headerlink" title="bzip2文件压缩"></a>bzip2文件压缩</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">一步打包压缩</span><br><span class="line">tar cjf name.tar.gz *txt</span><br><span class="line">一步解压缩</span><br><span class="line">tar xjf name name.tar.gz -C dciName</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="zip-unzip-文件压缩"><a href="#zip-unzip-文件压缩" class="headerlink" title="zip unzip 文件压缩"></a>zip unzip 文件压缩</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">压缩文件</span><br><span class="line">zip -r zname *txt</span><br><span class="line">将zname压缩到zz文件夹中</span><br><span class="line">unzip -d zz zname.zip </span><br></pre></td></tr></table></figure>
+
+<p>压缩率：<code>zip&lt;gzip&lt;bzip2</code>，zip最通用</p>
+<hr>
+<h3 id="其他命令编辑器Vim"><a href="#其他命令编辑器Vim" class="headerlink" title="其他命令编辑器Vim"></a>其他命令编辑器Vim</h3></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Linux/">Linux</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%91%BD%E4%BB%A4/">命令</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/02/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">数据结构和算法</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/01/26/%E6%B5%8B%E8%AF%95/"><span class="level-item">测试</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="mk310"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">mk310</p><p class="is-size-6 is-block">no-no-no</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>hangzhou</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">24</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">12</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">32</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://gitee.com" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://gitee.com"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="bilibili" href="https://bilibili.com"><i class="fab fa-bilibili"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="zhihu" href="https://zhihu.com"><i class="fab fa-zhihu"></i></a></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-12T05:46:28.000Z">2023-06-12</time></p><p class="title"><a href="/2023/06/12/English/">English</a></p><p class="categories"><a href="/categories/study/">study</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-05-21T12:19:51.000Z">2023-05-21</time></p><p class="title"><a href="/2023/05/21/python-Excel%E6%93%8D%E4%BD%9C/">python_Excel操作</a></p><p class="categories"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a> / <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/python/">python</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-03-23T14:52:18.000Z">2023-03-23</time></p><p class="title"><a href="/2023/03/23/python/">python</a></p><p class="categories"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a> / <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/python/">python</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-02-26T06:03:29.000Z">2023-02-26</time></p><p class="title"><a href="/2023/02/26/git/">Git</a></p><p class="categories"><a href="/categories/tech/">tech</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-02-24T14:36:52.000Z">2023-02-24</time></p><p class="title"><a href="/2023/02/24/MySQL/">MySQL</a></p><p class="categories"><a href="/categories/tech/">tech</a></p></div></article></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#Linux文件和目录"><span class="level-left"><span class="level-item">1</span><span class="level-item">Linux文件和目录</span></span></a></li><li><a class="level is-mobile" href="#文件和文件夹操作"><span class="level-left"><span class="level-item">2</span><span class="level-item">文件和文件夹操作</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#cd"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">cd</span></span></a></li><li><a class="level is-mobile" href="#ls"><span class="level-left"><span class="level-item">2.2</span><span class="level-item">ls</span></span></a></li><li><a class="level is-mobile" href="#mkdir"><span class="level-left"><span class="level-item">2.3</span><span class="level-item">mkdir</span></span></a></li><li><a class="level is-mobile" href="#touch"><span class="level-left"><span class="level-item">2.4</span><span class="level-item">touch</span></span></a></li><li><a class="level is-mobile" href="#rm"><span class="level-left"><span class="level-item">2.5</span><span class="level-item">rm</span></span></a></li><li><a class="level is-mobile" href="#cp"><span class="level-left"><span class="level-item">2.6</span><span class="level-item">cp</span></span></a></li><li><a class="level is-mobile" href="#mv"><span class="level-left"><span class="level-item">2.7</span><span class="level-item">mv</span></span></a></li><li><a class="level is-mobile" href="#查阅命令帮助信息"><span class="level-left"><span class="level-item">2.8</span><span class="level-item">查阅命令帮助信息</span></span></a></li></ul></li><li><a class="level is-mobile" href="#其它命令行"><span class="level-left"><span class="level-item">3</span><span class="level-item">其它命令行</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#重定向"><span class="level-left"><span class="level-item">3.1</span><span class="level-item">重定向</span></span></a></li><li><a class="level is-mobile" href="#管道"><span class="level-left"><span class="level-item">3.2</span><span class="level-item">管道</span></span></a></li><li><a class="level is-mobile" href="#find查找文件"><span class="level-left"><span class="level-item">3.3</span><span class="level-item">find查找文件</span></span></a></li><li><a class="level is-mobile" href="#ln-链接"><span class="level-left"><span class="level-item">3.4</span><span class="level-item">ln 链接</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#软链接"><span class="level-left"><span class="level-item">3.4.1</span><span class="level-item">软链接</span></span></a></li><li><a class="level is-mobile" href="#硬链接"><span class="level-left"><span class="level-item">3.4.2</span><span class="level-item">硬链接</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Ubuntu的软件安装apt"><span class="level-left"><span class="level-item">3.5</span><span class="level-item">Ubuntu的软件安装apt</span></span></a></li></ul></li><li><a class="level is-mobile" href="#文件内容命令"><span class="level-left"><span class="level-item">4</span><span class="level-item">文件内容命令</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#cat"><span class="level-left"><span class="level-item">4.1</span><span class="level-item">cat</span></span></a></li><li><a class="level is-mobile" href="#grep文本搜索"><span class="level-left"><span class="level-item">4.2</span><span class="level-item">grep文本搜索</span></span></a></li></ul></li><li><a class="level is-mobile" href="#远程管理命令"><span class="level-left"><span class="level-item">5</span><span class="level-item">远程管理命令</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#关机重启"><span class="level-left"><span class="level-item">5.1</span><span class="level-item">关机重启</span></span></a></li><li><a class="level is-mobile" href="#网卡信息命令"><span class="level-left"><span class="level-item">5.2</span><span class="level-item">网卡信息命令</span></span></a></li><li><a class="level is-mobile" href="#SSh-secure-shell"><span class="level-left"><span class="level-item">5.3</span><span class="level-item">SSh(secure shell)</span></span></a></li><li><a class="level is-mobile" href="#scp"><span class="level-left"><span class="level-item">5.4</span><span class="level-item">scp</span></span></a></li></ul></li><li><a class="level is-mobile" href="#用户权限命令"><span class="level-left"><span class="level-item">6</span><span class="level-item">用户权限命令</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#who查看登陆用户信息"><span class="level-left"><span class="level-item">6.1</span><span class="level-item">who查看登陆用户信息</span></span></a></li><li><a class="level is-mobile" href="#chown"><span class="level-left"><span class="level-item">6.2</span><span class="level-item">chown</span></span></a></li><li><a class="level is-mobile" href="#chgrp"><span class="level-left"><span class="level-item">6.3</span><span class="level-item">chgrp</span></span></a></li><li><a class="level is-mobile" href="#chmod修改文件权限"><span class="level-left"><span class="level-item">6.4</span><span class="level-item">chmod修改文件权限</span></span></a></li></ul></li><li><a class="level is-mobile" href="#用户管理命令"><span class="level-left"><span class="level-item">7</span><span class="level-item">用户管理命令</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#创建-x2F-设置密码-x2F-删除用户"><span class="level-left"><span class="level-item">7.1</span><span class="level-item">创建/设置密码/删除用户</span></span></a></li><li><a class="level is-mobile" href="#查看用户信息"><span class="level-left"><span class="level-item">7.2</span><span class="level-item">查看用户信息</span></span></a></li><li><a class="level is-mobile" href="#which"><span class="level-left"><span class="level-item">7.3</span><span class="level-item">which</span></span></a></li><li><a class="level is-mobile" href="#su切换用户"><span class="level-left"><span class="level-item">7.4</span><span class="level-item">su切换用户</span></span></a></li></ul></li><li><a class="level is-mobile" href="#系统信息命令"><span class="level-left"><span class="level-item">8</span><span class="level-item">系统信息命令</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#时间date和cal"><span class="level-left"><span class="level-item">8.1</span><span class="level-item">时间date和cal</span></span></a></li><li><a class="level is-mobile" href="#磁盘信息"><span class="level-left"><span class="level-item">8.2</span><span class="level-item">磁盘信息</span></span></a></li><li><a class="level is-mobile" href="#进程信息"><span class="level-left"><span class="level-item">8.3</span><span class="level-item">进程信息</span></span></a></li></ul></li><li><a class="level is-mobile" href="#压缩命令"><span class="level-left"><span class="level-item">9</span><span class="level-item">压缩命令</span></span></a><ul class="menu-list"><ul class="menu-list"><li><a class="level is-mobile" href="#tar打包命令（没有压缩）"><span class="level-left"><span class="level-item">9.1.1</span><span class="level-item">tar打包命令（没有压缩）</span></span></a></li><li><a class="level is-mobile" href="#gzip文件压缩"><span class="level-left"><span class="level-item">9.1.2</span><span class="level-item">gzip文件压缩</span></span></a></li><li><a class="level is-mobile" href="#bzip2文件压缩"><span class="level-left"><span class="level-item">9.1.3</span><span class="level-item">bzip2文件压缩</span></span></a></li><li><a class="level is-mobile" href="#zip-unzip-文件压缩"><span class="level-left"><span class="level-item">9.1.4</span><span class="level-item">zip unzip 文件压缩</span></span></a></li></ul><li><a class="level is-mobile" href="#其他命令编辑器Vim"><span class="level-left"><span class="level-item">9.2</span><span class="level-item">其他命令编辑器Vim</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/macOS/"><span class="level-start"><span class="level-item">macOS</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/study/"><span class="level-start"><span class="level-item">study</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/tech/"><span class="level-start"><span class="level-item">tech</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="level-start"><span class="level-item">前端</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%90%8E%E7%AB%AF/"><span class="level-start"><span class="level-item">后端</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"><span class="level-start"><span class="level-item">计算机基础</span></span><span class="level-end"><span class="level-item tag">5</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">数据结构和算法</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="level-start"><span class="level-item">计算机网络</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"><span class="level-start"><span class="level-item">软件工程</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2023 mk310</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">Hexo 博客</p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "opt-out",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
