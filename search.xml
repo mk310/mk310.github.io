@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>线性代数</title>
+      <link href="/2023/09/22/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
+      <url>/2023/09/22/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>math</p><span id="more"></span><h2 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h2><h3 id="行列式的基本概念和性质"><a href="#行列式的基本概念和性质" class="headerlink" title="行列式的基本概念和性质"></a>行列式的基本概念和性质</h3><h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><ul><li>逆序和逆序数</li><li>余子式和代数余子式</li></ul><h4 id="特殊高阶行列式"><a href="#特殊高阶行列式" class="headerlink" title="特殊高阶行列式"></a>特殊高阶行列式</h4><ol><li>对角 上三角 下三角 逆三角</li><li>范德蒙行列式</li><li>分块行列式</li><li><img src="/../images/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/image-20230922140828010.png" alt="常用行列式性质"></li></ol><h4 id="行列式计算性质"><a href="#行列式计算性质" class="headerlink" title="行列式计算性质"></a>行列式计算性质</h4><ul><li>行列式降阶<ul><li>行列式等于行列式某行元素与对应的代数余子式之极的和</li><li>行列式一样的元素和另一行的代数余子式之积的和为0</li></ul></li><li>行列式化简<ul><li>行列式和其转置行列式相等</li><li>对调两行行列式行列式改变符号</li><li>某行有公因子可以提到行列式外</li><li>可以拆分</li><li>行列式某行倍数加到另一行，行列式不变</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+          <category> 线性代数 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 线性代数 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>政治</title>
       <link href="/2023/08/24/%E6%94%BF%E6%B2%BB/"/>
       <url>/2023/08/24/%E6%94%BF%E6%B2%BB/</url>
@@ -479,9 +506,9 @@
       
         <tags>
             
-            <tag> css实战 </tag>
-            
             <tag> css </tag>
+            
+            <tag> css实战 </tag>
             
         </tags>
       
@@ -506,9 +533,9 @@
       
         <tags>
             
-            <tag> css </tag>
-            
             <tag> css基础 </tag>
+            
+            <tag> css </tag>
             
         </tags>
       
