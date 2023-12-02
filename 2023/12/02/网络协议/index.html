@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>网络协议 - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Hexo"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hexo"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="q前端学习路线: 前端学习路线 (gitee.io) 【干货】前端学习路线分享！写了个网站帮助你学习前端！_哔哩哔哩_bilibili"><meta property="og:type" content="blog"><meta property="og:title" content="网络协议"><meta property="og:url" content="http://example.com/2023/12/02/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="q前端学习路线: 前端学习路线 (gitee.io) 【干货】前端学习路线分享！写了个网站帮助你学习前端！_哔哩哔哩_bilibili"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://example.com/covers/pythonCover.png"><meta property="article:published_time" content="2023-12-02T08:52:17.000Z"><meta property="article:modified_time" content="2023-12-02T10:18:53.454Z"><meta property="article:author" content="mk310"><meta property="article:tag" content="网络协议"><meta property="article:tag" content="计算机网络"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://example.com/covers/pythonCover.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/12/02/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"},"headline":"网络协议","image":["http://example.com/covers/pythonCover.png"],"datePublished":"2023-12-02T08:52:17.000Z","dateModified":"2023-12-02T10:18:53.454Z","author":{"@type":"Person","name":"mk310"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":"q前端学习路线: 前端学习路线 (gitee.io) 【干货】前端学习路线分享！写了个网站帮助你学习前端！_哔哩哔哩_bilibili"}</script><link rel="canonical" href="http://example.com/2023/12/02/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/github.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="/covers/pythonCover.png" alt="网络协议"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-12-02T08:52:17.000Z" title="2023/12/2 16:52:17">2023-12-02</time>发表</span><span class="level-item"><time dateTime="2023-12-02T10:18:53.454Z" title="2023/12/2 18:18:53">2023-12-02</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><span> / </span><a class="link-muted" href="/categories/%E5%89%8D%E7%AB%AF/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/">网络协议</a></span><span class="level-item">5 分钟读完 (大约821个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">网络协议</h1><div class="content"><p>q前端学习路线:</p>
+<p><a target="_blank" rel="noopener" href="https://objtube.gitee.io/front-end-roadmap/#/front-end-roadmap/guide/how-does-the-internet-work">前端学习路线 (gitee.io)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ZZ4y1H7rU/?spm_id_from=333.1007.top_right_bar_window_history.content.click&vd_source=3d2f5140451ecab17c9415aa817fbdca">【干货】前端学习路线分享！写了个网站帮助你学习前端！_哔哩哔哩_bilibili</a></p>
+<span id="more"></span>
+
+<h2 id="http协议"><a href="#http协议" class="headerlink" title="http协议"></a>http协议</h2><h3 id="http基本知识"><a href="#http基本知识" class="headerlink" title="http基本知识"></a>http基本知识</h3><p>HTTP（HyperText Transfer Protocol）超文本传输协议</p>
+<p><strong>超文本</strong>：文本指图片，视频，压缩包等，超文本指文字，图片，视频等的混合体最关键有超链接，能从一个超文本跳转到另一个超文本。HTML就是最常见的超文本。</p>
+<p>HTTP常见状态码：</p>
+<ul>
+<li>1xx：提示信息，协议处理的中间状态，实际使用少</li>
+<li>2xx：表示服务器成功处理了客户端的请求</li>
+<li>3xx：表示客户端的请求资源发生了变动，需要客户端用新的URL从新发送请求获取资源，重定向。</li>
+<li>4xx：表示客户端请求的报文有错误，错误码。</li>
+<li>5xx：表示客户端请求报文正确，但是服务器处理内部发生了错误，属于服务端的错误码。</li>
+</ul>
+<h3 id="http报文"><a href="#http报文" class="headerlink" title="http报文"></a>http报文</h3><p><img src="/../images/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/db1894af5b6146327216b4c95dd2b93c-1701510048624-5.jpeg" alt="请求报文"></p>
+<ul>
+<li>Host：客户端发送请求时，用来指定服务器的域名</li>
+<li>Content-Length:服务器返回数据时候,表名回应的数据长度</li>
+<li>Connection:常用于客户端要求服务器使用TCP持久连接,一边其他请求复用</li>
+<li>Content-Type:用于服务器回应时候,告诉客户端,本次数据是什么格式</li>
+<li>Content_Encoding:表示服务器返回的数据使用了什么压缩格式</li>
+</ul>
+<p><img src="/../images/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/63d44d4a7be8d2ec56e9f7fbb80be6f5-1701510081516-8.jpeg" alt="响应报文"></p>
+<p>请求方法:</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>GET</td>
+<td>请求指定页面讯息,并返回</td>
+</tr>
+<tr>
+<td>2</td>
+<td>HEAD</td>
+<td>类似get,不过返回的响应中没有具体的内容,用于获取报头</td>
+</tr>
+<tr>
+<td>3</td>
+<td>POST</td>
+<td>向指定资源提交数据进行处理请求(提交表单或者上传文件),数据被包含在请求体中.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>PUT</td>
+<td>从客户端想服务器传送的数据取代指定的文档内容</td>
+</tr>
+<tr>
+<td>5</td>
+<td>DELETE</td>
+<td>请求服务器删除指定的页面</td>
+</tr>
+<tr>
+<td>6</td>
+<td>CONNECT</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>OPTIONS</td>
+<td>允许客户端查看服务器的性能</td>
+</tr>
+<tr>
+<td>8</td>
+<td>TRACE</td>
+<td>回显服务器收到的请求,用于测试或者判断</td>
+</tr>
+</tbody></table>
+<p>GET和POST都是安全等幂吗</p>
+<blockquote>
+<p>安全指请求方法会破坏服务器上的资源</p>
+<p>幂等指多次执行相等的操作,结果都是相同的</p>
+</blockquote>
+<ul>
+<li>那么很明显 GET 方法就是安全且幂等的，因为它是「只读」操作，无论操作多少次，服务器上的数据都是安全的，且每次的结果都是相同的。</li>
+<li>POST 因为是「新增或提交数据」的操作，会修改服务器上的资源，所以是不安全的，且多次提交数据就会创建多个资源，所以不是幂等的。</li>
+</ul>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/">网络协议</a><a class="link-muted mr-2" rel="tag" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/11/15/Flask%E5%AE%9E%E6%88%98-QA%E5%B9%B3%E5%8F%B0/"><span class="level-item">Flask实战-QA平台</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="mk310"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">mk310</p><p class="is-size-6 is-block">no-no-no</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>hangzhou</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">29</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">16</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">36</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://gitee.com" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://gitee.com"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="bilibili" href="https://bilibili.com"><i class="fab fa-bilibili"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="zhihu" href="https://zhihu.com"><i class="fab fa-zhihu"></i></a></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-12-02T08:52:17.000Z">2023-12-02</time></p><p class="title"><a href="/2023/12/02/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/">网络协议</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/">网络协议</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-11-15T09:40:23.000Z">2023-11-15</time></p><p class="title"><a href="/2023/11/15/Flask%E5%AE%9E%E6%88%98-QA%E5%B9%B3%E5%8F%B0/">Flask实战-QA平台</a></p><p class="categories"><a href="/categories/%E5%90%8E%E7%AB%AF/">后端</a> / <a href="/categories/%E5%90%8E%E7%AB%AF/flask/">flask</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-10-11T07:12:56.000Z">2023-10-11</time></p><p class="title"><a href="/2023/10/11/%E6%94%BF%E6%B2%BB%E5%8F%B2%E7%BA%B2/">史纲</a></p><p class="categories"><a href="/categories/study/">study</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-09-22T06:05:02.000Z">2023-09-22</time></p><p class="title"><a href="/2023/09/22/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">线性代数</a></p><p class="categories"><a href="/categories/study/">study</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-08-23T16:59:10.000Z">2023-08-24</time></p><p class="title"><a href="/2023/08/24/%E6%94%BF%E6%B2%BB%E9%A9%AC%E5%8E%9F/">马原</a></p><p class="categories"><a href="/categories/study/">study</a></p></div></article></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#http协议"><span class="level-left"><span class="level-item">1</span><span class="level-item">http协议</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#http基本知识"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">http基本知识</span></span></a></li><li><a class="level is-mobile" href="#http报文"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">http报文</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/macOS/"><span class="level-start"><span class="level-item">macOS</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/study/"><span class="level-start"><span class="level-item">study</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/tech/"><span class="level-start"><span class="level-item">tech</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="level-start"><span class="level-item">前端</span></span><span class="level-end"><span class="level-item tag">6</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/CSS/"><span class="level-start"><span class="level-item">CSS</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/HTML/"><span class="level-start"><span class="level-item">HTML</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/"><span class="level-start"><span class="level-item">JavaScript</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"><span class="level-start"><span class="level-item">网络协议</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E5%90%8E%E7%AB%AF/"><span class="level-start"><span class="level-item">后端</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%90%8E%E7%AB%AF/flask/"><span class="level-start"><span class="level-item">flask</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"><span class="level-start"><span class="level-item">计算机基础</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="level-start"><span class="level-item">计算机网络</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"><span class="level-start"><span class="level-item">软件工程</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2023 mk310</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">Hexo 博客</p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "opt-out",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
