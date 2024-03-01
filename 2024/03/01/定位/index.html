@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>定位 - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Hexo"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hexo"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="CSS定位"><meta property="og:type" content="blog"><meta property="og:title" content="定位"><meta property="og:url" content="http://example.com/2024/03/01/%E5%AE%9A%E4%BD%8D/"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="CSS定位"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://example.com/covers/cover_css.png"><meta property="article:published_time" content="2024-02-29T18:35:55.000Z"><meta property="article:modified_time" content="2024-03-01T07:10:58.608Z"><meta property="article:author" content="mk310"><meta property="article:tag" content="css基础"><meta property="article:tag" content="定位"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://example.com/covers/cover_css.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/03/01/%E5%AE%9A%E4%BD%8D/"},"headline":"定位","image":["http://example.com/covers/cover_css.png"],"datePublished":"2024-02-29T18:35:55.000Z","dateModified":"2024-03-01T07:10:58.608Z","author":{"@type":"Person","name":"mk310"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":"CSS定位"}</script><link rel="canonical" href="http://example.com/2024/03/01/%E5%AE%9A%E4%BD%8D/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/github.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="/covers/cover_css.png" alt="定位"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-02-29T18:35:55.000Z" title="2024/3/1 02:35:55">2024-03-01</time>发表</span><span class="level-item"><time dateTime="2024-03-01T07:10:58.608Z" title="2024/3/1 15:10:58">2024-03-01</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><span> / </span><a class="link-muted" href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></span><span class="level-item">11 分钟读完 (大约1716个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">定位</h1><div class="content"><p>CSS定位</p>
+<span id="more"></span>
+
+<h2 id="定位简介"><a href="#定位简介" class="headerlink" title="定位简介"></a>定位简介</h2><p><strong>定位（position）</strong></p>
+<p>定位是一种更加高级的布局手段</p>
+<p>通过定位可以将元素摆放到页面的任意位置</p>
+<p>使用<code>position</code>属性来设置定位</p>
+<table>
+<thead>
+<tr>
+<th align="left">可选值</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>static</code></td>
+<td align="left">不开启定位，元素是静止的，默认值</td>
+</tr>
+<tr>
+<td align="left"><code>relative</code></td>
+<td align="left">开启元素的相对定位</td>
+</tr>
+<tr>
+<td align="left"><code>absolute</code></td>
+<td align="left">开启元素的绝对定位</td>
+</tr>
+<tr>
+<td align="left"><code>fixed</code></td>
+<td align="left">开启元素的固定定位</td>
+</tr>
+<tr>
+<td align="left"><code>sticky</code></td>
+<td align="left">开启元素的粘滞定位</td>
+</tr>
+</tbody></table>
+<h2 id="相对定位"><a href="#相对定位" class="headerlink" title="相对定位"></a>相对定位</h2><p>使用了相对定位后，只会移动自身的布局位置，而不会对已存在的其他元素产生任何影响</p>
+<h3 id="偏移量（offset）"><a href="#偏移量（offset）" class="headerlink" title="偏移量（offset）"></a>偏移量（offset）</h3><p>当元素开启相对定位以后，可以通过偏移量来设置元素的位置</p>
+<table>
+<thead>
+<tr>
+<th align="left">offset 属性</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>top</code></td>
+<td align="left">定位元素和定位位置的上边距离</td>
+</tr>
+<tr>
+<td align="left"><code>bottom</code></td>
+<td align="left">定位元素和定位位置的下边距离</td>
+</tr>
+<tr>
+<td align="left"><code>left</code></td>
+<td align="left">定位元素和定位位置的左侧距离</td>
+</tr>
+<tr>
+<td align="left"><code>right</code></td>
+<td align="left">定位元素和定位位置的右侧距离</td>
+</tr>
+</tbody></table>
+<p>定位元素垂直方向的位置由<code>top</code>和<code>bottom</code>两个属性控制，通常情况下只会使用其中之一</p>
+<ul>
+<li><code>top</code>值越大，定位元素越靠下</li>
+<li><code>bottom</code>值越大，定位元素靠上</li>
+</ul>
+<p>定位元素水平方向的位置由<code>left</code>和<code>right</code>两个属性控制，通常情况下只会使用其中之一</p>
+<ul>
+<li><code>left</code>越大，定位元素越靠右</li>
+<li><code>right</code>越大，定位元素越靠左</li>
+</ul>
+<h3 id="相对定位的特点"><a href="#相对定位的特点" class="headerlink" title="相对定位的特点"></a>相对定位的特点</h3><ol>
+<li>当元素开启相对定位以后，如果不设置偏移量元素，则元素不会发生任何变化（这里注意，不仅仅是位置）</li>
+<li>相对定位是参照于元素在文档流中的位置进行定位的（可以理解为相对于自身原始位置）</li>
+<li>相对定位会提升元素的层级（表现为可以覆盖其他元素）</li>
+<li>相对定位不会改变元素的性质：块还是块，行内还是行内,不会脱离文档流</li>
+</ol>
+<p><strong>Q1</strong>:<strong>如果给上述三个 div 都设置相对定位，那么它们的层级关系会是什么样的呢？或者说谁会被谁覆盖呢？</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">  &lt;style&gt;</span><br><span class="line">    <span class="selector-class">.box1</span>&#123;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">      <span class="attribute">background-color</span>: red;</span><br><span class="line">      <span class="attribute">position</span>: relative;</span><br><span class="line">      <span class="attribute">left</span>: <span class="number">10px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.box2</span>&#123;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">      <span class="attribute">background-color</span>: yellow;</span><br><span class="line">      <span class="attribute">position</span>: relative;</span><br><span class="line">      <span class="attribute">left</span>: <span class="number">10px</span>;</span><br><span class="line">      <span class="attribute">bottom</span>: <span class="number">50px</span>;  </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.box3</span>&#123;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">      <span class="attribute">background-color</span>: blue;</span><br><span class="line">      <span class="attribute">position</span>: relative;</span><br><span class="line">      <span class="attribute">left</span>: <span class="number">10px</span>;</span><br><span class="line">      <span class="attribute">bottom</span>: <span class="number">120px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line"> </span><br><span class="line">  &lt;<span class="selector-tag">div</span> class=&quot;box1&quot;&gt;&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">  &lt;<span class="selector-tag">div</span> class=&quot;box2&quot;&gt;&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">  &lt;<span class="selector-tag">div</span> class=&quot;box3&quot;&gt;&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/%E5%AE%9A%E4%BD%8D/image-20240301031756535.png" alt="相对定位层级"></p>
+<p>A：在页面文档流中，越靠下的元素开启相对定位后，其层级越高(z-index)</p>
+<p><strong>Q2：相对定位的第三个特点相对定位会提升元素的层级，是不是就类似于浮动一样脱离了文档流？</strong></p>
+<p>A：我们可以对比下，浮动和相对定位的区别</p>
+<ul>
+<li>参考系不同：浮动的参考系是其父元素；相对定位是相对于自身</li>
+<li>可移动方向不同：浮动只能左右移动；相对定位是上下左右移动</li>
+<li>影响不同：浮动会影响页面布局（包括下方元素位置影响和高度塌陷问题）；相对定位不对影响页面布局</li>
+<li>性质不同：浮动会改变元素的性质（不再独占一行，其宽高都会被内容撑开）；相对定位不会改变元素的性质</li>
+<li>文字环绕：浮动不会覆盖文字；相对定位可以覆盖文字（这个可以自行验证，不再赘述）</li>
+</ul>
+<p>当然，浮动和相对定位也有其相似之处</p>
+<ul>
+<li>浮动和相对定位都是移动位置（貌似是废话）</li>
+<li>浮动和相对定位不会从父元素中移出</li>
+</ul>
+<p><strong>Q3：相对定位的第四个特点中块还是块，行内还是行内，意味着行内元素也可以使用相对定位是吗？</strong></p>
+<p>A：可以</p>
+<h2 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h2><h3 id="绝对定位的特点"><a href="#绝对定位的特点" class="headerlink" title="绝对定位的特点"></a>绝对定位的特点</h3><ol>
+<li>开启绝对定位后，如果不设置偏移量，元素的位置不会发生变化</li>
+<li>开启绝对定位后，元素会从文档流中脱离</li>
+<li>绝对定位会<strong>改变元素的性质</strong>：行内变成块，块的宽高被内容撑开（与相对定位相反）</li>
+<li>绝对定位会使元素提升一个层级</li>
+<li>绝对定位元素是相对于<strong>其包含块</strong>进行定位的（与相对定位不同）</li>
+</ol>
+<h3 id="包含块（containing-block）"><a href="#包含块（containing-block）" class="headerlink" title="包含块（containing block）"></a>包含块（containing block）</h3><p>正常情况下：</p>
+<ul>
+<li>包含块就是离当前元素最近的开启了定位的祖先块元素</li>
+<li>如果所有的祖先元素都没有开启定位，则<code>html（根元素、初始包含块）</code>就是它的包含块</li>
+</ul>
+<h2 id="固定定位"><a href="#固定定位" class="headerlink" title="固定定位"></a>固定定位</h2><h3 id="固定定位的特点"><a href="#固定定位的特点" class="headerlink" title="固定定位的特点"></a>固定定位的特点</h3><ul>
+<li><p>将元素的<code>position</code>属性设置为<code>fixed</code>，则开启了元素的固定定位</p>
+</li>
+<li><p>固定定位也是一种绝对定位，所以固定定位的大部分特点都和绝对定位一样</p>
+<ul>
+<li>唯一不同的是，固定定位永远参照于浏览器的视口（viewport，可视窗口）进行定位，不会随网页的滚动条滚动</li>
+</ul>
+</li>
+</ul>
+<h2 id="粘滞点位"><a href="#粘滞点位" class="headerlink" title="粘滞点位"></a>粘滞点位</h2><ul>
+<li>该元素是根据文档流进行定位的，即相对于包含块进行偏移</li>
+<li>偏移量不会影响任何其他元素的位置</li>
+<li>粘性元素总是“粘”到其最近的具有“滚动机制”的祖先元素（当<code>overflow</code>为<code>hidden</code>、<code>scroll</code>、<code>auto</code>、<code>overlay</code>时创建），即使该祖先不是最近的实际滚动祖先</li>
+</ul>
+<h3 id="粘滞定位的特点"><a href="#粘滞定位的特点" class="headerlink" title="粘滞定位的特点"></a>粘滞定位的特点</h3><ul>
+<li>粘滞定位和相对定位的特点基本一致（视频中说是和相对定位一致，不过我对比了一下，很多特点是不同的，感觉倒是和固定定位更相似，这里存疑）</li>
+<li>不同的是粘滞定位可以在元素到达某个位置时将其固定</li>
+</ul>
+<h2 id="几种定位的对比"><a href="#几种定位的对比" class="headerlink" title="几种定位的对比"></a>几种定位的对比</h2><p>我们通过上面的学习，知道<code>position</code>属性有五个可选值</p>
+<p>但<code>static</code>是默认值，即不开启定位，所以我们只需要对比 4 种定位方式即可</p>
+<table>
+<thead>
+<tr>
+<th align="left">定位方式</th>
+<th align="center">是否不设置偏移量，元素不会发生改变</th>
+<th align="center">是否脱离文档流</th>
+<th align="center">是否改变元素性质</th>
+<th align="center">是否提升元素层级</th>
+<th>参考系</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>relative</code>（相对定位）</td>
+<td align="center">√</td>
+<td align="center">×</td>
+<td align="center">×</td>
+<td align="center">√</td>
+<td>参照于元素在文档流中的位置</td>
+</tr>
+<tr>
+<td align="left"><code>absolute</code>（绝对定位）</td>
+<td align="center">×</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td>参照于其包含块</td>
+</tr>
+<tr>
+<td align="left"><code>fixed</code>（固定定位）</td>
+<td align="center">×</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td>参照于浏览器的视口</td>
+</tr>
+<tr>
+<td align="left"><code>sticky</code>（粘滞定位）</td>
+<td align="center">×</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td>参照于浏览器的视口</td>
+</tr>
+</tbody></table>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/css%E5%9F%BA%E7%A1%80/">css基础</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%AE%9A%E4%BD%8D/">定位</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/02/29/%E5%AD%97%E4%BD%93/"><span class="level-item">字体</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="mk310"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">mk310</p><p class="is-size-6 is-block">no-no-no</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>hangzhou</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">34</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">16</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">39</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://gitee.com" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://gitee.com"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="bilibili" href="https://bilibili.com"><i class="fab fa-bilibili"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="zhihu" href="https://zhihu.com"><i class="fab fa-zhihu"></i></a></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-02-29T18:35:55.000Z">2024-03-01</time></p><p class="title"><a href="/2024/03/01/%E5%AE%9A%E4%BD%8D/">定位</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-02-28T18:10:22.000Z">2024-02-29</time></p><p class="title"><a href="/2024/02/29/%E5%AD%97%E4%BD%93/">字体</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-02-25T12:34:34.000Z">2024-02-25</time></p><p class="title"><a href="/2024/02/25/BFC%E5%92%8C%E9%AB%98%E5%BA%A6%E5%A1%8C%E7%BC%A9/">BFC和高度塌缩</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-02-10T18:16:24.000Z">2024-02-11</time></p><p class="title"><a href="/2024/02/11/css-exercise/">css_exercise</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-01-10T06:25:04.000Z">2024-01-10</time></p><p class="title"><a href="/2024/01/10/CSS%E5%9F%BA%E7%A1%80/">CSS基础</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#定位简介"><span class="level-left"><span class="level-item">1</span><span class="level-item">定位简介</span></span></a></li><li><a class="level is-mobile" href="#相对定位"><span class="level-left"><span class="level-item">2</span><span class="level-item">相对定位</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#偏移量（offset）"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">偏移量（offset）</span></span></a></li><li><a class="level is-mobile" href="#相对定位的特点"><span class="level-left"><span class="level-item">2.2</span><span class="level-item">相对定位的特点</span></span></a></li></ul></li><li><a class="level is-mobile" href="#绝对定位"><span class="level-left"><span class="level-item">3</span><span class="level-item">绝对定位</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#绝对定位的特点"><span class="level-left"><span class="level-item">3.1</span><span class="level-item">绝对定位的特点</span></span></a></li><li><a class="level is-mobile" href="#包含块（containing-block）"><span class="level-left"><span class="level-item">3.2</span><span class="level-item">包含块（containing block）</span></span></a></li></ul></li><li><a class="level is-mobile" href="#固定定位"><span class="level-left"><span class="level-item">4</span><span class="level-item">固定定位</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#固定定位的特点"><span class="level-left"><span class="level-item">4.1</span><span class="level-item">固定定位的特点</span></span></a></li></ul></li><li><a class="level is-mobile" href="#粘滞点位"><span class="level-left"><span class="level-item">5</span><span class="level-item">粘滞点位</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#粘滞定位的特点"><span class="level-left"><span class="level-item">5.1</span><span class="level-item">粘滞定位的特点</span></span></a></li></ul></li><li><a class="level is-mobile" href="#几种定位的对比"><span class="level-left"><span class="level-item">6</span><span class="level-item">几种定位的对比</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/macOS/"><span class="level-start"><span class="level-item">macOS</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/study/"><span class="level-start"><span class="level-item">study</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/tech/"><span class="level-start"><span class="level-item">tech</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="level-start"><span class="level-item">前端</span></span><span class="level-end"><span class="level-item tag">11</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/CSS/"><span class="level-start"><span class="level-item">CSS</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/HTML/"><span class="level-start"><span class="level-item">HTML</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/"><span class="level-start"><span class="level-item">JavaScript</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"><span class="level-start"><span class="level-item">网络协议</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E5%90%8E%E7%AB%AF/"><span class="level-start"><span class="level-item">后端</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%90%8E%E7%AB%AF/flask/"><span class="level-start"><span class="level-item">flask</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"><span class="level-start"><span class="level-item">计算机基础</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="level-start"><span class="level-item">计算机网络</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"><span class="level-start"><span class="level-item">软件工程</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2024 mk310</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">Hexo 博客</p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "opt-out",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
