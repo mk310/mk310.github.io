@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>过度和动画 - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Hexo"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hexo"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="CSS表格"><meta property="og:type" content="blog"><meta property="og:title" content="过度和动画"><meta property="og:url" content="http://example.com/2024/03/09/%E8%BF%87%E5%BA%A6%E5%92%8C%E5%8A%A8%E7%94%BB/"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="CSS表格"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://example.com/covers/cover_css.png"><meta property="article:published_time" content="2024-03-08T18:11:01.000Z"><meta property="article:modified_time" content="2024-03-08T19:04:37.333Z"><meta property="article:author" content="mk310"><meta property="article:tag" content="css基础"><meta property="article:tag" content="动画"><meta property="article:tag" content="过度"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://example.com/covers/cover_css.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/03/09/%E8%BF%87%E5%BA%A6%E5%92%8C%E5%8A%A8%E7%94%BB/"},"headline":"过度和动画","image":["http://example.com/covers/cover_css.png"],"datePublished":"2024-03-08T18:11:01.000Z","dateModified":"2024-03-08T19:04:37.333Z","author":{"@type":"Person","name":"mk310"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":"CSS表格"}</script><link rel="canonical" href="http://example.com/2024/03/09/%E8%BF%87%E5%BA%A6%E5%92%8C%E5%8A%A8%E7%94%BB/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/github.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="/covers/cover_css.png" alt="过度和动画"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-03-08T18:11:01.000Z" title="2024/3/9 02:11:01">2024-03-09</time>发表</span><span class="level-item"><time dateTime="2024-03-08T19:04:37.333Z" title="2024/3/9 03:04:37">2024-03-09</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><span> / </span><a class="link-muted" href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></span><span class="level-item">8 分钟读完 (大约1191个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">过度和动画</h1><div class="content"><p>CSS表格</p>
+<span id="more"></span>
+
+<h2 id="过渡（transition）"><a href="#过渡（transition）" class="headerlink" title="过渡（transition）"></a><strong>过渡（transition）</strong></h2><ul>
+<li>通过过渡可以指定一个属性发生变化时的切换方式</li>
+<li>通过过渡可以创建一些非常好的效果，提升用户的体验</li>
+</ul>
+<p><strong>属性值</strong></p>
+<p><code>transition-property</code>：指定要执行过渡的属性</p>
+<ul>
+<li>多个属性间使用<code>,</code>隔开；</li>
+<li>如果所有属性都需要过渡，则使用<code>all</code>关键字；</li>
+<li>大部分属性都支持过渡效果；</li>
+<li>注意过渡时必须是从一个有效数值向另外一个有效数值进行过渡；</li>
+</ul>
+<p><code>transition-duration</code>：指定过渡效果的持续时间</p>
+<ul>
+<li>时间单位：s 和 ms（1s&#x3D;1000ms）</li>
+</ul>
+<p><code>transition-delay</code>：过渡效果的延迟，等待一段时间后在执行过渡</p>
+<p><code>transition-timing-function</code>：过渡的时序函数</p>
+<ul>
+<li><p><code>linear</code>匀速运动</p>
+</li>
+<li><p><code>ease</code> 默认值，慢速开始，先加速后减速</p>
+</li>
+<li><p><code>ease-in</code> 加速运动</p>
+</li>
+<li><p><code>ease-out</code> 减速运动</p>
+</li>
+<li><p><code>ease-in-out</code> 先加速后减速</p>
+</li>
+<li><p><code>cubic-bezier()</code>来指定时序函数 <a target="_blank" rel="noopener" href="https://cubic-bezier.com/">https://cubic-bezier.com</a></p>
+</li>
+<li><p>&#96;&#96;&#96;<br>steps()</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  分步执行过渡效果，可以设置第二个值：</span><br><span class="line"></span><br><span class="line">  - `end`，在时间结束时执行过渡（默认值）</span><br><span class="line">  - `start`，在时间开始时执行过渡</span><br><span class="line"></span><br><span class="line">`transition`：可以同时设置过渡相关的所有属性</span><br><span class="line"></span><br><span class="line">- 只有一个要求，如果要写延迟，则两个时间中第一个是持续时间，第二个是延迟时间</span><br><span class="line"></span><br><span class="line">**示例**</span><br><span class="line"></span><br><span class="line">```css</span><br><span class="line">/* transition: margin-left 2s 1s; */</span><br><span class="line">transition-property: margin-left;</span><br><span class="line">transition-duration: 2s;</span><br><span class="line">transition-delay: 1s;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><img src="/../images/%E8%BF%87%E5%BA%A6%E5%92%8C%E5%8A%A8%E7%94%BB/7480db3e978d72b04b48e47351b2712a.gif" alt="transition"></p>
+<p><strong>几种过渡效果对比</strong></p>
+<p><code>linear</code>匀速运动</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transition-timing-function</span>: linear;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/%E8%BF%87%E5%BA%A6%E5%92%8C%E5%8A%A8%E7%94%BB/db1e5c02804cfa5d8cfc03e84f465cc0.gif" alt="linear"></p>
+<p><code>ease</code> 默认值，慢速开始，先加速后减速</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transition-timing-function</span>: ease;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/%E8%BF%87%E5%BA%A6%E5%92%8C%E5%8A%A8%E7%94%BB/cc12a68d322c7f04647408b28e1a355b.gif" alt="ease"></p>
+<p><code>ease-in</code> 加速运动</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transition-timing-function</span>: ease-in;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/%E8%BF%87%E5%BA%A6%E5%92%8C%E5%8A%A8%E7%94%BB/e7e99280e1108793f8e0f681587c50fd.gif" alt="ease-in"></p>
+<p><code>ease-out</code> 减速运动</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transition-timing-function</span>: ease-out;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/%E8%BF%87%E5%BA%A6%E5%92%8C%E5%8A%A8%E7%94%BB/2c408e4fbec59ccbcf324b308d893ad9.gif" alt="ease-out"></p>
+<p><code>ease-in-out</code> 先加速后减速</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transition-timing-function</span>: ease-in-out;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/%E8%BF%87%E5%BA%A6%E5%92%8C%E5%8A%A8%E7%94%BB/a34bb617b70c57b8bdcdbba930315b82.gif" alt="ease-in-out"></p>
+<p><code>cubic-bezier()</code>来指定时序函数</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transition-timing-function</span>: <span class="built_in">cubic-bezier</span>(<span class="number">0.17</span>, <span class="number">1.79</span>, <span class="number">0.68</span>, -<span class="number">0.69</span>);</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/%E8%BF%87%E5%BA%A6%E5%92%8C%E5%8A%A8%E7%94%BB/95be9a5c0834580690f63674754a5a5d.gif" alt="cubic-bezier"></p>
+<p><code>steps()</code>分步执行过渡效果</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* transition-timing-function: steps(2, end); */</span></span><br><span class="line"><span class="attribute">transition-timing-function</span>: <span class="built_in">steps</span>(<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/%E8%BF%87%E5%BA%A6%E5%92%8C%E5%8A%A8%E7%94%BB/fad621042638ade6ffc1ca8ed7291524.gif" alt="steps-end"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transition-timing-function</span>: <span class="built_in">steps</span>(<span class="number">2</span>, start);</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/%E8%BF%87%E5%BA%A6%E5%92%8C%E5%8A%A8%E7%94%BB/eafa6e6574b7570eea4cbbd26bafe377.gif" alt="steps-start"></p>
+<h3 id="实战米兔"><a href="#实战米兔" class="headerlink" title="实战米兔"></a>实战米兔</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.mitu</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">132px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">271px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">40px</span> auto;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">&#x27;./img/bigtap.png&#x27;</span>);</span><br><span class="line">    <span class="comment">/* 确定初始的位置 */</span></span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0</span>, <span class="number">0</span>;</span><br><span class="line">    <span class="comment">/* 三次转换 */</span></span><br><span class="line">    <span class="attribute">transition</span>:  <span class="number">0.3s</span> <span class="built_in">steps</span>(<span class="number">3</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mitu</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">    <span class="comment">/* 移动到的最终的位置 */</span></span><br><span class="line">    <span class="attribute">background-position</span>: -<span class="number">396px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/%E8%BF%87%E5%BA%A6%E5%92%8C%E5%8A%A8%E7%94%BB/cfcff3ec2765beff571c95c8af08b20d.gif" alt="米兔"></p>
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p>动画和过渡类似，都是可以实现一些动态的效果，不同的是</p>
+<ul>
+<li>过渡需要在某个属性发生变化时才会触发</li>
+<li>动画可以自动触发动态效果</li>
+</ul>
+<p>设置动画效果，必须先要设置一个<strong>关键帧</strong>，关键帧设置了动画执行每一个步骤</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> test &#123;</span><br><span class="line">  <span class="selector-tag">from</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="selector-tag">to</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">900px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>animation-name</code> 指定动画的关键帧名称</p>
+<p><code>animation-duration</code>：指定动画效果的持续时间</p>
+<p><code>animation-delay</code>：动画效果的延迟，等待一段时间后在执行动画</p>
+<p><code>animation-timing-function</code>：动画的时序函数</p>
+<p><code>animation-iteration-count</code> 动画执行的次数</p>
+<ul>
+<li><code>infinite</code> 无限执行</li>
+</ul>
+<p><code>animation-direction</code> 指定动画运行的方向</p>
+<ul>
+<li><code>normal</code> 从<code>from</code>向<code>to</code>运行，每次都是这样，默认值</li>
+<li><code>reverse</code> 从<code>to</code>向<code>from</code>运行，每次都是这样</li>
+<li><code>alternate</code> 从<code>from</code>向<code>to</code>运行，重复执行动画时反向执行</li>
+<li><code>alternate-reverse</code> 从<code>to</code>向<code>from</code>运行，重复执行动画时反向执行</li>
+</ul>
+<p><code>animation-play-state</code> 设置动画的执行状态</p>
+<ul>
+<li><code>running</code> 动画执行，默认值</li>
+<li><code>paused</code> 动画暂停</li>
+</ul>
+<p><code>animation-fill-mode</code> 动画的填充模式</p>
+<ul>
+<li><code>none</code> 动画执行完毕，元素回到原来位置，默认值</li>
+<li><code>forwards</code> 动画执行完毕，元素会停止在动画结束的位置</li>
+<li><code>backwards</code> 动画延时等待时，元素就会处于开始位置</li>
+<li><code>both</code> 结合了<code>forwards</code>和<code>backwards</code></li>
+</ul>
+<h3 id="练习米兔"><a href="#练习米兔" class="headerlink" title="练习米兔"></a>练习米兔</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    <span class="selector-class">.mitu</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">132px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">271px</span>;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">40px</span> auto;</span><br><span class="line">        <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">&#x27;./img/bigtap.png&#x27;</span>);</span><br><span class="line">        <span class="comment">/* 确定初始的位置 */</span></span><br><span class="line">        <span class="comment">/* 三次转换 */</span></span><br><span class="line">        <span class="attribute">animation</span>: run <span class="number">0.3s</span> <span class="built_in">steps</span>(<span class="number">3</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">@keyframes</span> run &#123;</span><br><span class="line">        <span class="selector-tag">form</span> &#123;</span><br><span class="line">            <span class="attribute">background-position</span>: <span class="number">0</span>, <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="selector-tag">to</span> &#123;</span><br><span class="line">            <span class="attribute">background-position</span>: -<span class="number">396px</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>效果同上</p>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/css%E5%9F%BA%E7%A1%80/">css基础</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%8A%A8%E7%94%BB/">动画</a><a class="link-muted mr-2" rel="tag" href="/tags/%E8%BF%87%E5%BA%A6/">过度</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2024/03/13/%E5%8F%98%E5%BD%A2%EF%BC%9A%E5%B9%B3%E7%A7%BB%E3%80%81%E6%97%8B%E8%BD%AC%E4%B8%8E%E7%BC%A9%E6%94%BE/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">变形：平移、旋转与缩放</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/03/08/%E8%A1%A8%E6%A0%BC/"><span class="level-item">表格</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="mk310"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">mk310</p><p class="is-size-6 is-block">no-no-no</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>hangzhou</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">38</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">16</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">43</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://gitee.com" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://gitee.com"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="bilibili" href="https://bilibili.com"><i class="fab fa-bilibili"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="zhihu" href="https://zhihu.com"><i class="fab fa-zhihu"></i></a></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-03-12T19:34:25.000Z">2024-03-13</time></p><p class="title"><a href="/2024/03/13/%E5%8F%98%E5%BD%A2%EF%BC%9A%E5%B9%B3%E7%A7%BB%E3%80%81%E6%97%8B%E8%BD%AC%E4%B8%8E%E7%BC%A9%E6%94%BE/">变形：平移、旋转与缩放</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-03-08T18:11:01.000Z">2024-03-09</time></p><p class="title"><a href="/2024/03/09/%E8%BF%87%E5%BA%A6%E5%92%8C%E5%8A%A8%E7%94%BB/">过度和动画</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-03-08T13:14:40.000Z">2024-03-08</time></p><p class="title"><a href="/2024/03/08/%E8%A1%A8%E6%A0%BC/">表格</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-03-06T19:57:06.000Z">2024-03-07</time></p><p class="title"><a href="/2024/03/07/%E8%83%8C%E6%99%AF/">背景 雪碧图与渐变</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-02-29T18:35:55.000Z">2024-03-01</time></p><p class="title"><a href="/2024/03/01/%E5%AE%9A%E4%BD%8D/">定位</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#过渡（transition）"><span class="level-left"><span class="level-item">1</span><span class="level-item">过渡（transition）</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#实战米兔"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">实战米兔</span></span></a></li></ul></li><li><a class="level is-mobile" href="#动画"><span class="level-left"><span class="level-item">2</span><span class="level-item">动画</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#练习米兔"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">练习米兔</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/macOS/"><span class="level-start"><span class="level-item">macOS</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/study/"><span class="level-start"><span class="level-item">study</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/tech/"><span class="level-start"><span class="level-item">tech</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="level-start"><span class="level-item">前端</span></span><span class="level-end"><span class="level-item tag">15</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/CSS/"><span class="level-start"><span class="level-item">CSS</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/HTML/"><span class="level-start"><span class="level-item">HTML</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/"><span class="level-start"><span class="level-item">JavaScript</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"><span class="level-start"><span class="level-item">网络协议</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E5%90%8E%E7%AB%AF/"><span class="level-start"><span class="level-item">后端</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%90%8E%E7%AB%AF/flask/"><span class="level-start"><span class="level-item">flask</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"><span class="level-start"><span class="level-item">计算机基础</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="level-start"><span class="level-item">计算机网络</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"><span class="level-start"><span class="level-item">软件工程</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2024 mk310</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">Hexo 博客</p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "opt-out",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
