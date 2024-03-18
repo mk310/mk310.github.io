@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>弹性盒 - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Hexo"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hexo"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="CSS弹性盒"><meta property="og:type" content="blog"><meta property="og:title" content="弹性盒"><meta property="og:url" content="http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="CSS弹性盒"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://example.com/covers/cover_css.png"><meta property="article:published_time" content="2024-03-14T17:34:14.000Z"><meta property="article:modified_time" content="2024-03-15T19:35:28.084Z"><meta property="article:author" content="mk310"><meta property="article:tag" content="css基础"><meta property="article:tag" content="弹性盒"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://example.com/covers/cover_css.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/"},"headline":"弹性盒","image":["http://example.com/covers/cover_css.png"],"datePublished":"2024-03-14T17:34:14.000Z","dateModified":"2024-03-15T19:35:28.084Z","author":{"@type":"Person","name":"mk310"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":"CSS弹性盒"}</script><link rel="canonical" href="http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/github.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="/covers/cover_css.png" alt="弹性盒"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-03-14T17:34:14.000Z" title="2024/3/15 01:34:14">2024-03-15</time>发表</span><span class="level-item"><time dateTime="2024-03-15T19:35:28.084Z" title="2024/3/16 03:35:28">2024-03-16</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><span> / </span><a class="link-muted" href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></span><span class="level-item">12 分钟读完 (大约1772个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">弹性盒</h1><div class="content"><p>CSS弹性盒</p>
+<span id="more"></span>
+
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="弹性盒"><a href="#弹性盒" class="headerlink" title="弹性盒"></a>弹性盒</h3><p><code>flex</code>（弹性盒、伸缩盒）</p>
+<ul>
+<li>是<code>css</code>中的又一种布局手段，它主要用来代替浮动来完成页面的布局</li>
+<li><code>flex</code>可以使元素具有弹性，让元素可以跟随页面的大小的改变而改变</li>
+</ul>
+<h3 id="弹性容器"><a href="#弹性容器" class="headerlink" title="弹性容器"></a>弹性容器</h3><p>要使用弹性盒，必须先将一个元素设置为弹性容器</p>
+<p>我们通过<code>display</code> 来设置弹性容器</p>
+<ul>
+<li><code>display:flex</code> 设置为块级弹性容器</li>
+<li><code>display:inline-flex</code> 设置为行内的弹性容器</li>
+</ul>
+<h2 id="练习-弹性导航条"><a href="#练习-弹性导航条" class="headerlink" title="练习(弹性导航条)"></a>练习(弹性导航条)</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    <span class="selector-class">.nav</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">1210px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">48px</span>;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">50px</span> auto;</span><br><span class="line">        <span class="comment">/* 文字垂直方向居中 */</span></span><br><span class="line">        <span class="attribute">line-height</span>: <span class="number">48px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="number">#e6e7e2</span>;</span><br><span class="line">        <span class="comment">/* 设置为弹性盒子 */</span></span><br><span class="line">        <span class="attribute">display</span>: flex;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.box</span>&#123;</span><br><span class="line">        <span class="attribute">flex-grow</span>: <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.nav</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">        <span class="attribute">display</span>: block;</span><br><span class="line">        <span class="attribute">color</span>: <span class="number">#808080</span>;</span><br><span class="line">        <span class="attribute">text-decoration</span>: none;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">        <span class="attribute">text-align</span>: center;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.nav</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="number">#636363</span>;</span><br><span class="line">        <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/image-20240315032904094.png" alt="弹性导航条"></p>
+<h2 id="弹性容器的属性"><a href="#弹性容器的属性" class="headerlink" title="弹性容器的属性"></a>弹性容器的属性</h2><p><strong>主轴与侧轴</strong></p>
+<ul>
+<li>主轴：弹性元素的排列方向称为主轴</li>
+<li>侧轴：与主轴垂直方向的称为侧轴</li>
+</ul>
+<h3 id="主轴属性"><a href="#主轴属性" class="headerlink" title="主轴属性"></a>主轴属性</h3><h4 id="排列方式"><a href="#排列方式" class="headerlink" title="排列方式"></a>排列方式</h4><p><code>flex-direction</code> 指定容器中弹性元素的排列方式</p>
+<ul>
+<li><code>row</code>默认值，弹性元素在容器中水平排列（自左向右）</li>
+<li><code>row-reverse</code> 弹性元素在容器中反向水平排列（自右向左）</li>
+<li><code>column</code> 弹性元素纵向排列（自上向下）</li>
+<li><code>column-reverse</code> 弹性元素反向纵向排列（自下向上）</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 设置弹性元素排列方式 */</span></span><br><span class="line"><span class="attribute">flex-direction</span>: column;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/11729c6c2c818441f5089c3a3984a080.png" alt="flex-direction"></p>
+<h4 id="自动换行"><a href="#自动换行" class="headerlink" title="自动换行"></a>自动换行</h4><p><code>flex-wrap</code> 设置弹性元素是否在弹性容器中自动换行</p>
+<ul>
+<li><code>nowrap</code> 默认值，元素不会自动换行</li>
+<li><code>wrap</code> 元素沿着辅轴方向自动换行</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 设置弹性元素排列方式 */</span></span><br><span class="line"><span class="attribute">flex-direction</span>: row;</span><br><span class="line"><span class="comment">/* 设置自动换行 */</span></span><br><span class="line"><span class="attribute">flex-wrap</span>: wrap;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/c87e43a9db82a4f564f98dbdae47fcc4.png" alt="flex-wrap"></p>
+<p><strong>简写属性</strong></p>
+<p><code>flex-flow</code> 是<code>wrap</code>和<code>direction</code>的简写属性</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 简写属性 */</span></span><br><span class="line"><span class="attribute">flex-flow</span>: row wrap;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/963e711b9a2217a1c34b1a08538ea795.png" alt="flex-flow"></p>
+<h4 id="空白空间"><a href="#空白空间" class="headerlink" title="空白空间"></a>空白空间</h4><p><code>justify-content</code> 如何分配主轴上的空白空间（主轴上的元素如何排列）</p>
+<ul>
+<li><p><code>flex-start</code> 元素沿着主轴起边排列</p>
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/3ee816db158fb6b5d480172f9ac578c0.png" alt="flex-start"></p>
+</li>
+<li><p><code>flex-end</code> 元素沿着主轴终边排列</p>
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/bb526f4373ab471791217f20260dbbd1.png" alt="flex-end"></p>
+</li>
+<li><p><code>center</code> 元素居中排列</p>
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/0c54d451da26478557563813cbbcc77f.png" alt="center"></p>
+</li>
+<li><p><code>space-around</code> 空白分布到元素两侧</p>
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/954f8711b1e786fcc0834a064290c861.png" alt="space-around"></p>
+</li>
+<li><p><code>space-between</code> 空白均匀分布到元素间</p>
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/03d831ec631b993192edfd186e4c2396.png" alt="space-between"></p>
+</li>
+<li><p><code>space-evenly</code> 空白分布到元素的单侧</p>
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/110522935bd98f332cb9cf04380f563b.png" alt="space-evenly"></p>
+</li>
+</ul>
+<h3 id="辅轴属性"><a href="#辅轴属性" class="headerlink" title="辅轴属性"></a>辅轴属性</h3><h4 id="辅轴对齐"><a href="#辅轴对齐" class="headerlink" title="辅轴对齐"></a>辅轴对齐</h4><p><code>align-items</code>元素在辅轴上如何对齐</p>
+<ul>
+<li><p><code>stretch</code> 默认值，将元素的长度设置为相同的值</p>
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/2af92a896e40671ca536a9ed39dc1c1b.png" alt="stretch"></p>
+</li>
+<li><p><code>flex-start</code> 元素不会拉伸，沿着辅轴起边对齐</p>
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/6ab8b213829111066f5cd0ad1fa70bb7.png" alt="flex-start"></p>
+</li>
+<li><p><code>flex-end</code> 沿着辅轴的终边对齐</p>
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/9c5f3fff8119986aa076cbe5f3e778d9.png" alt="flex-end"></p>
+</li>
+<li><p><code>center</code> 居中对齐</p>
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/5448b556d848e25d86ea52c09222f8bf.png" alt="center"></p>
+</li>
+<li><p><code>baseline</code> 基线对齐</p>
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/c33af4a7dc9c4e2ea1a978edcfad4e11.png" alt="baseline"></p>
+</li>
+</ul>
+<h4 id="空白空间-1"><a href="#空白空间-1" class="headerlink" title="空白空间"></a>空白空间</h4><p><code>align-content</code> 如何分配辅轴上的空白空间（辅轴上的元素如何排列）</p>
+<ul>
+<li><p><code>flex-start</code> 元素沿着辅轴起边排列</p>
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/9508792eb1a11fe0af3d51f1d47bb584.png" alt="flex-start"></p>
+</li>
+<li><p><code>flex-end</code> 元素沿着辅轴终边排列</p>
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/13cf3c6ca7af292ddc5fb2279dc19839.png" alt="flex-end"></p>
+</li>
+<li><p><code>center</code> 元素居中排列</p>
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/d788195de72ec17c817338b220c2ea32.png" alt="center"></p>
+</li>
+<li><p><code>space-around</code> 空白分布到元素两侧</p>
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/3809331c72ca666656b99b1983e0d473.png" alt="space-around"></p>
+</li>
+<li><p><code>space-between</code> 空白均匀分布到元素间</p>
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/4a28fd1069af8b43b103e48f4db7cecf.png" alt="space-between"></p>
+</li>
+<li><p><code>space-evenly</code> 空白分布到元素的单侧</p>
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/f07a0ca24286bb5c3c5c3caf5a8e7559.png" alt="space-evenly"></p>
+</li>
+</ul>
+<h3 id="弹性居中"><a href="#弹性居中" class="headerlink" title="弹性居中"></a>弹性居中</h3><p>利用弹性盒对元素进行水平垂直双方向居中</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">justify-content</span>: center;</span><br><span class="line"><span class="attribute">align-items</span>: center;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/0f326ed5006e1aac8e7f9120cb02c8b4.png" alt="弹性居中"></p>
+<h2 id="弹性元素的属性"><a href="#弹性元素的属性" class="headerlink" title="弹性元素的属性"></a>弹性元素的属性</h2><h3 id="伸展系数"><a href="#伸展系数" class="headerlink" title="伸展系数"></a>伸展系数</h3><p><code>flex-grow</code> 指定弹性元素的伸展系数，默认值为 0</p>
+<ul>
+<li>当父元素有多余空间的时，子元素如何伸展</li>
+<li>父元素的剩余空间，会按照比例进行分配</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:nth-child</span>(<span class="number">1</span>) &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span><br><span class="line">  <span class="attribute">flex-grow</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:nth-child</span>(<span class="number">2</span>) &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">  <span class="attribute">flex-grow</span>: <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:nth-child</span>(<span class="number">3</span>) &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: green;</span><br><span class="line">  <span class="attribute">flex-grow</span>: <span class="number">3</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/fe1e85d111f123fbdc490048947a7252.png" alt="flex-grow"></p>
+<h3 id="缩减系数"><a href="#缩减系数" class="headerlink" title="缩减系数"></a>缩减系数</h3><p><code>flex-shrink</code> 指定弹性元素的收缩系数，默认值为 1</p>
+<ul>
+<li>当父元素中的空间不足以容纳所有的子元素时，如何对子元素进行收缩</li>
+<li>缩减系数的计算方式比较复杂，缩减多少是根据 <em>缩减系数</em> 和 <em>元素大小</em> 来计算</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:nth-child</span>(<span class="number">1</span>) &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span><br><span class="line">  <span class="attribute">flex-shrink</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:nth-child</span>(<span class="number">2</span>) &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">  <span class="attribute">flex-shrink</span>: <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:nth-child</span>(<span class="number">3</span>) &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: green;</span><br><span class="line">  <span class="attribute">flex-shrink</span>: <span class="number">3</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/19f06ff1e9a81a0838ab6f1cdfc607a0.png" alt="flex-shrink"></p>
+<h3 id="基础长度"><a href="#基础长度" class="headerlink" title="基础长度"></a>基础长度</h3><p><code>flex-basis</code> 指定的是元素在主轴上的基础长度</p>
+<ul>
+<li>如果主轴是横向的，则该值指定的就是元素的宽度</li>
+<li>如果主轴是纵向的，则该值指定的就是元素的高度</li>
+<li>默认值是<code>auto</code>，表示参考元素自身的高度或宽度</li>
+<li>如果传递了一个具体的数值，则以该值为准</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:nth-child</span>(<span class="number">1</span>) &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span><br><span class="line">  <span class="attribute">flex-basis</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/4ebbe412b98a6bda2cdcf8a95e6687b1.png" alt="flex-basis"></p>
+<p><strong>简写属性</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flex`可以设置弹性元素所有的三个样式 `flex: 增长 缩减 基础</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>initial</code>：<code>flex: 0 1 auto</code></li>
+<li><code>auto</code>：<code>flex: 1 1 auto</code></li>
+<li><code>none</code>：<code>flex: 0 0 auto</code> 弹性元素没有弹性</li>
+</ul>
+<h3 id="排列顺序"><a href="#排列顺序" class="headerlink" title="排列顺序"></a>排列顺序</h3><p><code>order</code> 决定弹性元素的排列顺序</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:nth-child</span>(<span class="number">1</span>) &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span><br><span class="line">  <span class="attribute">order</span>: <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:nth-child</span>(<span class="number">2</span>) &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">  <span class="attribute">order</span>: <span class="number">3</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:nth-child</span>(<span class="number">3</span>) &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: green;</span><br><span class="line">  <span class="attribute">order</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/9946555125edbfac6ed4bad5db916027.png" alt="order"></p>
+<h3 id="覆盖辅轴"><a href="#覆盖辅轴" class="headerlink" title="覆盖辅轴"></a>覆盖辅轴</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">align-self` 用来覆盖当前弹性元素上的`align-items</span><br><span class="line">li:nth-child(1) &#123;</span><br><span class="line">  background-color: #bfa;</span><br><span class="line">  align-self: flex-end;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/088ae6940229c340026c918928f9607e.png" alt="image-20210627134055587"></p>
+<h2 id="练习（手机淘宝）"><a href="#练习（手机淘宝）" class="headerlink" title="练习（手机淘宝）"></a>练习（手机淘宝）</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    <span class="selector-class">.nav</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.nav</span> <span class="selector-class">.nav-inner</span>&#123;</span><br><span class="line">        <span class="attribute">margin-top</span>: <span class="number">40px</span>;</span><br><span class="line">        <span class="comment">/* 变成弹性盒子 */</span></span><br><span class="line">        <span class="attribute">display</span>: flex;</span><br><span class="line">        <span class="comment">/* 为保持两边空白使用空白环绕 */</span></span><br><span class="line">        <span class="attribute">justify-content</span>: space-around;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.nav</span> <span class="selector-class">.item</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">19%</span>;</span><br><span class="line">        <span class="attribute">text-align</span>: center;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-tag">img</span>&#123;</span><br><span class="line">        <span class="comment">/* 保持图片大小防止页面变动时候影响布局 */</span></span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.item</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">        <span class="attribute">text-decoration</span>: none;</span><br><span class="line">        <span class="attribute">color</span>: <span class="number">#333</span>;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>效果：<img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/image-20240316033522533.png" alt="手机淘宝"></p>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/css%E5%9F%BA%E7%A1%80/">css基础</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92/">弹性盒</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/03/13/%E5%8F%98%E5%BD%A2%EF%BC%9A%E5%B9%B3%E7%A7%BB%E3%80%81%E6%97%8B%E8%BD%AC%E4%B8%8E%E7%BC%A9%E6%94%BE/"><span class="level-item">变形：平移、旋转与缩放</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="mk310"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">mk310</p><p class="is-size-6 is-block">no-no-no</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>hangzhou</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">39</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">16</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">47</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://gitee.com" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://gitee.com"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="bilibili" href="https://bilibili.com"><i class="fab fa-bilibili"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="zhihu" href="https://zhihu.com"><i class="fab fa-zhihu"></i></a></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-03-14T17:34:14.000Z">2024-03-15</time></p><p class="title"><a href="/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/">弹性盒</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-03-12T19:34:25.000Z">2024-03-13</time></p><p class="title"><a href="/2024/03/13/%E5%8F%98%E5%BD%A2%EF%BC%9A%E5%B9%B3%E7%A7%BB%E3%80%81%E6%97%8B%E8%BD%AC%E4%B8%8E%E7%BC%A9%E6%94%BE/">变形：平移、旋转与缩放</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-03-08T18:11:01.000Z">2024-03-09</time></p><p class="title"><a href="/2024/03/09/%E8%BF%87%E5%BA%A6%E5%92%8C%E5%8A%A8%E7%94%BB/">过度和动画</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-03-08T13:14:40.000Z">2024-03-08</time></p><p class="title"><a href="/2024/03/08/%E8%A1%A8%E6%A0%BC/">表格</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-03-06T19:57:06.000Z">2024-03-07</time></p><p class="title"><a href="/2024/03/07/%E8%83%8C%E6%99%AF/">背景 雪碧图与渐变</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#基本概念"><span class="level-left"><span class="level-item">1</span><span class="level-item">基本概念</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#弹性盒"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">弹性盒</span></span></a></li><li><a class="level is-mobile" href="#弹性容器"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">弹性容器</span></span></a></li></ul></li><li><a class="level is-mobile" href="#练习-弹性导航条"><span class="level-left"><span class="level-item">2</span><span class="level-item">练习(弹性导航条)</span></span></a></li><li><a class="level is-mobile" href="#弹性容器的属性"><span class="level-left"><span class="level-item">3</span><span class="level-item">弹性容器的属性</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#主轴属性"><span class="level-left"><span class="level-item">3.1</span><span class="level-item">主轴属性</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#排列方式"><span class="level-left"><span class="level-item">3.1.1</span><span class="level-item">排列方式</span></span></a></li><li><a class="level is-mobile" href="#自动换行"><span class="level-left"><span class="level-item">3.1.2</span><span class="level-item">自动换行</span></span></a></li><li><a class="level is-mobile" href="#空白空间"><span class="level-left"><span class="level-item">3.1.3</span><span class="level-item">空白空间</span></span></a></li></ul></li><li><a class="level is-mobile" href="#辅轴属性"><span class="level-left"><span class="level-item">3.2</span><span class="level-item">辅轴属性</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#辅轴对齐"><span class="level-left"><span class="level-item">3.2.1</span><span class="level-item">辅轴对齐</span></span></a></li><li><a class="level is-mobile" href="#空白空间-1"><span class="level-left"><span class="level-item">3.2.2</span><span class="level-item">空白空间</span></span></a></li></ul></li><li><a class="level is-mobile" href="#弹性居中"><span class="level-left"><span class="level-item">3.3</span><span class="level-item">弹性居中</span></span></a></li></ul></li><li><a class="level is-mobile" href="#弹性元素的属性"><span class="level-left"><span class="level-item">4</span><span class="level-item">弹性元素的属性</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#伸展系数"><span class="level-left"><span class="level-item">4.1</span><span class="level-item">伸展系数</span></span></a></li><li><a class="level is-mobile" href="#缩减系数"><span class="level-left"><span class="level-item">4.2</span><span class="level-item">缩减系数</span></span></a></li><li><a class="level is-mobile" href="#基础长度"><span class="level-left"><span class="level-item">4.3</span><span class="level-item">基础长度</span></span></a></li><li><a class="level is-mobile" href="#排列顺序"><span class="level-left"><span class="level-item">4.4</span><span class="level-item">排列顺序</span></span></a></li><li><a class="level is-mobile" href="#覆盖辅轴"><span class="level-left"><span class="level-item">4.5</span><span class="level-item">覆盖辅轴</span></span></a></li></ul></li><li><a class="level is-mobile" href="#练习（手机淘宝）"><span class="level-left"><span class="level-item">5</span><span class="level-item">练习（手机淘宝）</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/macOS/"><span class="level-start"><span class="level-item">macOS</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/study/"><span class="level-start"><span class="level-item">study</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/tech/"><span class="level-start"><span class="level-item">tech</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="level-start"><span class="level-item">前端</span></span><span class="level-end"><span class="level-item tag">16</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/CSS/"><span class="level-start"><span class="level-item">CSS</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/HTML/"><span class="level-start"><span class="level-item">HTML</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/"><span class="level-start"><span class="level-item">JavaScript</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"><span class="level-start"><span class="level-item">网络协议</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E5%90%8E%E7%AB%AF/"><span class="level-start"><span class="level-item">后端</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%90%8E%E7%AB%AF/flask/"><span class="level-start"><span class="level-item">flask</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"><span class="level-start"><span class="level-item">计算机基础</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="level-start"><span class="level-item">计算机网络</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"><span class="level-start"><span class="level-item">软件工程</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2024 mk310</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">Hexo 博客</p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "opt-out",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
