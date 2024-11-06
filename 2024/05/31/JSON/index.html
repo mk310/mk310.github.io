@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="JSON（JavaScript Object Notation，js对象表示法）就是一个特殊格式的字符串，这个字符串可以被任意的语言所识别，并且可以转换为任意语言中的对象，JSON在开发中主要用来数据的交互">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JSON">
+<meta property="og:url" content="http://example.com/2024/05/31/JSON/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="JSON（JavaScript Object Notation，js对象表示法）就是一个特殊格式的字符串，这个字符串可以被任意的语言所识别，并且可以转换为任意语言中的对象，JSON在开发中主要用来数据的交互">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/JSON/6iezRpgfl3bB2Uu.png">
+<meta property="og:image" content="http://example.com/images/JSON/AWUjuMbFRkIHyiw.png">
+<meta property="article:published_time" content="2024-05-31T11:28:19.000Z">
+<meta property="article:modified_time" content="2024-05-31T11:33:26.902Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="JS基础">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="JSON">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/JSON/6iezRpgfl3bB2Uu.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>JSON</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Category</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tag</a></li><!--
+     --><!--
+       --><li><a href="/search/">Search</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://gitee.com/">Projects</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2024/03/27/JS%E5%87%BD%E6%95%B0/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2024/05/31/JSON/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/05/31/JSON/&text=JSON"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2024/05/31/JSON/&title=JSON"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2024/05/31/JSON/&is_video=false&description=JSON"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=JSON&body=Check out this article: http://example.com/2024/05/31/JSON/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2024/05/31/JSON/&title=JSON"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2024/05/31/JSON/&title=JSON"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2024/05/31/JSON/&title=JSON"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2024/05/31/JSON/&title=JSON"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2024/05/31/JSON/&name=JSON&description=&lt;p&gt;&lt;code&gt;JSON&lt;/code&gt;（JavaScript Object Notation，js对象表示法）就是一个特殊格式的字符串，这个字符串可以被任意的语言所识别，并且可以转换为任意语言中的对象，&lt;code&gt;JSON&lt;/code&gt;在开发中主要用来数据的交互&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2024/05/31/JSON/&t=JSON"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JSON%E5%88%86%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">JSON分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JSON%E4%B8%AD%E5%85%81%E8%AE%B8%E7%9A%84%E5%80%BC"><span class="toc-number">2.</span> <span class="toc-text">JSON中允许的值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JSON%E5%92%8CJS%E9%97%B4%E8%BD%AC%E6%8D%A2"><span class="toc-number">3.</span> <span class="toc-text">JSON和JS间转换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JSON-parse"><span class="toc-number">3.1.</span> <span class="toc-text">JSON.parse()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSON-stringify"><span class="toc-number">3.2.</span> <span class="toc-text">JSON.stringify()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#eval"><span class="toc-number">3.3.</span> <span class="toc-text">eval()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%BC%E5%AE%B9IE7"><span class="toc-number">3.4.</span> <span class="toc-text">兼容IE7</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        JSON
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">John Doe</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-05-31T11:28:19.000Z" itemprop="datePublished">2024-05-31</time>
+        
+        (Updated: <time datetime="2024-05-31T11:33:26.902Z" itemprop="dateModified">2024-05-31</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> › <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/JSON/" rel="tag">JSON</a>, <a class="tag-link-link" href="/tags/JS%E5%9F%BA%E7%A1%80/" rel="tag">JS基础</a>, <a class="tag-link-link" href="/tags/JavaScript/" rel="tag">JavaScript</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><code>JSON</code>（JavaScript Object Notation，js对象表示法）就是一个特殊格式的字符串，这个字符串可以被任意的语言所识别，并且可以转换为任意语言中的对象，<code>JSON</code>在开发中主要用来数据的交互</p>
+<span id="more"></span>
+
+<h2 id="JSON分类"><a href="#JSON分类" class="headerlink" title="JSON分类"></a>JSON分类</h2><ul>
+<li><code>对象&#123;&#125;</code></li>
+<li><code>数组[]</code></li>
+</ul>
+<h2 id="JSON中允许的值"><a href="#JSON中允许的值" class="headerlink" title="JSON中允许的值"></a>JSON中允许的值</h2><ul>
+<li>字符串</li>
+<li>数值</li>
+<li>布尔值</li>
+<li><code>null</code></li>
+<li>对象</li>
+<li>数组</li>
+</ul>
+<pre><code class="js">// json对象可以包含json数组
+var obj1 = &#39;&#123;&quot;arr&quot;:[1,2,3]&#125;&#39;;
+// json数组可以包含json对象
+var obj2 = &#39;[&#123;&quot;name&quot;: &quot;孙悟空&quot;,&quot;age&quot;: 1000,&quot;gender&quot;: &quot;男&quot;&#125;,&#123;&quot;name&quot;: &quot;孙悟空&quot;,&quot;age&quot;: 1000,&quot;gender&quot;: &quot;男&quot;&#125;]&#39;;
+</code></pre>
+<h2 id="JSON和JS间转换"><a href="#JSON和JS间转换" class="headerlink" title="JSON和JS间转换"></a>JSON和JS间转换</h2><p>在 JS 中，为我们提供了一个工具类，就叫<code>JSON</code></p>
+<p>这个对象可以帮助我们将一个<code>JSON</code>转换为 JS 对象，也可以将一个 JS 对象转换<code>JSON</code></p>
+<h3 id="JSON-parse"><a href="#JSON-parse" class="headerlink" title="JSON.parse()"></a>JSON.parse()</h3><p>可以将<code>JSON</code>字符串转换为 JS 中的对象</p>
+<p>需要一个<code>JSON</code>字符串作为参数，会将该字符串转换为 JS 对象并返回</p>
+<pre><code class="js">var jsonObj = JSON.parse(jsonObjStr);
+console.log(typeof jsonObj); // object
+console.log(jsonObj); // &#123; name: &quot;孙悟空&quot;, age: 1000, gender: &quot;男&quot; &#125;
+console.log(jsonObj.name); // 孙悟空
+console.log(jsonObj.age); // 1000
+console.log(jsonObj.gender); // 男
+
+var jsonArr = JSON.parse(jsonArrStr);
+console.log(typeof jsonArr); // object
+console.log(jsonArr); // (5) [ 1, 2, 3, &quot;hello&quot;, true ]
+console.log(jsonArr[0]); // 1
+console.log(jsonArr[3]); // hello
+console.log(jsonArr[4]); // true
+</code></pre>
+<h3 id="JSON-stringify"><a href="#JSON-stringify" class="headerlink" title="JSON.stringify()"></a>JSON.stringify()</h3><p>可以将一个 JS 对象转换为<code>JSON</code>字符串</p>
+<p>需要一个 JS 对象作为参数，会返回一个<code>JSON</code>字符串</p>
+<pre><code class="js">var obj2 = &#123;
+    name: &quot;猪八戒&quot;,
+    age: 2000,
+    gender: &quot;男&quot;
+&#125;;
+var obj2JSONStr = JSON.stringify(obj2);
+console.log(typeof obj2JSONStr); // string
+console.log(obj2JSONStr); // &#123;&quot;name&quot;:&quot;猪八戒&quot;,&quot;age&quot;:2000,&quot;gender&quot;:&quot;男&quot;&#125;
+</code></pre>
+<p><code>JSON</code>对象在 IE7 及以下的浏览器中不支持，所以在这些浏览器中调用时会报错</p>
+<h3 id="eval"><a href="#eval" class="headerlink" title="eval()"></a>eval()</h3><p>这个函数可以用来执行一段字符串形式的 JS 代码，并将执行结果返回</p>
+<pre><code class="js">var str = &#39;alert(&quot;hello&quot;)&#39;;
+eval(str);
+</code></pre>
+<p><img src="/../images/JSON/6iezRpgfl3bB2Uu.png" alt="image-20210815160227547"></p>
+<p>如果使用<code>eval()</code>执行的字符串中含有<code>&#123;&#125;</code>，它会将<code>&#123;&#125;</code>当成是代码块</p>
+<pre><code class="js">var jsonObjStr = &#39;&#123;&quot;name&quot;: &quot;孙悟空&quot;,&quot;age&quot;: 1000,&quot;gender&quot;: &quot;男&quot;&#125;&#39;;
+eval(jsonObjStr);
+</code></pre>
+<p><img src="/../images/JSON/AWUjuMbFRkIHyiw.png" alt="image-20210815160250908"></p>
+<p>如果不希望将其当成代码块解析，则需要在字符串前后各加一个<code>()</code></p>
+<pre><code class="js">var jsonObjStr = &#39;&#123;&quot;name&quot;: &quot;孙悟空&quot;,&quot;age&quot;: 1000,&quot;gender&quot;: &quot;男&quot;&#125;&#39;;
+var result = eval(&quot;(&quot; + jsonObjStr + &quot;)&quot;);
+console.log(result); // &#123;age: 1000, gender: &quot;男&quot;, name: &quot;孙悟空&quot;&#125;
+</code></pre>
+<p><code>eval()</code>这个函数的功能很强大，可以直接执行一个字符串中的 JS 代码</p>
+<p>但是在开发中尽量不要使用，首先它的执行性能比较差，然后它还具有安全隐患</p>
+<h3 id="兼容IE7"><a href="#兼容IE7" class="headerlink" title="兼容IE7"></a>兼容IE7</h3><p>如果需要兼容 IE7 及以下的<code>JSON</code>操作，则可以通过引入一个外部的 JS 文件来处理</p>
+<pre><code class="html">&lt;script src=&quot;js/json2.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>然后在 IE7 浏览器中调用<code>JSON</code>相关方法就不会报错了</p>
+<pre><code class="js">console.log(JSON.parse(jsonObjStr)); // &#123;age: 1000, gender: &quot;男&quot;, name: &quot;孙悟空&quot;&#125;
+</code></pre>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/categories/">Category</a></li>
+         
+          <li><a href="/tags/">Tag</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="http://gitee.com/">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JSON%E5%88%86%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">JSON分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JSON%E4%B8%AD%E5%85%81%E8%AE%B8%E7%9A%84%E5%80%BC"><span class="toc-number">2.</span> <span class="toc-text">JSON中允许的值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JSON%E5%92%8CJS%E9%97%B4%E8%BD%AC%E6%8D%A2"><span class="toc-number">3.</span> <span class="toc-text">JSON和JS间转换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JSON-parse"><span class="toc-number">3.1.</span> <span class="toc-text">JSON.parse()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSON-stringify"><span class="toc-number">3.2.</span> <span class="toc-text">JSON.stringify()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#eval"><span class="toc-number">3.3.</span> <span class="toc-text">eval()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%BC%E5%AE%B9IE7"><span class="toc-number">3.4.</span> <span class="toc-text">兼容IE7</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2024/05/31/JSON/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/05/31/JSON/&text=JSON"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2024/05/31/JSON/&title=JSON"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2024/05/31/JSON/&is_video=false&description=JSON"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=JSON&body=Check out this article: http://example.com/2024/05/31/JSON/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2024/05/31/JSON/&title=JSON"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2024/05/31/JSON/&title=JSON"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2024/05/31/JSON/&title=JSON"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2024/05/31/JSON/&title=JSON"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2024/05/31/JSON/&name=JSON&description=&lt;p&gt;&lt;code&gt;JSON&lt;/code&gt;（JavaScript Object Notation，js对象表示法）就是一个特殊格式的字符串，这个字符串可以被任意的语言所识别，并且可以转换为任意语言中的对象，&lt;code&gt;JSON&lt;/code&gt;在开发中主要用来数据的交互&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2024/05/31/JSON/&t=JSON"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2018-2023
+    John Doe
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Category</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tag</a></li><!--
+     --><!--
+       --><li><a href="/search/">Search</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://gitee.com/">Projects</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+
+</body>
+</html>

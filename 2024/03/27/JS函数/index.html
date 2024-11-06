@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="JS 函数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS函数">
+<meta property="og:url" content="http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="JS 函数">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-03-27T11:49:05.000Z">
+<meta property="article:modified_time" content="2024-03-28T09:02:13.564Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="JS基础">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="JS函数">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>JS函数</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Category</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tag</a></li><!--
+     --><!--
+       --><li><a href="/search/">Search</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://gitee.com/">Projects</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2024/05/31/JSON/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2022/01/17/hexo/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/&text=JS函数"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/&title=JS函数"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/&is_video=false&description=JS函数"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=JS函数&body=Check out this article: http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/&title=JS函数"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/&title=JS函数"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/&title=JS函数"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/&title=JS函数"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/&name=JS函数&description=&lt;p&gt;JS 函数&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/&t=JS函数"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">函数的简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0"><span class="toc-number">2.</span> <span class="toc-text">函数的参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-number">3.</span> <span class="toc-text">函数的返回值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0"><span class="toc-number">4.</span> <span class="toc-text">立即执行函数</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        JS函数
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">John Doe</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-03-27T11:49:05.000Z" itemprop="datePublished">2024-03-27</time>
+        
+        (Updated: <time datetime="2024-03-28T09:02:13.564Z" itemprop="dateModified">2024-03-28</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> › <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/JS%E5%87%BD%E6%95%B0/" rel="tag">JS函数</a>, <a class="tag-link-link" href="/tags/JS%E5%9F%BA%E7%A1%80/" rel="tag">JS基础</a>, <a class="tag-link-link" href="/tags/JavaScript/" rel="tag">JavaScript</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>JS 函数</p>
+<span id="more"></span>
+
+<h2 id="函数的简介"><a href="#函数的简介" class="headerlink" title="函数的简介"></a>函数的简介</h2><p>使用函数声明来创建一个函数，<strong>函数也是一个对象</strong></p>
+<pre><code class="javascript">function 函数名([形参1, 形参2...形参N]) &#123;
+    语句...
+&#125;
+// 调用函数
+函数名();
+</code></pre>
+<p>使用函数表达式（匿名函数）来创建一个函数</p>
+<pre><code class="javascript">var 函数名 = function([形参1, 形参2...形参N]) &#123;
+    语句...
+&#125;;
+// 调用函数
+函数名(); 
+</code></pre>
+<h2 id="函数的参数"><a href="#函数的参数" class="headerlink" title="函数的参数"></a>函数的参数</h2><p>定义一个用来求两个数和的函数</p>
+<p>可以在函数的<code>()</code>中来指定一个或多个形参（形式参数）多个形参之间使用<code>,</code>隔开，声明形参就相当于在函数内部声明了对应的变量</p>
+<p>在调用函数时，可以在<code>()</code>中指定实参（实际参数）</p>
+<ul>
+<li>调用函数时解析器不会检查<strong>实参的类型</strong>。所以要注意，是否有可能会接收到非法的参数，如果有可能则需要对参数进行类型的检查</li>
+<li>调用函数时，解析器也不会检查<strong>实参的数量</strong>，多余实参不会被赋值。如果实参的数量少于形参的数量，则没有对应实参的形参将是<code>undefined</code></li>
+</ul>
+<pre><code class="js">function sum(a,b,c)&#123;
+    document.write(a+b+c)
+&#125;
+
+sum(1,2,3);//6
+
+sum(3,4);//Nan
+</code></pre>
+<h2 id="函数的返回值"><a href="#函数的返回值" class="headerlink" title="函数的返回值"></a>函数的返回值</h2><p>可以使用<code>return</code>来设置函数的返回值语法：<code>return 值</code></p>
+<p><code>return</code>后的值将会作为函数的执行结果返回，可以定义一个变量，来接收该结果</p>
+<p>在函数中<code>return</code>后的语句都不会执行</p>
+<p>如果<code>return</code>语句后不跟任何值，就相当于返回一个<code>undefined</code>；如果函数中不写<code>return</code>，则也会返回<code>undefined</code></p>
+<p><code>return</code>后可以跟任意类型的值</p>
+<p>实参可以是任意的数据类型，也可以是一个对象。当我们的参数过多时，可以将参数封装到一个对象</p>
+<pre><code class="js">function sayHello(o)&#123;
+    console.log(&quot;我是&quot; + o.name
+                + &quot;，今年我&quot; + o.age 
+                + &quot;岁了，我是一个&quot; + o.gender 
+                + &quot;人，我住在&quot; + o.address);
+&#125;			
+var obj = &#123;
+    name: &quot;孙悟空&quot;,
+    age: 1000,
+    gender: &quot;男&quot;,
+    address: &quot;花果山&quot;
+&#125;;
+sayHello(obj); // 我是孙悟空，今年我1000岁了，我是一个男人，我住在花果山
+</code></pre>
+<p>实参可以是一个对象，也可以是一个函数</p>
+<pre><code class="javascript">function calCirc(radius) &#123;
+    return Math.PI * Math.pow(radius, 2);
+&#125;
+function fun(a)&#123;
+    console.log(&quot;a = &quot; + a);
+&#125;
+fun(calCirc);  
+// a = function calCirc(radius) &#123;
+//     return Math.PI * Math.pow(radius, 2);
+// &#125;
+fun(calCirc(10)); // a = 314.1592653589793
+</code></pre>
+<p>函数也是一个对象，特殊在其具有功能</p>
+<p><strong>break、continue、return对比</strong></p>
+<ul>
+<li><code>break</code>可以退出当前的循环</li>
+<li><code>continue</code>用于跳过当次循环</li>
+<li><code>return</code>可以结束整个函数</li>
+</ul>
+<h2 id="立即执行函数"><a href="#立即执行函数" class="headerlink" title="立即执行函数"></a>立即执行函数</h2><p>函数定义完，立即被调用，这种函数叫做立即执行函数</p>
+<p>立即执行函数往往只会执行一次</p>
+<pre><code class="javascript">(function()&#123;
+    document.write(&#39;立即执行函数&#39;)
+&#125;)();
+</code></pre>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/categories/">Category</a></li>
+         
+          <li><a href="/tags/">Tag</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="http://gitee.com/">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">函数的简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0"><span class="toc-number">2.</span> <span class="toc-text">函数的参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-number">3.</span> <span class="toc-text">函数的返回值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0"><span class="toc-number">4.</span> <span class="toc-text">立即执行函数</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/&text=JS函数"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/&title=JS函数"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/&is_video=false&description=JS函数"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=JS函数&body=Check out this article: http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/&title=JS函数"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/&title=JS函数"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/&title=JS函数"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/&title=JS函数"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/&name=JS函数&description=&lt;p&gt;JS 函数&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2024/03/27/JS%E5%87%BD%E6%95%B0/&t=JS函数"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2018-2023
+    John Doe
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Category</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tag</a></li><!--
+     --><!--
+       --><li><a href="/search/">Search</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://gitee.com/">Projects</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+
+</body>
+</html>
