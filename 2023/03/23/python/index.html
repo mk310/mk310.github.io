@@ -1,35 +1,179 @@
-<!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>python - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Hexo"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hexo"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="​		Python是一种广泛使用的解释型、高级和通用的编程语言。"><meta property="og:type" content="blog"><meta property="og:title" content="python"><meta property="og:url" content="http://example.com/2023/03/23/python/"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="​		Python是一种广泛使用的解释型、高级和通用的编程语言。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://example.com/covers/pythonCover.png"><meta property="article:published_time" content="2023-03-23T14:52:18.000Z"><meta property="article:modified_time" content="2023-07-15T07:14:47.681Z"><meta property="article:author" content="mk310"><meta property="article:tag" content="python"><meta property="article:tag" content="编程语言"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://example.com/covers/pythonCover.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/03/23/python/"},"headline":"python","image":["http://example.com/covers/pythonCover.png"],"datePublished":"2023-03-23T14:52:18.000Z","dateModified":"2023-07-15T07:14:47.681Z","author":{"@type":"Person","name":"mk310"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":"​\t\tPython是一种广泛使用的解释型、高级和通用的编程语言。"}</script><link rel="canonical" href="http://example.com/2023/03/23/python/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/github.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
-  (function () {
-      function switchTab() {
-          if (!location.hash) {
-            return;
-          }
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="​		Python是一种广泛使用的解释型、高级和通用的编程语言。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python">
+<meta property="og:url" content="http://example.com/2023/03/23/python/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="​		Python是一种广泛使用的解释型、高级和通用的编程语言。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/python/image-20230324001008504.png">
+<meta property="og:image" content="http://example.com/images/python/image-20230704144911120.png">
+<meta property="og:image" content="http://example.com/images/python/image-20230629182558388.png">
+<meta property="og:image" content="http://example.com/images/python/image-20230324185435324.png">
+<meta property="og:image" content="http://example.com/images/python/image-20230324185952843.png">
+<meta property="og:image" content="http://example.com/images/python/image-20230630231232292.png">
+<meta property="og:image" content="http://example.com/images/python/image-20230708132554805.png">
+<meta property="og:image" content="http://example.com/images/python/image-20230325002759902.png">
+<meta property="article:published_time" content="2023-03-23T14:52:18.000Z">
+<meta property="article:modified_time" content="2023-07-15T07:14:47.681Z">
+<meta property="article:author" content="mk310">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="编程语言">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/python/image-20230324001008504.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>python</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
 
-          const id = '#' + CSS.escape(location.hash.substring(1));
-          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
-          if (!$tabMenu) {
-            return;
-          }
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"></head>
 
-          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
-          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
-          Array.from($tabMenuContainer.querySelectorAll('a'))
-              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
-              .forEach($content => $content.classList.add('is-hidden'));
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://gitee.com/">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2023/05/21/python-Excel%E6%93%8D%E4%BD%9C/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2023/02/26/git/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2023/03/23/python/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2023/03/23/python/&text=python"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2023/03/23/python/&title=python"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2023/03/23/python/&is_video=false&description=python"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=python&body=Check out this article: http://example.com/2023/03/23/python/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2023/03/23/python/&title=python"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2023/03/23/python/&title=python"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2023/03/23/python/&title=python"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2023/03/23/python/&title=python"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2023/03/23/python/&name=python&description=&lt;p&gt;​		Python是一种广泛使用的解释型、高级和通用的编程语言。&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2023/03/23/python/&t=python"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
 
-          if ($tabMenu) {
-              $tabMenu.parentElement.classList.add('is-active');
-          }
-          const $activeTab = document.querySelector(id);
-          if ($activeTab) {
-              $activeTab.classList.remove('is-hidden');
-          }
-      }
-      switchTab();
-      window.addEventListener('hashchange', switchTab, false);
-  })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="/covers/pythonCover.png" alt="python"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-23T14:52:18.000Z" title="2023/3/23 22:52:18">2023-03-23</time>发表</span><span class="level-item"><time dateTime="2023-07-15T07:14:47.681Z" title="2023/7/15 15:14:47">2023-07-15</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a><span> / </span><a class="link-muted" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/python/">python</a></span><span class="level-item">1 小时读完 (大约8277个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">python</h1><div class="content"><p>​		Python是一种广泛使用的解释型、高级和通用的编程语言。</p>
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%84%E5%A4%87"><span class="toc-number">1.</span> <span class="toc-text">预备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">1.1.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F"><span class="toc-number">1.2.</span> <span class="toc-text">常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-number">1.3.</span> <span class="toc-text">注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6%EF%BC%88%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99%EF%BC%89"><span class="toc-number">1.4.</span> <span class="toc-text">标识符（命名规则）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E5%92%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-number">1.5.</span> <span class="toc-text">局部变量和全局变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E5%8F%98%E5%92%8C%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.6.</span> <span class="toc-text">可变和不可变类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">基本数据结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Number%EF%BC%88%E6%95%B0%E5%AD%97%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">Number（数字）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">2.1.1.</span> <span class="toc-text">常用函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String%EF%BC%88%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%89"><span class="toc-number">2.2.</span> <span class="toc-text">String（字符串）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96"><span class="toc-number">2.2.1.</span> <span class="toc-text">字符串截取</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BF%90%E7%AE%97"><span class="toc-number">2.2.2.</span> <span class="toc-text">字符串运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-number">2.2.3.</span> <span class="toc-text">字符串格式化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">2.2.4.</span> <span class="toc-text">字符串常用函数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E7%B1%BB%E5%9E%8B%EF%BC%889%E4%B8%AA%EF%BC%89"><span class="toc-number">2.2.4.1.</span> <span class="toc-text">判断类型（9个）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E5%92%8C%E6%9B%BF%E6%8D%A2%EF%BC%887%E4%B8%AA%EF%BC%89"><span class="toc-number">2.2.4.2.</span> <span class="toc-text">查找和替换（7个）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E5%AF%B9%E9%BD%90%EF%BC%883%E4%B8%AA%EF%BC%89"><span class="toc-number">2.2.4.3.</span> <span class="toc-text">文本对齐（3个）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8E%BB%E9%99%A4%E7%A9%BA%E7%99%BD%E5%AD%97%E7%AC%A6%EF%BC%883%E4%B8%AA%EF%BC%89"><span class="toc-number">2.2.4.4.</span> <span class="toc-text">去除空白字符（3个）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bool%EF%BC%88%E5%B8%83%E5%B0%94%EF%BC%89"><span class="toc-number">2.3.</span> <span class="toc-text">bool（布尔）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#List%EF%BC%88%E5%88%97%E8%A1%A8%EF%BC%89"><span class="toc-number">2.4.</span> <span class="toc-text">List（列表）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E6%96%B9%E6%B3%95"><span class="toc-number">2.4.1.</span> <span class="toc-text">列表方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86"><span class="toc-number">2.4.2.</span> <span class="toc-text">列表迭代遍历</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">2.4.3.</span> <span class="toc-text">应用场景</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tuple%EF%BC%88%E5%85%83%E7%BB%84%EF%BC%89"><span class="toc-number">2.5.</span> <span class="toc-text">Tuple（元组）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-number">2.5.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-number">2.5.2.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-1"><span class="toc-number">2.5.3.</span> <span class="toc-text">应用场景</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Set%EF%BC%88%E9%9B%86%E5%90%88%EF%BC%89"><span class="toc-number">2.6.</span> <span class="toc-text">Set（集合）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9B%86%E5%90%88%E5%87%BD%E6%95%B0"><span class="toc-number">2.6.1.</span> <span class="toc-text">集合函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dictionary%EF%BC%88%E5%AD%97%E5%85%B8%EF%BC%89"><span class="toc-number">2.7.</span> <span class="toc-text">Dictionary（字典）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95-1"><span class="toc-number">2.7.1.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E7%89%B9%E6%80%A7"><span class="toc-number">2.7.2.</span> <span class="toc-text">字典特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-2"><span class="toc-number">2.7.3.</span> <span class="toc-text">应用场景</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95"><span class="toc-number">2.8.</span> <span class="toc-text">公共方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.8.1.</span> <span class="toc-text">运算符</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84"><span class="toc-number">3.</span> <span class="toc-text">逻辑结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E6%8E%A7%E5%88%B6%EF%BC%88if%EF%BC%89"><span class="toc-number">3.1.</span> <span class="toc-text">条件控制（if）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%EF%BC%88while-for%EF%BC%89"><span class="toc-number">3.2.</span> <span class="toc-text">循环语句（while for）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-number">4.</span> <span class="toc-text">python推导式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-number">4.1.</span> <span class="toc-text">列表推导式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-number">4.2.</span> <span class="toc-text">字典推导式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E5%90%88%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-number">4.3.</span> <span class="toc-text">集合推导式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%BB%84%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-number">4.4.</span> <span class="toc-text">元组推导式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%92%8C%E7%94%9F%E6%88%90%E5%99%A8"><span class="toc-number">5.</span> <span class="toc-text">迭代器和生成器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E5%87%BD%E6%95%B0"><span class="toc-number">6.</span> <span class="toc-text">python函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95"><span class="toc-number">6.1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%A2%E5%8F%82%E5%AE%9E%E5%8F%82"><span class="toc-number">6.2.</span> <span class="toc-text">形参实参</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%A0%E9%80%92%E5%AE%9E%E5%8F%82"><span class="toc-number">6.3.</span> <span class="toc-text">传递实参</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BF%85%E9%A1%BB%E5%8F%82%E6%95%B0%EF%BC%88%E4%BD%8D%E7%BD%AE%E5%8F%82%E6%95%B0%EF%BC%89"><span class="toc-number">6.3.1.</span> <span class="toc-text">必须参数（位置参数）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%AD%97%E5%8F%82%E6%95%B0"><span class="toc-number">6.3.2.</span> <span class="toc-text">关键字参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0"><span class="toc-number">6.3.3.</span> <span class="toc-text">默认参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E5%AE%9A%E9%95%BF%E5%8F%82%E6%95%B0"><span class="toc-number">6.3.4.</span> <span class="toc-text">不定长参数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0"><span class="toc-number">6.4.</span> <span class="toc-text">匿名函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E6%B3%A8%E9%87%8A"><span class="toc-number">6.5.</span> <span class="toc-text">函数注释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E6%A8%A1%E5%9D%97"><span class="toc-number">7.</span> <span class="toc-text">python模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E7%9A%84%E5%BC%95%E5%85%A5"><span class="toc-number">7.1.</span> <span class="toc-text">模块的引入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E6%A8%A1%E5%9D%97"><span class="toc-number">7.2.</span> <span class="toc-text">标准模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%85"><span class="toc-number">7.3.</span> <span class="toc-text">包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-number">8.</span> <span class="toc-text">python面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">8.1.</span> <span class="toc-text">面向对象基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8%E5%AF%B9%E8%B1%A1"><span class="toc-number">8.2.</span> <span class="toc-text">创建和使用对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BADog%E7%B1%BB"><span class="toc-number">8.2.1.</span> <span class="toc-text">创建Dog类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AE%E7%B1%BB%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BE%8B"><span class="toc-number">8.2.2.</span> <span class="toc-text">根据类创建实例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-number">8.3.</span> <span class="toc-text">继承</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%90%E7%B1%BB%E7%9A%84-init"><span class="toc-number">8.3.1.</span> <span class="toc-text">子类的__init__()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%99%E5%AD%90%E7%B1%BB%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95"><span class="toc-number">8.3.2.</span> <span class="toc-text">给子类定义属性和方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%8D%E5%86%99%E7%88%B6%E7%B1%BB%E6%96%B9%E6%B3%95"><span class="toc-number">8.3.3.</span> <span class="toc-text">重写父类方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%86%E5%AE%9E%E4%BE%8B%E7%94%A8%E4%BD%9C%E5%B1%9E%E6%80%A7"><span class="toc-number">8.3.4.</span> <span class="toc-text">将实例用作属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E7%B1%BB"><span class="toc-number">8.4.</span> <span class="toc-text">导入类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6"><span class="toc-number">9.</span> <span class="toc-text">文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-number">9.1.</span> <span class="toc-text">从文件中读取数据</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BB%E5%8F%96%E5%85%A8%E9%83%A8%E6%95%B0%E6%8D%AE"><span class="toc-number">9.1.1.</span> <span class="toc-text">读取全部数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%90%E8%A1%8C%E8%AF%BB%E5%8F%96"><span class="toc-number">9.1.2.</span> <span class="toc-text">逐行读取</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8C%85%E5%90%AB%E6%96%87%E4%BB%B6%E5%90%84%E8%A1%8C%E5%86%85%E5%AE%B9%E7%9A%84%E5%88%97%E8%A1%A8"><span class="toc-number">9.1.3.</span> <span class="toc-text">创建一个包含文件各行内容的列表</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6"><span class="toc-number">9.2.</span> <span class="toc-text">数据写入文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%99%E5%85%A5%E7%A9%BA%E7%99%BD%E6%96%87%E4%BB%B6"><span class="toc-number">9.2.1.</span> <span class="toc-text">写入空白文件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8"><span class="toc-number">10.</span> <span class="toc-text">异常</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E4%B8%8D%E8%83%BD%E8%A2%AB%E9%99%A4%E4%BB%A5%E9%9B%B6%E7%9A%84%E5%BC%82%E5%B8%B8"><span class="toc-number"></span> <span class="toc-text">处理不能被除以零的异常</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#else%E4%BB%A3%E7%A0%81"><span class="toc-number">0.1.</span> <span class="toc-text">else代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81"><span class="toc-number">1.</span> <span class="toc-text">测试代码</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        python
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">mk310</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2023-03-23T14:52:18.000Z" itemprop="datePublished">2023-03-23</time>
+        
+        (Updated: <time datetime="2023-07-15T07:14:47.681Z" itemprop="dateModified">2023-07-15</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a> › <a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/python/">python</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/python/" rel="tag">python</a>, <a class="tag-link-link" href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" rel="tag">编程语言</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>​		Python是一种广泛使用的解释型、高级和通用的编程语言。</p>
 <span id="more"></span>
 
 </br>
@@ -700,48 +844,156 @@
 
 <h3 id="else代码"><a href="#else代码" class="headerlink" title="else代码"></a>else代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">--snip--</span><br><span class="line"><span class="keyword">if</span> second_number == <span class="string">&#x27;q&#x27;</span>:</span><br><span class="line">	<span class="keyword">break</span></span><br><span class="line">❶ <span class="keyword">try</span>:</span><br><span class="line">answer = <span class="built_in">int</span>(first_number) / <span class="built_in">int</span>(second_number)</span><br><span class="line">❷ <span class="keyword">except</span> ZeroDivisionError:</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;You can&#x27;t divide by 0!&quot;</span>)</span><br><span class="line"><span class="comment"># 依赖try代码成功执行的代码应该放到else中</span></span><br><span class="line">❸ <span class="keyword">else</span>:</span><br><span class="line"><span class="built_in">print</span>(answer)</span><br></pre></td></tr></table></figure>
 
-<h2 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h2></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/python/">python</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/05/21/python-Excel%E6%93%8D%E4%BD%9C/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">python_Excel操作</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/02/26/git/"><span class="level-item">Git</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="mk310"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">mk310</p><p class="is-size-6 is-block">no-no-no</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>hangzhou</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">68</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">19</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">80</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://gitee.com" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://gitee.com"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="bilibili" href="https://bilibili.com"><i class="fab fa-bilibili"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="zhihu" href="https://zhihu.com"><i class="fab fa-zhihu"></i></a></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-11-06T11:06:38.000Z">2024-11-06</time></p><p class="title"><a href="/2024/11/06/flex%E5%B8%83%E5%B1%80/">flex布局</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-11-02T08:23:12.000Z">2024-11-02</time></p><p class="title"><a href="/2024/11/02/grid%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80/">13-grid网格布局</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-10-22T12:20:44.000Z">2024-10-22</time></p><p class="title"><a href="/2024/10/22/SaSS/">SaSS</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-10-09T14:51:38.000Z">2024-10-09</time></p><p class="title"><a href="/2024/10/09/jQuery/">jQuery</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/jQuery/">jQuery</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-08-20T10:51:38.000Z">2024-08-20</time></p><p class="title"><a href="/2024/08/20/ECMASript%206/">ECMASript 6</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/ES6/">ES6</a></p></div></article></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><ul class="menu-list"><li><a class="level is-mobile" href="#预备"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">预备</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#变量"><span class="level-left"><span class="level-item">1.1.1</span><span class="level-item">变量</span></span></a></li><li><a class="level is-mobile" href="#常量"><span class="level-left"><span class="level-item">1.1.2</span><span class="level-item">常量</span></span></a></li><li><a class="level is-mobile" href="#注释"><span class="level-left"><span class="level-item">1.1.3</span><span class="level-item">注释</span></span></a></li><li><a class="level is-mobile" href="#标识符（命名规则）"><span class="level-left"><span class="level-item">1.1.4</span><span class="level-item">标识符（命名规则）</span></span></a></li><li><a class="level is-mobile" href="#局部变量和全局变量"><span class="level-left"><span class="level-item">1.1.5</span><span class="level-item">局部变量和全局变量</span></span></a></li><li><a class="level is-mobile" href="#可变和不可变类型"><span class="level-left"><span class="level-item">1.1.6</span><span class="level-item">可变和不可变类型</span></span></a></li></ul></li><li><a class="level is-mobile" href="#基本数据结构"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">基本数据结构</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Number（数字）"><span class="level-left"><span class="level-item">1.2.1</span><span class="level-item">Number（数字）</span></span></a></li><li><a class="level is-mobile" href="#String（字符串）"><span class="level-left"><span class="level-item">1.2.2</span><span class="level-item">String（字符串）</span></span></a></li><li><a class="level is-mobile" href="#bool（布尔）"><span class="level-left"><span class="level-item">1.2.3</span><span class="level-item">bool（布尔）</span></span></a></li><li><a class="level is-mobile" href="#List（列表）"><span class="level-left"><span class="level-item">1.2.4</span><span class="level-item">List（列表）</span></span></a></li><li><a class="level is-mobile" href="#Tuple（元组）"><span class="level-left"><span class="level-item">1.2.5</span><span class="level-item">Tuple（元组）</span></span></a></li><li><a class="level is-mobile" href="#Set（集合）"><span class="level-left"><span class="level-item">1.2.6</span><span class="level-item">Set（集合）</span></span></a></li><li><a class="level is-mobile" href="#Dictionary（字典）"><span class="level-left"><span class="level-item">1.2.7</span><span class="level-item">Dictionary（字典）</span></span></a></li><li><a class="level is-mobile" href="#公共方法"><span class="level-left"><span class="level-item">1.2.8</span><span class="level-item">公共方法</span></span></a></li></ul></li><li><a class="level is-mobile" href="#逻辑结构"><span class="level-left"><span class="level-item">1.3</span><span class="level-item">逻辑结构</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#条件控制（if）"><span class="level-left"><span class="level-item">1.3.1</span><span class="level-item">条件控制（if）</span></span></a></li><li><a class="level is-mobile" href="#循环语句（while-for）"><span class="level-left"><span class="level-item">1.3.2</span><span class="level-item">循环语句（while for）</span></span></a></li></ul></li><li><a class="level is-mobile" href="#python推导式"><span class="level-left"><span class="level-item">1.4</span><span class="level-item">python推导式</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#列表推导式"><span class="level-left"><span class="level-item">1.4.1</span><span class="level-item">列表推导式</span></span></a></li><li><a class="level is-mobile" href="#字典推导式"><span class="level-left"><span class="level-item">1.4.2</span><span class="level-item">字典推导式</span></span></a></li><li><a class="level is-mobile" href="#集合推导式"><span class="level-left"><span class="level-item">1.4.3</span><span class="level-item">集合推导式</span></span></a></li><li><a class="level is-mobile" href="#元组推导式"><span class="level-left"><span class="level-item">1.4.4</span><span class="level-item">元组推导式</span></span></a></li></ul></li><li><a class="level is-mobile" href="#迭代器和生成器"><span class="level-left"><span class="level-item">1.5</span><span class="level-item">迭代器和生成器</span></span></a></li><li><a class="level is-mobile" href="#python函数"><span class="level-left"><span class="level-item">1.6</span><span class="level-item">python函数</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#语法"><span class="level-left"><span class="level-item">1.6.1</span><span class="level-item">语法</span></span></a></li><li><a class="level is-mobile" href="#形参实参"><span class="level-left"><span class="level-item">1.6.2</span><span class="level-item">形参实参</span></span></a></li><li><a class="level is-mobile" href="#传递实参"><span class="level-left"><span class="level-item">1.6.3</span><span class="level-item">传递实参</span></span></a></li><li><a class="level is-mobile" href="#匿名函数"><span class="level-left"><span class="level-item">1.6.4</span><span class="level-item">匿名函数</span></span></a></li><li><a class="level is-mobile" href="#函数注释"><span class="level-left"><span class="level-item">1.6.5</span><span class="level-item">函数注释</span></span></a></li></ul></li><li><a class="level is-mobile" href="#python模块"><span class="level-left"><span class="level-item">1.7</span><span class="level-item">python模块</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#模块的引入"><span class="level-left"><span class="level-item">1.7.1</span><span class="level-item">模块的引入</span></span></a></li><li><a class="level is-mobile" href="#标准模块"><span class="level-left"><span class="level-item">1.7.2</span><span class="level-item">标准模块</span></span></a></li><li><a class="level is-mobile" href="#包"><span class="level-left"><span class="level-item">1.7.3</span><span class="level-item">包</span></span></a></li></ul></li><li><a class="level is-mobile" href="#python面向对象"><span class="level-left"><span class="level-item">1.8</span><span class="level-item">python面向对象</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#面向对象基本概念"><span class="level-left"><span class="level-item">1.8.1</span><span class="level-item">面向对象基本概念</span></span></a></li><li><a class="level is-mobile" href="#创建和使用对象"><span class="level-left"><span class="level-item">1.8.2</span><span class="level-item">创建和使用对象</span></span></a></li><li><a class="level is-mobile" href="#继承"><span class="level-left"><span class="level-item">1.8.3</span><span class="level-item">继承</span></span></a></li><li><a class="level is-mobile" href="#导入类"><span class="level-left"><span class="level-item">1.8.4</span><span class="level-item">导入类</span></span></a></li></ul></li><li><a class="level is-mobile" href="#文件"><span class="level-left"><span class="level-item">1.9</span><span class="level-item">文件</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#从文件中读取数据"><span class="level-left"><span class="level-item">1.9.1</span><span class="level-item">从文件中读取数据</span></span></a></li><li><a class="level is-mobile" href="#数据写入文件"><span class="level-left"><span class="level-item">1.9.2</span><span class="level-item">数据写入文件</span></span></a></li></ul></li><li><a class="level is-mobile" href="#异常"><span class="level-left"><span class="level-item">1.10</span><span class="level-item">异常</span></span></a></li></ul><li><a class="level is-mobile" href="#处理不能被除以零的异常"><span class="level-left"><span class="level-item">2</span><span class="level-item">处理不能被除以零的异常</span></span></a><ul class="menu-list"><ul class="menu-list"><li><a class="level is-mobile" href="#else代码"><span class="level-left"><span class="level-item">2.1.1</span><span class="level-item">else代码</span></span></a></li></ul><li><a class="level is-mobile" href="#测试代码"><span class="level-left"><span class="level-item">2.2</span><span class="level-item">测试代码</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/macOS/"><span class="level-start"><span class="level-item">macOS</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/study/"><span class="level-start"><span class="level-item">study</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/tech/"><span class="level-start"><span class="level-item">tech</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="level-start"><span class="level-item">前端</span></span><span class="level-end"><span class="level-item tag">45</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/CSS/"><span class="level-start"><span class="level-item">CSS</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/HTML/"><span class="level-start"><span class="level-item">HTML</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/"><span class="level-start"><span class="level-item">JavaScript</span></span><span class="level-end"><span class="level-item tag">21</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/ES6/"><span class="level-start"><span class="level-item">ES6</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/jQuery/"><span class="level-start"><span class="level-item">jQuery</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript%E8%BF%9B%E9%98%B6/"><span class="level-start"><span class="level-item">JavaScript进阶</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"><span class="level-start"><span class="level-item">网络协议</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E5%90%8E%E7%AB%AF/"><span class="level-start"><span class="level-item">后端</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%90%8E%E7%AB%AF/flask/"><span class="level-start"><span class="level-item">flask</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"><span class="level-start"><span class="level-item">计算机基础</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="level-start"><span class="level-item">计算机网络</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"><span class="level-start"><span class="level-item">软件工程</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2024 mk310</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">Hexo 博客</p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
-            article: {
-                highlight: {
-                    clipboard: true,
-                    fold: 'unfolded'
-                }
-            }
-        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
-      window.cookieconsent.initialise({
-        type: "opt-out",
-        theme: "edgeless",
-        static: false,
-        position: "bottom-left",
-        content: {
-          message: "此网站使用Cookie来改善您的体验。",
-          dismiss: "知道了！",
-          allow: "允许使用Cookie",
-          deny: "拒绝",
-          link: "了解更多",
-          policy: "Cookie政策",
-          href: "https://www.cookiesandyou.com/",
-        },
-        palette: {
-          popup: {
-            background: "#edeff5",
-            text: "#838391"
-          },
-          button: {
-            background: "#4b81e8"
-          },
-        },
-      });
-    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
-            if (typeof $.fn.lightGallery === 'function') {
-                $('.article').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof $.fn.justifiedGallery === 'function') {
-                if ($('.justified-gallery > p > .gallery-item').length) {
-                    $('.justified-gallery > p > .gallery-item').unwrap();
-                }
-                $('.justified-gallery').justifiedGallery();
-            }
-        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
-            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script></body></html>
+<h2 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h2>
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="http://gitee.com/">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%84%E5%A4%87"><span class="toc-number">1.</span> <span class="toc-text">预备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">1.1.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F"><span class="toc-number">1.2.</span> <span class="toc-text">常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-number">1.3.</span> <span class="toc-text">注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6%EF%BC%88%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99%EF%BC%89"><span class="toc-number">1.4.</span> <span class="toc-text">标识符（命名规则）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E5%92%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-number">1.5.</span> <span class="toc-text">局部变量和全局变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E5%8F%98%E5%92%8C%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.6.</span> <span class="toc-text">可变和不可变类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">基本数据结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Number%EF%BC%88%E6%95%B0%E5%AD%97%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">Number（数字）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">2.1.1.</span> <span class="toc-text">常用函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String%EF%BC%88%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%89"><span class="toc-number">2.2.</span> <span class="toc-text">String（字符串）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96"><span class="toc-number">2.2.1.</span> <span class="toc-text">字符串截取</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BF%90%E7%AE%97"><span class="toc-number">2.2.2.</span> <span class="toc-text">字符串运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-number">2.2.3.</span> <span class="toc-text">字符串格式化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">2.2.4.</span> <span class="toc-text">字符串常用函数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E7%B1%BB%E5%9E%8B%EF%BC%889%E4%B8%AA%EF%BC%89"><span class="toc-number">2.2.4.1.</span> <span class="toc-text">判断类型（9个）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E5%92%8C%E6%9B%BF%E6%8D%A2%EF%BC%887%E4%B8%AA%EF%BC%89"><span class="toc-number">2.2.4.2.</span> <span class="toc-text">查找和替换（7个）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E5%AF%B9%E9%BD%90%EF%BC%883%E4%B8%AA%EF%BC%89"><span class="toc-number">2.2.4.3.</span> <span class="toc-text">文本对齐（3个）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8E%BB%E9%99%A4%E7%A9%BA%E7%99%BD%E5%AD%97%E7%AC%A6%EF%BC%883%E4%B8%AA%EF%BC%89"><span class="toc-number">2.2.4.4.</span> <span class="toc-text">去除空白字符（3个）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bool%EF%BC%88%E5%B8%83%E5%B0%94%EF%BC%89"><span class="toc-number">2.3.</span> <span class="toc-text">bool（布尔）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#List%EF%BC%88%E5%88%97%E8%A1%A8%EF%BC%89"><span class="toc-number">2.4.</span> <span class="toc-text">List（列表）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E6%96%B9%E6%B3%95"><span class="toc-number">2.4.1.</span> <span class="toc-text">列表方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E8%BF%AD%E4%BB%A3%E9%81%8D%E5%8E%86"><span class="toc-number">2.4.2.</span> <span class="toc-text">列表迭代遍历</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">2.4.3.</span> <span class="toc-text">应用场景</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tuple%EF%BC%88%E5%85%83%E7%BB%84%EF%BC%89"><span class="toc-number">2.5.</span> <span class="toc-text">Tuple（元组）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-number">2.5.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-number">2.5.2.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-1"><span class="toc-number">2.5.3.</span> <span class="toc-text">应用场景</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Set%EF%BC%88%E9%9B%86%E5%90%88%EF%BC%89"><span class="toc-number">2.6.</span> <span class="toc-text">Set（集合）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9B%86%E5%90%88%E5%87%BD%E6%95%B0"><span class="toc-number">2.6.1.</span> <span class="toc-text">集合函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dictionary%EF%BC%88%E5%AD%97%E5%85%B8%EF%BC%89"><span class="toc-number">2.7.</span> <span class="toc-text">Dictionary（字典）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95-1"><span class="toc-number">2.7.1.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E7%89%B9%E6%80%A7"><span class="toc-number">2.7.2.</span> <span class="toc-text">字典特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-2"><span class="toc-number">2.7.3.</span> <span class="toc-text">应用场景</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95"><span class="toc-number">2.8.</span> <span class="toc-text">公共方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.8.1.</span> <span class="toc-text">运算符</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84"><span class="toc-number">3.</span> <span class="toc-text">逻辑结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E6%8E%A7%E5%88%B6%EF%BC%88if%EF%BC%89"><span class="toc-number">3.1.</span> <span class="toc-text">条件控制（if）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%EF%BC%88while-for%EF%BC%89"><span class="toc-number">3.2.</span> <span class="toc-text">循环语句（while for）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-number">4.</span> <span class="toc-text">python推导式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-number">4.1.</span> <span class="toc-text">列表推导式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-number">4.2.</span> <span class="toc-text">字典推导式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E5%90%88%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-number">4.3.</span> <span class="toc-text">集合推导式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%BB%84%E6%8E%A8%E5%AF%BC%E5%BC%8F"><span class="toc-number">4.4.</span> <span class="toc-text">元组推导式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%92%8C%E7%94%9F%E6%88%90%E5%99%A8"><span class="toc-number">5.</span> <span class="toc-text">迭代器和生成器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E5%87%BD%E6%95%B0"><span class="toc-number">6.</span> <span class="toc-text">python函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95"><span class="toc-number">6.1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%A2%E5%8F%82%E5%AE%9E%E5%8F%82"><span class="toc-number">6.2.</span> <span class="toc-text">形参实参</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%A0%E9%80%92%E5%AE%9E%E5%8F%82"><span class="toc-number">6.3.</span> <span class="toc-text">传递实参</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BF%85%E9%A1%BB%E5%8F%82%E6%95%B0%EF%BC%88%E4%BD%8D%E7%BD%AE%E5%8F%82%E6%95%B0%EF%BC%89"><span class="toc-number">6.3.1.</span> <span class="toc-text">必须参数（位置参数）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%AD%97%E5%8F%82%E6%95%B0"><span class="toc-number">6.3.2.</span> <span class="toc-text">关键字参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0"><span class="toc-number">6.3.3.</span> <span class="toc-text">默认参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E5%AE%9A%E9%95%BF%E5%8F%82%E6%95%B0"><span class="toc-number">6.3.4.</span> <span class="toc-text">不定长参数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0"><span class="toc-number">6.4.</span> <span class="toc-text">匿名函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E6%B3%A8%E9%87%8A"><span class="toc-number">6.5.</span> <span class="toc-text">函数注释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E6%A8%A1%E5%9D%97"><span class="toc-number">7.</span> <span class="toc-text">python模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E7%9A%84%E5%BC%95%E5%85%A5"><span class="toc-number">7.1.</span> <span class="toc-text">模块的引入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E6%A8%A1%E5%9D%97"><span class="toc-number">7.2.</span> <span class="toc-text">标准模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%85"><span class="toc-number">7.3.</span> <span class="toc-text">包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-number">8.</span> <span class="toc-text">python面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">8.1.</span> <span class="toc-text">面向对象基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8%E5%AF%B9%E8%B1%A1"><span class="toc-number">8.2.</span> <span class="toc-text">创建和使用对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BADog%E7%B1%BB"><span class="toc-number">8.2.1.</span> <span class="toc-text">创建Dog类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AE%E7%B1%BB%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BE%8B"><span class="toc-number">8.2.2.</span> <span class="toc-text">根据类创建实例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-number">8.3.</span> <span class="toc-text">继承</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%90%E7%B1%BB%E7%9A%84-init"><span class="toc-number">8.3.1.</span> <span class="toc-text">子类的__init__()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%99%E5%AD%90%E7%B1%BB%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95"><span class="toc-number">8.3.2.</span> <span class="toc-text">给子类定义属性和方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%8D%E5%86%99%E7%88%B6%E7%B1%BB%E6%96%B9%E6%B3%95"><span class="toc-number">8.3.3.</span> <span class="toc-text">重写父类方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%86%E5%AE%9E%E4%BE%8B%E7%94%A8%E4%BD%9C%E5%B1%9E%E6%80%A7"><span class="toc-number">8.3.4.</span> <span class="toc-text">将实例用作属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E7%B1%BB"><span class="toc-number">8.4.</span> <span class="toc-text">导入类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6"><span class="toc-number">9.</span> <span class="toc-text">文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-number">9.1.</span> <span class="toc-text">从文件中读取数据</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BB%E5%8F%96%E5%85%A8%E9%83%A8%E6%95%B0%E6%8D%AE"><span class="toc-number">9.1.1.</span> <span class="toc-text">读取全部数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%90%E8%A1%8C%E8%AF%BB%E5%8F%96"><span class="toc-number">9.1.2.</span> <span class="toc-text">逐行读取</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8C%85%E5%90%AB%E6%96%87%E4%BB%B6%E5%90%84%E8%A1%8C%E5%86%85%E5%AE%B9%E7%9A%84%E5%88%97%E8%A1%A8"><span class="toc-number">9.1.3.</span> <span class="toc-text">创建一个包含文件各行内容的列表</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6"><span class="toc-number">9.2.</span> <span class="toc-text">数据写入文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%99%E5%85%A5%E7%A9%BA%E7%99%BD%E6%96%87%E4%BB%B6"><span class="toc-number">9.2.1.</span> <span class="toc-text">写入空白文件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8"><span class="toc-number">10.</span> <span class="toc-text">异常</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E4%B8%8D%E8%83%BD%E8%A2%AB%E9%99%A4%E4%BB%A5%E9%9B%B6%E7%9A%84%E5%BC%82%E5%B8%B8"><span class="toc-number"></span> <span class="toc-text">处理不能被除以零的异常</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#else%E4%BB%A3%E7%A0%81"><span class="toc-number">0.1.</span> <span class="toc-text">else代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81"><span class="toc-number">1.</span> <span class="toc-text">测试代码</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2023/03/23/python/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2023/03/23/python/&text=python"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2023/03/23/python/&title=python"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2023/03/23/python/&is_video=false&description=python"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=python&body=Check out this article: http://example.com/2023/03/23/python/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2023/03/23/python/&title=python"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2023/03/23/python/&title=python"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2023/03/23/python/&title=python"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2023/03/23/python/&title=python"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2023/03/23/python/&name=python&description=&lt;p&gt;​		Python是一种广泛使用的解释型、高级和通用的编程语言。&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2023/03/23/python/&t=python"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2018-2023
+    mk310
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://gitee.com/">项目</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+
+</body>
+</html>
