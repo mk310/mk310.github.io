@@ -1,38 +1,175 @@
-<!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>JS基础 - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Hexo"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hexo"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="JS编写位置，JS注释，字面量变量，标识符，数据类型，强制类型转换"><meta property="og:type" content="blog"><meta property="og:title" content="JS基础"><meta property="og:url" content="http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="JS编写位置，JS注释，字面量变量，标识符，数据类型，强制类型转换"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://example.com/covers/JS.jpg"><meta property="article:published_time" content="2024-03-26T10:51:38.000Z"><meta property="article:modified_time" content="2024-08-16T07:34:53.482Z"><meta property="article:author" content="mk310"><meta property="article:tag" content="JS基础"><meta property="article:tag" content="JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://example.com/covers/JS.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/"},"headline":"JS基础","image":["http://example.com/covers/JS.jpg"],"datePublished":"2024-03-26T10:51:38.000Z","dateModified":"2024-08-16T07:34:53.482Z","author":{"@type":"Person","name":"mk310"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":"JS编写位置，JS注释，字面量变量，标识符，数据类型，强制类型转换"}</script><link rel="canonical" href="http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/github.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
-  (function () {
-      function switchTab() {
-          if (!location.hash) {
-            return;
-          }
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="JS基本语法，数据类型和类型转换">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS基础">
+<meta property="og:url" content="http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="JS基本语法，数据类型和类型转换">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/JS%E5%9F%BA%E7%A1%80/sjW1ErMbcz4OZpD-1739518511916-2.png">
+<meta property="article:published_time" content="2024-03-26T10:51:38.000Z">
+<meta property="article:modified_time" content="2025-02-14T07:36:31.176Z">
+<meta property="article:author" content="mk310">
+<meta property="article:tag" content="JS基础">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/JS%E5%9F%BA%E7%A1%80/sjW1ErMbcz4OZpD-1739518511916-2.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>JS基础</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
 
-          const id = '#' + CSS.escape(location.hash.substring(1));
-          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
-          if (!$tabMenu) {
-            return;
-          }
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"></head>
 
-          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
-          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
-          Array.from($tabMenuContainer.querySelectorAll('a'))
-              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
-              .forEach($content => $content.classList.add('is-hidden'));
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://gitee.com/">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2024/03/27/%E5%AF%B9%E8%B1%A1/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2024/03/23/%E9%80%89%E6%8B%A9%E5%99%A8/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/&text=JS基础"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/&title=JS基础"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/&is_video=false&description=JS基础"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=JS基础&body=Check out this article: http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/&title=JS基础"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/&title=JS基础"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/&title=JS基础"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/&title=JS基础"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/&name=JS基础&description=&lt;p&gt;JS基本语法，数据类型和类型转换&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/&t=JS基础"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
 
-          if ($tabMenu) {
-              $tabMenu.parentElement.classList.add('is-active');
-          }
-          const $activeTab = document.querySelector(id);
-          if ($activeTab) {
-              $activeTab.classList.remove('is-hidden');
-          }
-      }
-      switchTab();
-      window.addEventListener('hashchange', switchTab, false);
-  })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="/covers/JS.jpg" alt="JS基础"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-03-26T10:51:38.000Z" title="2024/3/26 18:51:38">2024-03-26</time>发表</span><span class="level-item"><time dateTime="2024-08-16T07:34:53.482Z" title="2024/8/16 15:34:53">2024-08-16</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><span> / </span><a class="link-muted" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a></span><span class="level-item">19 分钟读完 (大约2918个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">JS基础</h1><div class="content"><p>JS编写位置，JS注释，字面量变量，标识符，数据类型，强制类型转换</p>
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JS%E7%BC%96%E5%86%99%E4%BD%8D%E7%BD%AE"><span class="toc-number">1.1.</span> <span class="toc-text">JS编写位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS%E6%B3%A8%E9%87%8A"><span class="toc-number">1.2.</span> <span class="toc-text">JS注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E9%9D%A2%E9%87%8F%E4%B8%8E%E5%8F%98%E9%87%8F"><span class="toc-number">1.3.</span> <span class="toc-text">字面量与变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="toc-number">1.3.1.</span> <span class="toc-text">#字面量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">1.3.2.</span> <span class="toc-text">#变量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="toc-number">1.4.</span> <span class="toc-text">标识符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.4.1.</span> <span class="toc-text">关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%9D%E7%95%99%E5%AD%97"><span class="toc-number">1.4.2.</span> <span class="toc-text">保留字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E4%B8%8D%E5%BB%BA%E8%AE%AE%E4%BD%BF%E7%94%A8%E7%9A%84%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="toc-number">1.4.3.</span> <span class="toc-text">其他不建议使用的标识符</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.</span> <span class="toc-text">数据类型和类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.1.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#String%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">2.1.1.</span> <span class="toc-text">String字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Number%E6%95%B0%E5%80%BC"><span class="toc-number">2.1.2.</span> <span class="toc-text">Number数值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boolean%E5%B8%83%E5%B0%94%E5%80%BC"><span class="toc-number">2.1.3.</span> <span class="toc-text">Boolean布尔值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Null"><span class="toc-number">2.1.4.</span> <span class="toc-text">Null</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Undefined"><span class="toc-number">2.1.5.</span> <span class="toc-text">Undefined</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.2.</span> <span class="toc-text">类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%B8%BAString"><span class="toc-number">2.2.1.</span> <span class="toc-text">其他数据类型转换为String</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%B8%BANumber"><span class="toc-number">2.2.2.</span> <span class="toc-text">其他数据类型转换为Number</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%B8%BABoolean"><span class="toc-number">2.2.3.</span> <span class="toc-text">其他数据类型转换为Boolean</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.</span> <span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">3.1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.2.</span> <span class="toc-text">算数运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.3.</span> <span class="toc-text">一元运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%A2%9E%E5%92%8C%E8%87%AA%E5%87%8F"><span class="toc-number">3.4.</span> <span class="toc-text">自增和自减</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%A2%9E"><span class="toc-number">3.4.1.</span> <span class="toc-text">自增++</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%87%8F%E2%80%93"><span class="toc-number">3.4.2.</span> <span class="toc-text">自减–</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.5.</span> <span class="toc-text">逻辑运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%9E%E8%BF%90%E7%AE%97"><span class="toc-number">3.5.1.</span> <span class="toc-text">非运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8E%E8%BF%90%E7%AE%97"><span class="toc-number">3.5.2.</span> <span class="toc-text">与运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%96%E8%BF%90%E7%AE%97"><span class="toc-number">3.5.3.</span> <span class="toc-text">或运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#amp-amp-%E3%80%81-%E9%9D%9E%E5%B8%83%E5%B0%94%E5%80%BC%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-number">3.5.4.</span> <span class="toc-text">&amp;&amp;、|| 非布尔值的情况</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.6.</span> <span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.7.</span> <span class="toc-text">关系运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E7%AD%89%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.8.</span> <span class="toc-text">相等运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E7%AD%89"><span class="toc-number">3.8.1.</span> <span class="toc-text">&#x3D;&#x3D; 相等</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E7%9B%B8%E7%AD%89"><span class="toc-number">3.8.2.</span> <span class="toc-text">!&#x3D; 不相等</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E7%AD%89"><span class="toc-number">3.8.3.</span> <span class="toc-text">&#x3D;&#x3D;&#x3D; 全等</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E5%85%A8%E7%AD%89"><span class="toc-number">3.8.4.</span> <span class="toc-text">!&#x3D;&#x3D;不全等</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.9.</span> <span class="toc-text">条件运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-number">3.10.</span> <span class="toc-text">运算符优先级</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Unicode%E7%BC%96%E7%A0%81%E8%A1%A8"><span class="toc-number">3.11.</span> <span class="toc-text">Unicode编码表</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6"><span class="toc-number">4.</span> <span class="toc-text">流程控制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E5%92%8C%E5%87%BD%E6%95%B0"><span class="toc-number">5.</span> <span class="toc-text">对象和函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%85%E5%BB%BA%E5%AF%B9%E8%B1%A1"><span class="toc-number">6.</span> <span class="toc-text">内建对象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">7.</span> <span class="toc-text">正则表达式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DOM%E6%93%8D%E4%BD%9C"><span class="toc-number">8.</span> <span class="toc-text">DOM操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6"><span class="toc-number">9.</span> <span class="toc-text">事件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BOM%E6%93%8D%E4%BD%9C"><span class="toc-number">10.</span> <span class="toc-text">BOM操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9A%E6%97%B6%E5%99%A8%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">11.</span> <span class="toc-text">定时器的应用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JSON%E6%93%8D%E4%BD%9C"><span class="toc-number">12.</span> <span class="toc-text">JSON操作</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        JS基础
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">mk310</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-03-26T10:51:38.000Z" itemprop="datePublished">2024-03-26</time>
+        
+        (Updated: <time datetime="2025-02-14T07:36:31.176Z" itemprop="dateModified">2025-02-14</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> › <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/JS%E5%9F%BA%E7%A1%80/" rel="tag">JS基础</a>, <a class="tag-link-link" href="/tags/JavaScript/" rel="tag">JavaScript</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>JS基本语法，数据类型和类型转换</p>
 <span id="more"></span>
 
-<h2 id="JS编写位置"><a href="#JS编写位置" class="headerlink" title="JS编写位置"></a>JS编写位置</h2><p>可以将js代码编写到标签的<code>onclick</code>属性中当我们点击按钮时，js代码才会执行</p>
+<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><h2 id="JS编写位置"><a href="#JS编写位置" class="headerlink" title="JS编写位置"></a>JS编写位置</h2><p>可以将js代码编写到标签的<code>onclick</code>属性中当我们点击按钮时，js代码才会执行</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;alert(&#x27;\&quot;</span>&#x27;<span class="attr">Fuck</span>! <span class="attr">Do</span> <span class="attr">not</span> <span class="attr">touch</span> <span class="attr">me</span>!&#x27;)&quot;&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>可以将js代码<strong>Ⅰ写在超链接的<code>href</code>属性中</strong>，这样当点击超链接时，会执行js代码</p>
@@ -56,7 +193,8 @@
 <blockquote>
 <p>注释中的内容不会被执行，但是可以在源代码中查看</p>
 </blockquote>
-<h2 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h2><blockquote>
+<p><strong>注意点</strong></p>
+<blockquote>
 <ol>
 <li><p>JS中严格区分大小写</p>
 </li>
@@ -229,7 +367,7 @@
 </tr>
 </tbody></table>
 <p>JS底层保存标识符时实际上是采用的Unicode编码，所以理论上讲，所有的utf-8中含有的内容都可以作为标识符</p>
-<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>数据类型指的就是字面量的类型，在JS中一共有六种数据类型</p>
+<h1 id="数据类型和类型转换"><a href="#数据类型和类型转换" class="headerlink" title="数据类型和类型转换"></a>数据类型和类型转换</h1><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>数据类型指的就是字面量的类型，在JS中一共有六种数据类型</p>
 <table>
 <thead>
 <tr>
@@ -363,13 +501,15 @@
 
 <p>指将一个数据类型强制转换为其他的数据类型</p>
 <p>类型转换主要指，将其他的数据类型，转换为<code>String</code>、<code>Number</code>、<code>Boolean</code></p>
-<h3 id="其他数据类型转换为String"><a href="#其他数据类型转换为String" class="headerlink" title="其他数据类型转换为String"></a>其他数据类型转换为String</h3><h4 id="方式一：调用被转换数据类型的toString-方法"><a href="#方式一：调用被转换数据类型的toString-方法" class="headerlink" title="方式一：调用被转换数据类型的toString()方法"></a>方式一：调用被转换数据类型的toString()方法</h4><p>该方法不会影响到原变量，它会将转换的结果返回</p>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><h3 id="其他数据类型转换为String"><a href="#其他数据类型转换为String" class="headerlink" title="其他数据类型转换为String"></a>其他数据类型转换为String</h3><p><strong>方式一：调用被转换数据类型的toString()方法</strong></p>
+<p>该方法不会影响到原变量，它会将转换的结果返回</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Number转换为String</span></span><br><span class="line"><span class="keyword">var</span> a1 = <span class="number">123</span>;</span><br><span class="line"><span class="keyword">var</span> b1 = a1.<span class="title function_">toString</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> a1); <span class="comment">// number</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> b1); <span class="comment">// string</span></span><br></pre></td></tr></table></figure>
 
 <p>但是注意：<code>null</code>和<code>undefined</code>这两个值没有<code>toString()</code>，如果调用他们的方法，会报错</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Null转换为String</span></span><br><span class="line"><span class="keyword">var</span> a3 = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">var</span> b3 = a3.<span class="title function_">toString</span>(); <span class="comment">// UncaughtTypeError: Cannot read property &#x27;toString&#x27; of null</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Undefined转换为String</span></span><br><span class="line"><span class="keyword">var</span> a4 = <span class="literal">undefined</span>;</span><br><span class="line"><span class="keyword">var</span> b4 = a4.<span class="title function_">toString</span>(); <span class="comment">// UncaughtTypeError: Cannot read property &#x27;toString&#x27; of undefined</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="方式二：调用String-函数，并将被转换的数据作为参数传递给函数"><a href="#方式二：调用String-函数，并将被转换的数据作为参数传递给函数" class="headerlink" title="方式二：调用String()函数，并将被转换的数据作为参数传递给函数"></a>方式二：调用String()函数，并将被转换的数据作为参数传递给函数</h4><p>使用<code>String()</code>函数做强制类型转换时，对于<code>Number</code>和<code>Boolean</code>实际上就是调用的<code>toString()</code>方法</p>
+<p><strong>方式二：调用String()函数，并将被转换的数据作为参数传递给函数</strong></p>
+<p>使用<code>String()</code>函数做强制类型转换时，对于<code>Number</code>和<code>Boolean</code>实际上就是调用的<code>toString()</code>方法</p>
 <p>但是对于<code>null</code>和<code>undefined</code>，就不会调用<code>toString()</code>方法，而是将</p>
 <ul>
 <li><code>null</code>直接转换为<code>&quot;null&quot;</code></li>
@@ -377,7 +517,8 @@
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Number转换为String</span></span><br><span class="line"><span class="keyword">var</span> a1 = <span class="number">123</span>;</span><br><span class="line"><span class="keyword">var</span> b1 = <span class="title class_">String</span>(a1);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> a1); <span class="comment">// number</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> b1); <span class="comment">// string</span></span><br><span class="line"><span class="comment">// Boolean转换为String</span></span><br><span class="line"><span class="keyword">var</span> a2 = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">var</span> b2 = <span class="title class_">String</span>(a2);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> a2); <span class="comment">// boolean</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> b2); <span class="comment">// string</span></span><br><span class="line"><span class="comment">// Null转换为String</span></span><br><span class="line"><span class="keyword">var</span> a3 = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">var</span> b3 = <span class="title class_">String</span>(a3);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> a3); <span class="comment">// object</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> b3); <span class="comment">// string</span></span><br><span class="line"><span class="comment">// Undefined转换为String</span></span><br><span class="line"><span class="keyword">var</span> a4 = <span class="literal">undefined</span>;</span><br><span class="line"><span class="keyword">var</span> b4 = <span class="title class_">String</span>(a4);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> a4); <span class="comment">// undefined</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> b4); <span class="comment">// string</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="其他数据类型转换为Number"><a href="#其他数据类型转换为Number" class="headerlink" title="其他数据类型转换为Number"></a>其他数据类型转换为Number</h3><h4 id="方式一：使用Number-函数"><a href="#方式一：使用Number-函数" class="headerlink" title="方式一：使用Number()函数"></a>方式一：使用Number()函数</h4><ul>
+<h3 id="其他数据类型转换为Number"><a href="#其他数据类型转换为Number" class="headerlink" title="其他数据类型转换为Number"></a>其他数据类型转换为Number</h3><p><strong>方式一：使用Number()函数</strong></p>
+<ul>
 <li><p>字符串 –&gt; 数字</p>
 <ul>
 <li>如果是纯数字的字符串，则直接将其转换为数字</li>
@@ -393,14 +534,16 @@
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a4 = <span class="literal">true</span>;</span><br><span class="line">a4 = <span class="title class_">Number</span>(a4);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> a4); <span class="comment">// number</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a4);        <span class="comment">// 1</span></span><br><span class="line"><span class="keyword">var</span> a5 = <span class="literal">false</span>;</span><br><span class="line">a5 = <span class="title class_">Number</span>(a5);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> a5); <span class="comment">// number</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a5);        <span class="comment">// 0</span></span><br></pre></td></tr></table></figure></li>
 </ul>
-<h4 id="方式二：专门用来对付字符串"><a href="#方式二：专门用来对付字符串" class="headerlink" title="方式二：专门用来对付字符串"></a>方式二：专门用来对付字符串</h4><ul>
+<p><strong>方式二：专门用来对付字符串</strong></p>
+<ul>
 <li><code>parseInt()</code>把一个字符串转换为一个整数：可以将一个字符串中的有效整数部分取出来，然后转换为Number</li>
 <li><code>parseFloat()</code>把一个字符串转换为一个浮点数：可以将一个字符串中的有效小数部分取出来，然后转换为Number</li>
 <li>如果对非String使用<code>parseInt()</code>或<code>parseFloat()</code>，它会先将其转换为String，然后再操作</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a1 = <span class="string">&quot;123&quot;</span>;</span><br><span class="line">a1 = <span class="built_in">parseInt</span>(a1);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> a1); <span class="comment">// number</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a1);        <span class="comment">// 123</span></span><br><span class="line"><span class="keyword">var</span> a2 = <span class="string">&quot;123.456&quot;</span>;</span><br><span class="line">a2 = <span class="built_in">parseInt</span>(a2);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> a2); <span class="comment">// number</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a2);        <span class="comment">// 123</span></span><br><span class="line"><span class="keyword">var</span> a3 = <span class="string">&quot;123px&quot;</span>;</span><br><span class="line">a3 = <span class="built_in">parseInt</span>(a3);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> a3); <span class="comment">// number</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a3);        <span class="comment">// 123 </span></span><br><span class="line"><span class="comment">// var a4 = null;</span></span><br><span class="line"><span class="comment">// var a4 = undefined;</span></span><br><span class="line"><span class="comment">// var a4 = &#x27;&#x27;;</span></span><br><span class="line"><span class="comment">// var a4 = &#x27;abc&#x27;;</span></span><br><span class="line"><span class="comment">// var a4 = true;</span></span><br><span class="line"><span class="keyword">var</span> a4 = <span class="literal">false</span>;</span><br><span class="line">a4 = <span class="built_in">parseInt</span>(a4);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> a4); <span class="comment">// number</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a4);        <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="其他数据类型转换为Boolean"><a href="#其他数据类型转换为Boolean" class="headerlink" title="其他数据类型转换为Boolean"></a>其他数据类型转换为Boolean</h3><h4 id="方式一：使用Boolean-函数"><a href="#方式一：使用Boolean-函数" class="headerlink" title="方式一：使用Boolean()函数"></a>方式一：使用<code>Boolean()</code>函数</h4><ul>
+<h3 id="其他数据类型转换为Boolean"><a href="#其他数据类型转换为Boolean" class="headerlink" title="其他数据类型转换为Boolean"></a>其他数据类型转换为Boolean</h3><p><strong>方式一：使用<code>Boolean()</code>函数</strong></p>
+<ul>
 <li>数字-—-&gt;布尔<ul>
 <li>除了<code>0</code>和<code>NaN</code>，其余的都是<code>true</code></li>
 </ul>
@@ -414,55 +557,361 @@
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// - 数字-—-&gt;布尔</span></span><br><span class="line"><span class="comment">//   - 除了`0`和`NaN`，其余的都是`true`</span></span><br><span class="line"><span class="comment">// var a1 = 0;</span></span><br><span class="line"><span class="keyword">var</span> a1 = <span class="title class_">NaN</span>;</span><br><span class="line">a1 = <span class="title class_">Boolean</span>(a1);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a1); <span class="comment">// false</span></span><br><span class="line"><span class="keyword">var</span> a2 = <span class="number">123</span>;</span><br><span class="line">a2 = <span class="title class_">Boolean</span>(a2);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a2); <span class="comment">// true</span></span><br><span class="line"><span class="comment">// - 字符串-—-&gt;布尔</span></span><br><span class="line"><span class="comment">//   - 除了空串，其余的都是`true`</span></span><br><span class="line"><span class="keyword">var</span> a3 = <span class="string">&quot;123&quot;</span>;</span><br><span class="line">a3 = <span class="title class_">Boolean</span>(a3);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a3); <span class="comment">// true</span></span><br><span class="line"><span class="keyword">var</span> a4 = <span class="string">&quot; &quot;</span>;</span><br><span class="line">a4 = <span class="title class_">Boolean</span>(a4);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a4); <span class="comment">// true</span></span><br><span class="line"><span class="keyword">var</span> a5 = <span class="string">&quot;&quot;</span>;</span><br><span class="line">a5 = <span class="title class_">Boolean</span>(a5);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a5); <span class="comment">// false</span></span><br><span class="line"><span class="comment">// - `null`和`undefined`都会转换为`false`</span></span><br><span class="line"><span class="comment">// var a6 = null;</span></span><br><span class="line"><span class="keyword">var</span> a6 = <span class="literal">undefined</span>;</span><br><span class="line">a6 = <span class="title class_">Boolean</span>(a6);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a6); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="方式二：隐式类型转换"><a href="#方式二：隐式类型转换" class="headerlink" title="方式二：隐式类型转换"></a>方式二：隐式类型转换</h4><p>为任意的数据类型做两次非运算，即可将其转换为布尔值（下一节会介绍）</p>
+<p><strong>方式二：隐式类型转换</strong></p>
+<p>为任意的数据类型做两次非运算，即可将其转换为布尔值（下一节会介绍）</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> b = !!a;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;a=&quot;</span>+a+<span class="string">&quot;,b=&quot;</span>+b); <span class="comment">// a=true,b=true</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>在js中，如果需要表示16进制的数字，则需要以<code>0x</code>开头</p>
-<p>如果需要表示8进制的数字，则需要以<code>0</code>开头</p>
-<p>如果需要表示2进制的数字，则需要以<code>0b</code>开头，但是不是所有的浏览器都支持</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 十六进制数字</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">0x10</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// 16</span></span><br><span class="line">a = <span class="number">0xff</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// 255</span></span><br><span class="line">a = <span class="number">0xCafe</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// 51966</span></span><br><span class="line">a = <span class="string">&quot;0x70&quot;</span>;</span><br><span class="line">a = <span class="built_in">parseInt</span>(a,<span class="number">16</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// 112</span></span><br><span class="line"><span class="comment">// 八进制数字</span></span><br><span class="line">a = <span class="number">070</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// 56</span></span><br><span class="line">a = <span class="string">&quot;070&quot;</span>;</span><br><span class="line">a = <span class="built_in">parseInt</span>(a,<span class="number">8</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// 56</span></span><br><span class="line"><span class="comment">// 二进制数字</span></span><br><span class="line">a = <span class="number">0b10</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
-</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/JS%E5%9F%BA%E7%A1%80/">JS基础</a><a class="link-muted mr-2" rel="tag" href="/tags/JavaScript/">JavaScript</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2024/03/27/JS%E8%BF%90%E7%AE%97/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">JS运算</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/03/23/%E9%80%89%E6%8B%A9%E5%99%A8/"><span class="level-item">1-选择器</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="mk310"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">mk310</p><p class="is-size-6 is-block">no-no-no</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>hangzhou</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">70</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">21</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">82</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://gitee.com" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://gitee.com"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="bilibili" href="https://bilibili.com"><i class="fab fa-bilibili"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="zhihu" href="https://zhihu.com"><i class="fab fa-zhihu"></i></a></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-01-10T10:07:37.000Z">2025-01-10</time></p><p class="title"><a href="/2025/01/10/Vue/">Vue</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/Vue3/">Vue3</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-12-24T08:20:47.000Z">2024-12-24</time></p><p class="title"><a href="/2024/12/24/Node-js/">Node.js</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/Node-js/">Node.js</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-11-06T11:06:38.000Z">2024-11-06</time></p><p class="title"><a href="/2024/11/06/flex%E5%B8%83%E5%B1%80/">flex布局</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-11-02T08:23:12.000Z">2024-11-02</time></p><p class="title"><a href="/2024/11/02/grid%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80/">13-grid网格布局</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-10-22T12:20:44.000Z">2024-10-22</time></p><p class="title"><a href="/2024/10/22/SaSS/">SaSS</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#JS编写位置"><span class="level-left"><span class="level-item">1</span><span class="level-item">JS编写位置</span></span></a></li><li><a class="level is-mobile" href="#JS注释"><span class="level-left"><span class="level-item">2</span><span class="level-item">JS注释</span></span></a></li><li><a class="level is-mobile" href="#注意点"><span class="level-left"><span class="level-item">3</span><span class="level-item">注意点</span></span></a></li><li><a class="level is-mobile" href="#字面量与变量"><span class="level-left"><span class="level-item">4</span><span class="level-item">字面量与变量</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#字面量"><span class="level-left"><span class="level-item">4.1</span><span class="level-item">#字面量</span></span></a></li><li><a class="level is-mobile" href="#变量"><span class="level-left"><span class="level-item">4.2</span><span class="level-item">#变量</span></span></a></li></ul></li><li><a class="level is-mobile" href="#标识符"><span class="level-left"><span class="level-item">5</span><span class="level-item">标识符</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#关键字"><span class="level-left"><span class="level-item">5.1</span><span class="level-item">关键字</span></span></a></li><li><a class="level is-mobile" href="#保留字"><span class="level-left"><span class="level-item">5.2</span><span class="level-item">保留字</span></span></a></li><li><a class="level is-mobile" href="#其他不建议使用的标识符"><span class="level-left"><span class="level-item">5.3</span><span class="level-item">其他不建议使用的标识符</span></span></a></li></ul></li><li><a class="level is-mobile" href="#数据类型"><span class="level-left"><span class="level-item">6</span><span class="level-item">数据类型</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#String字符串"><span class="level-left"><span class="level-item">6.1</span><span class="level-item">String字符串</span></span></a></li><li><a class="level is-mobile" href="#Number数值"><span class="level-left"><span class="level-item">6.2</span><span class="level-item">Number数值</span></span></a></li><li><a class="level is-mobile" href="#Boolean布尔值"><span class="level-left"><span class="level-item">6.3</span><span class="level-item">Boolean布尔值</span></span></a></li><li><a class="level is-mobile" href="#Null"><span class="level-left"><span class="level-item">6.4</span><span class="level-item">Null</span></span></a></li><li><a class="level is-mobile" href="#Undefined"><span class="level-left"><span class="level-item">6.5</span><span class="level-item">Undefined</span></span></a></li><li><a class="level is-mobile" href="#其他数据类型转换为String"><span class="level-left"><span class="level-item">6.6</span><span class="level-item">其他数据类型转换为String</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#方式一：调用被转换数据类型的toString-方法"><span class="level-left"><span class="level-item">6.6.1</span><span class="level-item">方式一：调用被转换数据类型的toString()方法</span></span></a></li><li><a class="level is-mobile" href="#方式二：调用String-函数，并将被转换的数据作为参数传递给函数"><span class="level-left"><span class="level-item">6.6.2</span><span class="level-item">方式二：调用String()函数，并将被转换的数据作为参数传递给函数</span></span></a></li></ul></li><li><a class="level is-mobile" href="#其他数据类型转换为Number"><span class="level-left"><span class="level-item">6.7</span><span class="level-item">其他数据类型转换为Number</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#方式一：使用Number-函数"><span class="level-left"><span class="level-item">6.7.1</span><span class="level-item">方式一：使用Number()函数</span></span></a></li><li><a class="level is-mobile" href="#方式二：专门用来对付字符串"><span class="level-left"><span class="level-item">6.7.2</span><span class="level-item">方式二：专门用来对付字符串</span></span></a></li></ul></li><li><a class="level is-mobile" href="#其他数据类型转换为Boolean"><span class="level-left"><span class="level-item">6.8</span><span class="level-item">其他数据类型转换为Boolean</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#方式一：使用Boolean-函数"><span class="level-left"><span class="level-item">6.8.1</span><span class="level-item">方式一：使用Boolean()函数</span></span></a></li><li><a class="level is-mobile" href="#方式二：隐式类型转换"><span class="level-left"><span class="level-item">6.8.2</span><span class="level-item">方式二：隐式类型转换</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="#补充"><span class="level-left"><span class="level-item">7</span><span class="level-item">补充</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/macOS/"><span class="level-start"><span class="level-item">macOS</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/study/"><span class="level-start"><span class="level-item">study</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/tech/"><span class="level-start"><span class="level-item">tech</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="level-start"><span class="level-item">前端</span></span><span class="level-end"><span class="level-item tag">47</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/CSS/"><span class="level-start"><span class="level-item">CSS</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/HTML/"><span class="level-start"><span class="level-item">HTML</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/"><span class="level-start"><span class="level-item">JavaScript</span></span><span class="level-end"><span class="level-item tag">21</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/ES6/"><span class="level-start"><span class="level-item">ES6</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/jQuery/"><span class="level-start"><span class="level-item">jQuery</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript%E8%BF%9B%E9%98%B6/"><span class="level-start"><span class="level-item">JavaScript进阶</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/Node-js/"><span class="level-start"><span class="level-item">Node.js</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/Vue3/"><span class="level-start"><span class="level-item">Vue3</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"><span class="level-start"><span class="level-item">网络协议</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E5%90%8E%E7%AB%AF/"><span class="level-start"><span class="level-item">后端</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%90%8E%E7%AB%AF/flask/"><span class="level-start"><span class="level-item">flask</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"><span class="level-start"><span class="level-item">计算机基础</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="level-start"><span class="level-item">计算机网络</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"><span class="level-start"><span class="level-item">软件工程</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2025 mk310</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">Hexo 博客</p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
-            article: {
-                highlight: {
-                    clipboard: true,
-                    fold: 'unfolded'
-                }
-            }
-        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
-      window.cookieconsent.initialise({
-        type: "opt-out",
-        theme: "edgeless",
-        static: false,
-        position: "bottom-left",
-        content: {
-          message: "此网站使用Cookie来改善您的体验。",
-          dismiss: "知道了！",
-          allow: "允许使用Cookie",
-          deny: "拒绝",
-          link: "了解更多",
-          policy: "Cookie政策",
-          href: "https://www.cookiesandyou.com/",
-        },
-        palette: {
-          popup: {
-            background: "#edeff5",
-            text: "#838391"
-          },
-          button: {
-            background: "#4b81e8"
-          },
-        },
-      });
-    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
-            if (typeof $.fn.lightGallery === 'function') {
-                $('.article').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof $.fn.justifiedGallery === 'function') {
-                if ($('.justified-gallery > p > .gallery-item').length) {
-                    $('.justified-gallery > p > .gallery-item').unwrap();
-                }
-                $('.justified-gallery').justifiedGallery();
-            }
-        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
-            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script></body></html>
+<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>运算符也叫操作符，通过运算符可以对一个或多个值进行运算，并获取运算结果</p>
+<p>比如：<code>typeof</code>就是运算符，可以来获得一个值的类型</p>
+<h2 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h2><ul>
+<li>当对非Number类型的值进行运算时，会将这些值转换为Number然后再运算</li>
+<li>任何值和<code>NaN</code>做运算都得<code>NaN</code></li>
+</ul>
+<p>算数运算符</p>
+<ul>
+<li><code>+</code> 可以对两个值进行加法运算，并将结果返回<ul>
+<li>如果对两个字符串进行加法运算，则会将两个字符串拼接为一个字符串，并返回</li>
+<li>任何的值和字符串做加法运算，<strong>都会先转换为字符串</strong>，然后再和字符串做拼串的操作</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a1 = <span class="number">123</span> + <span class="number">456</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a1); <span class="comment">// 579</span></span><br><span class="line"><span class="keyword">var</span> a2 = <span class="string">&quot;123&quot;</span> + <span class="string">&quot;456&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a2); <span class="comment">// 123456</span></span><br><span class="line"><span class="keyword">var</span> a3 = <span class="string">&quot;123&quot;</span> + <span class="number">456</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a3); <span class="comment">// 123456</span></span><br><span class="line"><span class="keyword">var</span> a8 = <span class="number">123</span> + <span class="literal">undefined</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a8); <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>-</code>可以对两个值进行减法运算（效果同上）</li>
+<li><code>*</code> 可以对两个值进行乘法运算</li>
+<li><code>/</code> 可以对两个值进行除法运算</li>
+<li><code>%</code> 可以对两个值进行取模运算</li>
+</ul>
+<p>可以利用<code>+&quot;&quot;</code>将Number转为String，利用<code>-0</code>、<code>*1</code>、<code>/1</code>将String转为Number</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> b= <span class="number">33</span>;</span><br><span class="line"><span class="keyword">var</span> x = b+<span class="string">&#x27;&#x27;</span>;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="title function_">typeof</span>(x))<span class="comment">//string</span></span><br><span class="line"><span class="keyword">var</span> w = <span class="string">&#x27;123&#x27;</span>; </span><br><span class="line"><span class="keyword">var</span> k = w-<span class="number">0</span>; </span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="title function_">typeof</span>(k))<span class="comment">//number</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="一元运算符"><a href="#一元运算符" class="headerlink" title="一元运算符"></a>一元运算符</h2><p>一元运算符，只需要一个操作数</p>
+<ul>
+<li><code>+</code> 正号：正号不会对数字产生任何影响</li>
+<li><code>-</code> 负号：负号可以对数字进行负号的取反</li>
+</ul>
+<p>对于非Number类型的值，它会将先转换为Number，然后再运算</p>
+<p>可以对一个其他的数据类型使用<code>+</code>，来将其转换为Number，它的原理和<code>Number()</code>函数一样</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">&quot;10&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> result = +a;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> result);    <span class="comment">// number</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;result=&quot;</span>+result); <span class="comment">// result=10</span></span><br><span class="line">result = -a;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;result=&quot;</span>+result); <span class="comment">// result=-10</span></span><br><span class="line">a = <span class="literal">true</span>;</span><br><span class="line">result = +a;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;result=&quot;</span>+result); <span class="comment">// result=1</span></span><br><span class="line">a = <span class="string">&quot;&quot;</span>;</span><br><span class="line">result = +a;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;result=&quot;</span>+result); <span class="comment">// result=0</span></span><br><span class="line">a = <span class="literal">null</span>;</span><br><span class="line">result = +a;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;result=&quot;</span>+result); <span class="comment">// result=0</span></span><br><span class="line">a = <span class="literal">undefined</span>;</span><br><span class="line">result = +a;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;result=&quot;</span>+result); <span class="comment">// result=NaN</span></span><br><span class="line">a = <span class="title class_">NaN</span>;</span><br><span class="line">result = +a;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;result=&quot;</span>+result); <span class="comment">// result=NaN</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="自增和自减"><a href="#自增和自减" class="headerlink" title="自增和自减"></a>自增和自减</h2><h3 id="自增"><a href="#自增" class="headerlink" title="自增++"></a>自增++</h3><p>通过自增可以使变量在自身的基础上增加1</p>
+<p>自增分成两种：后++（<code>a++</code>）和前++（<code>++a</code>）</p>
+<p>无论是<code>a++</code>还是<code>++a</code>，都会立即使原变量的值自增1</p>
+<p>不同的是<code>a++</code>和<code>++a</code>的值不同</p>
+<ul>
+<li><code>a++</code>是变量的原值（自增前的值）</li>
+<li><code>++a</code>是变量的新值（自增后的值）</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a,b;</span><br><span class="line">a = <span class="number">1</span>;</span><br><span class="line">b = a++;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;a++ = &quot;</span> + b + <span class="string">&quot;, a = &quot;</span> + a); <span class="comment">// a++ = 1, a = 2</span></span><br><span class="line">a = <span class="number">1</span>;</span><br><span class="line">b = ++a;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;++a = &quot;</span> + b + <span class="string">&quot;, a = &quot;</span> + a); <span class="comment">// ++a = 2, a = 2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="自减–"><a href="#自减–" class="headerlink" title="自减–"></a>自减–</h3><p>通过自减可以使变量在自身的基础上减少1</p>
+<p>自减分成两种：后–（<code>a--</code>）和前–（<code>--a</code>）</p>
+<p>无论是<code>a--</code>还是<code>--a</code>，都会立即使原变量的值自减1</p>
+<p>不同的是<code>a--</code>和<code>--a</code>的值不同</p>
+<ul>
+<li><code>a--</code>是变量的原值（自减前的值）</li>
+<li><code>--a</code>是变量的新值（自减后的值）</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a,b;</span><br><span class="line">a = <span class="number">1</span>;</span><br><span class="line">b = a--;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;a-- = &quot;</span> + b + <span class="string">&quot;, a = &quot;</span> + a); <span class="comment">// a-- = 1, a = 0</span></span><br><span class="line">a = <span class="number">1</span>;</span><br><span class="line">b = --a;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;--a = &quot;</span> + b + <span class="string">&quot;, a = &quot;</span> + a); <span class="comment">// --a = 0, a = 0</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><p>JS中为我们提供了三种逻辑运算符</p>
+<ul>
+<li><code>!</code> 非</li>
+<li><code>&amp;&amp;</code> 与</li>
+<li><code>||</code> 或</li>
+</ul>
+<h3 id="非运算"><a href="#非运算" class="headerlink" title="非运算"></a>非运算</h3><p><code>!</code>可以用来对一个值进行非运算</p>
+<p>所谓非运算就是值对一个布尔值进行取反操作，<code>true</code>变<code>false</code>，<code>false</code>变<code>true</code></p>
+<ul>
+<li>如果对一个值进行两次取反，它不会变化</li>
+<li>如果对非布尔值进行运算，则会将其转换为布尔值，然后再取反</li>
+</ul>
+<p>所以我们可以利用该特点，来将一个其他的数据类型转换为布尔值</p>
+<p>可以为一个任意数据类型取两次反，来将其转换为布尔值，原理和<code>Boolean()</code>函数一样</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a,b;</span><br><span class="line">a = <span class="literal">true</span>;</span><br><span class="line">b = !a;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;a=&quot;</span>+a+<span class="string">&quot;,b=&quot;</span>+b); <span class="comment">// a=true,b=false</span></span><br><span class="line">b = !!a;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;a=&quot;</span>+a+<span class="string">&quot;,b=&quot;</span>+b); <span class="comment">// a=true,b=true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="与运算"><a href="#与运算" class="headerlink" title="与运算"></a>与运算</h3><p><code>&amp;&amp;</code>可以对符号两侧的值进行与运算并返回结果</p>
+<p>运算规则</p>
+<ul>
+<li>两个值中只要有一个值的<code>false</code>就返回<code>false</code>；只有两个值都为<code>true</code>时，才会返回<code>true</code></li>
+<li>JS中的“与”属于短路的与，如果第一个值为<code>false</code>，则不会检查第二个值</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a;</span><br><span class="line">a = <span class="literal">true</span> &amp;&amp; <span class="literal">true</span>;   <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line">a = <span class="literal">true</span> &amp;&amp; <span class="literal">false</span>;  <span class="comment">// false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line">a = <span class="literal">false</span> &amp;&amp; <span class="literal">true</span>;  <span class="comment">// false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line">a = <span class="literal">false</span> &amp;&amp; <span class="literal">false</span>; <span class="comment">// false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br></pre></td></tr></table></figure>
+
+<h3 id="或运算"><a href="#或运算" class="headerlink" title="或运算"></a>或运算</h3><p><code>||</code>可以对符号两侧的值进行或运算并返回结果</p>
+<p>运算规则：</p>
+<ul>
+<li>两个值中只要有一个<code>true</code>，就返回<code>true</code>；如果两个值都为<code>false</code>，才返回<code>false</code></li>
+<li>JS中的“或”属于短路的或，如果第一个值为<code>true</code>，则不会检查第二个值</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a;</span><br><span class="line">a = <span class="literal">true</span> || <span class="literal">true</span>;   <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line">a = <span class="literal">true</span> || <span class="literal">false</span>;  <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line">a = <span class="literal">false</span> || <span class="literal">true</span>;  <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line">a = <span class="literal">false</span> || <span class="literal">false</span>; <span class="comment">// false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br></pre></td></tr></table></figure>
+
+<h3 id="amp-amp-、-非布尔值的情况"><a href="#amp-amp-、-非布尔值的情况" class="headerlink" title="&amp;&amp;、|| 非布尔值的情况"></a>&amp;&amp;、|| 非布尔值的情况</h3><p>对于非布尔值进行与或运算时，会先将其转换为布尔值，然后再运算，并且返回原值</p>
+<p>与运算</p>
+<ul>
+<li>如果第一个值为<code>true</code>，则必然返回第二个值</li>
+<li>如果第一个值为<code>false</code>，则直接返回第一个值</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> result;</span><br><span class="line">result = <span class="number">1</span> &amp;&amp; <span class="number">2</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);   <span class="comment">// 2</span></span><br><span class="line">result = <span class="number">2</span> &amp;&amp; <span class="number">1</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);   <span class="comment">// 1</span></span><br><span class="line">result = <span class="number">1</span> &amp;&amp; <span class="number">0</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);   <span class="comment">// 0</span></span><br><span class="line">result = <span class="number">0</span> &amp;&amp; <span class="number">1</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);   <span class="comment">// 0</span></span><br><span class="line">result = <span class="string">&quot;&quot;</span> &amp;&amp; <span class="number">1</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);   <span class="comment">//</span></span><br><span class="line">result = <span class="number">1</span> &amp;&amp; <span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);   <span class="comment">//</span></span><br><span class="line">result = <span class="literal">null</span> &amp;&amp; <span class="number">1</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);   <span class="comment">// null</span></span><br><span class="line">result = <span class="number">1</span> &amp;&amp; <span class="literal">null</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);   <span class="comment">// null</span></span><br><span class="line">result = <span class="literal">undefined</span> &amp;&amp; <span class="number">1</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);   <span class="comment">// undefined	</span></span><br><span class="line">result = <span class="number">1</span> &amp;&amp; <span class="literal">undefined</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);   <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+
+<p>或运算</p>
+<ul>
+<li>如果第一个值为<code>true</code>，则直接返回第一个值</li>
+<li>如果第一个值为<code>false</code>，则返回第二个值</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> result;</span><br><span class="line">result = <span class="number">1</span> || <span class="number">2</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);   <span class="comment">// 1</span></span><br><span class="line">result = <span class="number">2</span> || <span class="number">1</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);   <span class="comment">// 2</span></span><br><span class="line">result = <span class="number">1</span> || <span class="number">0</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);   <span class="comment">// 1</span></span><br><span class="line">result = <span class="number">0</span> || <span class="number">1</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);   <span class="comment">// 1</span></span><br><span class="line">result = <span class="string">&quot;&quot;</span> || <span class="number">1</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);   <span class="comment">// 1</span></span><br><span class="line">result = <span class="number">1</span> || <span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);   <span class="comment">// 1</span></span><br><span class="line">result = <span class="literal">null</span> || <span class="number">1</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);   <span class="comment">// 1</span></span><br><span class="line">result = <span class="number">1</span> || <span class="literal">null</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);   <span class="comment">// 1</span></span><br><span class="line">result = <span class="literal">undefined</span> || <span class="number">1</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);   <span class="comment">// 1	</span></span><br><span class="line">result = <span class="number">1</span> || <span class="literal">undefined</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);   <span class="comment">// 1	</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><p><code>=</code> 可以将符号右侧的值赋值给符号左侧的变量</p>
+<ul>
+<li><code>+=</code> <code>a+=5</code>等价于<code>a=a+5</code></li>
+<li><code>-=</code> <code>a-=5</code>等价于<code>a=a-5</code></li>
+<li><code>*=</code> <code>a*=5</code>等价于<code>a=a*5</code></li>
+<li><code>/=</code> <code>a/=5</code>等价于<code>a=a/5</code></li>
+<li><code>%=</code> <code>a%=5</code>等价于<code>a=a%5</code></li>
+</ul>
+<h2 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h2><p>通过关系运算符可以比较两个值之间的大小关系，如果关系成立它会返回<code>true</code>，如果关系不成立则返回<code>false</code></p>
+<ul>
+<li><code>&gt;</code>：大于号，判断符号左侧的值是否大于右侧的</li>
+<li><code>&gt;=</code>：大于等于号，判断符号左侧的值是否大于等于右侧的</li>
+<li><code>&lt;</code>：小于号，判断符号左侧的值是否小于右侧的</li>
+<li><code>&lt;=</code>：小于等于号，判断符号左侧的值是否小于等于右侧的</li>
+</ul>
+<p>任何值和<strong>NaN</strong>做任何比较都是<code>false</code></p>
+<p><strong>非数值的情况</strong></p>
+<p>对于非数值进行比较时，会将其转换为数字然后再比较</p>
+<p>如果符号两侧的值都是字符串时，不会将其转换为数字进行比较，而是分别比较字符串中字符的Unicode编码</p>
+<h2 id="相等运算符"><a href="#相等运算符" class="headerlink" title="相等运算符"></a>相等运算符</h2><h3 id="相等"><a href="#相等" class="headerlink" title="== 相等"></a><code>==</code> 相等</h3><p>相等运算符用来比较两个值是否相等，如果相等会返回<code>true</code>，否则返回<code>false</code></p>
+<p>使用<code>==</code>来做相等运算：当使用<code>==</code>来比较两个值时，如果值的类型不同，则会自动进行类型转换，将其转换为相同的类型然后在比较</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// undefined 衍生自null，所以这两个值做相等判断时，会返回true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">null</span> == <span class="literal">undefined</span>); <span class="comment">// true</span></span><br><span class="line"><span class="comment">// NaN不和任何值相等，包括他本身</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">NaN</span> == <span class="title class_">NaN</span>); <span class="comment">// false</span></span><br><span class="line"><span class="comment">// 可以通过isNaN()函数来判断一个值是否是NaN</span></span><br><span class="line"><span class="comment">// 如果该值是NaN则返回true，否则返回false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="built_in">isNaN</span>(<span class="title class_">NaN</span>)); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="不相等"><a href="#不相等" class="headerlink" title="!= 不相等"></a><code>!=</code> 不相等</h3><p>不相等运算符用来判断两个值是否不相等，如果不相等返回<code>true</code>，否则返回<code>false</code></p>
+<p>使用<code>!=</code>来做不相等运算：不相等也会对变量进行自动的类型转换，如果转换后相等它也会返回<code>false</code></p>
+<h3 id="全等"><a href="#全等" class="headerlink" title="=== 全等"></a><code>===</code> 全等</h3><p>用来判断两个值是否全等，它和相等类似，不同的是它不会做自动的类型转换，如果两个值的类型不同，直接返回<code>false</code></p>
+<h3 id="不全等"><a href="#不全等" class="headerlink" title="!==不全等"></a><code>!==</code>不全等</h3><p>用来判断两个值是否不全等，和不等类似，不同的是它不会做自动的类型转换，如果两个值的类型不同，直接返回<code>false</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;123&quot;</span> === <span class="number">123</span>); <span class="comment">// false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;123&quot;</span> !== <span class="number">123</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/JS%E5%9F%BA%E7%A1%80/sjW1ErMbcz4OZpD-1739518511916-2.png" alt="img"></p>
+<h2 id="条件运算符"><a href="#条件运算符" class="headerlink" title="条件运算符"></a>条件运算符</h2><p>条件运算符也叫三元运算符 <code>条件表达式 ? 语句1: 语句2;</code></p>
+<p>执行的流程：条件运算符在执行时，首先对条件表达式进行求值</p>
+<ul>
+<li>如果该值为<code>true</code>，则执行<code>语句1</code>，并返回执行结果</li>
+<li>如果该值为<code>false</code>，则执行<code>语句2</code>，并返回执行结果</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">30</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">40</span>;</span><br><span class="line"><span class="keyword">var</span> c = <span class="number">90</span>;</span><br><span class="line"><span class="comment">// 两数中取MAX</span></span><br><span class="line"><span class="keyword">var</span> max = a &gt; b ? a : b;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;max=&quot;</span>+max);</span><br><span class="line"><span class="comment">// 三数中取MAX</span></span><br><span class="line">max = a &gt; b ? (a &gt; c ? a : c) : (b &gt; c ? b : c);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;max=&quot;</span>+max);</span><br></pre></td></tr></table></figure>
+
+<p>如果条件的表达式的求值结果是一个非布尔值，则会将其转换为布尔值，然后再运算</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;hello&quot;</span> ? <span class="title function_">alert</span>(<span class="string">&quot;111111&quot;</span>) : <span class="title function_">alert</span>(<span class="string">&quot;2222222&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h2><p>就和数学中一样，在JS中运算符也有优先级，比如：先乘除后加减</p>
+<p>在JS中有一个运算符优先级的表，在表中越靠上优先级越高，优先级越高越优先计算，如果优先级一样，则从左往右计算</p>
+<p>但是这个表我们并不需要记忆，如果遇到优先级不清楚可以使用<code>()</code>来改变优先级</p>
+<table>
+<thead>
+<tr>
+<th align="left"><strong><code>.</code>、<code>[]</code>、<code>new</code></strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong><code>()</code></strong></td>
+</tr>
+<tr>
+<td align="left"><strong><code>++</code>、<code>--</code></strong></td>
+</tr>
+<tr>
+<td align="left"><strong><code>!</code>、<code>～</code>、<code>+</code>（单目）、<code>-</code>（单目）、<code>typeof</code>、<code>void</code>、<code>delete</code></strong></td>
+</tr>
+<tr>
+<td align="left"><strong><code>%</code>、<code>\*</code>、<code>/</code></strong></td>
+</tr>
+<tr>
+<td align="left"><strong><code>+</code>（双目）、<code>-</code>（双目）</strong></td>
+</tr>
+<tr>
+<td align="left"><strong><code>&lt;&lt;</code>、<code>&gt;&gt;</code>、<code>&gt;&gt;&gt;</code></strong></td>
+</tr>
+<tr>
+<td align="left"><strong><code>&lt;</code>、<code>&lt;=</code>、<code>&gt;</code>、<code>&gt;=</code></strong></td>
+</tr>
+<tr>
+<td align="left"><strong><code>==</code>、<code>!==</code>、<code>===</code></strong></td>
+</tr>
+<tr>
+<td align="left"><strong><code>&amp;</code></strong></td>
+</tr>
+<tr>
+<td align="left"><strong><code>^</code></strong></td>
+</tr>
+<tr>
+<td align="left">**&#96;</td>
+</tr>
+<tr>
+<td align="left"><strong><code>&amp;&amp;</code></strong></td>
+</tr>
+<tr>
+<td align="left">**&#96;</td>
+</tr>
+<tr>
+<td align="left"><strong><code>?:</code></strong></td>
+</tr>
+<tr>
+<td align="left">**<code>=</code>、<code>+=</code>、<code>-=</code>、<code>*=</code>、<code>/=</code>、<code>%=</code>、<code>&lt;&lt;=</code>、<code>&gt;&gt;=</code>、<code>&gt;&gt;&gt;=</code>、<code>&amp;=</code>、<code>^=</code>、&#96;</td>
+</tr>
+<tr>
+<td align="left"><strong><code>,</code></strong></td>
+</tr>
+</tbody></table>
+<h2 id="Unicode编码表"><a href="#Unicode编码表" class="headerlink" title="Unicode编码表"></a>Unicode编码表</h2><p>Unicode官网：<a target="_blank" rel="noopener" href="https://home.unicode.org/">https://home.unicode.org/</a></p>
+<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1><h1 id="对象和函数"><a href="#对象和函数" class="headerlink" title="对象和函数"></a>对象和函数</h1><h1 id="内建对象"><a href="#内建对象" class="headerlink" title="内建对象"></a>内建对象</h1><h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h1 id="DOM操作"><a href="#DOM操作" class="headerlink" title="DOM操作"></a>DOM操作</h1><h1 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h1><h1 id="BOM操作"><a href="#BOM操作" class="headerlink" title="BOM操作"></a>BOM操作</h1><h1 id="定时器的应用"><a href="#定时器的应用" class="headerlink" title="定时器的应用"></a>定时器的应用</h1><h1 id="JSON操作"><a href="#JSON操作" class="headerlink" title="JSON操作"></a>JSON操作</h1>
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="http://gitee.com/">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JS%E7%BC%96%E5%86%99%E4%BD%8D%E7%BD%AE"><span class="toc-number">1.1.</span> <span class="toc-text">JS编写位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS%E6%B3%A8%E9%87%8A"><span class="toc-number">1.2.</span> <span class="toc-text">JS注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E9%9D%A2%E9%87%8F%E4%B8%8E%E5%8F%98%E9%87%8F"><span class="toc-number">1.3.</span> <span class="toc-text">字面量与变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="toc-number">1.3.1.</span> <span class="toc-text">#字面量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">1.3.2.</span> <span class="toc-text">#变量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="toc-number">1.4.</span> <span class="toc-text">标识符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.4.1.</span> <span class="toc-text">关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%9D%E7%95%99%E5%AD%97"><span class="toc-number">1.4.2.</span> <span class="toc-text">保留字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E4%B8%8D%E5%BB%BA%E8%AE%AE%E4%BD%BF%E7%94%A8%E7%9A%84%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="toc-number">1.4.3.</span> <span class="toc-text">其他不建议使用的标识符</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.</span> <span class="toc-text">数据类型和类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.1.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#String%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">2.1.1.</span> <span class="toc-text">String字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Number%E6%95%B0%E5%80%BC"><span class="toc-number">2.1.2.</span> <span class="toc-text">Number数值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boolean%E5%B8%83%E5%B0%94%E5%80%BC"><span class="toc-number">2.1.3.</span> <span class="toc-text">Boolean布尔值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Null"><span class="toc-number">2.1.4.</span> <span class="toc-text">Null</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Undefined"><span class="toc-number">2.1.5.</span> <span class="toc-text">Undefined</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.2.</span> <span class="toc-text">类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%B8%BAString"><span class="toc-number">2.2.1.</span> <span class="toc-text">其他数据类型转换为String</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%B8%BANumber"><span class="toc-number">2.2.2.</span> <span class="toc-text">其他数据类型转换为Number</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%B8%BABoolean"><span class="toc-number">2.2.3.</span> <span class="toc-text">其他数据类型转换为Boolean</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.</span> <span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">3.1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.2.</span> <span class="toc-text">算数运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.3.</span> <span class="toc-text">一元运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%A2%9E%E5%92%8C%E8%87%AA%E5%87%8F"><span class="toc-number">3.4.</span> <span class="toc-text">自增和自减</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%A2%9E"><span class="toc-number">3.4.1.</span> <span class="toc-text">自增++</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%87%8F%E2%80%93"><span class="toc-number">3.4.2.</span> <span class="toc-text">自减–</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.5.</span> <span class="toc-text">逻辑运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%9E%E8%BF%90%E7%AE%97"><span class="toc-number">3.5.1.</span> <span class="toc-text">非运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8E%E8%BF%90%E7%AE%97"><span class="toc-number">3.5.2.</span> <span class="toc-text">与运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%96%E8%BF%90%E7%AE%97"><span class="toc-number">3.5.3.</span> <span class="toc-text">或运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#amp-amp-%E3%80%81-%E9%9D%9E%E5%B8%83%E5%B0%94%E5%80%BC%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-number">3.5.4.</span> <span class="toc-text">&amp;&amp;、|| 非布尔值的情况</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.6.</span> <span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.7.</span> <span class="toc-text">关系运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E7%AD%89%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.8.</span> <span class="toc-text">相等运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E7%AD%89"><span class="toc-number">3.8.1.</span> <span class="toc-text">&#x3D;&#x3D; 相等</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E7%9B%B8%E7%AD%89"><span class="toc-number">3.8.2.</span> <span class="toc-text">!&#x3D; 不相等</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E7%AD%89"><span class="toc-number">3.8.3.</span> <span class="toc-text">&#x3D;&#x3D;&#x3D; 全等</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E5%85%A8%E7%AD%89"><span class="toc-number">3.8.4.</span> <span class="toc-text">!&#x3D;&#x3D;不全等</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.9.</span> <span class="toc-text">条件运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-number">3.10.</span> <span class="toc-text">运算符优先级</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Unicode%E7%BC%96%E7%A0%81%E8%A1%A8"><span class="toc-number">3.11.</span> <span class="toc-text">Unicode编码表</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6"><span class="toc-number">4.</span> <span class="toc-text">流程控制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E5%92%8C%E5%87%BD%E6%95%B0"><span class="toc-number">5.</span> <span class="toc-text">对象和函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%85%E5%BB%BA%E5%AF%B9%E8%B1%A1"><span class="toc-number">6.</span> <span class="toc-text">内建对象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">7.</span> <span class="toc-text">正则表达式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DOM%E6%93%8D%E4%BD%9C"><span class="toc-number">8.</span> <span class="toc-text">DOM操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6"><span class="toc-number">9.</span> <span class="toc-text">事件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BOM%E6%93%8D%E4%BD%9C"><span class="toc-number">10.</span> <span class="toc-text">BOM操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9A%E6%97%B6%E5%99%A8%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">11.</span> <span class="toc-text">定时器的应用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JSON%E6%93%8D%E4%BD%9C"><span class="toc-number">12.</span> <span class="toc-text">JSON操作</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/&text=JS基础"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/&title=JS基础"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/&is_video=false&description=JS基础"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=JS基础&body=Check out this article: http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/&title=JS基础"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/&title=JS基础"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/&title=JS基础"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/&title=JS基础"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/&name=JS基础&description=&lt;p&gt;JS基本语法，数据类型和类型转换&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2024/03/26/JS%E5%9F%BA%E7%A1%80/&t=JS基础"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2018-2023
+    mk310
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://gitee.com/">项目</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+
+</body>
+</html>
