@@ -1,35 +1,180 @@
-<!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Vue - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Hexo"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hexo"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Vue3 官方文档简介 | Vue.js"><meta property="og:type" content="blog"><meta property="og:title" content="Vue"><meta property="og:url" content="http://example.com/2025/01/10/Vue/"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="Vue3 官方文档简介 | Vue.js"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://example.com/images/Vue/1683167182037-71c78210-8217-4e7d-9a83-e463035efbbe-1736505128300-1.png"><meta property="og:image" content="http://example.com/images/Vue/1683167204081-582dc237-72bc-499e-9589-2cdfd452e62f-1736505136980-3.png"><meta property="og:image" content="http://example.com/images/Vue/1696662197101-55d2b251-f6e5-47f4-b3f1-d8531bbf9279-1736505410485-16.gif"><meta property="og:image" content="http://example.com/images/Vue/1696662200734-1bad8249-d7a2-423e-a3c3-ab4c110628be-1736505422039-18.gif"><meta property="og:image" content="http://example.com/images/Vue/1696662249851-db6403a1-acb5-481a-88e0-e1e34d2ef53a-1736505465509-20.gif"><meta property="og:image" content="http://example.com/images/Vue/1696662256560-7239b9f9-a770-43c1-9386-6cc12ef1e9c0-1736505472764-22.gif"><meta property="og:image" content="http://example.com/2025/01/10/images/Vue/%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%85value.png"><meta property="og:image" content="http://example.com/2025/01/10/images/Vue/computed.gif"><meta property="og:image" content="http://example.com/images/Vue/image-20250116204601725.png"><meta property="og:image" content="http://example.com/2025/01/10/images/Vue/1684309952481-c67f67f9-d1a3-4d69-8bd6-2b381e003f31.png"><meta property="og:image" content="http://example.com/images/Vue/default_slot.png"><meta property="article:published_time" content="2025-01-10T10:07:37.000Z"><meta property="article:modified_time" content="2025-02-04T07:40:03.556Z"><meta property="article:author" content="mk310"><meta property="article:tag" content="Vue3"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://example.com/images/Vue/1683167182037-71c78210-8217-4e7d-9a83-e463035efbbe-1736505128300-1.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2025/01/10/Vue/"},"headline":"Vue","image":["http://example.com/images/Vue/1683167182037-71c78210-8217-4e7d-9a83-e463035efbbe-1736505128300-1.png","http://example.com/images/Vue/1683167204081-582dc237-72bc-499e-9589-2cdfd452e62f-1736505136980-3.png","http://example.com/images/Vue/1696662197101-55d2b251-f6e5-47f4-b3f1-d8531bbf9279-1736505410485-16.gif","http://example.com/images/Vue/1696662200734-1bad8249-d7a2-423e-a3c3-ab4c110628be-1736505422039-18.gif","http://example.com/images/Vue/1696662249851-db6403a1-acb5-481a-88e0-e1e34d2ef53a-1736505465509-20.gif","http://example.com/images/Vue/1696662256560-7239b9f9-a770-43c1-9386-6cc12ef1e9c0-1736505472764-22.gif","http://example.com/2025/01/10/images/Vue/%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%85value.png","http://example.com/2025/01/10/images/Vue/computed.gif","http://example.com/images/Vue/image-20250116204601725.png","http://example.com/2025/01/10/images/Vue/1684309952481-c67f67f9-d1a3-4d69-8bd6-2b381e003f31.png","http://example.com/images/Vue/default_slot.png"],"datePublished":"2025-01-10T10:07:37.000Z","dateModified":"2025-02-04T07:40:03.556Z","author":{"@type":"Person","name":"mk310"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":"Vue3 官方文档简介 | Vue.js"}</script><link rel="canonical" href="http://example.com/2025/01/10/Vue/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/github.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
-  (function () {
-      function switchTab() {
-          if (!location.hash) {
-            return;
-          }
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Vue3 官方文档简介 | Vue.js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue">
+<meta property="og:url" content="http://example.com/2025/01/10/Vue/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Vue3 官方文档简介 | Vue.js">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/Vue/1683167182037-71c78210-8217-4e7d-9a83-e463035efbbe-1736505128300-1.png">
+<meta property="og:image" content="http://example.com/images/Vue/1683167204081-582dc237-72bc-499e-9589-2cdfd452e62f-1736505136980-3.png">
+<meta property="og:image" content="http://example.com/images/Vue/1696662197101-55d2b251-f6e5-47f4-b3f1-d8531bbf9279-1736505410485-16.gif">
+<meta property="og:image" content="http://example.com/images/Vue/1696662200734-1bad8249-d7a2-423e-a3c3-ab4c110628be-1736505422039-18.gif">
+<meta property="og:image" content="http://example.com/images/Vue/1696662249851-db6403a1-acb5-481a-88e0-e1e34d2ef53a-1736505465509-20.gif">
+<meta property="og:image" content="http://example.com/images/Vue/1696662256560-7239b9f9-a770-43c1-9386-6cc12ef1e9c0-1736505472764-22.gif">
+<meta property="og:image" content="http://example.com/2025/01/10/images/Vue/%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%85value.png">
+<meta property="og:image" content="http://example.com/2025/01/10/images/Vue/computed.gif">
+<meta property="og:image" content="http://example.com/images/Vue/image-20250116204601725.png">
+<meta property="og:image" content="http://example.com/2025/01/10/images/Vue/1684309952481-c67f67f9-d1a3-4d69-8bd6-2b381e003f31.png">
+<meta property="og:image" content="http://example.com/images/Vue/default_slot.png">
+<meta property="article:published_time" content="2025-01-10T10:07:37.000Z">
+<meta property="article:modified_time" content="2025-02-04T07:40:03.556Z">
+<meta property="article:author" content="mk310">
+<meta property="article:tag" content="Vue3">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/Vue/1683167182037-71c78210-8217-4e7d-9a83-e463035efbbe-1736505128300-1.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Vue</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
 
-          const id = '#' + CSS.escape(location.hash.substring(1));
-          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
-          if (!$tabMenu) {
-            return;
-          }
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"></head>
 
-          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
-          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
-          Array.from($tabMenuContainer.querySelectorAll('a'))
-              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
-              .forEach($content => $content.classList.add('is-hidden'));
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://gitee.com/">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2024/12/24/Node-js/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2025/01/10/Vue/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2025/01/10/Vue/&text=Vue"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2025/01/10/Vue/&title=Vue"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2025/01/10/Vue/&is_video=false&description=Vue"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Vue&body=Check out this article: http://example.com/2025/01/10/Vue/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2025/01/10/Vue/&title=Vue"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2025/01/10/Vue/&title=Vue"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2025/01/10/Vue/&title=Vue"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2025/01/10/Vue/&title=Vue"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2025/01/10/Vue/&name=Vue&description=&lt;p&gt;Vue3&lt;/p&gt;
+&lt;p&gt;官方文档&lt;a href=&#34;https://cn.vuejs.org/guide/introduction.html&#34;&gt;简介 | Vue.js&lt;/a&gt;&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2025/01/10/Vue/&t=Vue"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
 
-          if ($tabMenu) {
-              $tabMenu.parentElement.classList.add('is-active');
-          }
-          const $activeTab = document.querySelector(id);
-          if ($activeTab) {
-              $activeTab.classList.remove('is-hidden');
-          }
-      }
-      switchTab();
-      window.addEventListener('hashchange', switchTab, false);
-  })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-01-10T10:07:37.000Z" title="2025/1/10 18:07:37">2025-01-10</time>发表</span><span class="level-item"><time dateTime="2025-02-04T07:40:03.556Z" title="2025/2/4 15:40:03">2025-02-04</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><span> / </span><a class="link-muted" href="/categories/%E5%89%8D%E7%AB%AF/Vue3/">Vue3</a></span><span class="level-item">1 小时读完 (大约8735个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Vue</h1><div class="content"><p>Vue3</p>
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAvue%E5%B7%A5%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">创建vue工程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue3%E6%A0%B8%E5%BF%83%E8%AF%AD%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">Vue3核心语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#OptionsAPI-%E4%B8%8E-CompositionAPI"><span class="toc-number">2.1.</span> <span class="toc-text">OptionsAPI 与 CompositionAPI</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Options-API-%E7%9A%84%E5%BC%8A%E7%AB%AF"><span class="toc-number">2.1.1.</span> <span class="toc-text">Options API 的弊端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Composition-API-%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="toc-number">2.1.2.</span> <span class="toc-text">Composition API 的优势</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setup"><span class="toc-number">2.2.</span> <span class="toc-text">setup</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">2.2.1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#setup-%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-number">2.2.2.</span> <span class="toc-text">setup 的返回值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#setup-%E4%B8%8E-Options-API-%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">2.2.3.</span> <span class="toc-text">setup 与 Options API 的关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#setup-%E8%AF%AD%E6%B3%95%E7%B3%96"><span class="toc-number">2.2.4.</span> <span class="toc-text">setup 语法糖</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ref-%E5%88%9B%E5%BB%BA%EF%BC%9A%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E6%95%B0%E6%8D%AE"><span class="toc-number">2.3.</span> <span class="toc-text">ref 创建：基本类型的响应式数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reactive-%E5%88%9B%E5%BB%BA%EF%BC%9A%E5%AF%B9%E8%B1%A1%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E6%95%B0%E6%8D%AE"><span class="toc-number">2.4.</span> <span class="toc-text">reactive 创建：对象类型的响应式数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ref-%E5%88%9B%E5%BB%BA%EF%BC%9A%E5%AF%B9%E8%B1%A1%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E6%95%B0%E6%8D%AE"><span class="toc-number">2.5.</span> <span class="toc-text">ref 创建：对象类型的响应式数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ref-%E5%AF%B9%E6%AF%94-reactive"><span class="toc-number">2.6.</span> <span class="toc-text">ref 对比 reactive</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#toRefs-%E4%B8%8E-toRef"><span class="toc-number">2.7.</span> <span class="toc-text">toRefs 与 toRef</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#computed"><span class="toc-number">2.8.</span> <span class="toc-text">computed</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#watch"><span class="toc-number">2.9.</span> <span class="toc-text">watch</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%83%85%E5%86%B5%E4%B8%80"><span class="toc-number">2.9.1.</span> <span class="toc-text">情况一</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%83%85%E5%86%B5%E4%BA%8C"><span class="toc-number">2.9.2.</span> <span class="toc-text">情况二</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%83%85%E5%86%B5%E4%B8%89"><span class="toc-number">2.9.3.</span> <span class="toc-text">情况三</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%83%85%E5%86%B5%E5%9B%9B"><span class="toc-number">2.9.4.</span> <span class="toc-text">情况四</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%83%85%E5%86%B5%E4%BA%94"><span class="toc-number">2.9.5.</span> <span class="toc-text">情况五</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#watchEffect"><span class="toc-number">2.10.</span> <span class="toc-text">watchEffect</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E7%9A%84-ref-%E5%B1%9E%E6%80%A7"><span class="toc-number">2.11.</span> <span class="toc-text">标签的 ref 属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#props"><span class="toc-number">2.12.</span> <span class="toc-text">props</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-number">2.13.</span> <span class="toc-text">生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89hook"><span class="toc-number">2.14.</span> <span class="toc-text">自定义hook</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1"><span class="toc-number">3.</span> <span class="toc-text">路由</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C"><span class="toc-number">3.1.</span> <span class="toc-text">基本切换效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E5%99%A8%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.2.</span> <span class="toc-text">路由器工作模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#to%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%86%99%E6%B3%95"><span class="toc-number">3.3.</span> <span class="toc-text">to的两种写法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E8%B7%AF%E7%94%B1"><span class="toc-number">3.4.</span> <span class="toc-text">命名路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B5%8C%E5%A5%97%E8%B7%AF%E7%94%B1"><span class="toc-number">3.5.</span> <span class="toc-text">嵌套路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82"><span class="toc-number">3.6.</span> <span class="toc-text">路由传参</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#query%E5%8F%82%E6%95%B0"><span class="toc-number">3.6.1.</span> <span class="toc-text">query参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#params%E5%8F%82%E6%95%B0"><span class="toc-number">3.6.2.</span> <span class="toc-text">params参数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E7%9A%84props%E9%85%8D%E7%BD%AE"><span class="toc-number">3.7.</span> <span class="toc-text">路由的props配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#replace%E5%B1%9E%E6%80%A7"><span class="toc-number">3.8.</span> <span class="toc-text">replace属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E5%BC%8F%E5%AF%BC%E8%88%AA"><span class="toc-number">3.9.</span> <span class="toc-text">编程式导航</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-number">3.10.</span> <span class="toc-text">重定向</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pinia"><span class="toc-number">4.</span> <span class="toc-text">pinia</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA-pinia-%E7%8E%AF%E5%A2%83"><span class="toc-number">4.1.</span> <span class="toc-text">搭建 pinia 环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8-%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-number">4.2.</span> <span class="toc-text">存储+读取数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE-%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="toc-number">4.3.</span> <span class="toc-text">修改数据(三种方式)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#storeToRefs"><span class="toc-number">4.4.</span> <span class="toc-text">storeToRefs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getters%EF%BC%88%E5%AF%B9%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E9%A2%84%E5%A4%84%E7%90%86%EF%BC%89"><span class="toc-number">4.5.</span> <span class="toc-text">getters（对数据进行预处理）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#subscribe"><span class="toc-number">4.6.</span> <span class="toc-text">$subscribe</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#store%E7%BB%84%E5%90%88%E5%BC%8F%E5%86%99%E6%B3%95"><span class="toc-number">4.7.</span> <span class="toc-text">store组合式写法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1"><span class="toc-number">5.</span> <span class="toc-text">组件通信</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#props-1"><span class="toc-number">5.1.</span> <span class="toc-text">props</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6"><span class="toc-number">5.2.</span> <span class="toc-text">自定义事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mitt"><span class="toc-number">5.3.</span> <span class="toc-text">mitt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#v-model"><span class="toc-number">5.4.</span> <span class="toc-text">v-model</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#attrs"><span class="toc-number">5.5.</span> <span class="toc-text">$attrs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#refs%E3%80%81-parent"><span class="toc-number">5.6.</span> <span class="toc-text">$refs、$parent</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#provide%E3%80%81inject"><span class="toc-number">5.7.</span> <span class="toc-text">provide、inject</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pinia-1"><span class="toc-number">5.8.</span> <span class="toc-text">pinia</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#slot"><span class="toc-number">5.9.</span> <span class="toc-text">slot</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E6%8F%92%E6%A7%BD"><span class="toc-number">5.9.1.</span> <span class="toc-text">默认插槽</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B7%E5%90%8D%E6%8F%92%E6%A7%BD"><span class="toc-number">5.9.2.</span> <span class="toc-text">具名插槽</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%8F%92%E6%A7%BD"><span class="toc-number">5.9.3.</span> <span class="toc-text">作用域插槽</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Vue
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">mk310</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2025-01-10T10:07:37.000Z" itemprop="datePublished">2025-01-10</time>
+        
+        (Updated: <time datetime="2025-02-04T07:40:03.556Z" itemprop="dateModified">2025-02-04</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> › <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/Vue3/">Vue3</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Vue3/" rel="tag">Vue3</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Vue3</p>
 <p>官方文档<a target="_blank" rel="noopener" href="https://cn.vuejs.org/guide/introduction.html">简介 | Vue.js</a></p>
 <span id="more"></span>
 
@@ -617,48 +762,157 @@
 <li><p>具体编码：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">父组件中：</span><br><span class="line">      &lt;Game v-slot=&quot;params&quot;&gt;</span><br><span class="line">      &lt;!-- &lt;Game v-slot:default=&quot;params&quot;&gt; --&gt;</span><br><span class="line">      &lt;!-- &lt;Game #default=&quot;params&quot;&gt; --&gt;</span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">          &lt;li v-for=&quot;g in params.games&quot; :key=&quot;g.id&quot;&gt;&#123;&#123; g.name &#125;&#125;&lt;/li&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">      &lt;/Game&gt;</span><br><span class="line"></span><br><span class="line">子组件中：</span><br><span class="line">      &lt;template&gt;</span><br><span class="line">        &lt;div class=&quot;category&quot;&gt;</span><br><span class="line">          &lt;h2&gt;今日游戏榜单&lt;/h2&gt;</span><br><span class="line">          &lt;slot :games=&quot;games&quot; a=&quot;哈哈&quot;&gt;&lt;/slot&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/template&gt;</span><br><span class="line"></span><br><span class="line">      &lt;script setup lang=&quot;ts&quot; name=&quot;Category&quot;&gt;</span><br><span class="line">        import &#123;reactive&#125; from &#x27;vue&#x27;</span><br><span class="line">        let games = reactive([</span><br><span class="line">          &#123;id:&#x27;asgdytsa01&#x27;,name:&#x27;英雄联盟&#x27;&#125;,</span><br><span class="line">          &#123;id:&#x27;asgdytsa02&#x27;,name:&#x27;王者荣耀&#x27;&#125;,</span><br><span class="line">          &#123;id:&#x27;asgdytsa03&#x27;,name:&#x27;红色警戒&#x27;&#125;,</span><br><span class="line">          &#123;id:&#x27;asgdytsa04&#x27;,name:&#x27;斗罗大陆&#x27;&#125;</span><br><span class="line">        ])</span><br><span class="line">      &lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
 </ol>
-</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Vue3/">Vue3</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/12/24/Node-js/"><span class="level-item">Node.js</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="mk310"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">mk310</p><p class="is-size-6 is-block">no-no-no</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>hangzhou</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">53</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">19</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">62</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://gitee.com" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://gitee.com"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="bilibili" href="https://bilibili.com"><i class="fab fa-bilibili"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="zhihu" href="https://zhihu.com"><i class="fab fa-zhihu"></i></a></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-01-10T10:07:37.000Z">2025-01-10</time></p><p class="title"><a href="/2025/01/10/Vue/">Vue</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/Vue3/">Vue3</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-12-24T08:20:47.000Z">2024-12-24</time></p><p class="title"><a href="/2024/12/24/Node-js/">Node.js</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/Node-js/">Node.js</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-11-06T11:06:38.000Z">2024-11-06</time></p><p class="title"><a href="/2024/11/06/flex%E5%B8%83%E5%B1%80/">flex布局</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-11-02T08:23:12.000Z">2024-11-02</time></p><p class="title"><a href="/2024/11/02/grid%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80/">13-grid网格布局</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-10-22T12:20:44.000Z">2024-10-22</time></p><p class="title"><a href="/2024/10/22/SaSS/">SaSS</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#创建vue工程"><span class="level-left"><span class="level-item">1</span><span class="level-item">创建vue工程</span></span></a></li><li><a class="level is-mobile" href="#Vue3核心语法"><span class="level-left"><span class="level-item">2</span><span class="level-item">Vue3核心语法</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#OptionsAPI-与-CompositionAPI"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">OptionsAPI 与 CompositionAPI</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Options-API-的弊端"><span class="level-left"><span class="level-item">2.1.1</span><span class="level-item">Options API 的弊端</span></span></a></li><li><a class="level is-mobile" href="#Composition-API-的优势"><span class="level-left"><span class="level-item">2.1.2</span><span class="level-item">Composition API 的优势</span></span></a></li></ul></li><li><a class="level is-mobile" href="#setup"><span class="level-left"><span class="level-item">2.2</span><span class="level-item">setup</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#概述"><span class="level-left"><span class="level-item">2.2.1</span><span class="level-item">概述</span></span></a></li><li><a class="level is-mobile" href="#setup-的返回值"><span class="level-left"><span class="level-item">2.2.2</span><span class="level-item">setup 的返回值</span></span></a></li><li><a class="level is-mobile" href="#setup-与-Options-API-的关系"><span class="level-left"><span class="level-item">2.2.3</span><span class="level-item">setup 与 Options API 的关系</span></span></a></li><li><a class="level is-mobile" href="#setup-语法糖"><span class="level-left"><span class="level-item">2.2.4</span><span class="level-item">setup 语法糖</span></span></a></li></ul></li><li><a class="level is-mobile" href="#ref-创建：基本类型的响应式数据"><span class="level-left"><span class="level-item">2.3</span><span class="level-item">ref 创建：基本类型的响应式数据</span></span></a></li><li><a class="level is-mobile" href="#reactive-创建：对象类型的响应式数据"><span class="level-left"><span class="level-item">2.4</span><span class="level-item">reactive 创建：对象类型的响应式数据</span></span></a></li><li><a class="level is-mobile" href="#ref-创建：对象类型的响应式数据"><span class="level-left"><span class="level-item">2.5</span><span class="level-item">ref 创建：对象类型的响应式数据</span></span></a></li><li><a class="level is-mobile" href="#ref-对比-reactive"><span class="level-left"><span class="level-item">2.6</span><span class="level-item">ref 对比 reactive</span></span></a></li><li><a class="level is-mobile" href="#toRefs-与-toRef"><span class="level-left"><span class="level-item">2.7</span><span class="level-item">toRefs 与 toRef</span></span></a></li><li><a class="level is-mobile" href="#computed"><span class="level-left"><span class="level-item">2.8</span><span class="level-item">computed</span></span></a></li><li><a class="level is-mobile" href="#watch"><span class="level-left"><span class="level-item">2.9</span><span class="level-item">watch</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#情况一"><span class="level-left"><span class="level-item">2.9.1</span><span class="level-item">情况一</span></span></a></li><li><a class="level is-mobile" href="#情况二"><span class="level-left"><span class="level-item">2.9.2</span><span class="level-item">情况二</span></span></a></li><li><a class="level is-mobile" href="#情况三"><span class="level-left"><span class="level-item">2.9.3</span><span class="level-item">情况三</span></span></a></li><li><a class="level is-mobile" href="#情况四"><span class="level-left"><span class="level-item">2.9.4</span><span class="level-item">情况四</span></span></a></li><li><a class="level is-mobile" href="#情况五"><span class="level-left"><span class="level-item">2.9.5</span><span class="level-item">情况五</span></span></a></li></ul></li><li><a class="level is-mobile" href="#watchEffect"><span class="level-left"><span class="level-item">2.10</span><span class="level-item">watchEffect</span></span></a></li><li><a class="level is-mobile" href="#标签的-ref-属性"><span class="level-left"><span class="level-item">2.11</span><span class="level-item">标签的 ref 属性</span></span></a></li><li><a class="level is-mobile" href="#props"><span class="level-left"><span class="level-item">2.12</span><span class="level-item">props</span></span></a></li><li><a class="level is-mobile" href="#生命周期"><span class="level-left"><span class="level-item">2.13</span><span class="level-item">生命周期</span></span></a></li><li><a class="level is-mobile" href="#自定义hook"><span class="level-left"><span class="level-item">2.14</span><span class="level-item">自定义hook</span></span></a></li></ul></li><li><a class="level is-mobile" href="#路由"><span class="level-left"><span class="level-item">3</span><span class="level-item">路由</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#基本切换效果"><span class="level-left"><span class="level-item">3.1</span><span class="level-item">基本切换效果</span></span></a></li><li><a class="level is-mobile" href="#路由器工作模式"><span class="level-left"><span class="level-item">3.2</span><span class="level-item">路由器工作模式</span></span></a></li><li><a class="level is-mobile" href="#to的两种写法"><span class="level-left"><span class="level-item">3.3</span><span class="level-item">to的两种写法</span></span></a></li><li><a class="level is-mobile" href="#命名路由"><span class="level-left"><span class="level-item">3.4</span><span class="level-item">命名路由</span></span></a></li><li><a class="level is-mobile" href="#嵌套路由"><span class="level-left"><span class="level-item">3.5</span><span class="level-item">嵌套路由</span></span></a></li><li><a class="level is-mobile" href="#路由传参"><span class="level-left"><span class="level-item">3.6</span><span class="level-item">路由传参</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#query参数"><span class="level-left"><span class="level-item">3.6.1</span><span class="level-item">query参数</span></span></a></li><li><a class="level is-mobile" href="#params参数"><span class="level-left"><span class="level-item">3.6.2</span><span class="level-item">params参数</span></span></a></li></ul></li><li><a class="level is-mobile" href="#路由的props配置"><span class="level-left"><span class="level-item">3.7</span><span class="level-item">路由的props配置</span></span></a></li><li><a class="level is-mobile" href="#replace属性"><span class="level-left"><span class="level-item">3.8</span><span class="level-item">replace属性</span></span></a></li><li><a class="level is-mobile" href="#编程式导航"><span class="level-left"><span class="level-item">3.9</span><span class="level-item">编程式导航</span></span></a></li><li><a class="level is-mobile" href="#重定向"><span class="level-left"><span class="level-item">3.10</span><span class="level-item">重定向</span></span></a></li></ul></li><li><a class="level is-mobile" href="#pinia"><span class="level-left"><span class="level-item">4</span><span class="level-item">pinia</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#搭建-pinia-环境"><span class="level-left"><span class="level-item">4.1</span><span class="level-item">搭建 pinia 环境</span></span></a></li><li><a class="level is-mobile" href="#存储-读取数据"><span class="level-left"><span class="level-item">4.2</span><span class="level-item">存储+读取数据</span></span></a></li><li><a class="level is-mobile" href="#修改数据-三种方式"><span class="level-left"><span class="level-item">4.3</span><span class="level-item">修改数据(三种方式)</span></span></a></li><li><a class="level is-mobile" href="#storeToRefs"><span class="level-left"><span class="level-item">4.4</span><span class="level-item">storeToRefs</span></span></a></li><li><a class="level is-mobile" href="#getters（对数据进行预处理）"><span class="level-left"><span class="level-item">4.5</span><span class="level-item">getters（对数据进行预处理）</span></span></a></li><li><a class="level is-mobile" href="#subscribe"><span class="level-left"><span class="level-item">4.6</span><span class="level-item">$subscribe</span></span></a></li><li><a class="level is-mobile" href="#store组合式写法"><span class="level-left"><span class="level-item">4.7</span><span class="level-item">store组合式写法</span></span></a></li></ul></li><li><a class="level is-mobile" href="#组件通信"><span class="level-left"><span class="level-item">5</span><span class="level-item">组件通信</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#props-1"><span class="level-left"><span class="level-item">5.1</span><span class="level-item">props</span></span></a></li><li><a class="level is-mobile" href="#自定义事件"><span class="level-left"><span class="level-item">5.2</span><span class="level-item">自定义事件</span></span></a></li><li><a class="level is-mobile" href="#mitt"><span class="level-left"><span class="level-item">5.3</span><span class="level-item">mitt</span></span></a></li><li><a class="level is-mobile" href="#v-model"><span class="level-left"><span class="level-item">5.4</span><span class="level-item">v-model</span></span></a></li><li><a class="level is-mobile" href="#attrs"><span class="level-left"><span class="level-item">5.5</span><span class="level-item">$attrs</span></span></a></li><li><a class="level is-mobile" href="#refs、-parent"><span class="level-left"><span class="level-item">5.6</span><span class="level-item">$refs、$parent</span></span></a></li><li><a class="level is-mobile" href="#provide、inject"><span class="level-left"><span class="level-item">5.7</span><span class="level-item">provide、inject</span></span></a></li><li><a class="level is-mobile" href="#pinia-1"><span class="level-left"><span class="level-item">5.8</span><span class="level-item">pinia</span></span></a></li><li><a class="level is-mobile" href="#slot"><span class="level-left"><span class="level-item">5.9</span><span class="level-item">slot</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#默认插槽"><span class="level-left"><span class="level-item">5.9.1</span><span class="level-item">默认插槽</span></span></a></li><li><a class="level is-mobile" href="#具名插槽"><span class="level-left"><span class="level-item">5.9.2</span><span class="level-item">具名插槽</span></span></a></li><li><a class="level is-mobile" href="#作用域插槽"><span class="level-left"><span class="level-item">5.9.3</span><span class="level-item">作用域插槽</span></span></a></li></ul></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/macOS/"><span class="level-start"><span class="level-item">macOS</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/study/"><span class="level-start"><span class="level-item">study</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/tech/"><span class="level-start"><span class="level-item">tech</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="level-start"><span class="level-item">前端</span></span><span class="level-end"><span class="level-item tag">30</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/CSS/"><span class="level-start"><span class="level-item">CSS</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/HTML/"><span class="level-start"><span class="level-item">HTML</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/"><span class="level-start"><span class="level-item">JavaScript</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript%E8%BF%9B%E9%98%B6/"><span class="level-start"><span class="level-item">JavaScript进阶</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/Node-js/"><span class="level-start"><span class="level-item">Node.js</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/Vue3/"><span class="level-start"><span class="level-item">Vue3</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"><span class="level-start"><span class="level-item">网络协议</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E5%90%8E%E7%AB%AF/"><span class="level-start"><span class="level-item">后端</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%90%8E%E7%AB%AF/flask/"><span class="level-start"><span class="level-item">flask</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"><span class="level-start"><span class="level-item">计算机基础</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="level-start"><span class="level-item">计算机网络</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"><span class="level-start"><span class="level-item">软件工程</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2025 mk310</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">Hexo 博客</p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
-            article: {
-                highlight: {
-                    clipboard: true,
-                    fold: 'unfolded'
-                }
-            }
-        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
-      window.cookieconsent.initialise({
-        type: "opt-out",
-        theme: "edgeless",
-        static: false,
-        position: "bottom-left",
-        content: {
-          message: "此网站使用Cookie来改善您的体验。",
-          dismiss: "知道了！",
-          allow: "允许使用Cookie",
-          deny: "拒绝",
-          link: "了解更多",
-          policy: "Cookie政策",
-          href: "https://www.cookiesandyou.com/",
-        },
-        palette: {
-          popup: {
-            background: "#edeff5",
-            text: "#838391"
-          },
-          button: {
-            background: "#4b81e8"
-          },
-        },
-      });
-    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
-            if (typeof $.fn.lightGallery === 'function') {
-                $('.article').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof $.fn.justifiedGallery === 'function') {
-                if ($('.justified-gallery > p > .gallery-item').length) {
-                    $('.justified-gallery > p > .gallery-item').unwrap();
-                }
-                $('.justified-gallery').justifiedGallery();
-            }
-        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
-            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script></body></html>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="http://gitee.com/">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAvue%E5%B7%A5%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">创建vue工程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue3%E6%A0%B8%E5%BF%83%E8%AF%AD%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">Vue3核心语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#OptionsAPI-%E4%B8%8E-CompositionAPI"><span class="toc-number">2.1.</span> <span class="toc-text">OptionsAPI 与 CompositionAPI</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Options-API-%E7%9A%84%E5%BC%8A%E7%AB%AF"><span class="toc-number">2.1.1.</span> <span class="toc-text">Options API 的弊端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Composition-API-%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="toc-number">2.1.2.</span> <span class="toc-text">Composition API 的优势</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setup"><span class="toc-number">2.2.</span> <span class="toc-text">setup</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">2.2.1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#setup-%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-number">2.2.2.</span> <span class="toc-text">setup 的返回值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#setup-%E4%B8%8E-Options-API-%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">2.2.3.</span> <span class="toc-text">setup 与 Options API 的关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#setup-%E8%AF%AD%E6%B3%95%E7%B3%96"><span class="toc-number">2.2.4.</span> <span class="toc-text">setup 语法糖</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ref-%E5%88%9B%E5%BB%BA%EF%BC%9A%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E6%95%B0%E6%8D%AE"><span class="toc-number">2.3.</span> <span class="toc-text">ref 创建：基本类型的响应式数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reactive-%E5%88%9B%E5%BB%BA%EF%BC%9A%E5%AF%B9%E8%B1%A1%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E6%95%B0%E6%8D%AE"><span class="toc-number">2.4.</span> <span class="toc-text">reactive 创建：对象类型的响应式数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ref-%E5%88%9B%E5%BB%BA%EF%BC%9A%E5%AF%B9%E8%B1%A1%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E6%95%B0%E6%8D%AE"><span class="toc-number">2.5.</span> <span class="toc-text">ref 创建：对象类型的响应式数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ref-%E5%AF%B9%E6%AF%94-reactive"><span class="toc-number">2.6.</span> <span class="toc-text">ref 对比 reactive</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#toRefs-%E4%B8%8E-toRef"><span class="toc-number">2.7.</span> <span class="toc-text">toRefs 与 toRef</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#computed"><span class="toc-number">2.8.</span> <span class="toc-text">computed</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#watch"><span class="toc-number">2.9.</span> <span class="toc-text">watch</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%83%85%E5%86%B5%E4%B8%80"><span class="toc-number">2.9.1.</span> <span class="toc-text">情况一</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%83%85%E5%86%B5%E4%BA%8C"><span class="toc-number">2.9.2.</span> <span class="toc-text">情况二</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%83%85%E5%86%B5%E4%B8%89"><span class="toc-number">2.9.3.</span> <span class="toc-text">情况三</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%83%85%E5%86%B5%E5%9B%9B"><span class="toc-number">2.9.4.</span> <span class="toc-text">情况四</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%83%85%E5%86%B5%E4%BA%94"><span class="toc-number">2.9.5.</span> <span class="toc-text">情况五</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#watchEffect"><span class="toc-number">2.10.</span> <span class="toc-text">watchEffect</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E7%9A%84-ref-%E5%B1%9E%E6%80%A7"><span class="toc-number">2.11.</span> <span class="toc-text">标签的 ref 属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#props"><span class="toc-number">2.12.</span> <span class="toc-text">props</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-number">2.13.</span> <span class="toc-text">生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89hook"><span class="toc-number">2.14.</span> <span class="toc-text">自定义hook</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1"><span class="toc-number">3.</span> <span class="toc-text">路由</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C"><span class="toc-number">3.1.</span> <span class="toc-text">基本切换效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E5%99%A8%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.2.</span> <span class="toc-text">路由器工作模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#to%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%86%99%E6%B3%95"><span class="toc-number">3.3.</span> <span class="toc-text">to的两种写法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E8%B7%AF%E7%94%B1"><span class="toc-number">3.4.</span> <span class="toc-text">命名路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B5%8C%E5%A5%97%E8%B7%AF%E7%94%B1"><span class="toc-number">3.5.</span> <span class="toc-text">嵌套路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82"><span class="toc-number">3.6.</span> <span class="toc-text">路由传参</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#query%E5%8F%82%E6%95%B0"><span class="toc-number">3.6.1.</span> <span class="toc-text">query参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#params%E5%8F%82%E6%95%B0"><span class="toc-number">3.6.2.</span> <span class="toc-text">params参数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E7%9A%84props%E9%85%8D%E7%BD%AE"><span class="toc-number">3.7.</span> <span class="toc-text">路由的props配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#replace%E5%B1%9E%E6%80%A7"><span class="toc-number">3.8.</span> <span class="toc-text">replace属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E5%BC%8F%E5%AF%BC%E8%88%AA"><span class="toc-number">3.9.</span> <span class="toc-text">编程式导航</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-number">3.10.</span> <span class="toc-text">重定向</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pinia"><span class="toc-number">4.</span> <span class="toc-text">pinia</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA-pinia-%E7%8E%AF%E5%A2%83"><span class="toc-number">4.1.</span> <span class="toc-text">搭建 pinia 环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8-%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-number">4.2.</span> <span class="toc-text">存储+读取数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE-%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="toc-number">4.3.</span> <span class="toc-text">修改数据(三种方式)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#storeToRefs"><span class="toc-number">4.4.</span> <span class="toc-text">storeToRefs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getters%EF%BC%88%E5%AF%B9%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E9%A2%84%E5%A4%84%E7%90%86%EF%BC%89"><span class="toc-number">4.5.</span> <span class="toc-text">getters（对数据进行预处理）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#subscribe"><span class="toc-number">4.6.</span> <span class="toc-text">$subscribe</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#store%E7%BB%84%E5%90%88%E5%BC%8F%E5%86%99%E6%B3%95"><span class="toc-number">4.7.</span> <span class="toc-text">store组合式写法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1"><span class="toc-number">5.</span> <span class="toc-text">组件通信</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#props-1"><span class="toc-number">5.1.</span> <span class="toc-text">props</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6"><span class="toc-number">5.2.</span> <span class="toc-text">自定义事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mitt"><span class="toc-number">5.3.</span> <span class="toc-text">mitt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#v-model"><span class="toc-number">5.4.</span> <span class="toc-text">v-model</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#attrs"><span class="toc-number">5.5.</span> <span class="toc-text">$attrs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#refs%E3%80%81-parent"><span class="toc-number">5.6.</span> <span class="toc-text">$refs、$parent</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#provide%E3%80%81inject"><span class="toc-number">5.7.</span> <span class="toc-text">provide、inject</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pinia-1"><span class="toc-number">5.8.</span> <span class="toc-text">pinia</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#slot"><span class="toc-number">5.9.</span> <span class="toc-text">slot</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E6%8F%92%E6%A7%BD"><span class="toc-number">5.9.1.</span> <span class="toc-text">默认插槽</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B7%E5%90%8D%E6%8F%92%E6%A7%BD"><span class="toc-number">5.9.2.</span> <span class="toc-text">具名插槽</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%8F%92%E6%A7%BD"><span class="toc-number">5.9.3.</span> <span class="toc-text">作用域插槽</span></a></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2025/01/10/Vue/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2025/01/10/Vue/&text=Vue"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2025/01/10/Vue/&title=Vue"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2025/01/10/Vue/&is_video=false&description=Vue"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Vue&body=Check out this article: http://example.com/2025/01/10/Vue/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2025/01/10/Vue/&title=Vue"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2025/01/10/Vue/&title=Vue"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2025/01/10/Vue/&title=Vue"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2025/01/10/Vue/&title=Vue"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2025/01/10/Vue/&name=Vue&description=&lt;p&gt;Vue3&lt;/p&gt;
+&lt;p&gt;官方文档&lt;a href=&#34;https://cn.vuejs.org/guide/introduction.html&#34;&gt;简介 | Vue.js&lt;/a&gt;&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2025/01/10/Vue/&t=Vue"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2018-2023
+    mk310
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://gitee.com/">项目</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+
+</body>
+</html>
