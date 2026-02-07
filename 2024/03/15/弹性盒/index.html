@@ -1,35 +1,200 @@
-<!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>12-flex弹性盒 - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Hexo"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hexo"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="CSSflex弹性盒"><meta property="og:type" content="blog"><meta property="og:title" content="12-flex弹性盒"><meta property="og:url" content="http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="CSSflex弹性盒"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://example.com/covers/cover_css.png"><meta property="article:published_time" content="2024-03-14T17:34:14.000Z"><meta property="article:modified_time" content="2024-11-01T08:56:26.119Z"><meta property="article:author" content="mk310"><meta property="article:tag" content="css基础"><meta property="article:tag" content="弹性盒"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://example.com/covers/cover_css.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/"},"headline":"12-flex弹性盒","image":["http://example.com/covers/cover_css.png"],"datePublished":"2024-03-14T17:34:14.000Z","dateModified":"2024-11-01T08:56:26.119Z","author":{"@type":"Person","name":"mk310"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":"CSSflex弹性盒"}</script><link rel="canonical" href="http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/github.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
-  (function () {
-      function switchTab() {
-          if (!location.hash) {
-            return;
-          }
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="CSSflex弹性盒">
+<meta property="og:type" content="article">
+<meta property="og:title" content="12-flex弹性盒">
+<meta property="og:url" content="http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="CSSflex弹性盒">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/image-20240315032904094.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/11729c6c2c818441f5089c3a3984a080.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/c87e43a9db82a4f564f98dbdae47fcc4.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/963e711b9a2217a1c34b1a08538ea795.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/3ee816db158fb6b5d480172f9ac578c0.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/bb526f4373ab471791217f20260dbbd1.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/0c54d451da26478557563813cbbcc77f.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/954f8711b1e786fcc0834a064290c861.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/03d831ec631b993192edfd186e4c2396.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/110522935bd98f332cb9cf04380f563b.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/2af92a896e40671ca536a9ed39dc1c1b.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/6ab8b213829111066f5cd0ad1fa70bb7.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/9c5f3fff8119986aa076cbe5f3e778d9.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/5448b556d848e25d86ea52c09222f8bf.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/c33af4a7dc9c4e2ea1a978edcfad4e11.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/9508792eb1a11fe0af3d51f1d47bb584.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/13cf3c6ca7af292ddc5fb2279dc19839.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/d788195de72ec17c817338b220c2ea32.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/3809331c72ca666656b99b1983e0d473.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/4a28fd1069af8b43b103e48f4db7cecf.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/f07a0ca24286bb5c3c5c3caf5a8e7559.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/0f326ed5006e1aac8e7f9120cb02c8b4.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/fe1e85d111f123fbdc490048947a7252.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/19f06ff1e9a81a0838ab6f1cdfc607a0.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/4ebbe412b98a6bda2cdcf8a95e6687b1.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/9946555125edbfac6ed4bad5db916027.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/088ae6940229c340026c918928f9607e.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/image-20240316033522533.png">
+<meta property="og:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/image-20240321132453017.png">
+<meta property="article:published_time" content="2024-03-14T17:34:14.000Z">
+<meta property="article:modified_time" content="2024-11-01T08:56:26.119Z">
+<meta property="article:author" content="mk310">
+<meta property="article:tag" content="css基础">
+<meta property="article:tag" content="弹性盒">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/%E5%BC%B9%E6%80%A7%E7%9B%92/image-20240315032904094.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>12-flex弹性盒</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
 
-          const id = '#' + CSS.escape(location.hash.substring(1));
-          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
-          if (!$tabMenu) {
-            return;
-          }
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"></head>
 
-          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
-          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
-          Array.from($tabMenuContainer.querySelectorAll('a'))
-              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
-              .forEach($content => $content.classList.add('is-hidden'));
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://gitee.com/">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2024/03/23/JS%E7%AE%80%E4%BB%8B/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2024/03/13/%E5%8F%98%E5%BD%A2%EF%BC%9A%E5%B9%B3%E7%A7%BB%E3%80%81%E6%97%8B%E8%BD%AC%E4%B8%8E%E7%BC%A9%E6%94%BE/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/&text=12-flex弹性盒"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/&title=12-flex弹性盒"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/&is_video=false&description=12-flex弹性盒"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=12-flex弹性盒&body=Check out this article: http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/&title=12-flex弹性盒"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/&title=12-flex弹性盒"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/&title=12-flex弹性盒"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/&title=12-flex弹性盒"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/&name=12-flex弹性盒&description=&lt;p&gt;CSSflex弹性盒&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/&t=12-flex弹性盒"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
 
-          if ($tabMenu) {
-              $tabMenu.parentElement.classList.add('is-active');
-          }
-          const $activeTab = document.querySelector(id);
-          if ($activeTab) {
-              $activeTab.classList.remove('is-hidden');
-          }
-      }
-      switchTab();
-      window.addEventListener('hashchange', switchTab, false);
-  })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="/covers/cover_css.png" alt="12-flex弹性盒"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-03-14T17:34:14.000Z" title="2024/3/15 01:34:14">2024-03-15</time>发表</span><span class="level-item"><time dateTime="2024-11-01T08:56:26.119Z" title="2024/11/1 16:56:26">2024-11-01</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><span> / </span><a class="link-muted" href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></span><span class="level-item">14 分钟读完 (大约2097个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">12-flex弹性盒</h1><div class="content"><p>CSSflex弹性盒</p>
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text">基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%B9%E6%80%A7%E7%9B%92"><span class="toc-number">1.1.</span> <span class="toc-text">弹性盒</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%B9%E6%80%A7%E5%AE%B9%E5%99%A8"><span class="toc-number">1.2.</span> <span class="toc-text">弹性容器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0-%E5%BC%B9%E6%80%A7%E5%AF%BC%E8%88%AA%E6%9D%A1"><span class="toc-number">2.</span> <span class="toc-text">练习(弹性导航条)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%B9%E6%80%A7%E5%AE%B9%E5%99%A8%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-number">3.</span> <span class="toc-text">弹性容器的属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%BD%B4%E5%B1%9E%E6%80%A7"><span class="toc-number">3.1.</span> <span class="toc-text">主轴属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%92%E5%88%97%E6%96%B9%E5%BC%8F"><span class="toc-number">3.1.1.</span> <span class="toc-text">排列方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E6%8D%A2%E8%A1%8C"><span class="toc-number">3.1.2.</span> <span class="toc-text">自动换行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A9%BA%E7%99%BD%E7%A9%BA%E9%97%B4"><span class="toc-number">3.1.3.</span> <span class="toc-text">空白空间</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%85%E8%BD%B4%E5%B1%9E%E6%80%A7"><span class="toc-number">3.2.</span> <span class="toc-text">辅轴属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%85%E8%BD%B4%E5%AF%B9%E9%BD%90"><span class="toc-number">3.2.1.</span> <span class="toc-text">辅轴对齐</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A9%BA%E7%99%BD%E7%A9%BA%E9%97%B4-1"><span class="toc-number">3.2.2.</span> <span class="toc-text">空白空间</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%B9%E6%80%A7%E5%B1%85%E4%B8%AD"><span class="toc-number">3.3.</span> <span class="toc-text">弹性居中</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%B9%E6%80%A7%E5%85%83%E7%B4%A0%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-number">4.</span> <span class="toc-text">弹性元素的属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%B8%E5%B1%95%E7%B3%BB%E6%95%B0"><span class="toc-number">4.1.</span> <span class="toc-text">伸展系数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%A9%E5%87%8F%E7%B3%BB%E6%95%B0"><span class="toc-number">4.2.</span> <span class="toc-text">缩减系数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E9%95%BF%E5%BA%A6"><span class="toc-number">4.3.</span> <span class="toc-text">基础长度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%92%E5%88%97%E9%A1%BA%E5%BA%8F"><span class="toc-number">4.4.</span> <span class="toc-text">排列顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A6%86%E7%9B%96%E8%BE%85%E8%BD%B4"><span class="toc-number">4.5.</span> <span class="toc-text">覆盖辅轴</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0%EF%BC%88%E6%89%8B%E6%9C%BA%E6%B7%98%E5%AE%9D%EF%BC%89"><span class="toc-number">5.</span> <span class="toc-text">练习（手机淘宝）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0%EF%BC%88%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%BD%91%E9%A1%B5%EF%BC%89"><span class="toc-number">6.</span> <span class="toc-text">练习（移动端网页）</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        12-flex弹性盒
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">mk310</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-03-14T17:34:14.000Z" itemprop="datePublished">2024-03-15</time>
+        
+        (Updated: <time datetime="2024-11-01T08:56:26.119Z" itemprop="dateModified">2024-11-01</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> › <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/css%E5%9F%BA%E7%A1%80/" rel="tag">css基础</a>, <a class="tag-link-link" href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92/" rel="tag">弹性盒</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>CSSflex弹性盒</p>
 <span id="more"></span>
 
 <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="弹性盒"><a href="#弹性盒" class="headerlink" title="弹性盒"></a>弹性盒</h3><p><code>flex</code>（弹性盒、伸缩盒）</p>
@@ -185,48 +350,156 @@
 <h2 id="练习（移动端网页）"><a href="#练习（移动端网页）" class="headerlink" title="练习（移动端网页）"></a>练习（移动端网页）</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.w</span>,</span><br><span class="line"><span class="selector-class">.top-bar</span>,</span><br><span class="line"><span class="selector-class">.banner</span>,</span><br><span class="line"><span class="selector-class">.menu</span>,</span><br><span class="line"><span class="selector-class">.course-list</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">17.325rem</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">5.33333333vw</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#eff0f4</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.top-bar</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">4.375rem</span>;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-around;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.top-bar</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#24253d</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">text-decoration</span>: none;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">36px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span> <span class="selector-tag">i</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#999</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.banner</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.menu</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">8.225rem</span>;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-flow</span>: row wrap;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.menu</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">8.175rem</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">2.6rem</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">2.5em</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.menu</span> <span class="selector-tag">a</span> <span class="selector-tag">i</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: white;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">2.6rem</span>;</span><br><span class="line">  <span class="attribute">vertical-align</span>: top;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.menu</span> <span class="selector-class">.course</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fe7b52</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.menu</span> <span class="selector-class">.star</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#d589ff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.menu</span> <span class="selector-class">.sub</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#ff4f71</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.menu</span> <span class="selector-class">.download</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#0baeff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item-list</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-flow</span>: row;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-around;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.course-list</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">9.85rem</span>;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-flow</span>: column;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: <span class="number">1.15rem</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.course-list</span> <span class="selector-class">.title</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.course-list</span> <span class="selector-tag">h2</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">0.825rem</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#242538</span>;</span><br><span class="line">  <span class="attribute">border-left</span>: <span class="number">8px</span> solid <span class="number">#3a84ff</span>;</span><br><span class="line">  <span class="attribute">padding-left</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.course-list</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">0.7rem</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#656565</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">8rem</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">8.1rem</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">0.55rem</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">10px</span> <span class="number">#000000</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-flow</span>: column;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-evenly;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item</span> <span class="selector-class">.course-title</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">0.8rem</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#24253d</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item</span> <span class="selector-class">.user-info</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item</span> <span class="selector-class">.avatar</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">1.05rem</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">1.05rem</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item</span> <span class="selector-class">.nickname</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">0.6rem</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#aba59f</span>;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">4px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">    &lt;<span class="selector-tag">header</span> class=&quot;<span class="attribute">top</span>-bar&quot;&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span> class=&quot;<span class="selector-tag">menu</span>-btn&quot;&gt;</span><br><span class="line">            &lt;<span class="selector-tag">a</span> href=&quot;#&quot;&gt;</span><br><span class="line">                &lt;<span class="selector-tag">i</span> class=&quot;fas fa-stream&quot;&gt;&lt;/<span class="selector-tag">i</span>&gt;</span><br><span class="line">            &lt;/<span class="selector-tag">a</span>&gt;</span><br><span class="line">        &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">h1</span> class=&quot;logo&quot;&gt;</span><br><span class="line">            &lt;<span class="selector-tag">a</span> href=&quot;#&quot;&gt;</span><br><span class="line">                爱学习</span><br><span class="line">            &lt;/<span class="selector-tag">a</span>&gt;</span><br><span class="line">        &lt;/<span class="selector-tag">h1</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span> class=&quot;search-btn&quot;&gt;</span><br><span class="line">            &lt;<span class="selector-tag">a</span> href=&quot;#&quot;&gt;</span><br><span class="line">                &lt;<span class="selector-tag">i</span> class=&quot;fas fa-search&quot;&gt;&lt;/<span class="selector-tag">i</span>&gt;</span><br><span class="line">            &lt;/<span class="selector-tag">a</span>&gt;</span><br><span class="line">        &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    &lt;/<span class="selector-tag">header</span>&gt;</span><br><span class="line"></span><br><span class="line">    &lt;<span class="selector-tag">div</span> class=&quot;banner&quot;&gt;</span><br><span class="line">        &lt;<span class="selector-tag">a</span> href=&quot;#&quot;&gt;</span><br><span class="line">            &lt;<span class="selector-tag">img</span> <span class="attribute">src</span>=&quot;./<span class="selector-tag">img</span>/<span class="number">17</span>/banner<span class="selector-class">.png</span>&quot; alt=&quot;&quot;&gt;</span><br><span class="line">        &lt;/<span class="selector-tag">a</span>&gt;</span><br><span class="line">    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;<span class="selector-tag">nav</span> class=&quot;<span class="selector-tag">menu</span>&quot;&gt;</span><br><span class="line">        &lt;<span class="selector-tag">a</span> class=&quot;course&quot; href=&quot;#&quot;&gt;</span><br><span class="line">            &lt;<span class="selector-tag">i</span> class=&quot;fas fa-book&quot;&gt; 我的课程&lt;/<span class="selector-tag">i</span>&gt;</span><br><span class="line">        &lt;/<span class="selector-tag">a</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">a</span> class=&quot;star&quot; href=&quot;#&quot;&gt;</span><br><span class="line">            &lt;<span class="selector-tag">i</span> class=&quot;fas fa-cut&quot;&gt; 明星讲师&lt;/<span class="selector-tag">i</span>&gt;</span><br><span class="line">        &lt;/<span class="selector-tag">a</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">a</span> class=&quot;sub&quot; href=&quot;#&quot;&gt;</span><br><span class="line">            &lt;<span class="selector-tag">i</span> class=&quot;fas fa-envelope&quot;&gt; 我的订阅&lt;/<span class="selector-tag">i</span>&gt;</span><br><span class="line">        &lt;/<span class="selector-tag">a</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">a</span> class=&quot;download&quot; href=&quot;#&quot;&gt;</span><br><span class="line">            &lt;<span class="selector-tag">i</span> class=&quot;fas fa-globe&quot;&gt; 我的下载&lt;/<span class="selector-tag">i</span>&gt;</span><br><span class="line">        &lt;/<span class="selector-tag">a</span>&gt;</span><br><span class="line">    &lt;/<span class="selector-tag">nav</span>&gt;</span><br><span class="line"></span><br><span class="line">    &lt;<span class="selector-tag">div</span> class=&quot;course-list&quot;&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span> class=&quot;title&quot;&gt;</span><br><span class="line">            &lt;<span class="selector-tag">h2</span>&gt;最新课程&lt;/<span class="selector-tag">h2</span>&gt;</span><br><span class="line">            &lt;<span class="selector-tag">a</span> href=&quot;#&quot; class=&quot;more&quot;&gt;更多&lt;/<span class="selector-tag">a</span>&gt;</span><br><span class="line">        &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span> class=&quot;item-list&quot;&gt;</span><br><span class="line">            &lt;<span class="selector-tag">div</span> class=&quot;item&quot;&gt;</span><br><span class="line">                &lt;<span class="selector-tag">div</span> class=&quot;cover&quot;&gt;</span><br><span class="line">                    &lt;<span class="selector-tag">img</span> <span class="attribute">src</span>=&quot;./<span class="selector-tag">img</span>/<span class="number">17</span>/cover<span class="selector-class">.png</span>&quot; alt=&quot;&quot;&gt;</span><br><span class="line">                &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">                &lt;<span class="selector-tag">h3</span> class=&quot;course-title&quot;&gt;</span><br><span class="line">                    摄影课程</span><br><span class="line">                &lt;/<span class="selector-tag">h3</span>&gt;</span><br><span class="line">                &lt;<span class="selector-tag">div</span> class=&quot;user-info&quot;&gt;</span><br><span class="line">                    &lt;<span class="selector-tag">div</span> class=&quot;avatar&quot;&gt;</span><br><span class="line">                        &lt;<span class="selector-tag">img</span> <span class="attribute">src</span>=&quot;./<span class="selector-tag">img</span>/<span class="number">17</span>/avatar<span class="selector-class">.png</span>&quot; alt=&quot;&quot;&gt;</span><br><span class="line">                    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">                    &lt;<span class="selector-tag">div</span> class=&quot;nickname&quot;&gt;</span><br><span class="line">                        令狐冲</span><br><span class="line">                    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">                &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">            &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">            &lt;<span class="selector-tag">div</span> class=&quot;item&quot;&gt;</span><br><span class="line">                &lt;<span class="selector-tag">div</span> class=&quot;cover&quot;&gt;</span><br><span class="line">                    &lt;<span class="selector-tag">img</span> <span class="attribute">src</span>=&quot;./<span class="selector-tag">img</span>/<span class="number">17</span>/cover<span class="selector-class">.png</span>&quot; alt=&quot;&quot;&gt;</span><br><span class="line">                &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">                &lt;<span class="selector-tag">h3</span> class=&quot;course-title&quot;&gt;</span><br><span class="line">                    摄影课程</span><br><span class="line">                &lt;/<span class="selector-tag">h3</span>&gt;</span><br><span class="line">                &lt;<span class="selector-tag">div</span> class=&quot;user-info&quot;&gt;</span><br><span class="line">                    &lt;<span class="selector-tag">div</span> class=&quot;avatar&quot;&gt;</span><br><span class="line">                        &lt;<span class="selector-tag">img</span> <span class="attribute">src</span>=&quot;./<span class="selector-tag">img</span>/<span class="number">17</span>/avatar<span class="selector-class">.png</span>&quot; alt=&quot;&quot;&gt;</span><br><span class="line">                    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">                    &lt;<span class="selector-tag">div</span> class=&quot;nickname&quot;&gt;</span><br><span class="line">                        令狐冲</span><br><span class="line">                    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">                &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">            &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    &lt;<span class="selector-tag">div</span> class=&quot;course-list&quot;&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span> class=&quot;title&quot;&gt;</span><br><span class="line">            &lt;<span class="selector-tag">h2</span>&gt;最新课程&lt;/<span class="selector-tag">h2</span>&gt;</span><br><span class="line">            &lt;<span class="selector-tag">a</span> href=&quot;#&quot; class=&quot;more&quot;&gt;更多&lt;/<span class="selector-tag">a</span>&gt;</span><br><span class="line">        &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span> class=&quot;item-list&quot;&gt;</span><br><span class="line">            &lt;<span class="selector-tag">div</span> class=&quot;item&quot;&gt;</span><br><span class="line">                &lt;<span class="selector-tag">div</span> class=&quot;cover&quot;&gt;</span><br><span class="line">                    &lt;<span class="selector-tag">img</span> <span class="attribute">src</span>=&quot;./<span class="selector-tag">img</span>/<span class="number">17</span>/cover<span class="selector-class">.png</span>&quot; alt=&quot;&quot;&gt;</span><br><span class="line">                &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">                &lt;<span class="selector-tag">h3</span> class=&quot;course-title&quot;&gt;</span><br><span class="line">                    摄影课程</span><br><span class="line">                &lt;/<span class="selector-tag">h3</span>&gt;</span><br><span class="line">                &lt;<span class="selector-tag">div</span> class=&quot;user-info&quot;&gt;</span><br><span class="line">                    &lt;<span class="selector-tag">div</span> class=&quot;avatar&quot;&gt;</span><br><span class="line">                        &lt;<span class="selector-tag">img</span> <span class="attribute">src</span>=&quot;./<span class="selector-tag">img</span>/<span class="number">17</span>/avatar<span class="selector-class">.png</span>&quot; alt=&quot;&quot;&gt;</span><br><span class="line">                    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">                    &lt;<span class="selector-tag">div</span> class=&quot;nickname&quot;&gt;</span><br><span class="line">                        令狐冲</span><br><span class="line">                    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">                &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">            &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">            &lt;<span class="selector-tag">div</span> class=&quot;item&quot;&gt;</span><br><span class="line">                &lt;<span class="selector-tag">div</span> class=&quot;cover&quot;&gt;</span><br><span class="line">                    &lt;<span class="selector-tag">img</span> <span class="attribute">src</span>=&quot;./<span class="selector-tag">img</span>/<span class="number">17</span>/cover<span class="selector-class">.png</span>&quot; alt=&quot;&quot;&gt;</span><br><span class="line">                &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">                &lt;<span class="selector-tag">h3</span> class=&quot;course-title&quot;&gt;</span><br><span class="line">                    摄影课程</span><br><span class="line">                &lt;/<span class="selector-tag">h3</span>&gt;</span><br><span class="line">                &lt;<span class="selector-tag">div</span> class=&quot;user-info&quot;&gt;</span><br><span class="line">                    &lt;<span class="selector-tag">div</span> class=&quot;avatar&quot;&gt;</span><br><span class="line">                        &lt;<span class="selector-tag">img</span> <span class="attribute">src</span>=&quot;./<span class="selector-tag">img</span>/<span class="number">17</span>/avatar<span class="selector-class">.png</span>&quot; alt=&quot;&quot;&gt;</span><br><span class="line">                    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">                    &lt;<span class="selector-tag">div</span> class=&quot;nickname&quot;&gt;</span><br><span class="line">                        令狐冲</span><br><span class="line">                    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">                &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">            &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">&lt;/<span class="selector-tag">body</span>&gt;</span><br></pre></td></tr></table></figure>
 
 <p><img src="/../images/%E5%BC%B9%E6%80%A7%E7%9B%92/image-20240321132453017.png" alt="移动端网页"></p>
-</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/css%E5%9F%BA%E7%A1%80/">css基础</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92/">弹性盒</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2024/03/23/JS%E7%AE%80%E4%BB%8B/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">JS简介</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/03/13/%E5%8F%98%E5%BD%A2%EF%BC%9A%E5%B9%B3%E7%A7%BB%E3%80%81%E6%97%8B%E8%BD%AC%E4%B8%8E%E7%BC%A9%E6%94%BE/"><span class="level-item">10-变形：平移、旋转与缩放</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="mk310"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">mk310</p><p class="is-size-6 is-block">no-no-no</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>hangzhou</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">54</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">19</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">62</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://gitee.com" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://gitee.com"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="bilibili" href="https://bilibili.com"><i class="fab fa-bilibili"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="zhihu" href="https://zhihu.com"><i class="fab fa-zhihu"></i></a></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-02-01T10:52:16.406Z">2026-02-01</time></p><p class="title"><a href="/2026/02/01/Promise/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-01-10T10:07:37.000Z">2025-01-10</time></p><p class="title"><a href="/2025/01/10/Vue/">Vue</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/Vue3/">Vue3</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-12-24T08:20:47.000Z">2024-12-24</time></p><p class="title"><a href="/2024/12/24/Node-js/">Node.js</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/Node-js/">Node.js</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-11-06T11:06:38.000Z">2024-11-06</time></p><p class="title"><a href="/2024/11/06/flex%E5%B8%83%E5%B1%80/">flex布局</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-11-02T08:23:12.000Z">2024-11-02</time></p><p class="title"><a href="/2024/11/02/grid%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80/">13-grid网格布局</a></p><p class="categories"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/">CSS</a></p></div></article></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#基本概念"><span class="level-left"><span class="level-item">1</span><span class="level-item">基本概念</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#弹性盒"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">弹性盒</span></span></a></li><li><a class="level is-mobile" href="#弹性容器"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">弹性容器</span></span></a></li></ul></li><li><a class="level is-mobile" href="#练习-弹性导航条"><span class="level-left"><span class="level-item">2</span><span class="level-item">练习(弹性导航条)</span></span></a></li><li><a class="level is-mobile" href="#弹性容器的属性"><span class="level-left"><span class="level-item">3</span><span class="level-item">弹性容器的属性</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#主轴属性"><span class="level-left"><span class="level-item">3.1</span><span class="level-item">主轴属性</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#排列方式"><span class="level-left"><span class="level-item">3.1.1</span><span class="level-item">排列方式</span></span></a></li><li><a class="level is-mobile" href="#自动换行"><span class="level-left"><span class="level-item">3.1.2</span><span class="level-item">自动换行</span></span></a></li><li><a class="level is-mobile" href="#空白空间"><span class="level-left"><span class="level-item">3.1.3</span><span class="level-item">空白空间</span></span></a></li></ul></li><li><a class="level is-mobile" href="#辅轴属性"><span class="level-left"><span class="level-item">3.2</span><span class="level-item">辅轴属性</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#辅轴对齐"><span class="level-left"><span class="level-item">3.2.1</span><span class="level-item">辅轴对齐</span></span></a></li><li><a class="level is-mobile" href="#空白空间-1"><span class="level-left"><span class="level-item">3.2.2</span><span class="level-item">空白空间</span></span></a></li></ul></li><li><a class="level is-mobile" href="#弹性居中"><span class="level-left"><span class="level-item">3.3</span><span class="level-item">弹性居中</span></span></a></li></ul></li><li><a class="level is-mobile" href="#弹性元素的属性"><span class="level-left"><span class="level-item">4</span><span class="level-item">弹性元素的属性</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#伸展系数"><span class="level-left"><span class="level-item">4.1</span><span class="level-item">伸展系数</span></span></a></li><li><a class="level is-mobile" href="#缩减系数"><span class="level-left"><span class="level-item">4.2</span><span class="level-item">缩减系数</span></span></a></li><li><a class="level is-mobile" href="#基础长度"><span class="level-left"><span class="level-item">4.3</span><span class="level-item">基础长度</span></span></a></li><li><a class="level is-mobile" href="#排列顺序"><span class="level-left"><span class="level-item">4.4</span><span class="level-item">排列顺序</span></span></a></li><li><a class="level is-mobile" href="#覆盖辅轴"><span class="level-left"><span class="level-item">4.5</span><span class="level-item">覆盖辅轴</span></span></a></li></ul></li><li><a class="level is-mobile" href="#练习（手机淘宝）"><span class="level-left"><span class="level-item">5</span><span class="level-item">练习（手机淘宝）</span></span></a></li><li><a class="level is-mobile" href="#练习（移动端网页）"><span class="level-left"><span class="level-item">6</span><span class="level-item">练习（移动端网页）</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/macOS/"><span class="level-start"><span class="level-item">macOS</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/study/"><span class="level-start"><span class="level-item">study</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/tech/"><span class="level-start"><span class="level-item">tech</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="level-start"><span class="level-item">前端</span></span><span class="level-end"><span class="level-item tag">30</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/CSS/"><span class="level-start"><span class="level-item">CSS</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/HTML/"><span class="level-start"><span class="level-item">HTML</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/"><span class="level-start"><span class="level-item">JavaScript</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript%E8%BF%9B%E9%98%B6/"><span class="level-start"><span class="level-item">JavaScript进阶</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/Node-js/"><span class="level-start"><span class="level-item">Node.js</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/Vue3/"><span class="level-start"><span class="level-item">Vue3</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%89%8D%E7%AB%AF/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"><span class="level-start"><span class="level-item">网络协议</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E5%90%8E%E7%AB%AF/"><span class="level-start"><span class="level-item">后端</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E5%90%8E%E7%AB%AF/flask/"><span class="level-start"><span class="level-item">flask</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"><span class="level-start"><span class="level-item">计算机基础</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="level-start"><span class="level-item">计算机网络</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"><span class="level-start"><span class="level-item">软件工程</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2026 mk310</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">Hexo 博客</p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
-            article: {
-                highlight: {
-                    clipboard: true,
-                    fold: 'unfolded'
-                }
-            }
-        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
-      window.cookieconsent.initialise({
-        type: "opt-out",
-        theme: "edgeless",
-        static: false,
-        position: "bottom-left",
-        content: {
-          message: "此网站使用Cookie来改善您的体验。",
-          dismiss: "知道了！",
-          allow: "允许使用Cookie",
-          deny: "拒绝",
-          link: "了解更多",
-          policy: "Cookie政策",
-          href: "https://www.cookiesandyou.com/",
-        },
-        palette: {
-          popup: {
-            background: "#edeff5",
-            text: "#838391"
-          },
-          button: {
-            background: "#4b81e8"
-          },
-        },
-      });
-    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
-            if (typeof $.fn.lightGallery === 'function') {
-                $('.article').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof $.fn.justifiedGallery === 'function') {
-                if ($('.justified-gallery > p > .gallery-item').length) {
-                    $('.justified-gallery > p > .gallery-item').unwrap();
-                }
-                $('.justified-gallery').justifiedGallery();
-            }
-        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
-            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script></body></html>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="http://gitee.com/">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text">基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%B9%E6%80%A7%E7%9B%92"><span class="toc-number">1.1.</span> <span class="toc-text">弹性盒</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%B9%E6%80%A7%E5%AE%B9%E5%99%A8"><span class="toc-number">1.2.</span> <span class="toc-text">弹性容器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0-%E5%BC%B9%E6%80%A7%E5%AF%BC%E8%88%AA%E6%9D%A1"><span class="toc-number">2.</span> <span class="toc-text">练习(弹性导航条)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%B9%E6%80%A7%E5%AE%B9%E5%99%A8%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-number">3.</span> <span class="toc-text">弹性容器的属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%BD%B4%E5%B1%9E%E6%80%A7"><span class="toc-number">3.1.</span> <span class="toc-text">主轴属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%92%E5%88%97%E6%96%B9%E5%BC%8F"><span class="toc-number">3.1.1.</span> <span class="toc-text">排列方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E6%8D%A2%E8%A1%8C"><span class="toc-number">3.1.2.</span> <span class="toc-text">自动换行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A9%BA%E7%99%BD%E7%A9%BA%E9%97%B4"><span class="toc-number">3.1.3.</span> <span class="toc-text">空白空间</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%85%E8%BD%B4%E5%B1%9E%E6%80%A7"><span class="toc-number">3.2.</span> <span class="toc-text">辅轴属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%85%E8%BD%B4%E5%AF%B9%E9%BD%90"><span class="toc-number">3.2.1.</span> <span class="toc-text">辅轴对齐</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A9%BA%E7%99%BD%E7%A9%BA%E9%97%B4-1"><span class="toc-number">3.2.2.</span> <span class="toc-text">空白空间</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%B9%E6%80%A7%E5%B1%85%E4%B8%AD"><span class="toc-number">3.3.</span> <span class="toc-text">弹性居中</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%B9%E6%80%A7%E5%85%83%E7%B4%A0%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-number">4.</span> <span class="toc-text">弹性元素的属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%B8%E5%B1%95%E7%B3%BB%E6%95%B0"><span class="toc-number">4.1.</span> <span class="toc-text">伸展系数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%A9%E5%87%8F%E7%B3%BB%E6%95%B0"><span class="toc-number">4.2.</span> <span class="toc-text">缩减系数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E9%95%BF%E5%BA%A6"><span class="toc-number">4.3.</span> <span class="toc-text">基础长度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%92%E5%88%97%E9%A1%BA%E5%BA%8F"><span class="toc-number">4.4.</span> <span class="toc-text">排列顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A6%86%E7%9B%96%E8%BE%85%E8%BD%B4"><span class="toc-number">4.5.</span> <span class="toc-text">覆盖辅轴</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0%EF%BC%88%E6%89%8B%E6%9C%BA%E6%B7%98%E5%AE%9D%EF%BC%89"><span class="toc-number">5.</span> <span class="toc-text">练习（手机淘宝）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0%EF%BC%88%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%BD%91%E9%A1%B5%EF%BC%89"><span class="toc-number">6.</span> <span class="toc-text">练习（移动端网页）</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/&text=12-flex弹性盒"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/&title=12-flex弹性盒"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/&is_video=false&description=12-flex弹性盒"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=12-flex弹性盒&body=Check out this article: http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/&title=12-flex弹性盒"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/&title=12-flex弹性盒"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/&title=12-flex弹性盒"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/&title=12-flex弹性盒"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/&name=12-flex弹性盒&description=&lt;p&gt;CSSflex弹性盒&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2024/03/15/%E5%BC%B9%E6%80%A7%E7%9B%92/&t=12-flex弹性盒"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2018-2023
+    mk310
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://gitee.com/">项目</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+
+</body>
+</html>
